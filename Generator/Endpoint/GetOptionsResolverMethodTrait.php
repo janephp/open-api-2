@@ -14,7 +14,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 trait GetOptionsResolverMethodTrait
 {
-    private function getOptionsResolverMethod(OperationGuess $operation, string $class, string $methodName, GuessClass $guessClass, NonBodyParameterGenerator $nonBodyParameterGenerator): ?Stmt\ClassMethod
+    public function getOptionsResolverMethod(OperationGuess $operation, string $class, string $methodName, GuessClass $guessClass, NonBodyParameterGenerator $nonBodyParameterGenerator): ?Stmt\ClassMethod
     {
         $parameters = [];
 

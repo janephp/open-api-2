@@ -10,7 +10,7 @@ use PhpParser\Node\Stmt;
 
 trait GetAuthenticationScopesTrait
 {
-    private function getAuthenticationScopesMethod(OperationGuess $operation): Stmt\ClassMethod
+    public function getAuthenticationScopesMethod(OperationGuess $operation): Stmt\ClassMethod
     {
         $securityScopes = [];
         foreach ($operation->getSecurityScopes() as $scope) {

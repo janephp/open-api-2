@@ -14,7 +14,7 @@ use PhpParser\Node\Stmt;
 
 trait GetGetUriTrait
 {
-    private function getGetUri(OperationGuess $operation, GuessClass $guessClass): Stmt\ClassMethod
+    public function getGetUri(OperationGuess $operation, GuessClass $guessClass): Stmt\ClassMethod
     {
         $names = [];
 
