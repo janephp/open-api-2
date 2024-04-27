@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpecPrivileges::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,10 +44,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('CredentialSpec', $data)) {
-                $object->setCredentialSpec($this->denormalizer->denormalize($data['CredentialSpec'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivilegesCredentialSpec', 'json', $context));
+                $object->setCredentialSpec($this->denormalizer->denormalize($data['CredentialSpec'], \Docker\Api\Model\TaskSpecContainerSpecPrivilegesCredentialSpec::class, 'json', $context));
             }
             if (\array_key_exists('SELinuxContext', $data)) {
-                $object->setSELinuxContext($this->denormalizer->denormalize($data['SELinuxContext'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivilegesSELinuxContext', 'json', $context));
+                $object->setSELinuxContext($this->denormalizer->denormalize($data['SELinuxContext'], \Docker\Api\Model\TaskSpecContainerSpecPrivilegesSELinuxContext::class, 'json', $context));
             }
             return $object;
         }
@@ -67,7 +67,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpecPrivileges::class => false];
         }
     }
 } else {
@@ -79,7 +79,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpecPrivileges::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -104,10 +104,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('CredentialSpec', $data)) {
-                $object->setCredentialSpec($this->denormalizer->denormalize($data['CredentialSpec'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivilegesCredentialSpec', 'json', $context));
+                $object->setCredentialSpec($this->denormalizer->denormalize($data['CredentialSpec'], \Docker\Api\Model\TaskSpecContainerSpecPrivilegesCredentialSpec::class, 'json', $context));
             }
             if (\array_key_exists('SELinuxContext', $data)) {
-                $object->setSELinuxContext($this->denormalizer->denormalize($data['SELinuxContext'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivilegesSELinuxContext', 'json', $context));
+                $object->setSELinuxContext($this->denormalizer->denormalize($data['SELinuxContext'], \Docker\Api\Model\TaskSpecContainerSpecPrivilegesSELinuxContext::class, 'json', $context));
             }
             return $object;
         }
@@ -130,7 +130,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpecPrivileges::class => false];
         }
     }
 }

@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects';
+            return $type === \Jane\OpenApi2\Tests\Expected\Model\Projects::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -43,7 +43,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('projects', $data)) {
                 $values = [];
                 foreach ($data['projects'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Jane\OpenApi2\Tests\Expected\Model\Project::class, 'json', $context);
                 }
                 $object->setProjects($values);
             }
@@ -66,7 +66,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setPage($data['page']);
             }
             if (\array_key_exists('links', $data)) {
-                $object->setLinks($this->denormalizer->denormalize($data['links'], 'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks', 'json', $context));
+                $object->setLinks($this->denormalizer->denormalize($data['links'], \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class, 'json', $context));
             }
             return $object;
         }
@@ -89,7 +89,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Projects::class => false];
         }
     }
 } else {
@@ -101,7 +101,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects';
+            return $type === \Jane\OpenApi2\Tests\Expected\Model\Projects::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -125,7 +125,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('projects', $data)) {
                 $values = [];
                 foreach ($data['projects'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Jane\OpenApi2\Tests\Expected\Model\Project::class, 'json', $context);
                 }
                 $object->setProjects($values);
             }
@@ -148,7 +148,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setPage($data['page']);
             }
             if (\array_key_exists('links', $data)) {
-                $object->setLinks($this->denormalizer->denormalize($data['links'], 'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks', 'json', $context));
+                $object->setLinks($this->denormalizer->denormalize($data['links'], \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class, 'json', $context));
             }
             return $object;
         }
@@ -174,7 +174,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Projects::class => false];
         }
     }
 }

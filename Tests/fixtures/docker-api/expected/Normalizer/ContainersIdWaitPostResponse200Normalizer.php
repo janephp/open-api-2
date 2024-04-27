@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ContainersIdWaitPostResponse200';
+            return $type === \Docker\Api\Model\ContainersIdWaitPostResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -47,7 +47,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setStatusCode($data['StatusCode']);
             }
             if (\array_key_exists('Error', $data)) {
-                $object->setError($this->denormalizer->denormalize($data['Error'], 'Docker\\Api\\Model\\ContainersIdWaitPostResponse200Error', 'json', $context));
+                $object->setError($this->denormalizer->denormalize($data['Error'], \Docker\Api\Model\ContainersIdWaitPostResponse200Error::class, 'json', $context));
             }
             return $object;
         }
@@ -65,7 +65,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ContainersIdWaitPostResponse200' => false];
+            return [\Docker\Api\Model\ContainersIdWaitPostResponse200::class => false];
         }
     }
 } else {
@@ -77,7 +77,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ContainersIdWaitPostResponse200';
+            return $type === \Docker\Api\Model\ContainersIdWaitPostResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -105,7 +105,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setStatusCode($data['StatusCode']);
             }
             if (\array_key_exists('Error', $data)) {
-                $object->setError($this->denormalizer->denormalize($data['Error'], 'Docker\\Api\\Model\\ContainersIdWaitPostResponse200Error', 'json', $context));
+                $object->setError($this->denormalizer->denormalize($data['Error'], \Docker\Api\Model\ContainersIdWaitPostResponse200Error::class, 'json', $context));
             }
             return $object;
         }
@@ -126,7 +126,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ContainersIdWaitPostResponse200' => false];
+            return [\Docker\Api\Model\ContainersIdWaitPostResponse200::class => false];
         }
     }
 }

@@ -14,7 +14,7 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    protected $normalizers = array('Jane\\Component\\OpenApi2\\Tests\\Client\\Model\\SimpleResponse' => 'Jane\\Component\\OpenApi2\\Tests\\Client\\Normalizer\\SimpleResponseNormalizer', 'Jane\\Component\\OpenApi2\\Tests\\Client\\Model\\Error' => 'Jane\\Component\\OpenApi2\\Tests\\Client\\Normalizer\\ErrorNormalizer', '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Jane\\Component\\OpenApi2\\Tests\\Client\\Runtime\\Normalizer\\ReferenceNormalizer'), $normalizersCache = array();
+    protected $normalizers = ['Jane\\Component\\OpenApi2\\Tests\\Client\\Model\\SimpleResponse' => 'Jane\\Component\\OpenApi2\\Tests\\Client\\Normalizer\\SimpleResponseNormalizer', 'Jane\\Component\\OpenApi2\\Tests\\Client\\Model\\Error' => 'Jane\\Component\\OpenApi2\\Tests\\Client\\Normalizer\\ErrorNormalizer', \Jane\Component\JsonSchemaRuntime\Reference::class => '\\Jane\\Component\\OpenApi2\\Tests\\Client\\Runtime\\Normalizer\\ReferenceNormalizer'], $normalizersCache = [];
     public function supportsDenormalization($data, $type, $format = null)
     {
         return array_key_exists($type, $this->normalizers);

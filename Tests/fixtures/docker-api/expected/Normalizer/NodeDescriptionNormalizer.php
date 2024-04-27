@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\NodeDescription';
+            return $type === \Docker\Api\Model\NodeDescription::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -47,16 +47,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setHostname($data['Hostname']);
             }
             if (\array_key_exists('Platform', $data)) {
-                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], 'Docker\\Api\\Model\\Platform', 'json', $context));
+                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], \Docker\Api\Model\Platform::class, 'json', $context));
             }
             if (\array_key_exists('Resources', $data)) {
-                $object->setResources($this->denormalizer->denormalize($data['Resources'], 'Docker\\Api\\Model\\ResourceObject', 'json', $context));
+                $object->setResources($this->denormalizer->denormalize($data['Resources'], \Docker\Api\Model\ResourceObject::class, 'json', $context));
             }
             if (\array_key_exists('Engine', $data)) {
-                $object->setEngine($this->denormalizer->denormalize($data['Engine'], 'Docker\\Api\\Model\\EngineDescription', 'json', $context));
+                $object->setEngine($this->denormalizer->denormalize($data['Engine'], \Docker\Api\Model\EngineDescription::class, 'json', $context));
             }
             if (\array_key_exists('TLSInfo', $data)) {
-                $object->setTLSInfo($this->denormalizer->denormalize($data['TLSInfo'], 'Docker\\Api\\Model\\TLSInfo', 'json', $context));
+                $object->setTLSInfo($this->denormalizer->denormalize($data['TLSInfo'], \Docker\Api\Model\TLSInfo::class, 'json', $context));
             }
             return $object;
         }
@@ -85,7 +85,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\NodeDescription' => false];
+            return [\Docker\Api\Model\NodeDescription::class => false];
         }
     }
 } else {
@@ -97,7 +97,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\NodeDescription';
+            return $type === \Docker\Api\Model\NodeDescription::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -125,16 +125,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setHostname($data['Hostname']);
             }
             if (\array_key_exists('Platform', $data)) {
-                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], 'Docker\\Api\\Model\\Platform', 'json', $context));
+                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], \Docker\Api\Model\Platform::class, 'json', $context));
             }
             if (\array_key_exists('Resources', $data)) {
-                $object->setResources($this->denormalizer->denormalize($data['Resources'], 'Docker\\Api\\Model\\ResourceObject', 'json', $context));
+                $object->setResources($this->denormalizer->denormalize($data['Resources'], \Docker\Api\Model\ResourceObject::class, 'json', $context));
             }
             if (\array_key_exists('Engine', $data)) {
-                $object->setEngine($this->denormalizer->denormalize($data['Engine'], 'Docker\\Api\\Model\\EngineDescription', 'json', $context));
+                $object->setEngine($this->denormalizer->denormalize($data['Engine'], \Docker\Api\Model\EngineDescription::class, 'json', $context));
             }
             if (\array_key_exists('TLSInfo', $data)) {
-                $object->setTLSInfo($this->denormalizer->denormalize($data['TLSInfo'], 'Docker\\Api\\Model\\TLSInfo', 'json', $context));
+                $object->setTLSInfo($this->denormalizer->denormalize($data['TLSInfo'], \Docker\Api\Model\TLSInfo::class, 'json', $context));
             }
             return $object;
         }
@@ -166,7 +166,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\NodeDescription' => false];
+            return [\Docker\Api\Model\NodeDescription::class => false];
         }
     }
 }

@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecResources';
+            return $type === \Docker\Api\Model\TaskSpecResources::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,10 +44,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Limits', $data)) {
-                $object->setLimits($this->denormalizer->denormalize($data['Limits'], 'Docker\\Api\\Model\\Limit', 'json', $context));
+                $object->setLimits($this->denormalizer->denormalize($data['Limits'], \Docker\Api\Model\Limit::class, 'json', $context));
             }
             if (\array_key_exists('Reservation', $data)) {
-                $object->setReservation($this->denormalizer->denormalize($data['Reservation'], 'Docker\\Api\\Model\\ResourceObject', 'json', $context));
+                $object->setReservation($this->denormalizer->denormalize($data['Reservation'], \Docker\Api\Model\ResourceObject::class, 'json', $context));
             }
             return $object;
         }
@@ -67,7 +67,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecResources' => false];
+            return [\Docker\Api\Model\TaskSpecResources::class => false];
         }
     }
 } else {
@@ -79,7 +79,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecResources';
+            return $type === \Docker\Api\Model\TaskSpecResources::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -104,10 +104,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Limits', $data)) {
-                $object->setLimits($this->denormalizer->denormalize($data['Limits'], 'Docker\\Api\\Model\\Limit', 'json', $context));
+                $object->setLimits($this->denormalizer->denormalize($data['Limits'], \Docker\Api\Model\Limit::class, 'json', $context));
             }
             if (\array_key_exists('Reservation', $data)) {
-                $object->setReservation($this->denormalizer->denormalize($data['Reservation'], 'Docker\\Api\\Model\\ResourceObject', 'json', $context));
+                $object->setReservation($this->denormalizer->denormalize($data['Reservation'], \Docker\Api\Model\ResourceObject::class, 'json', $context));
             }
             return $object;
         }
@@ -130,7 +130,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecResources' => false];
+            return [\Docker\Api\Model\TaskSpecResources::class => false];
         }
     }
 }

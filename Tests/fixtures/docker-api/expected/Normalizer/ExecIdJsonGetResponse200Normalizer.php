@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ExecIdJsonGetResponse200';
+            return $type === \Docker\Api\Model\ExecIdJsonGetResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -59,7 +59,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setExitCode($data['ExitCode']);
             }
             if (\array_key_exists('ProcessConfig', $data)) {
-                $object->setProcessConfig($this->denormalizer->denormalize($data['ProcessConfig'], 'Docker\\Api\\Model\\ProcessConfig', 'json', $context));
+                $object->setProcessConfig($this->denormalizer->denormalize($data['ProcessConfig'], \Docker\Api\Model\ProcessConfig::class, 'json', $context));
             }
             if (\array_key_exists('OpenStdin', $data)) {
                 $object->setOpenStdin($data['OpenStdin']);
@@ -121,7 +121,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ExecIdJsonGetResponse200' => false];
+            return [\Docker\Api\Model\ExecIdJsonGetResponse200::class => false];
         }
     }
 } else {
@@ -133,7 +133,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ExecIdJsonGetResponse200';
+            return $type === \Docker\Api\Model\ExecIdJsonGetResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -173,7 +173,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setExitCode($data['ExitCode']);
             }
             if (\array_key_exists('ProcessConfig', $data)) {
-                $object->setProcessConfig($this->denormalizer->denormalize($data['ProcessConfig'], 'Docker\\Api\\Model\\ProcessConfig', 'json', $context));
+                $object->setProcessConfig($this->denormalizer->denormalize($data['ProcessConfig'], \Docker\Api\Model\ProcessConfig::class, 'json', $context));
             }
             if (\array_key_exists('OpenStdin', $data)) {
                 $object->setOpenStdin($data['OpenStdin']);
@@ -238,7 +238,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ExecIdJsonGetResponse200' => false];
+            return [\Docker\Api\Model\ExecIdJsonGetResponse200::class => false];
         }
     }
 }

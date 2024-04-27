@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\EventMessage';
+            return $type === \Docker\Api\Model\EventMessage::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -50,7 +50,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setAction($data['Action']);
             }
             if (\array_key_exists('Actor', $data)) {
-                $object->setActor($this->denormalizer->denormalize($data['Actor'], 'Docker\\Api\\Model\\EventActor', 'json', $context));
+                $object->setActor($this->denormalizer->denormalize($data['Actor'], \Docker\Api\Model\EventActor::class, 'json', $context));
             }
             if (\array_key_exists('scope', $data)) {
                 $object->setScope($data['scope']);
@@ -91,7 +91,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\EventMessage' => false];
+            return [\Docker\Api\Model\EventMessage::class => false];
         }
     }
 } else {
@@ -103,7 +103,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\EventMessage';
+            return $type === \Docker\Api\Model\EventMessage::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -134,7 +134,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setAction($data['Action']);
             }
             if (\array_key_exists('Actor', $data)) {
-                $object->setActor($this->denormalizer->denormalize($data['Actor'], 'Docker\\Api\\Model\\EventActor', 'json', $context));
+                $object->setActor($this->denormalizer->denormalize($data['Actor'], \Docker\Api\Model\EventActor::class, 'json', $context));
             }
             if (\array_key_exists('scope', $data)) {
                 $object->setScope($data['scope']);
@@ -178,7 +178,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\EventMessage' => false];
+            return [\Docker\Api\Model\EventMessage::class => false];
         }
     }
 }

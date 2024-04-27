@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\Mount';
+            return $type === \Docker\Api\Model\Mount::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -59,13 +59,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setConsistency($data['Consistency']);
             }
             if (\array_key_exists('BindOptions', $data)) {
-                $object->setBindOptions($this->denormalizer->denormalize($data['BindOptions'], 'Docker\\Api\\Model\\MountBindOptions', 'json', $context));
+                $object->setBindOptions($this->denormalizer->denormalize($data['BindOptions'], \Docker\Api\Model\MountBindOptions::class, 'json', $context));
             }
             if (\array_key_exists('VolumeOptions', $data)) {
-                $object->setVolumeOptions($this->denormalizer->denormalize($data['VolumeOptions'], 'Docker\\Api\\Model\\MountVolumeOptions', 'json', $context));
+                $object->setVolumeOptions($this->denormalizer->denormalize($data['VolumeOptions'], \Docker\Api\Model\MountVolumeOptions::class, 'json', $context));
             }
             if (\array_key_exists('TmpfsOptions', $data)) {
-                $object->setTmpfsOptions($this->denormalizer->denormalize($data['TmpfsOptions'], 'Docker\\Api\\Model\\MountTmpfsOptions', 'json', $context));
+                $object->setTmpfsOptions($this->denormalizer->denormalize($data['TmpfsOptions'], \Docker\Api\Model\MountTmpfsOptions::class, 'json', $context));
             }
             return $object;
         }
@@ -103,7 +103,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\Mount' => false];
+            return [\Docker\Api\Model\Mount::class => false];
         }
     }
 } else {
@@ -115,7 +115,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\Mount';
+            return $type === \Docker\Api\Model\Mount::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -155,13 +155,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setConsistency($data['Consistency']);
             }
             if (\array_key_exists('BindOptions', $data)) {
-                $object->setBindOptions($this->denormalizer->denormalize($data['BindOptions'], 'Docker\\Api\\Model\\MountBindOptions', 'json', $context));
+                $object->setBindOptions($this->denormalizer->denormalize($data['BindOptions'], \Docker\Api\Model\MountBindOptions::class, 'json', $context));
             }
             if (\array_key_exists('VolumeOptions', $data)) {
-                $object->setVolumeOptions($this->denormalizer->denormalize($data['VolumeOptions'], 'Docker\\Api\\Model\\MountVolumeOptions', 'json', $context));
+                $object->setVolumeOptions($this->denormalizer->denormalize($data['VolumeOptions'], \Docker\Api\Model\MountVolumeOptions::class, 'json', $context));
             }
             if (\array_key_exists('TmpfsOptions', $data)) {
-                $object->setTmpfsOptions($this->denormalizer->denormalize($data['TmpfsOptions'], 'Docker\\Api\\Model\\MountTmpfsOptions', 'json', $context));
+                $object->setTmpfsOptions($this->denormalizer->denormalize($data['TmpfsOptions'], \Docker\Api\Model\MountTmpfsOptions::class, 'json', $context));
             }
             return $object;
         }
@@ -202,7 +202,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\Mount' => false];
+            return [\Docker\Api\Model\Mount::class => false];
         }
     }
 }

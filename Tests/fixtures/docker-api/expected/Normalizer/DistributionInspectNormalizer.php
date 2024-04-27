@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\DistributionInspect';
+            return $type === \Docker\Api\Model\DistributionInspect::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,12 +44,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Descriptor', $data)) {
-                $object->setDescriptor($this->denormalizer->denormalize($data['Descriptor'], 'Docker\\Api\\Model\\OCIDescriptor', 'json', $context));
+                $object->setDescriptor($this->denormalizer->denormalize($data['Descriptor'], \Docker\Api\Model\OCIDescriptor::class, 'json', $context));
             }
             if (\array_key_exists('Platforms', $data)) {
                 $values = [];
                 foreach ($data['Platforms'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\OCIPlatform', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\OCIPlatform::class, 'json', $context);
                 }
                 $object->setPlatforms($values);
             }
@@ -71,7 +71,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\DistributionInspect' => false];
+            return [\Docker\Api\Model\DistributionInspect::class => false];
         }
     }
 } else {
@@ -83,7 +83,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\DistributionInspect';
+            return $type === \Docker\Api\Model\DistributionInspect::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -108,12 +108,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Descriptor', $data)) {
-                $object->setDescriptor($this->denormalizer->denormalize($data['Descriptor'], 'Docker\\Api\\Model\\OCIDescriptor', 'json', $context));
+                $object->setDescriptor($this->denormalizer->denormalize($data['Descriptor'], \Docker\Api\Model\OCIDescriptor::class, 'json', $context));
             }
             if (\array_key_exists('Platforms', $data)) {
                 $values = [];
                 foreach ($data['Platforms'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\OCIPlatform', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\OCIPlatform::class, 'json', $context);
                 }
                 $object->setPlatforms($values);
             }
@@ -138,7 +138,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\DistributionInspect' => false];
+            return [\Docker\Api\Model\DistributionInspect::class => false];
         }
     }
 }

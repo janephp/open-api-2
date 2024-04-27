@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SwarmSpecTaskDefaults';
+            return $type === \Docker\Api\Model\SwarmSpecTaskDefaults::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,7 +44,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('LogDriver', $data)) {
-                $object->setLogDriver($this->denormalizer->denormalize($data['LogDriver'], 'Docker\\Api\\Model\\SwarmSpecTaskDefaultsLogDriver', 'json', $context));
+                $object->setLogDriver($this->denormalizer->denormalize($data['LogDriver'], \Docker\Api\Model\SwarmSpecTaskDefaultsLogDriver::class, 'json', $context));
             }
             return $object;
         }
@@ -61,7 +61,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SwarmSpecTaskDefaults' => false];
+            return [\Docker\Api\Model\SwarmSpecTaskDefaults::class => false];
         }
     }
 } else {
@@ -73,7 +73,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SwarmSpecTaskDefaults';
+            return $type === \Docker\Api\Model\SwarmSpecTaskDefaults::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -98,7 +98,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('LogDriver', $data)) {
-                $object->setLogDriver($this->denormalizer->denormalize($data['LogDriver'], 'Docker\\Api\\Model\\SwarmSpecTaskDefaultsLogDriver', 'json', $context));
+                $object->setLogDriver($this->denormalizer->denormalize($data['LogDriver'], \Docker\Api\Model\SwarmSpecTaskDefaultsLogDriver::class, 'json', $context));
             }
             return $object;
         }
@@ -118,7 +118,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SwarmSpecTaskDefaults' => false];
+            return [\Docker\Api\Model\SwarmSpecTaskDefaults::class => false];
         }
     }
 }

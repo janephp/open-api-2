@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpec';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpec::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -91,7 +91,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setGroups($values_4);
             }
             if (\array_key_exists('Privileges', $data)) {
-                $object->setPrivileges($this->denormalizer->denormalize($data['Privileges'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges', 'json', $context));
+                $object->setPrivileges($this->denormalizer->denormalize($data['Privileges'], \Docker\Api\Model\TaskSpecContainerSpecPrivileges::class, 'json', $context));
             }
             if (\array_key_exists('TTY', $data)) {
                 $object->setTTY($data['TTY']);
@@ -105,7 +105,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Mounts', $data)) {
                 $values_5 = [];
                 foreach ($data['Mounts'] as $value_5) {
-                    $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\\Api\\Model\\Mount', 'json', $context);
+                    $values_5[] = $this->denormalizer->denormalize($value_5, \Docker\Api\Model\Mount::class, 'json', $context);
                 }
                 $object->setMounts($values_5);
             }
@@ -116,7 +116,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setStopGracePeriod($data['StopGracePeriod']);
             }
             if (\array_key_exists('HealthCheck', $data)) {
-                $object->setHealthCheck($this->denormalizer->denormalize($data['HealthCheck'], 'Docker\\Api\\Model\\HealthConfig', 'json', $context));
+                $object->setHealthCheck($this->denormalizer->denormalize($data['HealthCheck'], \Docker\Api\Model\HealthConfig::class, 'json', $context));
             }
             if (\array_key_exists('Hosts', $data)) {
                 $values_6 = [];
@@ -126,19 +126,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setHosts($values_6);
             }
             if (\array_key_exists('DNSConfig', $data)) {
-                $object->setDNSConfig($this->denormalizer->denormalize($data['DNSConfig'], 'Docker\\Api\\Model\\TaskSpecContainerSpecDNSConfig', 'json', $context));
+                $object->setDNSConfig($this->denormalizer->denormalize($data['DNSConfig'], \Docker\Api\Model\TaskSpecContainerSpecDNSConfig::class, 'json', $context));
             }
             if (\array_key_exists('Secrets', $data)) {
                 $values_7 = [];
                 foreach ($data['Secrets'] as $value_7) {
-                    $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem', 'json', $context);
+                    $values_7[] = $this->denormalizer->denormalize($value_7, \Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class, 'json', $context);
                 }
                 $object->setSecrets($values_7);
             }
             if (\array_key_exists('Configs', $data)) {
                 $values_8 = [];
                 foreach ($data['Configs'] as $value_8) {
-                    $values_8[] = $this->denormalizer->denormalize($value_8, 'Docker\\Api\\Model\\TaskSpecContainerSpecConfigsItem', 'json', $context);
+                    $values_8[] = $this->denormalizer->denormalize($value_8, \Docker\Api\Model\TaskSpecContainerSpecConfigsItem::class, 'json', $context);
                 }
                 $object->setConfigs($values_8);
             }
@@ -175,7 +175,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Ulimits', $data)) {
                 $values_12 = [];
                 foreach ($data['Ulimits'] as $value_12) {
-                    $values_12[] = $this->denormalizer->denormalize($value_12, 'Docker\\Api\\Model\\TaskSpecContainerSpecUlimitsItem', 'json', $context);
+                    $values_12[] = $this->denormalizer->denormalize($value_12, \Docker\Api\Model\TaskSpecContainerSpecUlimitsItem::class, 'json', $context);
                 }
                 $object->setUlimits($values_12);
             }
@@ -324,7 +324,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpec' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpec::class => false];
         }
     }
 } else {
@@ -336,7 +336,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpec';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpec::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -408,7 +408,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setGroups($values_4);
             }
             if (\array_key_exists('Privileges', $data)) {
-                $object->setPrivileges($this->denormalizer->denormalize($data['Privileges'], 'Docker\\Api\\Model\\TaskSpecContainerSpecPrivileges', 'json', $context));
+                $object->setPrivileges($this->denormalizer->denormalize($data['Privileges'], \Docker\Api\Model\TaskSpecContainerSpecPrivileges::class, 'json', $context));
             }
             if (\array_key_exists('TTY', $data)) {
                 $object->setTTY($data['TTY']);
@@ -422,7 +422,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Mounts', $data)) {
                 $values_5 = [];
                 foreach ($data['Mounts'] as $value_5) {
-                    $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\\Api\\Model\\Mount', 'json', $context);
+                    $values_5[] = $this->denormalizer->denormalize($value_5, \Docker\Api\Model\Mount::class, 'json', $context);
                 }
                 $object->setMounts($values_5);
             }
@@ -433,7 +433,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setStopGracePeriod($data['StopGracePeriod']);
             }
             if (\array_key_exists('HealthCheck', $data)) {
-                $object->setHealthCheck($this->denormalizer->denormalize($data['HealthCheck'], 'Docker\\Api\\Model\\HealthConfig', 'json', $context));
+                $object->setHealthCheck($this->denormalizer->denormalize($data['HealthCheck'], \Docker\Api\Model\HealthConfig::class, 'json', $context));
             }
             if (\array_key_exists('Hosts', $data)) {
                 $values_6 = [];
@@ -443,19 +443,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setHosts($values_6);
             }
             if (\array_key_exists('DNSConfig', $data)) {
-                $object->setDNSConfig($this->denormalizer->denormalize($data['DNSConfig'], 'Docker\\Api\\Model\\TaskSpecContainerSpecDNSConfig', 'json', $context));
+                $object->setDNSConfig($this->denormalizer->denormalize($data['DNSConfig'], \Docker\Api\Model\TaskSpecContainerSpecDNSConfig::class, 'json', $context));
             }
             if (\array_key_exists('Secrets', $data)) {
                 $values_7 = [];
                 foreach ($data['Secrets'] as $value_7) {
-                    $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem', 'json', $context);
+                    $values_7[] = $this->denormalizer->denormalize($value_7, \Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class, 'json', $context);
                 }
                 $object->setSecrets($values_7);
             }
             if (\array_key_exists('Configs', $data)) {
                 $values_8 = [];
                 foreach ($data['Configs'] as $value_8) {
-                    $values_8[] = $this->denormalizer->denormalize($value_8, 'Docker\\Api\\Model\\TaskSpecContainerSpecConfigsItem', 'json', $context);
+                    $values_8[] = $this->denormalizer->denormalize($value_8, \Docker\Api\Model\TaskSpecContainerSpecConfigsItem::class, 'json', $context);
                 }
                 $object->setConfigs($values_8);
             }
@@ -492,7 +492,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Ulimits', $data)) {
                 $values_12 = [];
                 foreach ($data['Ulimits'] as $value_12) {
-                    $values_12[] = $this->denormalizer->denormalize($value_12, 'Docker\\Api\\Model\\TaskSpecContainerSpecUlimitsItem', 'json', $context);
+                    $values_12[] = $this->denormalizer->denormalize($value_12, \Docker\Api\Model\TaskSpecContainerSpecUlimitsItem::class, 'json', $context);
                 }
                 $object->setUlimits($values_12);
             }
@@ -644,7 +644,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpec' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpec::class => false];
         }
     }
 }

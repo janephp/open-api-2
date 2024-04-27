@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ContainersCreatePostBody';
+            return $type === \Docker\Api\Model\ContainersCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -92,7 +92,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setCmd($values_2);
             }
             if (\array_key_exists('Healthcheck', $data)) {
-                $object->setHealthcheck($this->denormalizer->denormalize($data['Healthcheck'], 'Docker\\Api\\Model\\HealthConfig', 'json', $context));
+                $object->setHealthcheck($this->denormalizer->denormalize($data['Healthcheck'], \Docker\Api\Model\HealthConfig::class, 'json', $context));
             }
             if (\array_key_exists('ArgsEscaped', $data)) {
                 $object->setArgsEscaped($data['ArgsEscaped']);
@@ -151,10 +151,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setShell($values_7);
             }
             if (\array_key_exists('HostConfig', $data)) {
-                $object->setHostConfig($this->denormalizer->denormalize($data['HostConfig'], 'Docker\\Api\\Model\\HostConfig', 'json', $context));
+                $object->setHostConfig($this->denormalizer->denormalize($data['HostConfig'], \Docker\Api\Model\HostConfig::class, 'json', $context));
             }
             if (\array_key_exists('NetworkingConfig', $data)) {
-                $object->setNetworkingConfig($this->denormalizer->denormalize($data['NetworkingConfig'], 'Docker\\Api\\Model\\NetworkingConfig', 'json', $context));
+                $object->setNetworkingConfig($this->denormalizer->denormalize($data['NetworkingConfig'], \Docker\Api\Model\NetworkingConfig::class, 'json', $context));
             }
             return $object;
         }
@@ -281,7 +281,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ContainersCreatePostBody' => false];
+            return [\Docker\Api\Model\ContainersCreatePostBody::class => false];
         }
     }
 } else {
@@ -293,7 +293,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ContainersCreatePostBody';
+            return $type === \Docker\Api\Model\ContainersCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -366,7 +366,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setCmd($values_2);
             }
             if (\array_key_exists('Healthcheck', $data)) {
-                $object->setHealthcheck($this->denormalizer->denormalize($data['Healthcheck'], 'Docker\\Api\\Model\\HealthConfig', 'json', $context));
+                $object->setHealthcheck($this->denormalizer->denormalize($data['Healthcheck'], \Docker\Api\Model\HealthConfig::class, 'json', $context));
             }
             if (\array_key_exists('ArgsEscaped', $data)) {
                 $object->setArgsEscaped($data['ArgsEscaped']);
@@ -425,10 +425,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setShell($values_7);
             }
             if (\array_key_exists('HostConfig', $data)) {
-                $object->setHostConfig($this->denormalizer->denormalize($data['HostConfig'], 'Docker\\Api\\Model\\HostConfig', 'json', $context));
+                $object->setHostConfig($this->denormalizer->denormalize($data['HostConfig'], \Docker\Api\Model\HostConfig::class, 'json', $context));
             }
             if (\array_key_exists('NetworkingConfig', $data)) {
-                $object->setNetworkingConfig($this->denormalizer->denormalize($data['NetworkingConfig'], 'Docker\\Api\\Model\\NetworkingConfig', 'json', $context));
+                $object->setNetworkingConfig($this->denormalizer->denormalize($data['NetworkingConfig'], \Docker\Api\Model\NetworkingConfig::class, 'json', $context));
             }
             return $object;
         }
@@ -558,7 +558,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ContainersCreatePostBody' => false];
+            return [\Docker\Api\Model\ContainersCreatePostBody::class => false];
         }
     }
 }

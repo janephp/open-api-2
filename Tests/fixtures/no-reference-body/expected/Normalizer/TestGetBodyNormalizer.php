@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBody';
+            return $type === \Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,10 +44,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setFoo($data['foo']);
             }
             if (\array_key_exists('Bar', $data)) {
-                $object->setBar($this->denormalizer->denormalize($data['Bar'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Bar', 'json', $context));
+                $object->setBar($this->denormalizer->denormalize($data['Bar'], \Jane\Component\OpenApi2\Tests\Expected\Model\Bar::class, 'json', $context));
             }
             if (\array_key_exists('Baz', $data)) {
-                $object->setBaz($this->denormalizer->denormalize($data['Baz'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBodyBaz', 'json', $context));
+                $object->setBaz($this->denormalizer->denormalize($data['Baz'], \Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBodyBaz::class, 'json', $context));
             }
             return $object;
         }
@@ -67,7 +67,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBody' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBody::class => false];
         }
     }
 } else {
@@ -79,7 +79,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBody';
+            return $type === \Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -104,10 +104,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setFoo($data['foo']);
             }
             if (\array_key_exists('Bar', $data)) {
-                $object->setBar($this->denormalizer->denormalize($data['Bar'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Bar', 'json', $context));
+                $object->setBar($this->denormalizer->denormalize($data['Bar'], \Jane\Component\OpenApi2\Tests\Expected\Model\Bar::class, 'json', $context));
             }
             if (\array_key_exists('Baz', $data)) {
-                $object->setBaz($this->denormalizer->denormalize($data['Baz'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBodyBaz', 'json', $context));
+                $object->setBaz($this->denormalizer->denormalize($data['Baz'], \Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBodyBaz::class, 'json', $context));
             }
             return $object;
         }
@@ -130,7 +130,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestGetBody' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\TestGetBody::class => false];
         }
     }
 }

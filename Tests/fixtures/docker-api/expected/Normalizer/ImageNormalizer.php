@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\Image';
+            return $type === \Docker\Api\Model\Image::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -73,7 +73,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setContainer($data['Container']);
             }
             if (\array_key_exists('ContainerConfig', $data)) {
-                $object->setContainerConfig($this->denormalizer->denormalize($data['ContainerConfig'], 'Docker\\Api\\Model\\ContainerConfig', 'json', $context));
+                $object->setContainerConfig($this->denormalizer->denormalize($data['ContainerConfig'], \Docker\Api\Model\ContainerConfig::class, 'json', $context));
             }
             if (\array_key_exists('DockerVersion', $data)) {
                 $object->setDockerVersion($data['DockerVersion']);
@@ -82,7 +82,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setAuthor($data['Author']);
             }
             if (\array_key_exists('Config', $data)) {
-                $object->setConfig($this->denormalizer->denormalize($data['Config'], 'Docker\\Api\\Model\\ContainerConfig', 'json', $context));
+                $object->setConfig($this->denormalizer->denormalize($data['Config'], \Docker\Api\Model\ContainerConfig::class, 'json', $context));
             }
             if (\array_key_exists('Architecture', $data)) {
                 $object->setArchitecture($data['Architecture']);
@@ -100,13 +100,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setVirtualSize($data['VirtualSize']);
             }
             if (\array_key_exists('GraphDriver', $data)) {
-                $object->setGraphDriver($this->denormalizer->denormalize($data['GraphDriver'], 'Docker\\Api\\Model\\GraphDriverData', 'json', $context));
+                $object->setGraphDriver($this->denormalizer->denormalize($data['GraphDriver'], \Docker\Api\Model\GraphDriverData::class, 'json', $context));
             }
             if (\array_key_exists('RootFS', $data)) {
-                $object->setRootFS($this->denormalizer->denormalize($data['RootFS'], 'Docker\\Api\\Model\\ImageRootFS', 'json', $context));
+                $object->setRootFS($this->denormalizer->denormalize($data['RootFS'], \Docker\Api\Model\ImageRootFS::class, 'json', $context));
             }
             if (\array_key_exists('Metadata', $data)) {
-                $object->setMetadata($this->denormalizer->denormalize($data['Metadata'], 'Docker\\Api\\Model\\ImageMetadata', 'json', $context));
+                $object->setMetadata($this->denormalizer->denormalize($data['Metadata'], \Docker\Api\Model\ImageMetadata::class, 'json', $context));
             }
             return $object;
         }
@@ -159,7 +159,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\Image' => false];
+            return [\Docker\Api\Model\Image::class => false];
         }
     }
 } else {
@@ -171,7 +171,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\Image';
+            return $type === \Docker\Api\Model\Image::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -225,7 +225,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setContainer($data['Container']);
             }
             if (\array_key_exists('ContainerConfig', $data)) {
-                $object->setContainerConfig($this->denormalizer->denormalize($data['ContainerConfig'], 'Docker\\Api\\Model\\ContainerConfig', 'json', $context));
+                $object->setContainerConfig($this->denormalizer->denormalize($data['ContainerConfig'], \Docker\Api\Model\ContainerConfig::class, 'json', $context));
             }
             if (\array_key_exists('DockerVersion', $data)) {
                 $object->setDockerVersion($data['DockerVersion']);
@@ -234,7 +234,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setAuthor($data['Author']);
             }
             if (\array_key_exists('Config', $data)) {
-                $object->setConfig($this->denormalizer->denormalize($data['Config'], 'Docker\\Api\\Model\\ContainerConfig', 'json', $context));
+                $object->setConfig($this->denormalizer->denormalize($data['Config'], \Docker\Api\Model\ContainerConfig::class, 'json', $context));
             }
             if (\array_key_exists('Architecture', $data)) {
                 $object->setArchitecture($data['Architecture']);
@@ -252,13 +252,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setVirtualSize($data['VirtualSize']);
             }
             if (\array_key_exists('GraphDriver', $data)) {
-                $object->setGraphDriver($this->denormalizer->denormalize($data['GraphDriver'], 'Docker\\Api\\Model\\GraphDriverData', 'json', $context));
+                $object->setGraphDriver($this->denormalizer->denormalize($data['GraphDriver'], \Docker\Api\Model\GraphDriverData::class, 'json', $context));
             }
             if (\array_key_exists('RootFS', $data)) {
-                $object->setRootFS($this->denormalizer->denormalize($data['RootFS'], 'Docker\\Api\\Model\\ImageRootFS', 'json', $context));
+                $object->setRootFS($this->denormalizer->denormalize($data['RootFS'], \Docker\Api\Model\ImageRootFS::class, 'json', $context));
             }
             if (\array_key_exists('Metadata', $data)) {
-                $object->setMetadata($this->denormalizer->denormalize($data['Metadata'], 'Docker\\Api\\Model\\ImageMetadata', 'json', $context));
+                $object->setMetadata($this->denormalizer->denormalize($data['Metadata'], \Docker\Api\Model\ImageMetadata::class, 'json', $context));
             }
             return $object;
         }
@@ -314,7 +314,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\Image' => false];
+            return [\Docker\Api\Model\Image::class => false];
         }
     }
 }

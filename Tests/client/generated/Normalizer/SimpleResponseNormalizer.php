@@ -24,7 +24,7 @@ class SimpleResponseNormalizer implements DenormalizerInterface, NormalizerInter
     {
         return is_object($data) && get_class($data) === 'Jane\\Component\\OpenApi2\\Tests\\Client\\Model\\SimpleResponse';
     }
-    public function denormalize($data, public function normalize(mixed $object, string $format = null, array $context = []) : array|string|int|float|bool|\ArrayObject|null, $format = null, array $context = array())
+    public function denormalize($data, public function normalize(mixed $object, string $format = null, array $context = []) : array|string|int|float|bool|\ArrayObject|null, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -46,7 +46,7 @@ class SimpleResponseNormalizer implements DenormalizerInterface, NormalizerInter
     }
     public function normalize(mixed $object, string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getFoo()) {
             $data['foo'] = $object->getFoo();
         }

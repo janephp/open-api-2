@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project';
+            return $type === \Jane\OpenApi2\Tests\Expected\Model\Project::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -59,7 +59,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setId($data['id']);
             }
             if (\array_key_exists('client', $data)) {
-                $object->setClient($this->denormalizer->denormalize($data['client'], 'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient', 'json', $context));
+                $object->setClient($this->denormalizer->denormalize($data['client'], \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class, 'json', $context));
             }
             if (\array_key_exists('name', $data)) {
                 $object->setName($data['name']);
@@ -208,7 +208,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Project::class => false];
         }
     }
 } else {
@@ -220,7 +220,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project';
+            return $type === \Jane\OpenApi2\Tests\Expected\Model\Project::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -260,7 +260,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setId($data['id']);
             }
             if (\array_key_exists('client', $data)) {
-                $object->setClient($this->denormalizer->denormalize($data['client'], 'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient', 'json', $context));
+                $object->setClient($this->denormalizer->denormalize($data['client'], \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class, 'json', $context));
             }
             if (\array_key_exists('name', $data)) {
                 $object->setName($data['name']);
@@ -412,7 +412,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Project::class => false];
         }
     }
 }

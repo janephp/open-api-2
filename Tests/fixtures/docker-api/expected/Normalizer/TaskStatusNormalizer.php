@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskStatus';
+            return $type === \Docker\Api\Model\TaskStatus::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -56,7 +56,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setErr($data['Err']);
             }
             if (\array_key_exists('ContainerStatus', $data)) {
-                $object->setContainerStatus($this->denormalizer->denormalize($data['ContainerStatus'], 'Docker\\Api\\Model\\TaskStatusContainerStatus', 'json', $context));
+                $object->setContainerStatus($this->denormalizer->denormalize($data['ContainerStatus'], \Docker\Api\Model\TaskStatusContainerStatus::class, 'json', $context));
             }
             return $object;
         }
@@ -85,7 +85,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskStatus' => false];
+            return [\Docker\Api\Model\TaskStatus::class => false];
         }
     }
 } else {
@@ -97,7 +97,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskStatus';
+            return $type === \Docker\Api\Model\TaskStatus::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -134,7 +134,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setErr($data['Err']);
             }
             if (\array_key_exists('ContainerStatus', $data)) {
-                $object->setContainerStatus($this->denormalizer->denormalize($data['ContainerStatus'], 'Docker\\Api\\Model\\TaskStatusContainerStatus', 'json', $context));
+                $object->setContainerStatus($this->denormalizer->denormalize($data['ContainerStatus'], \Docker\Api\Model\TaskStatusContainerStatus::class, 'json', $context));
             }
             return $object;
         }
@@ -166,7 +166,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskStatus' => false];
+            return [\Docker\Api\Model\TaskStatus::class => false];
         }
     }
 }

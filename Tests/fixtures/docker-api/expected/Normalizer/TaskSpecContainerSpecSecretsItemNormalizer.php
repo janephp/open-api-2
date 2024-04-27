@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,7 +44,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('File', $data)) {
-                $object->setFile($this->denormalizer->denormalize($data['File'], 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItemFile', 'json', $context));
+                $object->setFile($this->denormalizer->denormalize($data['File'], \Docker\Api\Model\TaskSpecContainerSpecSecretsItemFile::class, 'json', $context));
             }
             if (\array_key_exists('SecretID', $data)) {
                 $object->setSecretID($data['SecretID']);
@@ -73,7 +73,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class => false];
         }
     }
 } else {
@@ -85,7 +85,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem';
+            return $type === \Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -110,7 +110,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('File', $data)) {
-                $object->setFile($this->denormalizer->denormalize($data['File'], 'Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItemFile', 'json', $context));
+                $object->setFile($this->denormalizer->denormalize($data['File'], \Docker\Api\Model\TaskSpecContainerSpecSecretsItemFile::class, 'json', $context));
             }
             if (\array_key_exists('SecretID', $data)) {
                 $object->setSecretID($data['SecretID']);
@@ -142,7 +142,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\TaskSpecContainerSpecSecretsItem' => false];
+            return [\Docker\Api\Model\TaskSpecContainerSpecSecretsItem::class => false];
         }
     }
 }

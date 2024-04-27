@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\BuildInfo';
+            return $type === \Docker\Api\Model\BuildInfo::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -53,7 +53,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setError($data['error']);
             }
             if (\array_key_exists('errorDetail', $data)) {
-                $object->setErrorDetail($this->denormalizer->denormalize($data['errorDetail'], 'Docker\\Api\\Model\\ErrorDetail', 'json', $context));
+                $object->setErrorDetail($this->denormalizer->denormalize($data['errorDetail'], \Docker\Api\Model\ErrorDetail::class, 'json', $context));
             }
             if (\array_key_exists('status', $data)) {
                 $object->setStatus($data['status']);
@@ -62,10 +62,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setProgress($data['progress']);
             }
             if (\array_key_exists('progressDetail', $data)) {
-                $object->setProgressDetail($this->denormalizer->denormalize($data['progressDetail'], 'Docker\\Api\\Model\\ProgressDetail', 'json', $context));
+                $object->setProgressDetail($this->denormalizer->denormalize($data['progressDetail'], \Docker\Api\Model\ProgressDetail::class, 'json', $context));
             }
             if (\array_key_exists('aux', $data)) {
-                $object->setAux($this->denormalizer->denormalize($data['aux'], 'Docker\\Api\\Model\\ImageID', 'json', $context));
+                $object->setAux($this->denormalizer->denormalize($data['aux'], \Docker\Api\Model\ImageID::class, 'json', $context));
             }
             return $object;
         }
@@ -103,7 +103,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\BuildInfo' => false];
+            return [\Docker\Api\Model\BuildInfo::class => false];
         }
     }
 } else {
@@ -115,7 +115,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\BuildInfo';
+            return $type === \Docker\Api\Model\BuildInfo::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -149,7 +149,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setError($data['error']);
             }
             if (\array_key_exists('errorDetail', $data)) {
-                $object->setErrorDetail($this->denormalizer->denormalize($data['errorDetail'], 'Docker\\Api\\Model\\ErrorDetail', 'json', $context));
+                $object->setErrorDetail($this->denormalizer->denormalize($data['errorDetail'], \Docker\Api\Model\ErrorDetail::class, 'json', $context));
             }
             if (\array_key_exists('status', $data)) {
                 $object->setStatus($data['status']);
@@ -158,10 +158,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setProgress($data['progress']);
             }
             if (\array_key_exists('progressDetail', $data)) {
-                $object->setProgressDetail($this->denormalizer->denormalize($data['progressDetail'], 'Docker\\Api\\Model\\ProgressDetail', 'json', $context));
+                $object->setProgressDetail($this->denormalizer->denormalize($data['progressDetail'], \Docker\Api\Model\ProgressDetail::class, 'json', $context));
             }
             if (\array_key_exists('aux', $data)) {
-                $object->setAux($this->denormalizer->denormalize($data['aux'], 'Docker\\Api\\Model\\ImageID', 'json', $context));
+                $object->setAux($this->denormalizer->denormalize($data['aux'], \Docker\Api\Model\ImageID::class, 'json', $context));
             }
             return $object;
         }
@@ -202,7 +202,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\BuildInfo' => false];
+            return [\Docker\Api\Model\BuildInfo::class => false];
         }
     }
 }

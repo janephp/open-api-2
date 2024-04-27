@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\GenericResourcesItem';
+            return $type === \Docker\Api\Model\GenericResourcesItem::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,10 +44,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('NamedResourceSpec', $data)) {
-                $object->setNamedResourceSpec($this->denormalizer->denormalize($data['NamedResourceSpec'], 'Docker\\Api\\Model\\GenericResourcesItemNamedResourceSpec', 'json', $context));
+                $object->setNamedResourceSpec($this->denormalizer->denormalize($data['NamedResourceSpec'], \Docker\Api\Model\GenericResourcesItemNamedResourceSpec::class, 'json', $context));
             }
             if (\array_key_exists('DiscreteResourceSpec', $data)) {
-                $object->setDiscreteResourceSpec($this->denormalizer->denormalize($data['DiscreteResourceSpec'], 'Docker\\Api\\Model\\GenericResourcesItemDiscreteResourceSpec', 'json', $context));
+                $object->setDiscreteResourceSpec($this->denormalizer->denormalize($data['DiscreteResourceSpec'], \Docker\Api\Model\GenericResourcesItemDiscreteResourceSpec::class, 'json', $context));
             }
             return $object;
         }
@@ -67,7 +67,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\GenericResourcesItem' => false];
+            return [\Docker\Api\Model\GenericResourcesItem::class => false];
         }
     }
 } else {
@@ -79,7 +79,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\GenericResourcesItem';
+            return $type === \Docker\Api\Model\GenericResourcesItem::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -104,10 +104,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('NamedResourceSpec', $data)) {
-                $object->setNamedResourceSpec($this->denormalizer->denormalize($data['NamedResourceSpec'], 'Docker\\Api\\Model\\GenericResourcesItemNamedResourceSpec', 'json', $context));
+                $object->setNamedResourceSpec($this->denormalizer->denormalize($data['NamedResourceSpec'], \Docker\Api\Model\GenericResourcesItemNamedResourceSpec::class, 'json', $context));
             }
             if (\array_key_exists('DiscreteResourceSpec', $data)) {
-                $object->setDiscreteResourceSpec($this->denormalizer->denormalize($data['DiscreteResourceSpec'], 'Docker\\Api\\Model\\GenericResourcesItemDiscreteResourceSpec', 'json', $context));
+                $object->setDiscreteResourceSpec($this->denormalizer->denormalize($data['DiscreteResourceSpec'], \Docker\Api\Model\GenericResourcesItemDiscreteResourceSpec::class, 'json', $context));
             }
             return $object;
         }
@@ -130,7 +130,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\GenericResourcesItem' => false];
+            return [\Docker\Api\Model\GenericResourcesItem::class => false];
         }
     }
 }

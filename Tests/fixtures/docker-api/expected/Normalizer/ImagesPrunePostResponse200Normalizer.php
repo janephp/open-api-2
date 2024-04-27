@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ImagesPrunePostResponse200';
+            return $type === \Docker\Api\Model\ImagesPrunePostResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -46,7 +46,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('ImagesDeleted', $data)) {
                 $values = [];
                 foreach ($data['ImagesDeleted'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\ImageDeleteResponseItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\ImageDeleteResponseItem::class, 'json', $context);
                 }
                 $object->setImagesDeleted($values);
             }
@@ -75,7 +75,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ImagesPrunePostResponse200' => false];
+            return [\Docker\Api\Model\ImagesPrunePostResponse200::class => false];
         }
     }
 } else {
@@ -87,7 +87,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ImagesPrunePostResponse200';
+            return $type === \Docker\Api\Model\ImagesPrunePostResponse200::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -114,7 +114,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('ImagesDeleted', $data)) {
                 $values = [];
                 foreach ($data['ImagesDeleted'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\ImageDeleteResponseItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\ImageDeleteResponseItem::class, 'json', $context);
                 }
                 $object->setImagesDeleted($values);
             }
@@ -146,7 +146,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ImagesPrunePostResponse200' => false];
+            return [\Docker\Api\Model\ImagesPrunePostResponse200::class => false];
         }
     }
 }

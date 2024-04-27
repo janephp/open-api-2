@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ResourceObject';
+            return $type === \Docker\Api\Model\ResourceObject::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -52,7 +52,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('GenericResources', $data)) {
                 $values = [];
                 foreach ($data['GenericResources'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\GenericResourcesItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\GenericResourcesItem::class, 'json', $context);
                 }
                 $object->setGenericResources($values);
             }
@@ -81,7 +81,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ResourceObject' => false];
+            return [\Docker\Api\Model\ResourceObject::class => false];
         }
     }
 } else {
@@ -93,7 +93,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ResourceObject';
+            return $type === \Docker\Api\Model\ResourceObject::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -126,7 +126,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('GenericResources', $data)) {
                 $values = [];
                 foreach ($data['GenericResources'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\GenericResourcesItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\GenericResourcesItem::class, 'json', $context);
                 }
                 $object->setGenericResources($values);
             }
@@ -158,7 +158,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ResourceObject' => false];
+            return [\Docker\Api\Model\ResourceObject::class => false];
         }
     }
 }

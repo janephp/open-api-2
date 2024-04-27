@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SwarmSpecCAConfig';
+            return $type === \Docker\Api\Model\SwarmSpecCAConfig::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -49,7 +49,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('ExternalCAs', $data)) {
                 $values = [];
                 foreach ($data['ExternalCAs'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\SwarmSpecCAConfigExternalCAsItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\SwarmSpecCAConfigExternalCAsItem::class, 'json', $context);
                 }
                 $object->setExternalCAs($values);
             }
@@ -93,7 +93,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SwarmSpecCAConfig' => false];
+            return [\Docker\Api\Model\SwarmSpecCAConfig::class => false];
         }
     }
 } else {
@@ -105,7 +105,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SwarmSpecCAConfig';
+            return $type === \Docker\Api\Model\SwarmSpecCAConfig::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -135,7 +135,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('ExternalCAs', $data)) {
                 $values = [];
                 foreach ($data['ExternalCAs'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\SwarmSpecCAConfigExternalCAsItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\SwarmSpecCAConfigExternalCAsItem::class, 'json', $context);
                 }
                 $object->setExternalCAs($values);
             }
@@ -182,7 +182,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SwarmSpecCAConfig' => false];
+            return [\Docker\Api\Model\SwarmSpecCAConfig::class => false];
         }
     }
 }

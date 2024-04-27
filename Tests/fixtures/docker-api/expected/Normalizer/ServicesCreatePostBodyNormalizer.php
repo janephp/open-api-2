@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ServicesCreatePostBody';
+            return $type === \Docker\Api\Model\ServicesCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -54,26 +54,26 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setLabels($values);
             }
             if (\array_key_exists('TaskTemplate', $data)) {
-                $object->setTaskTemplate($this->denormalizer->denormalize($data['TaskTemplate'], 'Docker\\Api\\Model\\TaskSpec', 'json', $context));
+                $object->setTaskTemplate($this->denormalizer->denormalize($data['TaskTemplate'], \Docker\Api\Model\TaskSpec::class, 'json', $context));
             }
             if (\array_key_exists('Mode', $data)) {
-                $object->setMode($this->denormalizer->denormalize($data['Mode'], 'Docker\\Api\\Model\\ServiceSpecMode', 'json', $context));
+                $object->setMode($this->denormalizer->denormalize($data['Mode'], \Docker\Api\Model\ServiceSpecMode::class, 'json', $context));
             }
             if (\array_key_exists('UpdateConfig', $data)) {
-                $object->setUpdateConfig($this->denormalizer->denormalize($data['UpdateConfig'], 'Docker\\Api\\Model\\ServiceSpecUpdateConfig', 'json', $context));
+                $object->setUpdateConfig($this->denormalizer->denormalize($data['UpdateConfig'], \Docker\Api\Model\ServiceSpecUpdateConfig::class, 'json', $context));
             }
             if (\array_key_exists('RollbackConfig', $data)) {
-                $object->setRollbackConfig($this->denormalizer->denormalize($data['RollbackConfig'], 'Docker\\Api\\Model\\ServiceSpecRollbackConfig', 'json', $context));
+                $object->setRollbackConfig($this->denormalizer->denormalize($data['RollbackConfig'], \Docker\Api\Model\ServiceSpecRollbackConfig::class, 'json', $context));
             }
             if (\array_key_exists('Networks', $data)) {
                 $values_1 = [];
                 foreach ($data['Networks'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\\Api\\Model\\NetworkAttachmentConfig', 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \Docker\Api\Model\NetworkAttachmentConfig::class, 'json', $context);
                 }
                 $object->setNetworks($values_1);
             }
             if (\array_key_exists('EndpointSpec', $data)) {
-                $object->setEndpointSpec($this->denormalizer->denormalize($data['EndpointSpec'], 'Docker\\Api\\Model\\EndpointSpec', 'json', $context));
+                $object->setEndpointSpec($this->denormalizer->denormalize($data['EndpointSpec'], \Docker\Api\Model\EndpointSpec::class, 'json', $context));
             }
             return $object;
         }
@@ -119,7 +119,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ServicesCreatePostBody' => false];
+            return [\Docker\Api\Model\ServicesCreatePostBody::class => false];
         }
     }
 } else {
@@ -131,7 +131,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ServicesCreatePostBody';
+            return $type === \Docker\Api\Model\ServicesCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -166,26 +166,26 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setLabels($values);
             }
             if (\array_key_exists('TaskTemplate', $data)) {
-                $object->setTaskTemplate($this->denormalizer->denormalize($data['TaskTemplate'], 'Docker\\Api\\Model\\TaskSpec', 'json', $context));
+                $object->setTaskTemplate($this->denormalizer->denormalize($data['TaskTemplate'], \Docker\Api\Model\TaskSpec::class, 'json', $context));
             }
             if (\array_key_exists('Mode', $data)) {
-                $object->setMode($this->denormalizer->denormalize($data['Mode'], 'Docker\\Api\\Model\\ServiceSpecMode', 'json', $context));
+                $object->setMode($this->denormalizer->denormalize($data['Mode'], \Docker\Api\Model\ServiceSpecMode::class, 'json', $context));
             }
             if (\array_key_exists('UpdateConfig', $data)) {
-                $object->setUpdateConfig($this->denormalizer->denormalize($data['UpdateConfig'], 'Docker\\Api\\Model\\ServiceSpecUpdateConfig', 'json', $context));
+                $object->setUpdateConfig($this->denormalizer->denormalize($data['UpdateConfig'], \Docker\Api\Model\ServiceSpecUpdateConfig::class, 'json', $context));
             }
             if (\array_key_exists('RollbackConfig', $data)) {
-                $object->setRollbackConfig($this->denormalizer->denormalize($data['RollbackConfig'], 'Docker\\Api\\Model\\ServiceSpecRollbackConfig', 'json', $context));
+                $object->setRollbackConfig($this->denormalizer->denormalize($data['RollbackConfig'], \Docker\Api\Model\ServiceSpecRollbackConfig::class, 'json', $context));
             }
             if (\array_key_exists('Networks', $data)) {
                 $values_1 = [];
                 foreach ($data['Networks'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\\Api\\Model\\NetworkAttachmentConfig', 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \Docker\Api\Model\NetworkAttachmentConfig::class, 'json', $context);
                 }
                 $object->setNetworks($values_1);
             }
             if (\array_key_exists('EndpointSpec', $data)) {
-                $object->setEndpointSpec($this->denormalizer->denormalize($data['EndpointSpec'], 'Docker\\Api\\Model\\EndpointSpec', 'json', $context));
+                $object->setEndpointSpec($this->denormalizer->denormalize($data['EndpointSpec'], \Docker\Api\Model\EndpointSpec::class, 'json', $context));
             }
             return $object;
         }
@@ -234,7 +234,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ServicesCreatePostBody' => false];
+            return [\Docker\Api\Model\ServicesCreatePostBody::class => false];
         }
     }
 }

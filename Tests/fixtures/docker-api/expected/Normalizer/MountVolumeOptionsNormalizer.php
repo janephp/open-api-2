@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\MountVolumeOptions';
+            return $type === \Docker\Api\Model\MountVolumeOptions::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -54,7 +54,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setLabels($values);
             }
             if (\array_key_exists('DriverConfig', $data)) {
-                $object->setDriverConfig($this->denormalizer->denormalize($data['DriverConfig'], 'Docker\\Api\\Model\\MountVolumeOptionsDriverConfig', 'json', $context));
+                $object->setDriverConfig($this->denormalizer->denormalize($data['DriverConfig'], \Docker\Api\Model\MountVolumeOptionsDriverConfig::class, 'json', $context));
             }
             return $object;
         }
@@ -81,7 +81,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\MountVolumeOptions' => false];
+            return [\Docker\Api\Model\MountVolumeOptions::class => false];
         }
     }
 } else {
@@ -93,7 +93,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\MountVolumeOptions';
+            return $type === \Docker\Api\Model\MountVolumeOptions::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -128,7 +128,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setLabels($values);
             }
             if (\array_key_exists('DriverConfig', $data)) {
-                $object->setDriverConfig($this->denormalizer->denormalize($data['DriverConfig'], 'Docker\\Api\\Model\\MountVolumeOptionsDriverConfig', 'json', $context));
+                $object->setDriverConfig($this->denormalizer->denormalize($data['DriverConfig'], \Docker\Api\Model\MountVolumeOptionsDriverConfig::class, 'json', $context));
             }
             return $object;
         }
@@ -158,7 +158,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\MountVolumeOptions' => false];
+            return [\Docker\Api\Model\MountVolumeOptions::class => false];
         }
     }
 }

@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\NetworksCreatePostBody';
+            return $type === \Docker\Api\Model\NetworksCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -62,7 +62,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setIngress($data['Ingress']);
             }
             if (\array_key_exists('IPAM', $data)) {
-                $object->setIPAM($this->denormalizer->denormalize($data['IPAM'], 'Docker\\Api\\Model\\IPAM', 'json', $context));
+                $object->setIPAM($this->denormalizer->denormalize($data['IPAM'], \Docker\Api\Model\IPAM::class, 'json', $context));
             }
             if (\array_key_exists('EnableIPv6', $data)) {
                 $object->setEnableIPv6($data['EnableIPv6']);
@@ -129,7 +129,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\NetworksCreatePostBody' => false];
+            return [\Docker\Api\Model\NetworksCreatePostBody::class => false];
         }
     }
 } else {
@@ -141,7 +141,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\NetworksCreatePostBody';
+            return $type === \Docker\Api\Model\NetworksCreatePostBody::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -184,7 +184,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setIngress($data['Ingress']);
             }
             if (\array_key_exists('IPAM', $data)) {
-                $object->setIPAM($this->denormalizer->denormalize($data['IPAM'], 'Docker\\Api\\Model\\IPAM', 'json', $context));
+                $object->setIPAM($this->denormalizer->denormalize($data['IPAM'], \Docker\Api\Model\IPAM::class, 'json', $context));
             }
             if (\array_key_exists('EnableIPv6', $data)) {
                 $object->setEnableIPv6($data['EnableIPv6']);
@@ -254,7 +254,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\NetworksCreatePostBody' => false];
+            return [\Docker\Api\Model\NetworksCreatePostBody::class => false];
         }
     }
 }

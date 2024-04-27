@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\PluginConfigInterface';
+            return $type === \Docker\Api\Model\PluginConfigInterface::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -46,7 +46,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Types', $data)) {
                 $values = [];
                 foreach ($data['Types'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\PluginInterfaceType', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\PluginInterfaceType::class, 'json', $context);
                 }
                 $object->setTypes($values);
             }
@@ -77,7 +77,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\PluginConfigInterface' => false];
+            return [\Docker\Api\Model\PluginConfigInterface::class => false];
         }
     }
 } else {
@@ -89,7 +89,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\PluginConfigInterface';
+            return $type === \Docker\Api\Model\PluginConfigInterface::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -116,7 +116,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('Types', $data)) {
                 $values = [];
                 foreach ($data['Types'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\PluginInterfaceType', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\PluginInterfaceType::class, 'json', $context);
                 }
                 $object->setTypes($values);
             }
@@ -150,7 +150,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\PluginConfigInterface' => false];
+            return [\Docker\Api\Model\PluginConfigInterface::class => false];
         }
     }
 }

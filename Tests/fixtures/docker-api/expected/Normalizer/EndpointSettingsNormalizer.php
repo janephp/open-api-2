@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\EndpointSettings';
+            return $type === \Docker\Api\Model\EndpointSettings::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,7 +44,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('IPAMConfig', $data) && $data['IPAMConfig'] !== null) {
-                $object->setIPAMConfig($this->denormalizer->denormalize($data['IPAMConfig'], 'Docker\\Api\\Model\\EndpointIPAMConfig', 'json', $context));
+                $object->setIPAMConfig($this->denormalizer->denormalize($data['IPAMConfig'], \Docker\Api\Model\EndpointIPAMConfig::class, 'json', $context));
             }
             elseif (\array_key_exists('IPAMConfig', $data) && $data['IPAMConfig'] === null) {
                 $object->setIPAMConfig(null);
@@ -163,7 +163,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\EndpointSettings' => false];
+            return [\Docker\Api\Model\EndpointSettings::class => false];
         }
     }
 } else {
@@ -175,7 +175,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\EndpointSettings';
+            return $type === \Docker\Api\Model\EndpointSettings::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -200,7 +200,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('IPAMConfig', $data) && $data['IPAMConfig'] !== null) {
-                $object->setIPAMConfig($this->denormalizer->denormalize($data['IPAMConfig'], 'Docker\\Api\\Model\\EndpointIPAMConfig', 'json', $context));
+                $object->setIPAMConfig($this->denormalizer->denormalize($data['IPAMConfig'], \Docker\Api\Model\EndpointIPAMConfig::class, 'json', $context));
             }
             elseif (\array_key_exists('IPAMConfig', $data) && $data['IPAMConfig'] === null) {
                 $object->setIPAMConfig(null);
@@ -322,7 +322,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\EndpointSettings' => false];
+            return [\Docker\Api\Model\EndpointSettings::class => false];
         }
     }
 }

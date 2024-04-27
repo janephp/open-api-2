@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema';
+            return $type === \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -67,10 +67,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setMapProperty($values_1);
             }
             if (\array_key_exists('objectProperty', $data)) {
-                $object->setObjectProperty($this->denormalizer->denormalize($data['objectProperty'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty', 'json', $context));
+                $object->setObjectProperty($this->denormalizer->denormalize($data['objectProperty'], \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class, 'json', $context));
             }
             if (\array_key_exists('objectRefProperty', $data)) {
-                $object->setObjectRefProperty($this->denormalizer->denormalize($data['objectRefProperty'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema', 'json', $context));
+                $object->setObjectRefProperty($this->denormalizer->denormalize($data['objectRefProperty'], \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class, 'json', $context));
             }
             return $object;
         }
@@ -110,7 +110,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => false];
         }
     }
 } else {
@@ -122,7 +122,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema';
+            return $type === \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -170,10 +170,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setMapProperty($values_1);
             }
             if (\array_key_exists('objectProperty', $data)) {
-                $object->setObjectProperty($this->denormalizer->denormalize($data['objectProperty'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty', 'json', $context));
+                $object->setObjectProperty($this->denormalizer->denormalize($data['objectProperty'], \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class, 'json', $context));
             }
             if (\array_key_exists('objectRefProperty', $data)) {
-                $object->setObjectRefProperty($this->denormalizer->denormalize($data['objectRefProperty'], 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema', 'json', $context));
+                $object->setObjectRefProperty($this->denormalizer->denormalize($data['objectRefProperty'], \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class, 'json', $context));
             }
             return $object;
         }
@@ -216,7 +216,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => false];
         }
     }
 }

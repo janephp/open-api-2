@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SystemVersion';
+            return $type === \Docker\Api\Model\SystemVersion::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,12 +44,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Platform', $data)) {
-                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], 'Docker\\Api\\Model\\SystemVersionPlatform', 'json', $context));
+                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], \Docker\Api\Model\SystemVersionPlatform::class, 'json', $context));
             }
             if (\array_key_exists('Components', $data)) {
                 $values = [];
                 foreach ($data['Components'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\SystemVersionComponentsItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\SystemVersionComponentsItem::class, 'json', $context);
                 }
                 $object->setComponents($values);
             }
@@ -135,7 +135,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SystemVersion' => false];
+            return [\Docker\Api\Model\SystemVersion::class => false];
         }
     }
 } else {
@@ -147,7 +147,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\SystemVersion';
+            return $type === \Docker\Api\Model\SystemVersion::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -172,12 +172,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Platform', $data)) {
-                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], 'Docker\\Api\\Model\\SystemVersionPlatform', 'json', $context));
+                $object->setPlatform($this->denormalizer->denormalize($data['Platform'], \Docker\Api\Model\SystemVersionPlatform::class, 'json', $context));
             }
             if (\array_key_exists('Components', $data)) {
                 $values = [];
                 foreach ($data['Components'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\SystemVersionComponentsItem', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\SystemVersionComponentsItem::class, 'json', $context);
                 }
                 $object->setComponents($values);
             }
@@ -266,7 +266,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\SystemVersion' => false];
+            return [\Docker\Api\Model\SystemVersion::class => false];
         }
     }
 }

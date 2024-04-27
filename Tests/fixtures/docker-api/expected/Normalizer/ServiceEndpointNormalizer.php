@@ -22,7 +22,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ServiceEndpoint';
+            return $type === \Docker\Api\Model\ServiceEndpoint::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -44,19 +44,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Spec', $data)) {
-                $object->setSpec($this->denormalizer->denormalize($data['Spec'], 'Docker\\Api\\Model\\EndpointSpec', 'json', $context));
+                $object->setSpec($this->denormalizer->denormalize($data['Spec'], \Docker\Api\Model\EndpointSpec::class, 'json', $context));
             }
             if (\array_key_exists('Ports', $data)) {
                 $values = [];
                 foreach ($data['Ports'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\EndpointPortConfig', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\EndpointPortConfig::class, 'json', $context);
                 }
                 $object->setPorts($values);
             }
             if (\array_key_exists('VirtualIPs', $data)) {
                 $values_1 = [];
                 foreach ($data['VirtualIPs'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\\Api\\Model\\ServiceEndpointVirtualIPsItem', 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \Docker\Api\Model\ServiceEndpointVirtualIPsItem::class, 'json', $context);
                 }
                 $object->setVirtualIPs($values_1);
             }
@@ -89,7 +89,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ServiceEndpoint' => false];
+            return [\Docker\Api\Model\ServiceEndpoint::class => false];
         }
     }
 } else {
@@ -101,7 +101,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use ValidatorTrait;
         public function supportsDenormalization($data, $type, string $format = null, array $context = []) : bool
         {
-            return $type === 'Docker\\Api\\Model\\ServiceEndpoint';
+            return $type === \Docker\Api\Model\ServiceEndpoint::class;
         }
         public function supportsNormalization(mixed $data, string $format = null, array $context = []) : bool
         {
@@ -126,19 +126,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
             if (\array_key_exists('Spec', $data)) {
-                $object->setSpec($this->denormalizer->denormalize($data['Spec'], 'Docker\\Api\\Model\\EndpointSpec', 'json', $context));
+                $object->setSpec($this->denormalizer->denormalize($data['Spec'], \Docker\Api\Model\EndpointSpec::class, 'json', $context));
             }
             if (\array_key_exists('Ports', $data)) {
                 $values = [];
                 foreach ($data['Ports'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, 'Docker\\Api\\Model\\EndpointPortConfig', 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \Docker\Api\Model\EndpointPortConfig::class, 'json', $context);
                 }
                 $object->setPorts($values);
             }
             if (\array_key_exists('VirtualIPs', $data)) {
                 $values_1 = [];
                 foreach ($data['VirtualIPs'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\\Api\\Model\\ServiceEndpointVirtualIPsItem', 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \Docker\Api\Model\ServiceEndpointVirtualIPsItem::class, 'json', $context);
                 }
                 $object->setVirtualIPs($values_1);
             }
@@ -174,7 +174,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Docker\\Api\\Model\\ServiceEndpoint' => false];
+            return [\Docker\Api\Model\ServiceEndpoint::class => false];
         }
     }
 }
