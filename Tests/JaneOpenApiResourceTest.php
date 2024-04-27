@@ -82,8 +82,8 @@ class JaneOpenApiResourceTest extends TestCase
 
         $data = [];
 
-        foreach ($finder as $directory) {
-            $data[] = [$directory->getFilename(), $directory];
+        foreach ($finder as $key => $directory) {
+            $data[str_replace(__DIR__ . '/fixtures/', 'fixtures-', $key)] = [$directory->getFilename(), $directory];
         }
 
         return $data;
