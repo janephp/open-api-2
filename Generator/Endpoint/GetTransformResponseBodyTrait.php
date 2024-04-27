@@ -10,7 +10,6 @@ use Jane\Component\OpenApi2\JsonSchema\Model\Schema;
 use Jane\Component\OpenApiCommon\Generator\ExceptionGenerator;
 use Jane\Component\OpenApiCommon\Guesser\Guess\OperationGuess;
 use PhpParser\Comment\Doc;
-use PhpParser\Modifiers;
 use PhpParser\Node;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr;
@@ -90,7 +89,7 @@ trait GetTransformResponseBodyTrait
             . ' * @return ' . implode('|', $outputTypes);
 
         return [new Stmt\ClassMethod('transformResponseBody', [
-            'type' => Modifiers::PROTECTED,
+            'type' => Stmt\Class_::MODIFIER_PROTECTED,
             'params' => [
                 new Node\Param(new Expr\Variable('response'), null, new Name('\\Psr\\Http\\Message\\ResponseInterface')),
                 new Node\Param(new Expr\Variable('serializer'), null, new Name\FullyQualified(SerializerInterface::class)),

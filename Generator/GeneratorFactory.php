@@ -11,17 +11,13 @@ use Jane\Component\OpenApiCommon\Naming\ChainOperationNaming;
 use Jane\Component\OpenApiCommon\Naming\OperationIdNaming;
 use Jane\Component\OpenApiCommon\Naming\OperationUrlNaming;
 use PhpParser\ParserFactory;
-use PhpParser\PhpVersion;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
 class GeneratorFactory
 {
-    public static function build(DenormalizerInterface $serializer, string $endpointGeneratorClass, ?string $phpVersion): GeneratorInterface
+    public static function build(DenormalizerInterface $serializer, string $endpointGeneratorClass): GeneratorInterface
     {
-        $parser = is_string($phpVersion)
-            ? (new ParserFactory())->createForVersion(PhpVersion::fromString($phpVersion))
-            : (new ParserFactory())->createForHostVersion()
-        ;
+        $parser = (new ParserFactory())->createForHostVersion();
 
         $bodyParameter = new BodyParameterGenerator($parser, $serializer);
         $nonBodyParameter = new NonBodyParameterGenerator($parser);
