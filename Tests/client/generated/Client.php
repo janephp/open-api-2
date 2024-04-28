@@ -29,7 +29,10 @@ class Client extends \Jane\Component\OpenApi2\Tests\Client\Runtime\Client\Client
         }
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
-        $serializer = new \Symfony\Component\Serializer\Serializer([new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \Jane\Component\OpenApi2\Tests\Client\Normalizer\JaneObjectNormalizer()), [new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode(['json_decode_associative' => true)))));
+        $serializer = new \Symfony\Component\Serializer\Serializer(
+            [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \Jane\Component\OpenApi2\Tests\Client\Normalizer\JaneObjectNormalizer()], 
+            [new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode(['json_decode_associative' => true]))]
+        );
         return new static($httpClient, $requestFactory, $serializer, $streamFactory);
     }
 }
