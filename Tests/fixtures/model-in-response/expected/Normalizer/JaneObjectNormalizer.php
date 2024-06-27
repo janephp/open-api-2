@@ -18,19 +18,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = array(
-            
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\EmptySpace' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\EmptySpaceNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\SchemaNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\SchemaObjectPropertyNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Error' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\ErrorNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestIdGetResponse200' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestIdGetResponse200Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item0' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item0Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item1' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item1Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item2' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item2Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponsedefault' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponsedefaultNormalizer',
-            '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Jane\\Component\\OpenApi2\\Tests\\Expected\\Runtime\\Normalizer\\ReferenceNormalizer',
-        ), $normalizersCache = [];
+        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []) : bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -65,7 +53,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\EmptySpace' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Error' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestIdGetResponse200' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item0' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item1' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item2' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponsedefault' => false, '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 } else {
@@ -75,19 +63,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = array(
-            
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\EmptySpace' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\EmptySpaceNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\SchemaNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\SchemaObjectPropertyNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Error' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\ErrorNormalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestIdGetResponse200' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestIdGetResponse200Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item0' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item0Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item1' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item1Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item2' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponse200Item2Normalizer',
-            'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponsedefault' => 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Normalizer\\TestComplexListGetResponsedefaultNormalizer',
-            '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Jane\\Component\\OpenApi2\\Tests\\Expected\\Runtime\\Normalizer\\ReferenceNormalizer',
-        ), $normalizersCache = [];
+        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []) : bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -128,7 +104,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\EmptySpace' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Schema' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\SchemaObjectProperty' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\Error' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestIdGetResponse200' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item0' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item1' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponse200Item2' => false, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Model\\TestComplexListGetResponsedefault' => false, '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => false];
+            return [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => false, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 }

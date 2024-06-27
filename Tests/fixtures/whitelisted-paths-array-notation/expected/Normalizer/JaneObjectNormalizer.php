@@ -18,17 +18,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = array(
-            
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Company' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\CompanyNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectClientNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectsNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Error' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ErrorNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\PaginationLinksNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\CompanyPatchBody' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\CompanyPatchBodyNormalizer',
-            '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Jane\\OpenApi2\\Tests\\Expected\\Runtime\\Normalizer\\ReferenceNormalizer',
-        ), $normalizersCache = [];
+        protected $normalizers = [\Jane\OpenApi2\Tests\Expected\Model\Company::class => \Jane\OpenApi2\Tests\Expected\Normalizer\CompanyNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Project::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectClientNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectsNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Error::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => \Jane\OpenApi2\Tests\Expected\Normalizer\PaginationLinksNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => \Jane\OpenApi2\Tests\Expected\Normalizer\CompanyPatchBodyNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []) : bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -63,7 +53,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Company' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Error' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\CompanyPatchBody' => false, '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Company::class => false, \Jane\OpenApi2\Tests\Expected\Model\Project::class => false, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false, \Jane\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 } else {
@@ -73,17 +63,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = array(
-            
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Company' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\CompanyNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectClientNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ProjectsNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\Error' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\ErrorNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\PaginationLinksNormalizer',
-            'Jane\\OpenApi2\\Tests\\Expected\\Model\\CompanyPatchBody' => 'Jane\\OpenApi2\\Tests\\Expected\\Normalizer\\CompanyPatchBodyNormalizer',
-            '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => '\\Jane\\OpenApi2\\Tests\\Expected\\Runtime\\Normalizer\\ReferenceNormalizer',
-        ), $normalizersCache = [];
+        protected $normalizers = [\Jane\OpenApi2\Tests\Expected\Model\Company::class => \Jane\OpenApi2\Tests\Expected\Normalizer\CompanyNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Project::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectClientNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ProjectsNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\Error::class => \Jane\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => \Jane\OpenApi2\Tests\Expected\Normalizer\PaginationLinksNormalizer::class, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => \Jane\OpenApi2\Tests\Expected\Normalizer\CompanyPatchBodyNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []) : bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -124,7 +104,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null) : array
         {
-            return ['Jane\\OpenApi2\\Tests\\Expected\\Model\\Company' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Project' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\ProjectClient' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Error' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\PaginationLinks' => false, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\CompanyPatchBody' => false, '\\Jane\\Component\\JsonSchemaRuntime\\Reference' => false];
+            return [\Jane\OpenApi2\Tests\Expected\Model\Company::class => false, \Jane\OpenApi2\Tests\Expected\Model\Project::class => false, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false, \Jane\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 }
