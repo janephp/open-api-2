@@ -2,6 +2,7 @@
 
 namespace Jane\Component\OpenApi2\Tests;
 
+use Jane\Component\JsonSchema\Tests\CodeStyleFixerTrait;
 use Jane\Component\OpenApi2\Tests\Client\Authentication\ApiKeyAuthAuthentication;
 use Jane\Component\OpenApi2\Tests\Client\Client;
 use Jane\Component\OpenApi2\Tests\Client\Exception\GetEndpointUnauthorizedException;
@@ -21,6 +22,8 @@ use Symfony\Component\Finder\SplFileInfo;
 
 class JaneOpenApiResourceTest extends TestCase
 {
+    use CodeStyleFixerTrait;
+
     /**
      * @dataProvider resourceProvider
      */
@@ -46,9 +49,11 @@ class JaneOpenApiResourceTest extends TestCase
         // 3. Compare
         $expectedFinder = new Finder();
         $expectedFinder->in($testDirectory->getRealPath() . \DIRECTORY_SEPARATOR . 'expected');
+        $this->fixCodeStyle($testDirectory->getRealPath() . \DIRECTORY_SEPARATOR . 'expected');
 
         $generatedFinder = new Finder();
         $generatedFinder->in($testDirectory->getRealPath() . \DIRECTORY_SEPARATOR . 'generated');
+        $this->fixCodeStyle($testDirectory->getRealPath() . \DIRECTORY_SEPARATOR . 'generated');
 
         $generatedData = [];
 
