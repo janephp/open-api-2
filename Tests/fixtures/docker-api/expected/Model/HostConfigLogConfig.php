@@ -8,7 +8,7 @@ class HostConfigLogConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class HostConfigLogConfig
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -40,7 +40,7 @@ class HostConfigLogConfig
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -51,7 +51,7 @@ class HostConfigLogConfig
      *
      * @return array<string, string>
      */
-    public function getConfig() : iterable
+    public function getConfig(): iterable
     {
         return $this->config;
     }
@@ -62,7 +62,7 @@ class HostConfigLogConfig
      *
      * @return self
      */
-    public function setConfig(iterable $config) : self
+    public function setConfig(iterable $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

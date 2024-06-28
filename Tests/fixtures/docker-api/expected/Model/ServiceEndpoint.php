@@ -8,7 +8,7 @@ class ServiceEndpoint
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class ServiceEndpoint
      *
      * @return EndpointSpec
      */
-    public function getSpec() : EndpointSpec
+    public function getSpec(): EndpointSpec
     {
         return $this->spec;
     }
@@ -46,7 +46,7 @@ class ServiceEndpoint
      *
      * @return self
      */
-    public function setSpec(EndpointSpec $spec) : self
+    public function setSpec(EndpointSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -57,7 +57,7 @@ class ServiceEndpoint
      *
      * @return list<EndpointPortConfig>
      */
-    public function getPorts() : array
+    public function getPorts(): array
     {
         return $this->ports;
     }
@@ -68,7 +68,7 @@ class ServiceEndpoint
      *
      * @return self
      */
-    public function setPorts(array $ports) : self
+    public function setPorts(array $ports): self
     {
         $this->initialized['ports'] = true;
         $this->ports = $ports;
@@ -79,7 +79,7 @@ class ServiceEndpoint
      *
      * @return list<ServiceEndpointVirtualIPsItem>
      */
-    public function getVirtualIPs() : array
+    public function getVirtualIPs(): array
     {
         return $this->virtualIPs;
     }
@@ -90,7 +90,7 @@ class ServiceEndpoint
      *
      * @return self
      */
-    public function setVirtualIPs(array $virtualIPs) : self
+    public function setVirtualIPs(array $virtualIPs): self
     {
         $this->initialized['virtualIPs'] = true;
         $this->virtualIPs = $virtualIPs;

@@ -18,11 +18,11 @@ class VolumeDeleteInternalServerErrorException extends InternalServerErrorExcept
         $this->errorResponse = $errorResponse;
         $this->response = $response;
     }
-    public function getErrorResponse() : \Docker\Api\Model\ErrorResponse
+    public function getErrorResponse(): \Docker\Api\Model\ErrorResponse
     {
         return $this->errorResponse;
     }
-    public function getResponse() : \Psr\Http\Message\ResponseInterface
+    public function getResponse(): \Psr\Http\Message\ResponseInterface
     {
         return $this->response;
     }

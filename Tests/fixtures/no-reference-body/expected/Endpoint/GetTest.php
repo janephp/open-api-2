@@ -14,15 +14,15 @@ class GetTest extends \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\Bas
         $this->body = $body;
     }
     use \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/test';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return $this->getSerializedBody($serializer);
     }
@@ -37,7 +37,7 @@ class GetTest extends \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\Bas
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

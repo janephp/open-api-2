@@ -8,7 +8,7 @@ class EngineDescription
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class EngineDescription
      *
      * @return string
      */
-    public function getEngineVersion() : string
+    public function getEngineVersion(): string
     {
         return $this->engineVersion;
     }
@@ -46,7 +46,7 @@ class EngineDescription
      *
      * @return self
      */
-    public function setEngineVersion(string $engineVersion) : self
+    public function setEngineVersion(string $engineVersion): self
     {
         $this->initialized['engineVersion'] = true;
         $this->engineVersion = $engineVersion;
@@ -57,7 +57,7 @@ class EngineDescription
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -68,7 +68,7 @@ class EngineDescription
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -79,7 +79,7 @@ class EngineDescription
      *
      * @return list<EngineDescriptionPluginsItem>
      */
-    public function getPlugins() : array
+    public function getPlugins(): array
     {
         return $this->plugins;
     }
@@ -90,7 +90,7 @@ class EngineDescription
      *
      * @return self
      */
-    public function setPlugins(array $plugins) : self
+    public function setPlugins(array $plugins): self
     {
         $this->initialized['plugins'] = true;
         $this->plugins = $plugins;

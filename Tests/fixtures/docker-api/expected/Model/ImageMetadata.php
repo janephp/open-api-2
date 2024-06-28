@@ -8,7 +8,7 @@ class ImageMetadata
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class ImageMetadata
      *
      * @return string
      */
-    public function getLastTagTime() : string
+    public function getLastTagTime(): string
     {
         return $this->lastTagTime;
     }
@@ -34,7 +34,7 @@ class ImageMetadata
      *
      * @return self
      */
-    public function setLastTagTime(string $lastTagTime) : self
+    public function setLastTagTime(string $lastTagTime): self
     {
         $this->initialized['lastTagTime'] = true;
         $this->lastTagTime = $lastTagTime;

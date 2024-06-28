@@ -8,7 +8,7 @@ class ServicesIdUpdatePostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -65,7 +65,7 @@ class ServicesIdUpdatePostBody
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -76,7 +76,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -87,7 +87,7 @@ class ServicesIdUpdatePostBody
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -98,7 +98,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -109,7 +109,7 @@ class ServicesIdUpdatePostBody
      *
      * @return TaskSpec
      */
-    public function getTaskTemplate() : TaskSpec
+    public function getTaskTemplate(): TaskSpec
     {
         return $this->taskTemplate;
     }
@@ -120,7 +120,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setTaskTemplate(TaskSpec $taskTemplate) : self
+    public function setTaskTemplate(TaskSpec $taskTemplate): self
     {
         $this->initialized['taskTemplate'] = true;
         $this->taskTemplate = $taskTemplate;
@@ -131,7 +131,7 @@ class ServicesIdUpdatePostBody
      *
      * @return ServiceSpecMode
      */
-    public function getMode() : ServiceSpecMode
+    public function getMode(): ServiceSpecMode
     {
         return $this->mode;
     }
@@ -142,7 +142,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setMode(ServiceSpecMode $mode) : self
+    public function setMode(ServiceSpecMode $mode): self
     {
         $this->initialized['mode'] = true;
         $this->mode = $mode;
@@ -153,7 +153,7 @@ class ServicesIdUpdatePostBody
      *
      * @return ServiceSpecUpdateConfig
      */
-    public function getUpdateConfig() : ServiceSpecUpdateConfig
+    public function getUpdateConfig(): ServiceSpecUpdateConfig
     {
         return $this->updateConfig;
     }
@@ -164,7 +164,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setUpdateConfig(ServiceSpecUpdateConfig $updateConfig) : self
+    public function setUpdateConfig(ServiceSpecUpdateConfig $updateConfig): self
     {
         $this->initialized['updateConfig'] = true;
         $this->updateConfig = $updateConfig;
@@ -175,7 +175,7 @@ class ServicesIdUpdatePostBody
      *
      * @return ServiceSpecRollbackConfig
      */
-    public function getRollbackConfig() : ServiceSpecRollbackConfig
+    public function getRollbackConfig(): ServiceSpecRollbackConfig
     {
         return $this->rollbackConfig;
     }
@@ -186,7 +186,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setRollbackConfig(ServiceSpecRollbackConfig $rollbackConfig) : self
+    public function setRollbackConfig(ServiceSpecRollbackConfig $rollbackConfig): self
     {
         $this->initialized['rollbackConfig'] = true;
         $this->rollbackConfig = $rollbackConfig;
@@ -197,7 +197,7 @@ class ServicesIdUpdatePostBody
      *
      * @return list<NetworkAttachmentConfig>
      */
-    public function getNetworks() : array
+    public function getNetworks(): array
     {
         return $this->networks;
     }
@@ -208,7 +208,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setNetworks(array $networks) : self
+    public function setNetworks(array $networks): self
     {
         $this->initialized['networks'] = true;
         $this->networks = $networks;
@@ -219,7 +219,7 @@ class ServicesIdUpdatePostBody
      *
      * @return EndpointSpec
      */
-    public function getEndpointSpec() : EndpointSpec
+    public function getEndpointSpec(): EndpointSpec
     {
         return $this->endpointSpec;
     }
@@ -230,7 +230,7 @@ class ServicesIdUpdatePostBody
      *
      * @return self
      */
-    public function setEndpointSpec(EndpointSpec $endpointSpec) : self
+    public function setEndpointSpec(EndpointSpec $endpointSpec): self
     {
         $this->initialized['endpointSpec'] = true;
         $this->endpointSpec = $endpointSpec;

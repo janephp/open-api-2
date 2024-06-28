@@ -8,7 +8,7 @@ class RestartPolicy
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -39,7 +39,7 @@ class RestartPolicy
     *
     * @return string
     */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -55,7 +55,7 @@ class RestartPolicy
     *
     * @return self
     */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -66,7 +66,7 @@ class RestartPolicy
      *
      * @return int
      */
-    public function getMaximumRetryCount() : int
+    public function getMaximumRetryCount(): int
     {
         return $this->maximumRetryCount;
     }
@@ -77,7 +77,7 @@ class RestartPolicy
      *
      * @return self
      */
-    public function setMaximumRetryCount(int $maximumRetryCount) : self
+    public function setMaximumRetryCount(int $maximumRetryCount): self
     {
         $this->initialized['maximumRetryCount'] = true;
         $this->maximumRetryCount = $maximumRetryCount;

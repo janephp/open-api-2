@@ -8,7 +8,7 @@ class RegistryServiceConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -134,7 +134,7 @@ class RegistryServiceConfig
     *
     * @return list<string>
     */
-    public function getAllowNondistributableArtifactsCIDRs() : array
+    public function getAllowNondistributableArtifactsCIDRs(): array
     {
         return $this->allowNondistributableArtifactsCIDRs;
     }
@@ -166,7 +166,7 @@ class RegistryServiceConfig
     *
     * @return self
     */
-    public function setAllowNondistributableArtifactsCIDRs(array $allowNondistributableArtifactsCIDRs) : self
+    public function setAllowNondistributableArtifactsCIDRs(array $allowNondistributableArtifactsCIDRs): self
     {
         $this->initialized['allowNondistributableArtifactsCIDRs'] = true;
         $this->allowNondistributableArtifactsCIDRs = $allowNondistributableArtifactsCIDRs;
@@ -197,7 +197,7 @@ class RegistryServiceConfig
     *
     * @return list<string>
     */
-    public function getAllowNondistributableArtifactsHostnames() : array
+    public function getAllowNondistributableArtifactsHostnames(): array
     {
         return $this->allowNondistributableArtifactsHostnames;
     }
@@ -228,7 +228,7 @@ class RegistryServiceConfig
     *
     * @return self
     */
-    public function setAllowNondistributableArtifactsHostnames(array $allowNondistributableArtifactsHostnames) : self
+    public function setAllowNondistributableArtifactsHostnames(array $allowNondistributableArtifactsHostnames): self
     {
         $this->initialized['allowNondistributableArtifactsHostnames'] = true;
         $this->allowNondistributableArtifactsHostnames = $allowNondistributableArtifactsHostnames;
@@ -262,7 +262,7 @@ class RegistryServiceConfig
     *
     * @return list<string>
     */
-    public function getInsecureRegistryCIDRs() : array
+    public function getInsecureRegistryCIDRs(): array
     {
         return $this->insecureRegistryCIDRs;
     }
@@ -296,7 +296,7 @@ class RegistryServiceConfig
     *
     * @return self
     */
-    public function setInsecureRegistryCIDRs(array $insecureRegistryCIDRs) : self
+    public function setInsecureRegistryCIDRs(array $insecureRegistryCIDRs): self
     {
         $this->initialized['insecureRegistryCIDRs'] = true;
         $this->insecureRegistryCIDRs = $insecureRegistryCIDRs;
@@ -307,7 +307,7 @@ class RegistryServiceConfig
      *
      * @return array<string, IndexInfo>
      */
-    public function getIndexConfigs() : iterable
+    public function getIndexConfigs(): iterable
     {
         return $this->indexConfigs;
     }
@@ -318,7 +318,7 @@ class RegistryServiceConfig
      *
      * @return self
      */
-    public function setIndexConfigs(iterable $indexConfigs) : self
+    public function setIndexConfigs(iterable $indexConfigs): self
     {
         $this->initialized['indexConfigs'] = true;
         $this->indexConfigs = $indexConfigs;
@@ -331,7 +331,7 @@ class RegistryServiceConfig
     *
     * @return list<string>
     */
-    public function getMirrors() : array
+    public function getMirrors(): array
     {
         return $this->mirrors;
     }
@@ -344,7 +344,7 @@ class RegistryServiceConfig
     *
     * @return self
     */
-    public function setMirrors(array $mirrors) : self
+    public function setMirrors(array $mirrors): self
     {
         $this->initialized['mirrors'] = true;
         $this->mirrors = $mirrors;

@@ -8,7 +8,7 @@ class Projects
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -65,7 +65,7 @@ class Projects
      *
      * @return list<Project>
      */
-    public function getProjects() : array
+    public function getProjects(): array
     {
         return $this->projects;
     }
@@ -76,7 +76,7 @@ class Projects
      *
      * @return self
      */
-    public function setProjects(array $projects) : self
+    public function setProjects(array $projects): self
     {
         $this->initialized['projects'] = true;
         $this->projects = $projects;
@@ -87,7 +87,7 @@ class Projects
      *
      * @return int
      */
-    public function getPerPage() : int
+    public function getPerPage(): int
     {
         return $this->perPage;
     }
@@ -98,7 +98,7 @@ class Projects
      *
      * @return self
      */
-    public function setPerPage(int $perPage) : self
+    public function setPerPage(int $perPage): self
     {
         $this->initialized['perPage'] = true;
         $this->perPage = $perPage;
@@ -109,7 +109,7 @@ class Projects
      *
      * @return int
      */
-    public function getTotalPages() : int
+    public function getTotalPages(): int
     {
         return $this->totalPages;
     }
@@ -120,7 +120,7 @@ class Projects
      *
      * @return self
      */
-    public function setTotalPages(int $totalPages) : self
+    public function setTotalPages(int $totalPages): self
     {
         $this->initialized['totalPages'] = true;
         $this->totalPages = $totalPages;
@@ -131,7 +131,7 @@ class Projects
      *
      * @return int
      */
-    public function getTotalEntries() : int
+    public function getTotalEntries(): int
     {
         return $this->totalEntries;
     }
@@ -142,7 +142,7 @@ class Projects
      *
      * @return self
      */
-    public function setTotalEntries(int $totalEntries) : self
+    public function setTotalEntries(int $totalEntries): self
     {
         $this->initialized['totalEntries'] = true;
         $this->totalEntries = $totalEntries;
@@ -153,7 +153,7 @@ class Projects
      *
      * @return int
      */
-    public function getNextPage() : int
+    public function getNextPage(): int
     {
         return $this->nextPage;
     }
@@ -164,7 +164,7 @@ class Projects
      *
      * @return self
      */
-    public function setNextPage(int $nextPage) : self
+    public function setNextPage(int $nextPage): self
     {
         $this->initialized['nextPage'] = true;
         $this->nextPage = $nextPage;
@@ -175,7 +175,7 @@ class Projects
      *
      * @return int
      */
-    public function getPreviousPage() : int
+    public function getPreviousPage(): int
     {
         return $this->previousPage;
     }
@@ -186,7 +186,7 @@ class Projects
      *
      * @return self
      */
-    public function setPreviousPage(int $previousPage) : self
+    public function setPreviousPage(int $previousPage): self
     {
         $this->initialized['previousPage'] = true;
         $this->previousPage = $previousPage;
@@ -197,7 +197,7 @@ class Projects
      *
      * @return int
      */
-    public function getPage() : int
+    public function getPage(): int
     {
         return $this->page;
     }
@@ -208,7 +208,7 @@ class Projects
      *
      * @return self
      */
-    public function setPage(int $page) : self
+    public function setPage(int $page): self
     {
         $this->initialized['page'] = true;
         $this->page = $page;
@@ -219,7 +219,7 @@ class Projects
      *
      * @return PaginationLinks
      */
-    public function getLinks() : PaginationLinks
+    public function getLinks(): PaginationLinks
     {
         return $this->links;
     }
@@ -230,7 +230,7 @@ class Projects
      *
      * @return self
      */
-    public function setLinks(PaginationLinks $links) : self
+    public function setLinks(PaginationLinks $links): self
     {
         $this->initialized['links'] = true;
         $this->links = $links;

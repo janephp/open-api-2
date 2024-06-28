@@ -8,7 +8,7 @@ class PluginConfigRootfs
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class PluginConfigRootfs
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -40,7 +40,7 @@ class PluginConfigRootfs
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -51,7 +51,7 @@ class PluginConfigRootfs
      *
      * @return list<string>
      */
-    public function getDiffIds() : array
+    public function getDiffIds(): array
     {
         return $this->diffIds;
     }
@@ -62,7 +62,7 @@ class PluginConfigRootfs
      *
      * @return self
      */
-    public function setDiffIds(array $diffIds) : self
+    public function setDiffIds(array $diffIds): self
     {
         $this->initialized['diffIds'] = true;
         $this->diffIds = $diffIds;

@@ -8,7 +8,7 @@ class ExecIdStartPostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ExecIdStartPostBody
      *
      * @return bool
      */
-    public function getDetach() : bool
+    public function getDetach(): bool
     {
         return $this->detach;
     }
@@ -40,7 +40,7 @@ class ExecIdStartPostBody
      *
      * @return self
      */
-    public function setDetach(bool $detach) : self
+    public function setDetach(bool $detach): self
     {
         $this->initialized['detach'] = true;
         $this->detach = $detach;
@@ -51,7 +51,7 @@ class ExecIdStartPostBody
      *
      * @return bool
      */
-    public function getTty() : bool
+    public function getTty(): bool
     {
         return $this->tty;
     }
@@ -62,7 +62,7 @@ class ExecIdStartPostBody
      *
      * @return self
      */
-    public function setTty(bool $tty) : self
+    public function setTty(bool $tty): self
     {
         $this->initialized['tty'] = true;
         $this->tty = $tty;

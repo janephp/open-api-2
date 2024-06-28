@@ -18,11 +18,11 @@ class ContainerArchiveInfoBadRequestException extends BadRequestException
         $this->containersIdArchiveHeadResponse400 = $containersIdArchiveHeadResponse400;
         $this->response = $response;
     }
-    public function getContainersIdArchiveHeadResponse400() : \Docker\Api\Model\ContainersIdArchiveHeadResponse400
+    public function getContainersIdArchiveHeadResponse400(): \Docker\Api\Model\ContainersIdArchiveHeadResponse400
     {
         return $this->containersIdArchiveHeadResponse400;
     }
-    public function getResponse() : \Psr\Http\Message\ResponseInterface
+    public function getResponse(): \Psr\Http\Message\ResponseInterface
     {
         return $this->response;
     }

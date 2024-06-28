@@ -8,7 +8,7 @@ class PluginMount
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -59,7 +59,7 @@ class PluginMount
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -70,7 +70,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -81,7 +81,7 @@ class PluginMount
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -92,7 +92,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -103,7 +103,7 @@ class PluginMount
      *
      * @return list<string>
      */
-    public function getSettable() : array
+    public function getSettable(): array
     {
         return $this->settable;
     }
@@ -114,7 +114,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setSettable(array $settable) : self
+    public function setSettable(array $settable): self
     {
         $this->initialized['settable'] = true;
         $this->settable = $settable;
@@ -125,7 +125,7 @@ class PluginMount
      *
      * @return string
      */
-    public function getSource() : string
+    public function getSource(): string
     {
         return $this->source;
     }
@@ -136,7 +136,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setSource(string $source) : self
+    public function setSource(string $source): self
     {
         $this->initialized['source'] = true;
         $this->source = $source;
@@ -147,7 +147,7 @@ class PluginMount
      *
      * @return string
      */
-    public function getDestination() : string
+    public function getDestination(): string
     {
         return $this->destination;
     }
@@ -158,7 +158,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setDestination(string $destination) : self
+    public function setDestination(string $destination): self
     {
         $this->initialized['destination'] = true;
         $this->destination = $destination;
@@ -169,7 +169,7 @@ class PluginMount
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -180,7 +180,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -191,7 +191,7 @@ class PluginMount
      *
      * @return list<string>
      */
-    public function getOptions() : array
+    public function getOptions(): array
     {
         return $this->options;
     }
@@ -202,7 +202,7 @@ class PluginMount
      *
      * @return self
      */
-    public function setOptions(array $options) : self
+    public function setOptions(array $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

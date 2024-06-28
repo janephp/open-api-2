@@ -8,7 +8,7 @@ class PluginConfigInterface
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class PluginConfigInterface
      *
      * @return list<PluginInterfaceType>
      */
-    public function getTypes() : array
+    public function getTypes(): array
     {
         return $this->types;
     }
@@ -46,7 +46,7 @@ class PluginConfigInterface
      *
      * @return self
      */
-    public function setTypes(array $types) : self
+    public function setTypes(array $types): self
     {
         $this->initialized['types'] = true;
         $this->types = $types;
@@ -57,7 +57,7 @@ class PluginConfigInterface
      *
      * @return string
      */
-    public function getSocket() : string
+    public function getSocket(): string
     {
         return $this->socket;
     }
@@ -68,7 +68,7 @@ class PluginConfigInterface
      *
      * @return self
      */
-    public function setSocket(string $socket) : self
+    public function setSocket(string $socket): self
     {
         $this->initialized['socket'] = true;
         $this->socket = $socket;
@@ -79,7 +79,7 @@ class PluginConfigInterface
      *
      * @return string
      */
-    public function getProtocolScheme() : string
+    public function getProtocolScheme(): string
     {
         return $this->protocolScheme;
     }
@@ -90,7 +90,7 @@ class PluginConfigInterface
      *
      * @return self
      */
-    public function setProtocolScheme(string $protocolScheme) : self
+    public function setProtocolScheme(string $protocolScheme): self
     {
         $this->initialized['protocolScheme'] = true;
         $this->protocolScheme = $protocolScheme;

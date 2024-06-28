@@ -8,7 +8,7 @@ class Mount
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -71,7 +71,7 @@ class Mount
      *
      * @return string
      */
-    public function getTarget() : string
+    public function getTarget(): string
     {
         return $this->target;
     }
@@ -82,7 +82,7 @@ class Mount
      *
      * @return self
      */
-    public function setTarget(string $target) : self
+    public function setTarget(string $target): self
     {
         $this->initialized['target'] = true;
         $this->target = $target;
@@ -93,7 +93,7 @@ class Mount
      *
      * @return string
      */
-    public function getSource() : string
+    public function getSource(): string
     {
         return $this->source;
     }
@@ -104,7 +104,7 @@ class Mount
      *
      * @return self
      */
-    public function setSource(string $source) : self
+    public function setSource(string $source): self
     {
         $this->initialized['source'] = true;
         $this->source = $source;
@@ -121,7 +121,7 @@ class Mount
     *
     * @return string
     */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -138,7 +138,7 @@ class Mount
     *
     * @return self
     */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -149,7 +149,7 @@ class Mount
      *
      * @return bool
      */
-    public function getReadOnly() : bool
+    public function getReadOnly(): bool
     {
         return $this->readOnly;
     }
@@ -160,7 +160,7 @@ class Mount
      *
      * @return self
      */
-    public function setReadOnly(bool $readOnly) : self
+    public function setReadOnly(bool $readOnly): self
     {
         $this->initialized['readOnly'] = true;
         $this->readOnly = $readOnly;
@@ -171,7 +171,7 @@ class Mount
      *
      * @return string
      */
-    public function getConsistency() : string
+    public function getConsistency(): string
     {
         return $this->consistency;
     }
@@ -182,7 +182,7 @@ class Mount
      *
      * @return self
      */
-    public function setConsistency(string $consistency) : self
+    public function setConsistency(string $consistency): self
     {
         $this->initialized['consistency'] = true;
         $this->consistency = $consistency;
@@ -193,7 +193,7 @@ class Mount
      *
      * @return MountBindOptions
      */
-    public function getBindOptions() : MountBindOptions
+    public function getBindOptions(): MountBindOptions
     {
         return $this->bindOptions;
     }
@@ -204,7 +204,7 @@ class Mount
      *
      * @return self
      */
-    public function setBindOptions(MountBindOptions $bindOptions) : self
+    public function setBindOptions(MountBindOptions $bindOptions): self
     {
         $this->initialized['bindOptions'] = true;
         $this->bindOptions = $bindOptions;
@@ -215,7 +215,7 @@ class Mount
      *
      * @return MountVolumeOptions
      */
-    public function getVolumeOptions() : MountVolumeOptions
+    public function getVolumeOptions(): MountVolumeOptions
     {
         return $this->volumeOptions;
     }
@@ -226,7 +226,7 @@ class Mount
      *
      * @return self
      */
-    public function setVolumeOptions(MountVolumeOptions $volumeOptions) : self
+    public function setVolumeOptions(MountVolumeOptions $volumeOptions): self
     {
         $this->initialized['volumeOptions'] = true;
         $this->volumeOptions = $volumeOptions;
@@ -237,7 +237,7 @@ class Mount
      *
      * @return MountTmpfsOptions
      */
-    public function getTmpfsOptions() : MountTmpfsOptions
+    public function getTmpfsOptions(): MountTmpfsOptions
     {
         return $this->tmpfsOptions;
     }
@@ -248,7 +248,7 @@ class Mount
      *
      * @return self
      */
-    public function setTmpfsOptions(MountTmpfsOptions $tmpfsOptions) : self
+    public function setTmpfsOptions(MountTmpfsOptions $tmpfsOptions): self
     {
         $this->initialized['tmpfsOptions'] = true;
         $this->tmpfsOptions = $tmpfsOptions;

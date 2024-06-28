@@ -5,15 +5,15 @@ namespace Jane\Component\OpenApi2\Tests\Expected\Api1\Endpoint;
 class TestReferenceResponse extends \Jane\Component\OpenApi2\Tests\Expected\Api1\Runtime\Client\BaseEndpoint implements \Jane\Component\OpenApi2\Tests\Expected\Api1\Runtime\Client\Endpoint
 {
     use \Jane\Component\OpenApi2\Tests\Expected\Api1\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/test-query';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return [[], null];
     }
@@ -28,10 +28,10 @@ class TestReferenceResponse extends \Jane\Component\OpenApi2\Tests\Expected\Api1
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Jane\\Component\\OpenApi2\\Tests\\Expected\\Api1\\Model\\Body', 'json');
+            return $serializer->deserialize($body, 'Jane\Component\OpenApi2\Tests\Expected\Api1\Model\Body', 'json');
         }
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

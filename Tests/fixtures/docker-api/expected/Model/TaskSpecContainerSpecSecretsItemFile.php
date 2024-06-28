@@ -8,7 +8,7 @@ class TaskSpecContainerSpecSecretsItemFile
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -63,7 +63,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return string
      */
-    public function getUID() : string
+    public function getUID(): string
     {
         return $this->uID;
     }
@@ -74,7 +74,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return self
      */
-    public function setUID(string $uID) : self
+    public function setUID(string $uID): self
     {
         $this->initialized['uID'] = true;
         $this->uID = $uID;
@@ -85,7 +85,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return string
      */
-    public function getGID() : string
+    public function getGID(): string
     {
         return $this->gID;
     }
@@ -96,7 +96,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return self
      */
-    public function setGID(string $gID) : self
+    public function setGID(string $gID): self
     {
         $this->initialized['gID'] = true;
         $this->gID = $gID;
@@ -107,7 +107,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return int
      */
-    public function getMode() : int
+    public function getMode(): int
     {
         return $this->mode;
     }
@@ -118,7 +118,7 @@ class TaskSpecContainerSpecSecretsItemFile
      *
      * @return self
      */
-    public function setMode(int $mode) : self
+    public function setMode(int $mode): self
     {
         $this->initialized['mode'] = true;
         $this->mode = $mode;

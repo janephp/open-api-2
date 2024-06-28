@@ -8,7 +8,7 @@ class MountVolumeOptionsDriverConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class MountVolumeOptionsDriverConfig
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -40,7 +40,7 @@ class MountVolumeOptionsDriverConfig
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -51,7 +51,7 @@ class MountVolumeOptionsDriverConfig
      *
      * @return array<string, string>
      */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -62,7 +62,7 @@ class MountVolumeOptionsDriverConfig
      *
      * @return self
      */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

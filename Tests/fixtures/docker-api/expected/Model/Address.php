@@ -8,7 +8,7 @@ class Address
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class Address
      *
      * @return string
      */
-    public function getAddr() : string
+    public function getAddr(): string
     {
         return $this->addr;
     }
@@ -40,7 +40,7 @@ class Address
      *
      * @return self
      */
-    public function setAddr(string $addr) : self
+    public function setAddr(string $addr): self
     {
         $this->initialized['addr'] = true;
         $this->addr = $addr;
@@ -51,7 +51,7 @@ class Address
      *
      * @return int
      */
-    public function getPrefixLen() : int
+    public function getPrefixLen(): int
     {
         return $this->prefixLen;
     }
@@ -62,7 +62,7 @@ class Address
      *
      * @return self
      */
-    public function setPrefixLen(int $prefixLen) : self
+    public function setPrefixLen(int $prefixLen): self
     {
         $this->initialized['prefixLen'] = true;
         $this->prefixLen = $prefixLen;

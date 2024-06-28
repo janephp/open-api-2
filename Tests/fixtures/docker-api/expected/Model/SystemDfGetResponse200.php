@@ -8,7 +8,7 @@ class SystemDfGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class SystemDfGetResponse200
      *
      * @return int
      */
-    public function getLayersSize() : int
+    public function getLayersSize(): int
     {
         return $this->layersSize;
     }
@@ -58,7 +58,7 @@ class SystemDfGetResponse200
      *
      * @return self
      */
-    public function setLayersSize(int $layersSize) : self
+    public function setLayersSize(int $layersSize): self
     {
         $this->initialized['layersSize'] = true;
         $this->layersSize = $layersSize;
@@ -69,7 +69,7 @@ class SystemDfGetResponse200
      *
      * @return list<ImageSummary>
      */
-    public function getImages() : array
+    public function getImages(): array
     {
         return $this->images;
     }
@@ -80,7 +80,7 @@ class SystemDfGetResponse200
      *
      * @return self
      */
-    public function setImages(array $images) : self
+    public function setImages(array $images): self
     {
         $this->initialized['images'] = true;
         $this->images = $images;
@@ -91,7 +91,7 @@ class SystemDfGetResponse200
      *
      * @return list<ContainerSummary>
      */
-    public function getContainers() : array
+    public function getContainers(): array
     {
         return $this->containers;
     }
@@ -102,7 +102,7 @@ class SystemDfGetResponse200
      *
      * @return self
      */
-    public function setContainers(array $containers) : self
+    public function setContainers(array $containers): self
     {
         $this->initialized['containers'] = true;
         $this->containers = $containers;
@@ -113,7 +113,7 @@ class SystemDfGetResponse200
      *
      * @return list<Volume>
      */
-    public function getVolumes() : array
+    public function getVolumes(): array
     {
         return $this->volumes;
     }
@@ -124,7 +124,7 @@ class SystemDfGetResponse200
      *
      * @return self
      */
-    public function setVolumes(array $volumes) : self
+    public function setVolumes(array $volumes): self
     {
         $this->initialized['volumes'] = true;
         $this->volumes = $volumes;
@@ -135,7 +135,7 @@ class SystemDfGetResponse200
      *
      * @return list<BuildCache>
      */
-    public function getBuildCache() : array
+    public function getBuildCache(): array
     {
         return $this->buildCache;
     }
@@ -146,7 +146,7 @@ class SystemDfGetResponse200
      *
      * @return self
      */
-    public function setBuildCache(array $buildCache) : self
+    public function setBuildCache(array $buildCache): self
     {
         $this->initialized['buildCache'] = true;
         $this->buildCache = $buildCache;

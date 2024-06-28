@@ -8,7 +8,7 @@ class ThrottleDevice
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ThrottleDevice
      *
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -40,7 +40,7 @@ class ThrottleDevice
      *
      * @return self
      */
-    public function setPath(string $path) : self
+    public function setPath(string $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;
@@ -51,7 +51,7 @@ class ThrottleDevice
      *
      * @return int
      */
-    public function getRate() : int
+    public function getRate(): int
     {
         return $this->rate;
     }
@@ -62,7 +62,7 @@ class ThrottleDevice
      *
      * @return self
      */
-    public function setRate(int $rate) : self
+    public function setRate(int $rate): self
     {
         $this->initialized['rate'] = true;
         $this->rate = $rate;

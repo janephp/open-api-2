@@ -8,7 +8,7 @@ class ServiceEndpointVirtualIPsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ServiceEndpointVirtualIPsItem
      *
      * @return string
      */
-    public function getNetworkID() : string
+    public function getNetworkID(): string
     {
         return $this->networkID;
     }
@@ -40,7 +40,7 @@ class ServiceEndpointVirtualIPsItem
      *
      * @return self
      */
-    public function setNetworkID(string $networkID) : self
+    public function setNetworkID(string $networkID): self
     {
         $this->initialized['networkID'] = true;
         $this->networkID = $networkID;
@@ -51,7 +51,7 @@ class ServiceEndpointVirtualIPsItem
      *
      * @return string
      */
-    public function getAddr() : string
+    public function getAddr(): string
     {
         return $this->addr;
     }
@@ -62,7 +62,7 @@ class ServiceEndpointVirtualIPsItem
      *
      * @return self
      */
-    public function setAddr(string $addr) : self
+    public function setAddr(string $addr): self
     {
         $this->initialized['addr'] = true;
         $this->addr = $addr;

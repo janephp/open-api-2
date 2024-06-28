@@ -8,7 +8,7 @@ class ExecIdJsonGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -83,7 +83,7 @@ class ExecIdJsonGetResponse200
      *
      * @return bool
      */
-    public function getCanRemove() : bool
+    public function getCanRemove(): bool
     {
         return $this->canRemove;
     }
@@ -94,7 +94,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setCanRemove(bool $canRemove) : self
+    public function setCanRemove(bool $canRemove): self
     {
         $this->initialized['canRemove'] = true;
         $this->canRemove = $canRemove;
@@ -105,7 +105,7 @@ class ExecIdJsonGetResponse200
      *
      * @return string
      */
-    public function getDetachKeys() : string
+    public function getDetachKeys(): string
     {
         return $this->detachKeys;
     }
@@ -116,7 +116,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setDetachKeys(string $detachKeys) : self
+    public function setDetachKeys(string $detachKeys): self
     {
         $this->initialized['detachKeys'] = true;
         $this->detachKeys = $detachKeys;
@@ -127,7 +127,7 @@ class ExecIdJsonGetResponse200
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -138,7 +138,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -149,7 +149,7 @@ class ExecIdJsonGetResponse200
      *
      * @return bool
      */
-    public function getRunning() : bool
+    public function getRunning(): bool
     {
         return $this->running;
     }
@@ -160,7 +160,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setRunning(bool $running) : self
+    public function setRunning(bool $running): self
     {
         $this->initialized['running'] = true;
         $this->running = $running;
@@ -171,7 +171,7 @@ class ExecIdJsonGetResponse200
      *
      * @return int
      */
-    public function getExitCode() : int
+    public function getExitCode(): int
     {
         return $this->exitCode;
     }
@@ -182,7 +182,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setExitCode(int $exitCode) : self
+    public function setExitCode(int $exitCode): self
     {
         $this->initialized['exitCode'] = true;
         $this->exitCode = $exitCode;
@@ -193,7 +193,7 @@ class ExecIdJsonGetResponse200
      *
      * @return ProcessConfig
      */
-    public function getProcessConfig() : ProcessConfig
+    public function getProcessConfig(): ProcessConfig
     {
         return $this->processConfig;
     }
@@ -204,7 +204,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setProcessConfig(ProcessConfig $processConfig) : self
+    public function setProcessConfig(ProcessConfig $processConfig): self
     {
         $this->initialized['processConfig'] = true;
         $this->processConfig = $processConfig;
@@ -215,7 +215,7 @@ class ExecIdJsonGetResponse200
      *
      * @return bool
      */
-    public function getOpenStdin() : bool
+    public function getOpenStdin(): bool
     {
         return $this->openStdin;
     }
@@ -226,7 +226,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setOpenStdin(bool $openStdin) : self
+    public function setOpenStdin(bool $openStdin): self
     {
         $this->initialized['openStdin'] = true;
         $this->openStdin = $openStdin;
@@ -237,7 +237,7 @@ class ExecIdJsonGetResponse200
      *
      * @return bool
      */
-    public function getOpenStderr() : bool
+    public function getOpenStderr(): bool
     {
         return $this->openStderr;
     }
@@ -248,7 +248,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setOpenStderr(bool $openStderr) : self
+    public function setOpenStderr(bool $openStderr): self
     {
         $this->initialized['openStderr'] = true;
         $this->openStderr = $openStderr;
@@ -259,7 +259,7 @@ class ExecIdJsonGetResponse200
      *
      * @return bool
      */
-    public function getOpenStdout() : bool
+    public function getOpenStdout(): bool
     {
         return $this->openStdout;
     }
@@ -270,7 +270,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setOpenStdout(bool $openStdout) : self
+    public function setOpenStdout(bool $openStdout): self
     {
         $this->initialized['openStdout'] = true;
         $this->openStdout = $openStdout;
@@ -281,7 +281,7 @@ class ExecIdJsonGetResponse200
      *
      * @return string
      */
-    public function getContainerID() : string
+    public function getContainerID(): string
     {
         return $this->containerID;
     }
@@ -292,7 +292,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setContainerID(string $containerID) : self
+    public function setContainerID(string $containerID): self
     {
         $this->initialized['containerID'] = true;
         $this->containerID = $containerID;
@@ -303,7 +303,7 @@ class ExecIdJsonGetResponse200
      *
      * @return int
      */
-    public function getPid() : int
+    public function getPid(): int
     {
         return $this->pid;
     }
@@ -314,7 +314,7 @@ class ExecIdJsonGetResponse200
      *
      * @return self
      */
-    public function setPid(int $pid) : self
+    public function setPid(int $pid): self
     {
         $this->initialized['pid'] = true;
         $this->pid = $pid;

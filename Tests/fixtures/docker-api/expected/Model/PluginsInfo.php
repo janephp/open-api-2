@@ -8,7 +8,7 @@ class PluginsInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class PluginsInfo
      *
      * @return list<string>
      */
-    public function getVolume() : array
+    public function getVolume(): array
     {
         return $this->volume;
     }
@@ -52,7 +52,7 @@ class PluginsInfo
      *
      * @return self
      */
-    public function setVolume(array $volume) : self
+    public function setVolume(array $volume): self
     {
         $this->initialized['volume'] = true;
         $this->volume = $volume;
@@ -63,7 +63,7 @@ class PluginsInfo
      *
      * @return list<string>
      */
-    public function getNetwork() : array
+    public function getNetwork(): array
     {
         return $this->network;
     }
@@ -74,7 +74,7 @@ class PluginsInfo
      *
      * @return self
      */
-    public function setNetwork(array $network) : self
+    public function setNetwork(array $network): self
     {
         $this->initialized['network'] = true;
         $this->network = $network;
@@ -85,7 +85,7 @@ class PluginsInfo
      *
      * @return list<string>
      */
-    public function getAuthorization() : array
+    public function getAuthorization(): array
     {
         return $this->authorization;
     }
@@ -96,7 +96,7 @@ class PluginsInfo
      *
      * @return self
      */
-    public function setAuthorization(array $authorization) : self
+    public function setAuthorization(array $authorization): self
     {
         $this->initialized['authorization'] = true;
         $this->authorization = $authorization;
@@ -107,7 +107,7 @@ class PluginsInfo
      *
      * @return list<string>
      */
-    public function getLog() : array
+    public function getLog(): array
     {
         return $this->log;
     }
@@ -118,7 +118,7 @@ class PluginsInfo
      *
      * @return self
      */
-    public function setLog(array $log) : self
+    public function setLog(array $log): self
     {
         $this->initialized['log'] = true;
         $this->log = $log;

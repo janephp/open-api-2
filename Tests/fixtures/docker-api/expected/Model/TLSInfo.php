@@ -8,7 +8,7 @@ class TLSInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -39,7 +39,7 @@ class TLSInfo
     *
     * @return string
     */
-    public function getTrustRoot() : string
+    public function getTrustRoot(): string
     {
         return $this->trustRoot;
     }
@@ -52,7 +52,7 @@ class TLSInfo
     *
     * @return self
     */
-    public function setTrustRoot(string $trustRoot) : self
+    public function setTrustRoot(string $trustRoot): self
     {
         $this->initialized['trustRoot'] = true;
         $this->trustRoot = $trustRoot;
@@ -63,7 +63,7 @@ class TLSInfo
      *
      * @return string
      */
-    public function getCertIssuerSubject() : string
+    public function getCertIssuerSubject(): string
     {
         return $this->certIssuerSubject;
     }
@@ -74,7 +74,7 @@ class TLSInfo
      *
      * @return self
      */
-    public function setCertIssuerSubject(string $certIssuerSubject) : self
+    public function setCertIssuerSubject(string $certIssuerSubject): self
     {
         $this->initialized['certIssuerSubject'] = true;
         $this->certIssuerSubject = $certIssuerSubject;
@@ -85,7 +85,7 @@ class TLSInfo
      *
      * @return string
      */
-    public function getCertIssuerPublicKey() : string
+    public function getCertIssuerPublicKey(): string
     {
         return $this->certIssuerPublicKey;
     }
@@ -96,7 +96,7 @@ class TLSInfo
      *
      * @return self
      */
-    public function setCertIssuerPublicKey(string $certIssuerPublicKey) : self
+    public function setCertIssuerPublicKey(string $certIssuerPublicKey): self
     {
         $this->initialized['certIssuerPublicKey'] = true;
         $this->certIssuerPublicKey = $certIssuerPublicKey;

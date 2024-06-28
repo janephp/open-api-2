@@ -8,7 +8,7 @@ class ContainersIdUpdatePostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -291,7 +291,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getCpuShares() : int
+    public function getCpuShares(): int
     {
         return $this->cpuShares;
     }
@@ -304,7 +304,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpuShares(int $cpuShares) : self
+    public function setCpuShares(int $cpuShares): self
     {
         $this->initialized['cpuShares'] = true;
         $this->cpuShares = $cpuShares;
@@ -315,7 +315,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getMemory() : int
+    public function getMemory(): int
     {
         return $this->memory;
     }
@@ -326,7 +326,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setMemory(int $memory) : self
+    public function setMemory(int $memory): self
     {
         $this->initialized['memory'] = true;
         $this->memory = $memory;
@@ -341,7 +341,7 @@ class ContainersIdUpdatePostBody
     *
     * @return string
     */
-    public function getCgroupParent() : string
+    public function getCgroupParent(): string
     {
         return $this->cgroupParent;
     }
@@ -356,7 +356,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCgroupParent(string $cgroupParent) : self
+    public function setCgroupParent(string $cgroupParent): self
     {
         $this->initialized['cgroupParent'] = true;
         $this->cgroupParent = $cgroupParent;
@@ -367,7 +367,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getBlkioWeight() : int
+    public function getBlkioWeight(): int
     {
         return $this->blkioWeight;
     }
@@ -378,7 +378,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setBlkioWeight(int $blkioWeight) : self
+    public function setBlkioWeight(int $blkioWeight): self
     {
         $this->initialized['blkioWeight'] = true;
         $this->blkioWeight = $blkioWeight;
@@ -394,7 +394,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ResourcesBlkioWeightDeviceItem>
     */
-    public function getBlkioWeightDevice() : array
+    public function getBlkioWeightDevice(): array
     {
         return $this->blkioWeightDevice;
     }
@@ -410,7 +410,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setBlkioWeightDevice(array $blkioWeightDevice) : self
+    public function setBlkioWeightDevice(array $blkioWeightDevice): self
     {
         $this->initialized['blkioWeightDevice'] = true;
         $this->blkioWeightDevice = $blkioWeightDevice;
@@ -426,7 +426,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ThrottleDevice>
     */
-    public function getBlkioDeviceReadBps() : array
+    public function getBlkioDeviceReadBps(): array
     {
         return $this->blkioDeviceReadBps;
     }
@@ -442,7 +442,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setBlkioDeviceReadBps(array $blkioDeviceReadBps) : self
+    public function setBlkioDeviceReadBps(array $blkioDeviceReadBps): self
     {
         $this->initialized['blkioDeviceReadBps'] = true;
         $this->blkioDeviceReadBps = $blkioDeviceReadBps;
@@ -458,7 +458,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ThrottleDevice>
     */
-    public function getBlkioDeviceWriteBps() : array
+    public function getBlkioDeviceWriteBps(): array
     {
         return $this->blkioDeviceWriteBps;
     }
@@ -474,7 +474,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setBlkioDeviceWriteBps(array $blkioDeviceWriteBps) : self
+    public function setBlkioDeviceWriteBps(array $blkioDeviceWriteBps): self
     {
         $this->initialized['blkioDeviceWriteBps'] = true;
         $this->blkioDeviceWriteBps = $blkioDeviceWriteBps;
@@ -490,7 +490,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ThrottleDevice>
     */
-    public function getBlkioDeviceReadIOps() : array
+    public function getBlkioDeviceReadIOps(): array
     {
         return $this->blkioDeviceReadIOps;
     }
@@ -506,7 +506,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setBlkioDeviceReadIOps(array $blkioDeviceReadIOps) : self
+    public function setBlkioDeviceReadIOps(array $blkioDeviceReadIOps): self
     {
         $this->initialized['blkioDeviceReadIOps'] = true;
         $this->blkioDeviceReadIOps = $blkioDeviceReadIOps;
@@ -522,7 +522,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ThrottleDevice>
     */
-    public function getBlkioDeviceWriteIOps() : array
+    public function getBlkioDeviceWriteIOps(): array
     {
         return $this->blkioDeviceWriteIOps;
     }
@@ -538,7 +538,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setBlkioDeviceWriteIOps(array $blkioDeviceWriteIOps) : self
+    public function setBlkioDeviceWriteIOps(array $blkioDeviceWriteIOps): self
     {
         $this->initialized['blkioDeviceWriteIOps'] = true;
         $this->blkioDeviceWriteIOps = $blkioDeviceWriteIOps;
@@ -549,7 +549,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getCpuPeriod() : int
+    public function getCpuPeriod(): int
     {
         return $this->cpuPeriod;
     }
@@ -560,7 +560,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setCpuPeriod(int $cpuPeriod) : self
+    public function setCpuPeriod(int $cpuPeriod): self
     {
         $this->initialized['cpuPeriod'] = true;
         $this->cpuPeriod = $cpuPeriod;
@@ -571,7 +571,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getCpuQuota() : int
+    public function getCpuQuota(): int
     {
         return $this->cpuQuota;
     }
@@ -582,7 +582,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setCpuQuota(int $cpuQuota) : self
+    public function setCpuQuota(int $cpuQuota): self
     {
         $this->initialized['cpuQuota'] = true;
         $this->cpuQuota = $cpuQuota;
@@ -595,7 +595,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getCpuRealtimePeriod() : int
+    public function getCpuRealtimePeriod(): int
     {
         return $this->cpuRealtimePeriod;
     }
@@ -608,7 +608,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpuRealtimePeriod(int $cpuRealtimePeriod) : self
+    public function setCpuRealtimePeriod(int $cpuRealtimePeriod): self
     {
         $this->initialized['cpuRealtimePeriod'] = true;
         $this->cpuRealtimePeriod = $cpuRealtimePeriod;
@@ -621,7 +621,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getCpuRealtimeRuntime() : int
+    public function getCpuRealtimeRuntime(): int
     {
         return $this->cpuRealtimeRuntime;
     }
@@ -634,7 +634,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpuRealtimeRuntime(int $cpuRealtimeRuntime) : self
+    public function setCpuRealtimeRuntime(int $cpuRealtimeRuntime): self
     {
         $this->initialized['cpuRealtimeRuntime'] = true;
         $this->cpuRealtimeRuntime = $cpuRealtimeRuntime;
@@ -645,7 +645,7 @@ class ContainersIdUpdatePostBody
      *
      * @return string
      */
-    public function getCpusetCpus() : string
+    public function getCpusetCpus(): string
     {
         return $this->cpusetCpus;
     }
@@ -656,7 +656,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setCpusetCpus(string $cpusetCpus) : self
+    public function setCpusetCpus(string $cpusetCpus): self
     {
         $this->initialized['cpusetCpus'] = true;
         $this->cpusetCpus = $cpusetCpus;
@@ -669,7 +669,7 @@ class ContainersIdUpdatePostBody
     *
     * @return string
     */
-    public function getCpusetMems() : string
+    public function getCpusetMems(): string
     {
         return $this->cpusetMems;
     }
@@ -682,7 +682,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpusetMems(string $cpusetMems) : self
+    public function setCpusetMems(string $cpusetMems): self
     {
         $this->initialized['cpusetMems'] = true;
         $this->cpusetMems = $cpusetMems;
@@ -693,7 +693,7 @@ class ContainersIdUpdatePostBody
      *
      * @return list<DeviceMapping>
      */
-    public function getDevices() : array
+    public function getDevices(): array
     {
         return $this->devices;
     }
@@ -704,7 +704,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setDevices(array $devices) : self
+    public function setDevices(array $devices): self
     {
         $this->initialized['devices'] = true;
         $this->devices = $devices;
@@ -715,7 +715,7 @@ class ContainersIdUpdatePostBody
      *
      * @return list<string>
      */
-    public function getDeviceCgroupRules() : array
+    public function getDeviceCgroupRules(): array
     {
         return $this->deviceCgroupRules;
     }
@@ -726,7 +726,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setDeviceCgroupRules(array $deviceCgroupRules) : self
+    public function setDeviceCgroupRules(array $deviceCgroupRules): self
     {
         $this->initialized['deviceCgroupRules'] = true;
         $this->deviceCgroupRules = $deviceCgroupRules;
@@ -737,7 +737,7 @@ class ContainersIdUpdatePostBody
      *
      * @return list<DeviceRequest>
      */
-    public function getDeviceRequests() : array
+    public function getDeviceRequests(): array
     {
         return $this->deviceRequests;
     }
@@ -748,7 +748,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setDeviceRequests(array $deviceRequests) : self
+    public function setDeviceRequests(array $deviceRequests): self
     {
         $this->initialized['deviceRequests'] = true;
         $this->deviceRequests = $deviceRequests;
@@ -765,7 +765,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getKernelMemory() : int
+    public function getKernelMemory(): int
     {
         return $this->kernelMemory;
     }
@@ -782,7 +782,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setKernelMemory(int $kernelMemory) : self
+    public function setKernelMemory(int $kernelMemory): self
     {
         $this->initialized['kernelMemory'] = true;
         $this->kernelMemory = $kernelMemory;
@@ -793,7 +793,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getKernelMemoryTCP() : int
+    public function getKernelMemoryTCP(): int
     {
         return $this->kernelMemoryTCP;
     }
@@ -804,7 +804,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setKernelMemoryTCP(int $kernelMemoryTCP) : self
+    public function setKernelMemoryTCP(int $kernelMemoryTCP): self
     {
         $this->initialized['kernelMemoryTCP'] = true;
         $this->kernelMemoryTCP = $kernelMemoryTCP;
@@ -815,7 +815,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getMemoryReservation() : int
+    public function getMemoryReservation(): int
     {
         return $this->memoryReservation;
     }
@@ -826,7 +826,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setMemoryReservation(int $memoryReservation) : self
+    public function setMemoryReservation(int $memoryReservation): self
     {
         $this->initialized['memoryReservation'] = true;
         $this->memoryReservation = $memoryReservation;
@@ -839,7 +839,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getMemorySwap() : int
+    public function getMemorySwap(): int
     {
         return $this->memorySwap;
     }
@@ -852,7 +852,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setMemorySwap(int $memorySwap) : self
+    public function setMemorySwap(int $memorySwap): self
     {
         $this->initialized['memorySwap'] = true;
         $this->memorySwap = $memorySwap;
@@ -865,7 +865,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getMemorySwappiness() : int
+    public function getMemorySwappiness(): int
     {
         return $this->memorySwappiness;
     }
@@ -878,7 +878,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setMemorySwappiness(int $memorySwappiness) : self
+    public function setMemorySwappiness(int $memorySwappiness): self
     {
         $this->initialized['memorySwappiness'] = true;
         $this->memorySwappiness = $memorySwappiness;
@@ -889,7 +889,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getNanoCpus() : int
+    public function getNanoCpus(): int
     {
         return $this->nanoCpus;
     }
@@ -900,7 +900,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setNanoCpus(int $nanoCpus) : self
+    public function setNanoCpus(int $nanoCpus): self
     {
         $this->initialized['nanoCpus'] = true;
         $this->nanoCpus = $nanoCpus;
@@ -911,7 +911,7 @@ class ContainersIdUpdatePostBody
      *
      * @return bool
      */
-    public function getOomKillDisable() : bool
+    public function getOomKillDisable(): bool
     {
         return $this->oomKillDisable;
     }
@@ -922,7 +922,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setOomKillDisable(bool $oomKillDisable) : self
+    public function setOomKillDisable(bool $oomKillDisable): self
     {
         $this->initialized['oomKillDisable'] = true;
         $this->oomKillDisable = $oomKillDisable;
@@ -936,7 +936,7 @@ class ContainersIdUpdatePostBody
     *
     * @return bool|null
     */
-    public function getInit() : ?bool
+    public function getInit(): ?bool
     {
         return $this->init;
     }
@@ -950,7 +950,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setInit(?bool $init) : self
+    public function setInit(?bool $init): self
     {
         $this->initialized['init'] = true;
         $this->init = $init;
@@ -963,7 +963,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int|null
     */
-    public function getPidsLimit() : ?int
+    public function getPidsLimit(): ?int
     {
         return $this->pidsLimit;
     }
@@ -976,7 +976,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setPidsLimit(?int $pidsLimit) : self
+    public function setPidsLimit(?int $pidsLimit): self
     {
         $this->initialized['pidsLimit'] = true;
         $this->pidsLimit = $pidsLimit;
@@ -992,7 +992,7 @@ class ContainersIdUpdatePostBody
     *
     * @return list<ResourcesUlimitsItem>
     */
-    public function getUlimits() : array
+    public function getUlimits(): array
     {
         return $this->ulimits;
     }
@@ -1008,7 +1008,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setUlimits(array $ulimits) : self
+    public function setUlimits(array $ulimits): self
     {
         $this->initialized['ulimits'] = true;
         $this->ulimits = $ulimits;
@@ -1024,7 +1024,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getCpuCount() : int
+    public function getCpuCount(): int
     {
         return $this->cpuCount;
     }
@@ -1040,7 +1040,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpuCount(int $cpuCount) : self
+    public function setCpuCount(int $cpuCount): self
     {
         $this->initialized['cpuCount'] = true;
         $this->cpuCount = $cpuCount;
@@ -1056,7 +1056,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getCpuPercent() : int
+    public function getCpuPercent(): int
     {
         return $this->cpuPercent;
     }
@@ -1072,7 +1072,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setCpuPercent(int $cpuPercent) : self
+    public function setCpuPercent(int $cpuPercent): self
     {
         $this->initialized['cpuPercent'] = true;
         $this->cpuPercent = $cpuPercent;
@@ -1083,7 +1083,7 @@ class ContainersIdUpdatePostBody
      *
      * @return int
      */
-    public function getIOMaximumIOps() : int
+    public function getIOMaximumIOps(): int
     {
         return $this->iOMaximumIOps;
     }
@@ -1094,7 +1094,7 @@ class ContainersIdUpdatePostBody
      *
      * @return self
      */
-    public function setIOMaximumIOps(int $iOMaximumIOps) : self
+    public function setIOMaximumIOps(int $iOMaximumIOps): self
     {
         $this->initialized['iOMaximumIOps'] = true;
         $this->iOMaximumIOps = $iOMaximumIOps;
@@ -1107,7 +1107,7 @@ class ContainersIdUpdatePostBody
     *
     * @return int
     */
-    public function getIOMaximumBandwidth() : int
+    public function getIOMaximumBandwidth(): int
     {
         return $this->iOMaximumBandwidth;
     }
@@ -1120,7 +1120,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setIOMaximumBandwidth(int $iOMaximumBandwidth) : self
+    public function setIOMaximumBandwidth(int $iOMaximumBandwidth): self
     {
         $this->initialized['iOMaximumBandwidth'] = true;
         $this->iOMaximumBandwidth = $iOMaximumBandwidth;
@@ -1136,7 +1136,7 @@ class ContainersIdUpdatePostBody
     *
     * @return RestartPolicy
     */
-    public function getRestartPolicy() : RestartPolicy
+    public function getRestartPolicy(): RestartPolicy
     {
         return $this->restartPolicy;
     }
@@ -1152,7 +1152,7 @@ class ContainersIdUpdatePostBody
     *
     * @return self
     */
-    public function setRestartPolicy(RestartPolicy $restartPolicy) : self
+    public function setRestartPolicy(RestartPolicy $restartPolicy): self
     {
         $this->initialized['restartPolicy'] = true;
         $this->restartPolicy = $restartPolicy;

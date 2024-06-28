@@ -8,7 +8,7 @@ class DeviceRequest
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -49,7 +49,7 @@ class DeviceRequest
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -60,7 +60,7 @@ class DeviceRequest
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -71,7 +71,7 @@ class DeviceRequest
      *
      * @return int
      */
-    public function getCount() : int
+    public function getCount(): int
     {
         return $this->count;
     }
@@ -82,7 +82,7 @@ class DeviceRequest
      *
      * @return self
      */
-    public function setCount(int $count) : self
+    public function setCount(int $count): self
     {
         $this->initialized['count'] = true;
         $this->count = $count;
@@ -93,7 +93,7 @@ class DeviceRequest
      *
      * @return list<string>
      */
-    public function getDeviceIDs() : array
+    public function getDeviceIDs(): array
     {
         return $this->deviceIDs;
     }
@@ -104,7 +104,7 @@ class DeviceRequest
      *
      * @return self
      */
-    public function setDeviceIDs(array $deviceIDs) : self
+    public function setDeviceIDs(array $deviceIDs): self
     {
         $this->initialized['deviceIDs'] = true;
         $this->deviceIDs = $deviceIDs;
@@ -115,7 +115,7 @@ class DeviceRequest
      *
      * @return list<list<string>>
      */
-    public function getCapabilities() : array
+    public function getCapabilities(): array
     {
         return $this->capabilities;
     }
@@ -126,7 +126,7 @@ class DeviceRequest
      *
      * @return self
      */
-    public function setCapabilities(array $capabilities) : self
+    public function setCapabilities(array $capabilities): self
     {
         $this->initialized['capabilities'] = true;
         $this->capabilities = $capabilities;
@@ -139,7 +139,7 @@ class DeviceRequest
     *
     * @return array<string, string>
     */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -152,7 +152,7 @@ class DeviceRequest
     *
     * @return self
     */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

@@ -8,7 +8,7 @@ class ImageDeleteResponseItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ImageDeleteResponseItem
      *
      * @return string
      */
-    public function getUntagged() : string
+    public function getUntagged(): string
     {
         return $this->untagged;
     }
@@ -40,7 +40,7 @@ class ImageDeleteResponseItem
      *
      * @return self
      */
-    public function setUntagged(string $untagged) : self
+    public function setUntagged(string $untagged): self
     {
         $this->initialized['untagged'] = true;
         $this->untagged = $untagged;
@@ -51,7 +51,7 @@ class ImageDeleteResponseItem
      *
      * @return string
      */
-    public function getDeleted() : string
+    public function getDeleted(): string
     {
         return $this->deleted;
     }
@@ -62,7 +62,7 @@ class ImageDeleteResponseItem
      *
      * @return self
      */
-    public function setDeleted(string $deleted) : self
+    public function setDeleted(string $deleted): self
     {
         $this->initialized['deleted'] = true;
         $this->deleted = $deleted;

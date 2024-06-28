@@ -8,7 +8,7 @@ class ClusterInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -100,7 +100,7 @@ class ClusterInfo
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -111,7 +111,7 @@ class ClusterInfo
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -132,7 +132,7 @@ class ClusterInfo
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -153,7 +153,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -166,7 +166,7 @@ class ClusterInfo
     *
     * @return string
     */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -179,7 +179,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -192,7 +192,7 @@ class ClusterInfo
     *
     * @return string
     */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -205,7 +205,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -216,7 +216,7 @@ class ClusterInfo
      *
      * @return SwarmSpec
      */
-    public function getSpec() : SwarmSpec
+    public function getSpec(): SwarmSpec
     {
         return $this->spec;
     }
@@ -227,7 +227,7 @@ class ClusterInfo
      *
      * @return self
      */
-    public function setSpec(SwarmSpec $spec) : self
+    public function setSpec(SwarmSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -240,7 +240,7 @@ class ClusterInfo
     *
     * @return TLSInfo
     */
-    public function getTLSInfo() : TLSInfo
+    public function getTLSInfo(): TLSInfo
     {
         return $this->tLSInfo;
     }
@@ -253,7 +253,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setTLSInfo(TLSInfo $tLSInfo) : self
+    public function setTLSInfo(TLSInfo $tLSInfo): self
     {
         $this->initialized['tLSInfo'] = true;
         $this->tLSInfo = $tLSInfo;
@@ -264,7 +264,7 @@ class ClusterInfo
      *
      * @return bool
      */
-    public function getRootRotationInProgress() : bool
+    public function getRootRotationInProgress(): bool
     {
         return $this->rootRotationInProgress;
     }
@@ -275,7 +275,7 @@ class ClusterInfo
      *
      * @return self
      */
-    public function setRootRotationInProgress(bool $rootRotationInProgress) : self
+    public function setRootRotationInProgress(bool $rootRotationInProgress): self
     {
         $this->initialized['rootRotationInProgress'] = true;
         $this->rootRotationInProgress = $rootRotationInProgress;
@@ -289,7 +289,7 @@ class ClusterInfo
     *
     * @return int
     */
-    public function getDataPathPort() : int
+    public function getDataPathPort(): int
     {
         return $this->dataPathPort;
     }
@@ -303,7 +303,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setDataPathPort(int $dataPathPort) : self
+    public function setDataPathPort(int $dataPathPort): self
     {
         $this->initialized['dataPathPort'] = true;
         $this->dataPathPort = $dataPathPort;
@@ -316,7 +316,7 @@ class ClusterInfo
     *
     * @return list<string>
     */
-    public function getDefaultAddrPool() : array
+    public function getDefaultAddrPool(): array
     {
         return $this->defaultAddrPool;
     }
@@ -329,7 +329,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setDefaultAddrPool(array $defaultAddrPool) : self
+    public function setDefaultAddrPool(array $defaultAddrPool): self
     {
         $this->initialized['defaultAddrPool'] = true;
         $this->defaultAddrPool = $defaultAddrPool;
@@ -342,7 +342,7 @@ class ClusterInfo
     *
     * @return int
     */
-    public function getSubnetSize() : int
+    public function getSubnetSize(): int
     {
         return $this->subnetSize;
     }
@@ -355,7 +355,7 @@ class ClusterInfo
     *
     * @return self
     */
-    public function setSubnetSize(int $subnetSize) : self
+    public function setSubnetSize(int $subnetSize): self
     {
         $this->initialized['subnetSize'] = true;
         $this->subnetSize = $subnetSize;

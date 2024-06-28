@@ -8,7 +8,7 @@ class Network
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -95,7 +95,7 @@ class Network
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -106,7 +106,7 @@ class Network
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -117,7 +117,7 @@ class Network
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -128,7 +128,7 @@ class Network
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -139,7 +139,7 @@ class Network
      *
      * @return string
      */
-    public function getCreated() : string
+    public function getCreated(): string
     {
         return $this->created;
     }
@@ -150,7 +150,7 @@ class Network
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(string $created): self
     {
         $this->initialized['created'] = true;
         $this->created = $created;
@@ -161,7 +161,7 @@ class Network
      *
      * @return string
      */
-    public function getScope() : string
+    public function getScope(): string
     {
         return $this->scope;
     }
@@ -172,7 +172,7 @@ class Network
      *
      * @return self
      */
-    public function setScope(string $scope) : self
+    public function setScope(string $scope): self
     {
         $this->initialized['scope'] = true;
         $this->scope = $scope;
@@ -183,7 +183,7 @@ class Network
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -194,7 +194,7 @@ class Network
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -205,7 +205,7 @@ class Network
      *
      * @return bool
      */
-    public function getEnableIPv6() : bool
+    public function getEnableIPv6(): bool
     {
         return $this->enableIPv6;
     }
@@ -216,7 +216,7 @@ class Network
      *
      * @return self
      */
-    public function setEnableIPv6(bool $enableIPv6) : self
+    public function setEnableIPv6(bool $enableIPv6): self
     {
         $this->initialized['enableIPv6'] = true;
         $this->enableIPv6 = $enableIPv6;
@@ -227,7 +227,7 @@ class Network
      *
      * @return IPAM
      */
-    public function getIPAM() : IPAM
+    public function getIPAM(): IPAM
     {
         return $this->iPAM;
     }
@@ -238,7 +238,7 @@ class Network
      *
      * @return self
      */
-    public function setIPAM(IPAM $iPAM) : self
+    public function setIPAM(IPAM $iPAM): self
     {
         $this->initialized['iPAM'] = true;
         $this->iPAM = $iPAM;
@@ -249,7 +249,7 @@ class Network
      *
      * @return bool
      */
-    public function getInternal() : bool
+    public function getInternal(): bool
     {
         return $this->internal;
     }
@@ -260,7 +260,7 @@ class Network
      *
      * @return self
      */
-    public function setInternal(bool $internal) : self
+    public function setInternal(bool $internal): self
     {
         $this->initialized['internal'] = true;
         $this->internal = $internal;
@@ -271,7 +271,7 @@ class Network
      *
      * @return bool
      */
-    public function getAttachable() : bool
+    public function getAttachable(): bool
     {
         return $this->attachable;
     }
@@ -282,7 +282,7 @@ class Network
      *
      * @return self
      */
-    public function setAttachable(bool $attachable) : self
+    public function setAttachable(bool $attachable): self
     {
         $this->initialized['attachable'] = true;
         $this->attachable = $attachable;
@@ -293,7 +293,7 @@ class Network
      *
      * @return bool
      */
-    public function getIngress() : bool
+    public function getIngress(): bool
     {
         return $this->ingress;
     }
@@ -304,7 +304,7 @@ class Network
      *
      * @return self
      */
-    public function setIngress(bool $ingress) : self
+    public function setIngress(bool $ingress): self
     {
         $this->initialized['ingress'] = true;
         $this->ingress = $ingress;
@@ -315,7 +315,7 @@ class Network
      *
      * @return array<string, NetworkContainer>
      */
-    public function getContainers() : iterable
+    public function getContainers(): iterable
     {
         return $this->containers;
     }
@@ -326,7 +326,7 @@ class Network
      *
      * @return self
      */
-    public function setContainers(iterable $containers) : self
+    public function setContainers(iterable $containers): self
     {
         $this->initialized['containers'] = true;
         $this->containers = $containers;
@@ -337,7 +337,7 @@ class Network
      *
      * @return array<string, string>
      */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -348,7 +348,7 @@ class Network
      *
      * @return self
      */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;
@@ -359,7 +359,7 @@ class Network
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -370,7 +370,7 @@ class Network
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;

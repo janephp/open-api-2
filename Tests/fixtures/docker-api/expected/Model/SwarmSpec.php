@@ -8,7 +8,7 @@ class SwarmSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -65,7 +65,7 @@ class SwarmSpec
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -76,7 +76,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -87,7 +87,7 @@ class SwarmSpec
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -98,7 +98,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -109,7 +109,7 @@ class SwarmSpec
      *
      * @return SwarmSpecOrchestration|null
      */
-    public function getOrchestration() : ?SwarmSpecOrchestration
+    public function getOrchestration(): ?SwarmSpecOrchestration
     {
         return $this->orchestration;
     }
@@ -120,7 +120,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setOrchestration(?SwarmSpecOrchestration $orchestration) : self
+    public function setOrchestration(?SwarmSpecOrchestration $orchestration): self
     {
         $this->initialized['orchestration'] = true;
         $this->orchestration = $orchestration;
@@ -131,7 +131,7 @@ class SwarmSpec
      *
      * @return SwarmSpecRaft
      */
-    public function getRaft() : SwarmSpecRaft
+    public function getRaft(): SwarmSpecRaft
     {
         return $this->raft;
     }
@@ -142,7 +142,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setRaft(SwarmSpecRaft $raft) : self
+    public function setRaft(SwarmSpecRaft $raft): self
     {
         $this->initialized['raft'] = true;
         $this->raft = $raft;
@@ -153,7 +153,7 @@ class SwarmSpec
      *
      * @return SwarmSpecDispatcher|null
      */
-    public function getDispatcher() : ?SwarmSpecDispatcher
+    public function getDispatcher(): ?SwarmSpecDispatcher
     {
         return $this->dispatcher;
     }
@@ -164,7 +164,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setDispatcher(?SwarmSpecDispatcher $dispatcher) : self
+    public function setDispatcher(?SwarmSpecDispatcher $dispatcher): self
     {
         $this->initialized['dispatcher'] = true;
         $this->dispatcher = $dispatcher;
@@ -175,7 +175,7 @@ class SwarmSpec
      *
      * @return SwarmSpecCAConfig|null
      */
-    public function getCAConfig() : ?SwarmSpecCAConfig
+    public function getCAConfig(): ?SwarmSpecCAConfig
     {
         return $this->cAConfig;
     }
@@ -186,7 +186,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setCAConfig(?SwarmSpecCAConfig $cAConfig) : self
+    public function setCAConfig(?SwarmSpecCAConfig $cAConfig): self
     {
         $this->initialized['cAConfig'] = true;
         $this->cAConfig = $cAConfig;
@@ -197,7 +197,7 @@ class SwarmSpec
      *
      * @return SwarmSpecEncryptionConfig
      */
-    public function getEncryptionConfig() : SwarmSpecEncryptionConfig
+    public function getEncryptionConfig(): SwarmSpecEncryptionConfig
     {
         return $this->encryptionConfig;
     }
@@ -208,7 +208,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setEncryptionConfig(SwarmSpecEncryptionConfig $encryptionConfig) : self
+    public function setEncryptionConfig(SwarmSpecEncryptionConfig $encryptionConfig): self
     {
         $this->initialized['encryptionConfig'] = true;
         $this->encryptionConfig = $encryptionConfig;
@@ -219,7 +219,7 @@ class SwarmSpec
      *
      * @return SwarmSpecTaskDefaults
      */
-    public function getTaskDefaults() : SwarmSpecTaskDefaults
+    public function getTaskDefaults(): SwarmSpecTaskDefaults
     {
         return $this->taskDefaults;
     }
@@ -230,7 +230,7 @@ class SwarmSpec
      *
      * @return self
      */
-    public function setTaskDefaults(SwarmSpecTaskDefaults $taskDefaults) : self
+    public function setTaskDefaults(SwarmSpecTaskDefaults $taskDefaults): self
     {
         $this->initialized['taskDefaults'] = true;
         $this->taskDefaults = $taskDefaults;

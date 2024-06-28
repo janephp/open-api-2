@@ -8,7 +8,7 @@ class MountVolumeOptions
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class MountVolumeOptions
      *
      * @return bool
      */
-    public function getNoCopy() : bool
+    public function getNoCopy(): bool
     {
         return $this->noCopy;
     }
@@ -46,7 +46,7 @@ class MountVolumeOptions
      *
      * @return self
      */
-    public function setNoCopy(bool $noCopy) : self
+    public function setNoCopy(bool $noCopy): self
     {
         $this->initialized['noCopy'] = true;
         $this->noCopy = $noCopy;
@@ -57,7 +57,7 @@ class MountVolumeOptions
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -68,7 +68,7 @@ class MountVolumeOptions
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -79,7 +79,7 @@ class MountVolumeOptions
      *
      * @return MountVolumeOptionsDriverConfig
      */
-    public function getDriverConfig() : MountVolumeOptionsDriverConfig
+    public function getDriverConfig(): MountVolumeOptionsDriverConfig
     {
         return $this->driverConfig;
     }
@@ -90,7 +90,7 @@ class MountVolumeOptions
      *
      * @return self
      */
-    public function setDriverConfig(MountVolumeOptionsDriverConfig $driverConfig) : self
+    public function setDriverConfig(MountVolumeOptionsDriverConfig $driverConfig): self
     {
         $this->initialized['driverConfig'] = true;
         $this->driverConfig = $driverConfig;

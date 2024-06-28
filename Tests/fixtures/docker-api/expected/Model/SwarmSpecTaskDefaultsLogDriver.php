@@ -8,7 +8,7 @@ class SwarmSpecTaskDefaultsLogDriver
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -31,7 +31,7 @@ class SwarmSpecTaskDefaultsLogDriver
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -42,7 +42,7 @@ class SwarmSpecTaskDefaultsLogDriver
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -55,7 +55,7 @@ class SwarmSpecTaskDefaultsLogDriver
     *
     * @return array<string, string>
     */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -68,7 +68,7 @@ class SwarmSpecTaskDefaultsLogDriver
     *
     * @return self
     */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

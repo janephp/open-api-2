@@ -8,7 +8,7 @@ class ImagesSearchGetResponse200Item
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -58,7 +58,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -69,7 +69,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return bool
      */
-    public function getIsOfficial() : bool
+    public function getIsOfficial(): bool
     {
         return $this->isOfficial;
     }
@@ -80,7 +80,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return self
      */
-    public function setIsOfficial(bool $isOfficial) : self
+    public function setIsOfficial(bool $isOfficial): self
     {
         $this->initialized['isOfficial'] = true;
         $this->isOfficial = $isOfficial;
@@ -91,7 +91,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return bool
      */
-    public function getIsAutomated() : bool
+    public function getIsAutomated(): bool
     {
         return $this->isAutomated;
     }
@@ -102,7 +102,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return self
      */
-    public function setIsAutomated(bool $isAutomated) : self
+    public function setIsAutomated(bool $isAutomated): self
     {
         $this->initialized['isAutomated'] = true;
         $this->isAutomated = $isAutomated;
@@ -113,7 +113,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -124,7 +124,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -135,7 +135,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return int
      */
-    public function getStarCount() : int
+    public function getStarCount(): int
     {
         return $this->starCount;
     }
@@ -146,7 +146,7 @@ class ImagesSearchGetResponse200Item
      *
      * @return self
      */
-    public function setStarCount(int $starCount) : self
+    public function setStarCount(int $starCount): self
     {
         $this->initialized['starCount'] = true;
         $this->starCount = $starCount;

@@ -8,7 +8,7 @@ class TaskSpecContainerSpecUlimitsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -46,7 +46,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -57,7 +57,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return int
      */
-    public function getSoft() : int
+    public function getSoft(): int
     {
         return $this->soft;
     }
@@ -68,7 +68,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return self
      */
-    public function setSoft(int $soft) : self
+    public function setSoft(int $soft): self
     {
         $this->initialized['soft'] = true;
         $this->soft = $soft;
@@ -79,7 +79,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return int
      */
-    public function getHard() : int
+    public function getHard(): int
     {
         return $this->hard;
     }
@@ -90,7 +90,7 @@ class TaskSpecContainerSpecUlimitsItem
      *
      * @return self
      */
-    public function setHard(int $hard) : self
+    public function setHard(int $hard): self
     {
         $this->initialized['hard'] = true;
         $this->hard = $hard;

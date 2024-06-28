@@ -8,7 +8,7 @@ class ContainersIdJsonGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -171,7 +171,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -182,7 +182,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -193,7 +193,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getCreated() : string
+    public function getCreated(): string
     {
         return $this->created;
     }
@@ -204,7 +204,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(string $created): self
     {
         $this->initialized['created'] = true;
         $this->created = $created;
@@ -215,7 +215,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -226,7 +226,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setPath(string $path) : self
+    public function setPath(string $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;
@@ -237,7 +237,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return list<string>
      */
-    public function getArgs() : array
+    public function getArgs(): array
     {
         return $this->args;
     }
@@ -248,7 +248,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setArgs(array $args) : self
+    public function setArgs(array $args): self
     {
         $this->initialized['args'] = true;
         $this->args = $args;
@@ -261,7 +261,7 @@ class ContainersIdJsonGetResponse200
     *
     * @return ContainerState
     */
-    public function getState() : ContainerState
+    public function getState(): ContainerState
     {
         return $this->state;
     }
@@ -274,7 +274,7 @@ class ContainersIdJsonGetResponse200
     *
     * @return self
     */
-    public function setState(ContainerState $state) : self
+    public function setState(ContainerState $state): self
     {
         $this->initialized['state'] = true;
         $this->state = $state;
@@ -285,7 +285,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getImage() : string
+    public function getImage(): string
     {
         return $this->image;
     }
@@ -296,7 +296,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setImage(string $image) : self
+    public function setImage(string $image): self
     {
         $this->initialized['image'] = true;
         $this->image = $image;
@@ -307,7 +307,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getResolvConfPath() : string
+    public function getResolvConfPath(): string
     {
         return $this->resolvConfPath;
     }
@@ -318,7 +318,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setResolvConfPath(string $resolvConfPath) : self
+    public function setResolvConfPath(string $resolvConfPath): self
     {
         $this->initialized['resolvConfPath'] = true;
         $this->resolvConfPath = $resolvConfPath;
@@ -329,7 +329,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getHostnamePath() : string
+    public function getHostnamePath(): string
     {
         return $this->hostnamePath;
     }
@@ -340,7 +340,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setHostnamePath(string $hostnamePath) : self
+    public function setHostnamePath(string $hostnamePath): self
     {
         $this->initialized['hostnamePath'] = true;
         $this->hostnamePath = $hostnamePath;
@@ -351,7 +351,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getHostsPath() : string
+    public function getHostsPath(): string
     {
         return $this->hostsPath;
     }
@@ -362,7 +362,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setHostsPath(string $hostsPath) : self
+    public function setHostsPath(string $hostsPath): self
     {
         $this->initialized['hostsPath'] = true;
         $this->hostsPath = $hostsPath;
@@ -373,7 +373,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getLogPath() : string
+    public function getLogPath(): string
     {
         return $this->logPath;
     }
@@ -384,7 +384,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setLogPath(string $logPath) : self
+    public function setLogPath(string $logPath): self
     {
         $this->initialized['logPath'] = true;
         $this->logPath = $logPath;
@@ -395,7 +395,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -406,7 +406,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -417,7 +417,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return int
      */
-    public function getRestartCount() : int
+    public function getRestartCount(): int
     {
         return $this->restartCount;
     }
@@ -428,7 +428,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setRestartCount(int $restartCount) : self
+    public function setRestartCount(int $restartCount): self
     {
         $this->initialized['restartCount'] = true;
         $this->restartCount = $restartCount;
@@ -439,7 +439,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -450,7 +450,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -461,7 +461,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getPlatform() : string
+    public function getPlatform(): string
     {
         return $this->platform;
     }
@@ -472,7 +472,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setPlatform(string $platform) : self
+    public function setPlatform(string $platform): self
     {
         $this->initialized['platform'] = true;
         $this->platform = $platform;
@@ -483,7 +483,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getMountLabel() : string
+    public function getMountLabel(): string
     {
         return $this->mountLabel;
     }
@@ -494,7 +494,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setMountLabel(string $mountLabel) : self
+    public function setMountLabel(string $mountLabel): self
     {
         $this->initialized['mountLabel'] = true;
         $this->mountLabel = $mountLabel;
@@ -505,7 +505,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getProcessLabel() : string
+    public function getProcessLabel(): string
     {
         return $this->processLabel;
     }
@@ -516,7 +516,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setProcessLabel(string $processLabel) : self
+    public function setProcessLabel(string $processLabel): self
     {
         $this->initialized['processLabel'] = true;
         $this->processLabel = $processLabel;
@@ -527,7 +527,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return string
      */
-    public function getAppArmorProfile() : string
+    public function getAppArmorProfile(): string
     {
         return $this->appArmorProfile;
     }
@@ -538,7 +538,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setAppArmorProfile(string $appArmorProfile) : self
+    public function setAppArmorProfile(string $appArmorProfile): self
     {
         $this->initialized['appArmorProfile'] = true;
         $this->appArmorProfile = $appArmorProfile;
@@ -549,7 +549,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return list<string>|null
      */
-    public function getExecIDs() : ?array
+    public function getExecIDs(): ?array
     {
         return $this->execIDs;
     }
@@ -560,7 +560,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setExecIDs(?array $execIDs) : self
+    public function setExecIDs(?array $execIDs): self
     {
         $this->initialized['execIDs'] = true;
         $this->execIDs = $execIDs;
@@ -571,7 +571,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return HostConfig
      */
-    public function getHostConfig() : HostConfig
+    public function getHostConfig(): HostConfig
     {
         return $this->hostConfig;
     }
@@ -582,7 +582,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setHostConfig(HostConfig $hostConfig) : self
+    public function setHostConfig(HostConfig $hostConfig): self
     {
         $this->initialized['hostConfig'] = true;
         $this->hostConfig = $hostConfig;
@@ -593,7 +593,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return GraphDriverData
      */
-    public function getGraphDriver() : GraphDriverData
+    public function getGraphDriver(): GraphDriverData
     {
         return $this->graphDriver;
     }
@@ -604,7 +604,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setGraphDriver(GraphDriverData $graphDriver) : self
+    public function setGraphDriver(GraphDriverData $graphDriver): self
     {
         $this->initialized['graphDriver'] = true;
         $this->graphDriver = $graphDriver;
@@ -617,7 +617,7 @@ class ContainersIdJsonGetResponse200
     *
     * @return int
     */
-    public function getSizeRw() : int
+    public function getSizeRw(): int
     {
         return $this->sizeRw;
     }
@@ -630,7 +630,7 @@ class ContainersIdJsonGetResponse200
     *
     * @return self
     */
-    public function setSizeRw(int $sizeRw) : self
+    public function setSizeRw(int $sizeRw): self
     {
         $this->initialized['sizeRw'] = true;
         $this->sizeRw = $sizeRw;
@@ -641,7 +641,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return int
      */
-    public function getSizeRootFs() : int
+    public function getSizeRootFs(): int
     {
         return $this->sizeRootFs;
     }
@@ -652,7 +652,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setSizeRootFs(int $sizeRootFs) : self
+    public function setSizeRootFs(int $sizeRootFs): self
     {
         $this->initialized['sizeRootFs'] = true;
         $this->sizeRootFs = $sizeRootFs;
@@ -663,7 +663,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return list<MountPoint>
      */
-    public function getMounts() : array
+    public function getMounts(): array
     {
         return $this->mounts;
     }
@@ -674,7 +674,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setMounts(array $mounts) : self
+    public function setMounts(array $mounts): self
     {
         $this->initialized['mounts'] = true;
         $this->mounts = $mounts;
@@ -685,7 +685,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return ContainerConfig
      */
-    public function getConfig() : ContainerConfig
+    public function getConfig(): ContainerConfig
     {
         return $this->config;
     }
@@ -696,7 +696,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setConfig(ContainerConfig $config) : self
+    public function setConfig(ContainerConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;
@@ -707,7 +707,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return NetworkSettings
      */
-    public function getNetworkSettings() : NetworkSettings
+    public function getNetworkSettings(): NetworkSettings
     {
         return $this->networkSettings;
     }
@@ -718,7 +718,7 @@ class ContainersIdJsonGetResponse200
      *
      * @return self
      */
-    public function setNetworkSettings(NetworkSettings $networkSettings) : self
+    public function setNetworkSettings(NetworkSettings $networkSettings): self
     {
         $this->initialized['networkSettings'] = true;
         $this->networkSettings = $networkSettings;

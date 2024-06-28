@@ -8,7 +8,7 @@ class TestComplexListGetResponsedefault
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class TestComplexListGetResponsedefault
      *
      * @return string
      */
-    public function getError() : string
+    public function getError(): string
     {
         return $this->error;
     }
@@ -40,7 +40,7 @@ class TestComplexListGetResponsedefault
      *
      * @return self
      */
-    public function setError(string $error) : self
+    public function setError(string $error): self
     {
         $this->initialized['error'] = true;
         $this->error = $error;
@@ -51,7 +51,7 @@ class TestComplexListGetResponsedefault
      *
      * @return bool
      */
-    public function getOk() : bool
+    public function getOk(): bool
     {
         return $this->ok;
     }
@@ -62,7 +62,7 @@ class TestComplexListGetResponsedefault
      *
      * @return self
      */
-    public function setOk(bool $ok) : self
+    public function setOk(bool $ok): self
     {
         $this->initialized['ok'] = true;
         $this->ok = $ok;

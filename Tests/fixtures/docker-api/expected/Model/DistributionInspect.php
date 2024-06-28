@@ -8,7 +8,7 @@ class DistributionInspect
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -33,7 +33,7 @@ class DistributionInspect
     *
     * @return OCIDescriptor
     */
-    public function getDescriptor() : OCIDescriptor
+    public function getDescriptor(): OCIDescriptor
     {
         return $this->descriptor;
     }
@@ -46,7 +46,7 @@ class DistributionInspect
     *
     * @return self
     */
-    public function setDescriptor(OCIDescriptor $descriptor) : self
+    public function setDescriptor(OCIDescriptor $descriptor): self
     {
         $this->initialized['descriptor'] = true;
         $this->descriptor = $descriptor;
@@ -57,7 +57,7 @@ class DistributionInspect
      *
      * @return list<OCIPlatform>
      */
-    public function getPlatforms() : array
+    public function getPlatforms(): array
     {
         return $this->platforms;
     }
@@ -68,7 +68,7 @@ class DistributionInspect
      *
      * @return self
      */
-    public function setPlatforms(array $platforms) : self
+    public function setPlatforms(array $platforms): self
     {
         $this->initialized['platforms'] = true;
         $this->platforms = $platforms;

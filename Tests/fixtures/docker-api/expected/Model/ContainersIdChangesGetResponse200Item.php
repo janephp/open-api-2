@@ -8,7 +8,7 @@ class ContainersIdChangesGetResponse200Item
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ContainersIdChangesGetResponse200Item
      *
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -40,7 +40,7 @@ class ContainersIdChangesGetResponse200Item
      *
      * @return self
      */
-    public function setPath(string $path) : self
+    public function setPath(string $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;
@@ -51,7 +51,7 @@ class ContainersIdChangesGetResponse200Item
      *
      * @return int
      */
-    public function getKind() : int
+    public function getKind(): int
     {
         return $this->kind;
     }
@@ -62,7 +62,7 @@ class ContainersIdChangesGetResponse200Item
      *
      * @return self
      */
-    public function setKind(int $kind) : self
+    public function setKind(int $kind): self
     {
         $this->initialized['kind'] = true;
         $this->kind = $kind;

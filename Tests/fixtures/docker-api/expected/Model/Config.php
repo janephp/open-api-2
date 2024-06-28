@@ -8,7 +8,7 @@ class Config
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -57,7 +57,7 @@ class Config
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -68,7 +68,7 @@ class Config
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -89,7 +89,7 @@ class Config
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -110,7 +110,7 @@ class Config
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -121,7 +121,7 @@ class Config
      *
      * @return string
      */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -132,7 +132,7 @@ class Config
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -143,7 +143,7 @@ class Config
      *
      * @return string
      */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -154,7 +154,7 @@ class Config
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -165,7 +165,7 @@ class Config
      *
      * @return ConfigSpec
      */
-    public function getSpec() : ConfigSpec
+    public function getSpec(): ConfigSpec
     {
         return $this->spec;
     }
@@ -176,7 +176,7 @@ class Config
      *
      * @return self
      */
-    public function setSpec(ConfigSpec $spec) : self
+    public function setSpec(ConfigSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

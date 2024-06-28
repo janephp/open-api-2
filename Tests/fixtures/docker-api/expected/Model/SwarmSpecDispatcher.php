@@ -8,7 +8,7 @@ class SwarmSpecDispatcher
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class SwarmSpecDispatcher
      *
      * @return int
      */
-    public function getHeartbeatPeriod() : int
+    public function getHeartbeatPeriod(): int
     {
         return $this->heartbeatPeriod;
     }
@@ -34,7 +34,7 @@ class SwarmSpecDispatcher
      *
      * @return self
      */
-    public function setHeartbeatPeriod(int $heartbeatPeriod) : self
+    public function setHeartbeatPeriod(int $heartbeatPeriod): self
     {
         $this->initialized['heartbeatPeriod'] = true;
         $this->heartbeatPeriod = $heartbeatPeriod;

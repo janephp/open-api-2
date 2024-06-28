@@ -8,7 +8,7 @@ class Node
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -88,7 +88,7 @@ class Node
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -99,7 +99,7 @@ class Node
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -120,7 +120,7 @@ class Node
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -141,7 +141,7 @@ class Node
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -154,7 +154,7 @@ class Node
     *
     * @return string
     */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -167,7 +167,7 @@ class Node
     *
     * @return self
     */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -180,7 +180,7 @@ class Node
     *
     * @return string
     */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -193,7 +193,7 @@ class Node
     *
     * @return self
     */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -204,7 +204,7 @@ class Node
      *
      * @return NodeSpec
      */
-    public function getSpec() : NodeSpec
+    public function getSpec(): NodeSpec
     {
         return $this->spec;
     }
@@ -215,7 +215,7 @@ class Node
      *
      * @return self
      */
-    public function setSpec(NodeSpec $spec) : self
+    public function setSpec(NodeSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -228,7 +228,7 @@ class Node
     *
     * @return NodeDescription
     */
-    public function getDescription() : NodeDescription
+    public function getDescription(): NodeDescription
     {
         return $this->description;
     }
@@ -241,7 +241,7 @@ class Node
     *
     * @return self
     */
-    public function setDescription(NodeDescription $description) : self
+    public function setDescription(NodeDescription $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -255,7 +255,7 @@ class Node
     *
     * @return NodeStatus
     */
-    public function getStatus() : NodeStatus
+    public function getStatus(): NodeStatus
     {
         return $this->status;
     }
@@ -269,7 +269,7 @@ class Node
     *
     * @return self
     */
-    public function setStatus(NodeStatus $status) : self
+    public function setStatus(NodeStatus $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -284,7 +284,7 @@ class Node
     *
     * @return ManagerStatus|null
     */
-    public function getManagerStatus() : ?ManagerStatus
+    public function getManagerStatus(): ?ManagerStatus
     {
         return $this->managerStatus;
     }
@@ -299,7 +299,7 @@ class Node
     *
     * @return self
     */
-    public function setManagerStatus(?ManagerStatus $managerStatus) : self
+    public function setManagerStatus(?ManagerStatus $managerStatus): self
     {
         $this->initialized['managerStatus'] = true;
         $this->managerStatus = $managerStatus;

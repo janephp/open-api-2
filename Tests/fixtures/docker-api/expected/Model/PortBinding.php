@@ -8,7 +8,7 @@ class PortBinding
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class PortBinding
      *
      * @return string
      */
-    public function getHostIp() : string
+    public function getHostIp(): string
     {
         return $this->hostIp;
     }
@@ -40,7 +40,7 @@ class PortBinding
      *
      * @return self
      */
-    public function setHostIp(string $hostIp) : self
+    public function setHostIp(string $hostIp): self
     {
         $this->initialized['hostIp'] = true;
         $this->hostIp = $hostIp;
@@ -51,7 +51,7 @@ class PortBinding
      *
      * @return string
      */
-    public function getHostPort() : string
+    public function getHostPort(): string
     {
         return $this->hostPort;
     }
@@ -62,7 +62,7 @@ class PortBinding
      *
      * @return self
      */
-    public function setHostPort(string $hostPort) : self
+    public function setHostPort(string $hostPort): self
     {
         $this->initialized['hostPort'] = true;
         $this->hostPort = $hostPort;

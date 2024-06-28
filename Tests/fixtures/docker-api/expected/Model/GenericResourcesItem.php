@@ -8,7 +8,7 @@ class GenericResourcesItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class GenericResourcesItem
      *
      * @return GenericResourcesItemNamedResourceSpec
      */
-    public function getNamedResourceSpec() : GenericResourcesItemNamedResourceSpec
+    public function getNamedResourceSpec(): GenericResourcesItemNamedResourceSpec
     {
         return $this->namedResourceSpec;
     }
@@ -40,7 +40,7 @@ class GenericResourcesItem
      *
      * @return self
      */
-    public function setNamedResourceSpec(GenericResourcesItemNamedResourceSpec $namedResourceSpec) : self
+    public function setNamedResourceSpec(GenericResourcesItemNamedResourceSpec $namedResourceSpec): self
     {
         $this->initialized['namedResourceSpec'] = true;
         $this->namedResourceSpec = $namedResourceSpec;
@@ -51,7 +51,7 @@ class GenericResourcesItem
      *
      * @return GenericResourcesItemDiscreteResourceSpec
      */
-    public function getDiscreteResourceSpec() : GenericResourcesItemDiscreteResourceSpec
+    public function getDiscreteResourceSpec(): GenericResourcesItemDiscreteResourceSpec
     {
         return $this->discreteResourceSpec;
     }
@@ -62,7 +62,7 @@ class GenericResourcesItem
      *
      * @return self
      */
-    public function setDiscreteResourceSpec(GenericResourcesItemDiscreteResourceSpec $discreteResourceSpec) : self
+    public function setDiscreteResourceSpec(GenericResourcesItemDiscreteResourceSpec $discreteResourceSpec): self
     {
         $this->initialized['discreteResourceSpec'] = true;
         $this->discreteResourceSpec = $discreteResourceSpec;

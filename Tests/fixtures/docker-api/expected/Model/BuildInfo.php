@@ -8,7 +8,7 @@ class BuildInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -65,7 +65,7 @@ class BuildInfo
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -76,7 +76,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -87,7 +87,7 @@ class BuildInfo
      *
      * @return string
      */
-    public function getStream() : string
+    public function getStream(): string
     {
         return $this->stream;
     }
@@ -98,7 +98,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setStream(string $stream) : self
+    public function setStream(string $stream): self
     {
         $this->initialized['stream'] = true;
         $this->stream = $stream;
@@ -109,7 +109,7 @@ class BuildInfo
      *
      * @return string
      */
-    public function getError() : string
+    public function getError(): string
     {
         return $this->error;
     }
@@ -120,7 +120,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setError(string $error) : self
+    public function setError(string $error): self
     {
         $this->initialized['error'] = true;
         $this->error = $error;
@@ -131,7 +131,7 @@ class BuildInfo
      *
      * @return ErrorDetail
      */
-    public function getErrorDetail() : ErrorDetail
+    public function getErrorDetail(): ErrorDetail
     {
         return $this->errorDetail;
     }
@@ -142,7 +142,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setErrorDetail(ErrorDetail $errorDetail) : self
+    public function setErrorDetail(ErrorDetail $errorDetail): self
     {
         $this->initialized['errorDetail'] = true;
         $this->errorDetail = $errorDetail;
@@ -153,7 +153,7 @@ class BuildInfo
      *
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -164,7 +164,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(string $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -175,7 +175,7 @@ class BuildInfo
      *
      * @return string
      */
-    public function getProgress() : string
+    public function getProgress(): string
     {
         return $this->progress;
     }
@@ -186,7 +186,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setProgress(string $progress) : self
+    public function setProgress(string $progress): self
     {
         $this->initialized['progress'] = true;
         $this->progress = $progress;
@@ -197,7 +197,7 @@ class BuildInfo
      *
      * @return ProgressDetail
      */
-    public function getProgressDetail() : ProgressDetail
+    public function getProgressDetail(): ProgressDetail
     {
         return $this->progressDetail;
     }
@@ -208,7 +208,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setProgressDetail(ProgressDetail $progressDetail) : self
+    public function setProgressDetail(ProgressDetail $progressDetail): self
     {
         $this->initialized['progressDetail'] = true;
         $this->progressDetail = $progressDetail;
@@ -219,7 +219,7 @@ class BuildInfo
      *
      * @return ImageID
      */
-    public function getAux() : ImageID
+    public function getAux(): ImageID
     {
         return $this->aux;
     }
@@ -230,7 +230,7 @@ class BuildInfo
      *
      * @return self
      */
-    public function setAux(ImageID $aux) : self
+    public function setAux(ImageID $aux): self
     {
         $this->initialized['aux'] = true;
         $this->aux = $aux;

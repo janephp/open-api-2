@@ -8,7 +8,7 @@ class VolumesCreatePostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -43,7 +43,7 @@ class VolumesCreatePostBody
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -54,7 +54,7 @@ class VolumesCreatePostBody
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -65,7 +65,7 @@ class VolumesCreatePostBody
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -76,7 +76,7 @@ class VolumesCreatePostBody
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -89,7 +89,7 @@ class VolumesCreatePostBody
     *
     * @return array<string, string>
     */
-    public function getDriverOpts() : iterable
+    public function getDriverOpts(): iterable
     {
         return $this->driverOpts;
     }
@@ -102,7 +102,7 @@ class VolumesCreatePostBody
     *
     * @return self
     */
-    public function setDriverOpts(iterable $driverOpts) : self
+    public function setDriverOpts(iterable $driverOpts): self
     {
         $this->initialized['driverOpts'] = true;
         $this->driverOpts = $driverOpts;
@@ -113,7 +113,7 @@ class VolumesCreatePostBody
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -124,7 +124,7 @@ class VolumesCreatePostBody
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;

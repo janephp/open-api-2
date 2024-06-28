@@ -16,25 +16,25 @@ class TestFormFileParameters extends \Jane\Component\OpenApi2\Tests\Expected\Run
         $this->formParameters = $formParameters;
     }
     use \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/test-form-file';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return $this->getMultipartBody($streamFactory);
     }
-    protected function getFormOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getFormOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getFormOptionsResolver();
         $optionsResolver->setDefined(['testFile']);
         $optionsResolver->setRequired([]);
         $optionsResolver->setDefaults([]);
-        $optionsResolver->addAllowedTypes('testFile', ['string', 'resource', '\\Psr\\Http\\Message\\StreamInterface']);
+        $optionsResolver->addAllowedTypes('testFile', ['string', 'resource', '\Psr\Http\Message\StreamInterface']);
         return $optionsResolver;
     }
     /**
@@ -51,7 +51,7 @@ class TestFormFileParameters extends \Jane\Component\OpenApi2\Tests\Expected\Run
             return null;
         }
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

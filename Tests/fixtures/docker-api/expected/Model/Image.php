@@ -8,7 +8,7 @@ class Image
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -131,7 +131,7 @@ class Image
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -142,7 +142,7 @@ class Image
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -153,7 +153,7 @@ class Image
      *
      * @return list<string>
      */
-    public function getRepoTags() : array
+    public function getRepoTags(): array
     {
         return $this->repoTags;
     }
@@ -164,7 +164,7 @@ class Image
      *
      * @return self
      */
-    public function setRepoTags(array $repoTags) : self
+    public function setRepoTags(array $repoTags): self
     {
         $this->initialized['repoTags'] = true;
         $this->repoTags = $repoTags;
@@ -175,7 +175,7 @@ class Image
      *
      * @return list<string>
      */
-    public function getRepoDigests() : array
+    public function getRepoDigests(): array
     {
         return $this->repoDigests;
     }
@@ -186,7 +186,7 @@ class Image
      *
      * @return self
      */
-    public function setRepoDigests(array $repoDigests) : self
+    public function setRepoDigests(array $repoDigests): self
     {
         $this->initialized['repoDigests'] = true;
         $this->repoDigests = $repoDigests;
@@ -197,7 +197,7 @@ class Image
      *
      * @return string
      */
-    public function getParent() : string
+    public function getParent(): string
     {
         return $this->parent;
     }
@@ -208,7 +208,7 @@ class Image
      *
      * @return self
      */
-    public function setParent(string $parent) : self
+    public function setParent(string $parent): self
     {
         $this->initialized['parent'] = true;
         $this->parent = $parent;
@@ -219,7 +219,7 @@ class Image
      *
      * @return string
      */
-    public function getComment() : string
+    public function getComment(): string
     {
         return $this->comment;
     }
@@ -230,7 +230,7 @@ class Image
      *
      * @return self
      */
-    public function setComment(string $comment) : self
+    public function setComment(string $comment): self
     {
         $this->initialized['comment'] = true;
         $this->comment = $comment;
@@ -241,7 +241,7 @@ class Image
      *
      * @return string
      */
-    public function getCreated() : string
+    public function getCreated(): string
     {
         return $this->created;
     }
@@ -252,7 +252,7 @@ class Image
      *
      * @return self
      */
-    public function setCreated(string $created) : self
+    public function setCreated(string $created): self
     {
         $this->initialized['created'] = true;
         $this->created = $created;
@@ -263,7 +263,7 @@ class Image
      *
      * @return string
      */
-    public function getContainer() : string
+    public function getContainer(): string
     {
         return $this->container;
     }
@@ -274,7 +274,7 @@ class Image
      *
      * @return self
      */
-    public function setContainer(string $container) : self
+    public function setContainer(string $container): self
     {
         $this->initialized['container'] = true;
         $this->container = $container;
@@ -285,7 +285,7 @@ class Image
      *
      * @return ContainerConfig
      */
-    public function getContainerConfig() : ContainerConfig
+    public function getContainerConfig(): ContainerConfig
     {
         return $this->containerConfig;
     }
@@ -296,7 +296,7 @@ class Image
      *
      * @return self
      */
-    public function setContainerConfig(ContainerConfig $containerConfig) : self
+    public function setContainerConfig(ContainerConfig $containerConfig): self
     {
         $this->initialized['containerConfig'] = true;
         $this->containerConfig = $containerConfig;
@@ -307,7 +307,7 @@ class Image
      *
      * @return string
      */
-    public function getDockerVersion() : string
+    public function getDockerVersion(): string
     {
         return $this->dockerVersion;
     }
@@ -318,7 +318,7 @@ class Image
      *
      * @return self
      */
-    public function setDockerVersion(string $dockerVersion) : self
+    public function setDockerVersion(string $dockerVersion): self
     {
         $this->initialized['dockerVersion'] = true;
         $this->dockerVersion = $dockerVersion;
@@ -329,7 +329,7 @@ class Image
      *
      * @return string
      */
-    public function getAuthor() : string
+    public function getAuthor(): string
     {
         return $this->author;
     }
@@ -340,7 +340,7 @@ class Image
      *
      * @return self
      */
-    public function setAuthor(string $author) : self
+    public function setAuthor(string $author): self
     {
         $this->initialized['author'] = true;
         $this->author = $author;
@@ -351,7 +351,7 @@ class Image
      *
      * @return ContainerConfig
      */
-    public function getConfig() : ContainerConfig
+    public function getConfig(): ContainerConfig
     {
         return $this->config;
     }
@@ -362,7 +362,7 @@ class Image
      *
      * @return self
      */
-    public function setConfig(ContainerConfig $config) : self
+    public function setConfig(ContainerConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;
@@ -373,7 +373,7 @@ class Image
      *
      * @return string
      */
-    public function getArchitecture() : string
+    public function getArchitecture(): string
     {
         return $this->architecture;
     }
@@ -384,7 +384,7 @@ class Image
      *
      * @return self
      */
-    public function setArchitecture(string $architecture) : self
+    public function setArchitecture(string $architecture): self
     {
         $this->initialized['architecture'] = true;
         $this->architecture = $architecture;
@@ -395,7 +395,7 @@ class Image
      *
      * @return string
      */
-    public function getOs() : string
+    public function getOs(): string
     {
         return $this->os;
     }
@@ -406,7 +406,7 @@ class Image
      *
      * @return self
      */
-    public function setOs(string $os) : self
+    public function setOs(string $os): self
     {
         $this->initialized['os'] = true;
         $this->os = $os;
@@ -417,7 +417,7 @@ class Image
      *
      * @return string
      */
-    public function getOsVersion() : string
+    public function getOsVersion(): string
     {
         return $this->osVersion;
     }
@@ -428,7 +428,7 @@ class Image
      *
      * @return self
      */
-    public function setOsVersion(string $osVersion) : self
+    public function setOsVersion(string $osVersion): self
     {
         $this->initialized['osVersion'] = true;
         $this->osVersion = $osVersion;
@@ -439,7 +439,7 @@ class Image
      *
      * @return int
      */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -450,7 +450,7 @@ class Image
      *
      * @return self
      */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;
@@ -461,7 +461,7 @@ class Image
      *
      * @return int
      */
-    public function getVirtualSize() : int
+    public function getVirtualSize(): int
     {
         return $this->virtualSize;
     }
@@ -472,7 +472,7 @@ class Image
      *
      * @return self
      */
-    public function setVirtualSize(int $virtualSize) : self
+    public function setVirtualSize(int $virtualSize): self
     {
         $this->initialized['virtualSize'] = true;
         $this->virtualSize = $virtualSize;
@@ -483,7 +483,7 @@ class Image
      *
      * @return GraphDriverData
      */
-    public function getGraphDriver() : GraphDriverData
+    public function getGraphDriver(): GraphDriverData
     {
         return $this->graphDriver;
     }
@@ -494,7 +494,7 @@ class Image
      *
      * @return self
      */
-    public function setGraphDriver(GraphDriverData $graphDriver) : self
+    public function setGraphDriver(GraphDriverData $graphDriver): self
     {
         $this->initialized['graphDriver'] = true;
         $this->graphDriver = $graphDriver;
@@ -505,7 +505,7 @@ class Image
      *
      * @return ImageRootFS
      */
-    public function getRootFS() : ImageRootFS
+    public function getRootFS(): ImageRootFS
     {
         return $this->rootFS;
     }
@@ -516,7 +516,7 @@ class Image
      *
      * @return self
      */
-    public function setRootFS(ImageRootFS $rootFS) : self
+    public function setRootFS(ImageRootFS $rootFS): self
     {
         $this->initialized['rootFS'] = true;
         $this->rootFS = $rootFS;
@@ -527,7 +527,7 @@ class Image
      *
      * @return ImageMetadata
      */
-    public function getMetadata() : ImageMetadata
+    public function getMetadata(): ImageMetadata
     {
         return $this->metadata;
     }
@@ -538,7 +538,7 @@ class Image
      *
      * @return self
      */
-    public function setMetadata(ImageMetadata $metadata) : self
+    public function setMetadata(ImageMetadata $metadata): self
     {
         $this->initialized['metadata'] = true;
         $this->metadata = $metadata;

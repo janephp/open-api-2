@@ -8,7 +8,7 @@ class HealthConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -68,7 +68,7 @@ class HealthConfig
     *
     * @return list<string>
     */
-    public function getTest() : array
+    public function getTest(): array
     {
         return $this->test;
     }
@@ -85,7 +85,7 @@ class HealthConfig
     *
     * @return self
     */
-    public function setTest(array $test) : self
+    public function setTest(array $test): self
     {
         $this->initialized['test'] = true;
         $this->test = $test;
@@ -98,7 +98,7 @@ class HealthConfig
     *
     * @return int
     */
-    public function getInterval() : int
+    public function getInterval(): int
     {
         return $this->interval;
     }
@@ -111,7 +111,7 @@ class HealthConfig
     *
     * @return self
     */
-    public function setInterval(int $interval) : self
+    public function setInterval(int $interval): self
     {
         $this->initialized['interval'] = true;
         $this->interval = $interval;
@@ -124,7 +124,7 @@ class HealthConfig
     *
     * @return int
     */
-    public function getTimeout() : int
+    public function getTimeout(): int
     {
         return $this->timeout;
     }
@@ -137,7 +137,7 @@ class HealthConfig
     *
     * @return self
     */
-    public function setTimeout(int $timeout) : self
+    public function setTimeout(int $timeout): self
     {
         $this->initialized['timeout'] = true;
         $this->timeout = $timeout;
@@ -150,7 +150,7 @@ class HealthConfig
     *
     * @return int
     */
-    public function getRetries() : int
+    public function getRetries(): int
     {
         return $this->retries;
     }
@@ -163,7 +163,7 @@ class HealthConfig
     *
     * @return self
     */
-    public function setRetries(int $retries) : self
+    public function setRetries(int $retries): self
     {
         $this->initialized['retries'] = true;
         $this->retries = $retries;
@@ -177,7 +177,7 @@ class HealthConfig
     *
     * @return int
     */
-    public function getStartPeriod() : int
+    public function getStartPeriod(): int
     {
         return $this->startPeriod;
     }
@@ -191,7 +191,7 @@ class HealthConfig
     *
     * @return self
     */
-    public function setStartPeriod(int $startPeriod) : self
+    public function setStartPeriod(int $startPeriod): self
     {
         $this->initialized['startPeriod'] = true;
         $this->startPeriod = $startPeriod;

@@ -8,7 +8,7 @@ class TaskSpecRestartPolicy
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -45,7 +45,7 @@ class TaskSpecRestartPolicy
      *
      * @return string
      */
-    public function getCondition() : string
+    public function getCondition(): string
     {
         return $this->condition;
     }
@@ -56,7 +56,7 @@ class TaskSpecRestartPolicy
      *
      * @return self
      */
-    public function setCondition(string $condition) : self
+    public function setCondition(string $condition): self
     {
         $this->initialized['condition'] = true;
         $this->condition = $condition;
@@ -67,7 +67,7 @@ class TaskSpecRestartPolicy
      *
      * @return int
      */
-    public function getDelay() : int
+    public function getDelay(): int
     {
         return $this->delay;
     }
@@ -78,7 +78,7 @@ class TaskSpecRestartPolicy
      *
      * @return self
      */
-    public function setDelay(int $delay) : self
+    public function setDelay(int $delay): self
     {
         $this->initialized['delay'] = true;
         $this->delay = $delay;
@@ -91,7 +91,7 @@ class TaskSpecRestartPolicy
     *
     * @return int
     */
-    public function getMaxAttempts() : int
+    public function getMaxAttempts(): int
     {
         return $this->maxAttempts;
     }
@@ -104,7 +104,7 @@ class TaskSpecRestartPolicy
     *
     * @return self
     */
-    public function setMaxAttempts(int $maxAttempts) : self
+    public function setMaxAttempts(int $maxAttempts): self
     {
         $this->initialized['maxAttempts'] = true;
         $this->maxAttempts = $maxAttempts;
@@ -117,7 +117,7 @@ class TaskSpecRestartPolicy
     *
     * @return int
     */
-    public function getWindow() : int
+    public function getWindow(): int
     {
         return $this->window;
     }
@@ -130,7 +130,7 @@ class TaskSpecRestartPolicy
     *
     * @return self
     */
-    public function setWindow(int $window) : self
+    public function setWindow(int $window): self
     {
         $this->initialized['window'] = true;
         $this->window = $window;

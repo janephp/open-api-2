@@ -8,7 +8,7 @@ class EventMessage
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -57,7 +57,7 @@ class EventMessage
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -68,7 +68,7 @@ class EventMessage
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -79,7 +79,7 @@ class EventMessage
      *
      * @return string
      */
-    public function getAction() : string
+    public function getAction(): string
     {
         return $this->action;
     }
@@ -90,7 +90,7 @@ class EventMessage
      *
      * @return self
      */
-    public function setAction(string $action) : self
+    public function setAction(string $action): self
     {
         $this->initialized['action'] = true;
         $this->action = $action;
@@ -103,7 +103,7 @@ class EventMessage
     *
     * @return EventActor
     */
-    public function getActor() : EventActor
+    public function getActor(): EventActor
     {
         return $this->actor;
     }
@@ -116,7 +116,7 @@ class EventMessage
     *
     * @return self
     */
-    public function setActor(EventActor $actor) : self
+    public function setActor(EventActor $actor): self
     {
         $this->initialized['actor'] = true;
         $this->actor = $actor;
@@ -129,7 +129,7 @@ class EventMessage
     *
     * @return string
     */
-    public function getScope() : string
+    public function getScope(): string
     {
         return $this->scope;
     }
@@ -142,7 +142,7 @@ class EventMessage
     *
     * @return self
     */
-    public function setScope(string $scope) : self
+    public function setScope(string $scope): self
     {
         $this->initialized['scope'] = true;
         $this->scope = $scope;
@@ -153,7 +153,7 @@ class EventMessage
      *
      * @return int
      */
-    public function getTime() : int
+    public function getTime(): int
     {
         return $this->time;
     }
@@ -164,7 +164,7 @@ class EventMessage
      *
      * @return self
      */
-    public function setTime(int $time) : self
+    public function setTime(int $time): self
     {
         $this->initialized['time'] = true;
         $this->time = $time;
@@ -175,7 +175,7 @@ class EventMessage
      *
      * @return int
      */
-    public function getTimeNano() : int
+    public function getTimeNano(): int
     {
         return $this->timeNano;
     }
@@ -186,7 +186,7 @@ class EventMessage
      *
      * @return self
      */
-    public function setTimeNano(int $timeNano) : self
+    public function setTimeNano(int $timeNano): self
     {
         $this->initialized['timeNano'] = true;
         $this->timeNano = $timeNano;

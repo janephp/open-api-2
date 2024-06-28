@@ -8,7 +8,7 @@ class BuildCache
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -81,7 +81,7 @@ class BuildCache
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -92,7 +92,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -103,7 +103,7 @@ class BuildCache
      *
      * @return string
      */
-    public function getParent() : string
+    public function getParent(): string
     {
         return $this->parent;
     }
@@ -114,7 +114,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setParent(string $parent) : self
+    public function setParent(string $parent): self
     {
         $this->initialized['parent'] = true;
         $this->parent = $parent;
@@ -125,7 +125,7 @@ class BuildCache
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -136,7 +136,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -147,7 +147,7 @@ class BuildCache
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -158,7 +158,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -169,7 +169,7 @@ class BuildCache
      *
      * @return bool
      */
-    public function getInUse() : bool
+    public function getInUse(): bool
     {
         return $this->inUse;
     }
@@ -180,7 +180,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setInUse(bool $inUse) : self
+    public function setInUse(bool $inUse): self
     {
         $this->initialized['inUse'] = true;
         $this->inUse = $inUse;
@@ -191,7 +191,7 @@ class BuildCache
      *
      * @return bool
      */
-    public function getShared() : bool
+    public function getShared(): bool
     {
         return $this->shared;
     }
@@ -202,7 +202,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setShared(bool $shared) : self
+    public function setShared(bool $shared): self
     {
         $this->initialized['shared'] = true;
         $this->shared = $shared;
@@ -213,7 +213,7 @@ class BuildCache
      *
      * @return int
      */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -224,7 +224,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;
@@ -237,7 +237,7 @@ class BuildCache
     *
     * @return string
     */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -250,7 +250,7 @@ class BuildCache
     *
     * @return self
     */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -263,7 +263,7 @@ class BuildCache
     *
     * @return string|null
     */
-    public function getLastUsedAt() : ?string
+    public function getLastUsedAt(): ?string
     {
         return $this->lastUsedAt;
     }
@@ -276,7 +276,7 @@ class BuildCache
     *
     * @return self
     */
-    public function setLastUsedAt(?string $lastUsedAt) : self
+    public function setLastUsedAt(?string $lastUsedAt): self
     {
         $this->initialized['lastUsedAt'] = true;
         $this->lastUsedAt = $lastUsedAt;
@@ -287,7 +287,7 @@ class BuildCache
      *
      * @return int
      */
-    public function getUsageCount() : int
+    public function getUsageCount(): int
     {
         return $this->usageCount;
     }
@@ -298,7 +298,7 @@ class BuildCache
      *
      * @return self
      */
-    public function setUsageCount(int $usageCount) : self
+    public function setUsageCount(int $usageCount): self
     {
         $this->initialized['usageCount'] = true;
         $this->usageCount = $usageCount;

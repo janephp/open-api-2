@@ -8,7 +8,7 @@ class VolumeUsageData
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -39,7 +39,7 @@ class VolumeUsageData
     *
     * @return int
     */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -54,7 +54,7 @@ class VolumeUsageData
     *
     * @return self
     */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;
@@ -67,7 +67,7 @@ class VolumeUsageData
     *
     * @return int
     */
-    public function getRefCount() : int
+    public function getRefCount(): int
     {
         return $this->refCount;
     }
@@ -80,7 +80,7 @@ class VolumeUsageData
     *
     * @return self
     */
-    public function setRefCount(int $refCount) : self
+    public function setRefCount(int $refCount): self
     {
         $this->initialized['refCount'] = true;
         $this->refCount = $refCount;

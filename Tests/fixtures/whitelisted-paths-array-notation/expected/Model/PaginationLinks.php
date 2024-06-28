@@ -8,7 +8,7 @@ class PaginationLinks
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class PaginationLinks
      *
      * @return string
      */
-    public function getFirst() : string
+    public function getFirst(): string
     {
         return $this->first;
     }
@@ -52,7 +52,7 @@ class PaginationLinks
      *
      * @return self
      */
-    public function setFirst(string $first) : self
+    public function setFirst(string $first): self
     {
         $this->initialized['first'] = true;
         $this->first = $first;
@@ -63,7 +63,7 @@ class PaginationLinks
      *
      * @return string
      */
-    public function getLast() : string
+    public function getLast(): string
     {
         return $this->last;
     }
@@ -74,7 +74,7 @@ class PaginationLinks
      *
      * @return self
      */
-    public function setLast(string $last) : self
+    public function setLast(string $last): self
     {
         $this->initialized['last'] = true;
         $this->last = $last;
@@ -85,7 +85,7 @@ class PaginationLinks
      *
      * @return string
      */
-    public function getPrevious() : string
+    public function getPrevious(): string
     {
         return $this->previous;
     }
@@ -96,7 +96,7 @@ class PaginationLinks
      *
      * @return self
      */
-    public function setPrevious(string $previous) : self
+    public function setPrevious(string $previous): self
     {
         $this->initialized['previous'] = true;
         $this->previous = $previous;
@@ -107,7 +107,7 @@ class PaginationLinks
      *
      * @return string
      */
-    public function getNext() : string
+    public function getNext(): string
     {
         return $this->next;
     }
@@ -118,7 +118,7 @@ class PaginationLinks
      *
      * @return self
      */
-    public function setNext(string $next) : self
+    public function setNext(string $next): self
     {
         $this->initialized['next'] = true;
         $this->next = $next;

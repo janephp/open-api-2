@@ -8,7 +8,7 @@ class SwarmJoinPostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -69,7 +69,7 @@ class SwarmJoinPostBody
     *
     * @return string
     */
-    public function getListenAddr() : string
+    public function getListenAddr(): string
     {
         return $this->listenAddr;
     }
@@ -83,7 +83,7 @@ class SwarmJoinPostBody
     *
     * @return self
     */
-    public function setListenAddr(string $listenAddr) : self
+    public function setListenAddr(string $listenAddr): self
     {
         $this->initialized['listenAddr'] = true;
         $this->listenAddr = $listenAddr;
@@ -100,7 +100,7 @@ class SwarmJoinPostBody
     *
     * @return string
     */
-    public function getAdvertiseAddr() : string
+    public function getAdvertiseAddr(): string
     {
         return $this->advertiseAddr;
     }
@@ -117,7 +117,7 @@ class SwarmJoinPostBody
     *
     * @return self
     */
-    public function setAdvertiseAddr(string $advertiseAddr) : self
+    public function setAdvertiseAddr(string $advertiseAddr): self
     {
         $this->initialized['advertiseAddr'] = true;
         $this->advertiseAddr = $advertiseAddr;
@@ -138,7 +138,7 @@ class SwarmJoinPostBody
     *
     * @return string
     */
-    public function getDataPathAddr() : string
+    public function getDataPathAddr(): string
     {
         return $this->dataPathAddr;
     }
@@ -159,7 +159,7 @@ class SwarmJoinPostBody
     *
     * @return self
     */
-    public function setDataPathAddr(string $dataPathAddr) : self
+    public function setDataPathAddr(string $dataPathAddr): self
     {
         $this->initialized['dataPathAddr'] = true;
         $this->dataPathAddr = $dataPathAddr;
@@ -170,7 +170,7 @@ class SwarmJoinPostBody
      *
      * @return list<string>
      */
-    public function getRemoteAddrs() : array
+    public function getRemoteAddrs(): array
     {
         return $this->remoteAddrs;
     }
@@ -181,7 +181,7 @@ class SwarmJoinPostBody
      *
      * @return self
      */
-    public function setRemoteAddrs(array $remoteAddrs) : self
+    public function setRemoteAddrs(array $remoteAddrs): self
     {
         $this->initialized['remoteAddrs'] = true;
         $this->remoteAddrs = $remoteAddrs;
@@ -192,7 +192,7 @@ class SwarmJoinPostBody
      *
      * @return string
      */
-    public function getJoinToken() : string
+    public function getJoinToken(): string
     {
         return $this->joinToken;
     }
@@ -203,7 +203,7 @@ class SwarmJoinPostBody
      *
      * @return self
      */
-    public function setJoinToken(string $joinToken) : self
+    public function setJoinToken(string $joinToken): self
     {
         $this->initialized['joinToken'] = true;
         $this->joinToken = $joinToken;

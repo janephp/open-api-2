@@ -8,7 +8,7 @@ class ProgressDetail
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ProgressDetail
      *
      * @return int
      */
-    public function getCurrent() : int
+    public function getCurrent(): int
     {
         return $this->current;
     }
@@ -40,7 +40,7 @@ class ProgressDetail
      *
      * @return self
      */
-    public function setCurrent(int $current) : self
+    public function setCurrent(int $current): self
     {
         $this->initialized['current'] = true;
         $this->current = $current;
@@ -51,7 +51,7 @@ class ProgressDetail
      *
      * @return int
      */
-    public function getTotal() : int
+    public function getTotal(): int
     {
         return $this->total;
     }
@@ -62,7 +62,7 @@ class ProgressDetail
      *
      * @return self
      */
-    public function setTotal(int $total) : self
+    public function setTotal(int $total): self
     {
         $this->initialized['total'] = true;
         $this->total = $total;

@@ -8,7 +8,7 @@ class Project
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -161,7 +161,7 @@ class Project
      *
      * @return int
      */
-    public function getId() : int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -172,7 +172,7 @@ class Project
      *
      * @return self
      */
-    public function setId(int $id) : self
+    public function setId(int $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -183,7 +183,7 @@ class Project
      *
      * @return ProjectClient
      */
-    public function getClient() : ProjectClient
+    public function getClient(): ProjectClient
     {
         return $this->client;
     }
@@ -194,7 +194,7 @@ class Project
      *
      * @return self
      */
-    public function setClient(ProjectClient $client) : self
+    public function setClient(ProjectClient $client): self
     {
         $this->initialized['client'] = true;
         $this->client = $client;
@@ -205,7 +205,7 @@ class Project
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -216,7 +216,7 @@ class Project
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -227,7 +227,7 @@ class Project
      *
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->code;
     }
@@ -238,7 +238,7 @@ class Project
      *
      * @return self
      */
-    public function setCode(string $code) : self
+    public function setCode(string $code): self
     {
         $this->initialized['code'] = true;
         $this->code = $code;
@@ -249,7 +249,7 @@ class Project
      *
      * @return bool
      */
-    public function getIsActive() : bool
+    public function getIsActive(): bool
     {
         return $this->isActive;
     }
@@ -260,7 +260,7 @@ class Project
      *
      * @return self
      */
-    public function setIsActive(bool $isActive) : self
+    public function setIsActive(bool $isActive): self
     {
         $this->initialized['isActive'] = true;
         $this->isActive = $isActive;
@@ -271,7 +271,7 @@ class Project
      *
      * @return bool
      */
-    public function getIsBillable() : bool
+    public function getIsBillable(): bool
     {
         return $this->isBillable;
     }
@@ -282,7 +282,7 @@ class Project
      *
      * @return self
      */
-    public function setIsBillable(bool $isBillable) : self
+    public function setIsBillable(bool $isBillable): self
     {
         $this->initialized['isBillable'] = true;
         $this->isBillable = $isBillable;
@@ -293,7 +293,7 @@ class Project
      *
      * @return bool
      */
-    public function getIsFixedFee() : bool
+    public function getIsFixedFee(): bool
     {
         return $this->isFixedFee;
     }
@@ -304,7 +304,7 @@ class Project
      *
      * @return self
      */
-    public function setIsFixedFee(bool $isFixedFee) : self
+    public function setIsFixedFee(bool $isFixedFee): self
     {
         $this->initialized['isFixedFee'] = true;
         $this->isFixedFee = $isFixedFee;
@@ -315,7 +315,7 @@ class Project
      *
      * @return string
      */
-    public function getBillBy() : string
+    public function getBillBy(): string
     {
         return $this->billBy;
     }
@@ -326,7 +326,7 @@ class Project
      *
      * @return self
      */
-    public function setBillBy(string $billBy) : self
+    public function setBillBy(string $billBy): self
     {
         $this->initialized['billBy'] = true;
         $this->billBy = $billBy;
@@ -337,7 +337,7 @@ class Project
      *
      * @return float
      */
-    public function getHourlyRate() : float
+    public function getHourlyRate(): float
     {
         return $this->hourlyRate;
     }
@@ -348,7 +348,7 @@ class Project
      *
      * @return self
      */
-    public function setHourlyRate(float $hourlyRate) : self
+    public function setHourlyRate(float $hourlyRate): self
     {
         $this->initialized['hourlyRate'] = true;
         $this->hourlyRate = $hourlyRate;
@@ -359,7 +359,7 @@ class Project
      *
      * @return float
      */
-    public function getBudget() : float
+    public function getBudget(): float
     {
         return $this->budget;
     }
@@ -370,7 +370,7 @@ class Project
      *
      * @return self
      */
-    public function setBudget(float $budget) : self
+    public function setBudget(float $budget): self
     {
         $this->initialized['budget'] = true;
         $this->budget = $budget;
@@ -381,7 +381,7 @@ class Project
      *
      * @return string
      */
-    public function getBudgetBy() : string
+    public function getBudgetBy(): string
     {
         return $this->budgetBy;
     }
@@ -392,7 +392,7 @@ class Project
      *
      * @return self
      */
-    public function setBudgetBy(string $budgetBy) : self
+    public function setBudgetBy(string $budgetBy): self
     {
         $this->initialized['budgetBy'] = true;
         $this->budgetBy = $budgetBy;
@@ -403,7 +403,7 @@ class Project
      *
      * @return bool
      */
-    public function getBudgetIsMonthly() : bool
+    public function getBudgetIsMonthly(): bool
     {
         return $this->budgetIsMonthly;
     }
@@ -414,7 +414,7 @@ class Project
      *
      * @return self
      */
-    public function setBudgetIsMonthly(bool $budgetIsMonthly) : self
+    public function setBudgetIsMonthly(bool $budgetIsMonthly): self
     {
         $this->initialized['budgetIsMonthly'] = true;
         $this->budgetIsMonthly = $budgetIsMonthly;
@@ -425,7 +425,7 @@ class Project
      *
      * @return bool
      */
-    public function getNotifyWhenOverBudget() : bool
+    public function getNotifyWhenOverBudget(): bool
     {
         return $this->notifyWhenOverBudget;
     }
@@ -436,7 +436,7 @@ class Project
      *
      * @return self
      */
-    public function setNotifyWhenOverBudget(bool $notifyWhenOverBudget) : self
+    public function setNotifyWhenOverBudget(bool $notifyWhenOverBudget): self
     {
         $this->initialized['notifyWhenOverBudget'] = true;
         $this->notifyWhenOverBudget = $notifyWhenOverBudget;
@@ -447,7 +447,7 @@ class Project
      *
      * @return float
      */
-    public function getOverBudgetNotificationPercentage() : float
+    public function getOverBudgetNotificationPercentage(): float
     {
         return $this->overBudgetNotificationPercentage;
     }
@@ -458,7 +458,7 @@ class Project
      *
      * @return self
      */
-    public function setOverBudgetNotificationPercentage(float $overBudgetNotificationPercentage) : self
+    public function setOverBudgetNotificationPercentage(float $overBudgetNotificationPercentage): self
     {
         $this->initialized['overBudgetNotificationPercentage'] = true;
         $this->overBudgetNotificationPercentage = $overBudgetNotificationPercentage;
@@ -469,7 +469,7 @@ class Project
      *
      * @return \DateTime
      */
-    public function getOverBudgetNotificationDate() : \DateTime
+    public function getOverBudgetNotificationDate(): \DateTime
     {
         return $this->overBudgetNotificationDate;
     }
@@ -480,7 +480,7 @@ class Project
      *
      * @return self
      */
-    public function setOverBudgetNotificationDate(\DateTime $overBudgetNotificationDate) : self
+    public function setOverBudgetNotificationDate(\DateTime $overBudgetNotificationDate): self
     {
         $this->initialized['overBudgetNotificationDate'] = true;
         $this->overBudgetNotificationDate = $overBudgetNotificationDate;
@@ -491,7 +491,7 @@ class Project
      *
      * @return bool
      */
-    public function getShowBudgetToAll() : bool
+    public function getShowBudgetToAll(): bool
     {
         return $this->showBudgetToAll;
     }
@@ -502,7 +502,7 @@ class Project
      *
      * @return self
      */
-    public function setShowBudgetToAll(bool $showBudgetToAll) : self
+    public function setShowBudgetToAll(bool $showBudgetToAll): self
     {
         $this->initialized['showBudgetToAll'] = true;
         $this->showBudgetToAll = $showBudgetToAll;
@@ -513,7 +513,7 @@ class Project
      *
      * @return float
      */
-    public function getCostBudget() : float
+    public function getCostBudget(): float
     {
         return $this->costBudget;
     }
@@ -524,7 +524,7 @@ class Project
      *
      * @return self
      */
-    public function setCostBudget(float $costBudget) : self
+    public function setCostBudget(float $costBudget): self
     {
         $this->initialized['costBudget'] = true;
         $this->costBudget = $costBudget;
@@ -535,7 +535,7 @@ class Project
      *
      * @return bool
      */
-    public function getCostBudgetIncludeExpenses() : bool
+    public function getCostBudgetIncludeExpenses(): bool
     {
         return $this->costBudgetIncludeExpenses;
     }
@@ -546,7 +546,7 @@ class Project
      *
      * @return self
      */
-    public function setCostBudgetIncludeExpenses(bool $costBudgetIncludeExpenses) : self
+    public function setCostBudgetIncludeExpenses(bool $costBudgetIncludeExpenses): self
     {
         $this->initialized['costBudgetIncludeExpenses'] = true;
         $this->costBudgetIncludeExpenses = $costBudgetIncludeExpenses;
@@ -557,7 +557,7 @@ class Project
      *
      * @return float
      */
-    public function getFee() : float
+    public function getFee(): float
     {
         return $this->fee;
     }
@@ -568,7 +568,7 @@ class Project
      *
      * @return self
      */
-    public function setFee(float $fee) : self
+    public function setFee(float $fee): self
     {
         $this->initialized['fee'] = true;
         $this->fee = $fee;
@@ -579,7 +579,7 @@ class Project
      *
      * @return string
      */
-    public function getNotes() : string
+    public function getNotes(): string
     {
         return $this->notes;
     }
@@ -590,7 +590,7 @@ class Project
      *
      * @return self
      */
-    public function setNotes(string $notes) : self
+    public function setNotes(string $notes): self
     {
         $this->initialized['notes'] = true;
         $this->notes = $notes;
@@ -601,7 +601,7 @@ class Project
      *
      * @return \DateTime
      */
-    public function getStartsOn() : \DateTime
+    public function getStartsOn(): \DateTime
     {
         return $this->startsOn;
     }
@@ -612,7 +612,7 @@ class Project
      *
      * @return self
      */
-    public function setStartsOn(\DateTime $startsOn) : self
+    public function setStartsOn(\DateTime $startsOn): self
     {
         $this->initialized['startsOn'] = true;
         $this->startsOn = $startsOn;
@@ -623,7 +623,7 @@ class Project
      *
      * @return \DateTime
      */
-    public function getEndsOn() : \DateTime
+    public function getEndsOn(): \DateTime
     {
         return $this->endsOn;
     }
@@ -634,7 +634,7 @@ class Project
      *
      * @return self
      */
-    public function setEndsOn(\DateTime $endsOn) : self
+    public function setEndsOn(\DateTime $endsOn): self
     {
         $this->initialized['endsOn'] = true;
         $this->endsOn = $endsOn;
@@ -645,7 +645,7 @@ class Project
      *
      * @return \DateTime
      */
-    public function getCreatedAt() : \DateTime
+    public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;
     }
@@ -656,7 +656,7 @@ class Project
      *
      * @return self
      */
-    public function setCreatedAt(\DateTime $createdAt) : self
+    public function setCreatedAt(\DateTime $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -667,7 +667,7 @@ class Project
      *
      * @return \DateTime
      */
-    public function getUpdatedAt() : \DateTime
+    public function getUpdatedAt(): \DateTime
     {
         return $this->updatedAt;
     }
@@ -678,7 +678,7 @@ class Project
      *
      * @return self
      */
-    public function setUpdatedAt(\DateTime $updatedAt) : self
+    public function setUpdatedAt(\DateTime $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;

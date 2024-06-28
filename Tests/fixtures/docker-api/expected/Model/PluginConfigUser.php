@@ -8,7 +8,7 @@ class PluginConfigUser
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class PluginConfigUser
      *
      * @return int
      */
-    public function getUID() : int
+    public function getUID(): int
     {
         return $this->uID;
     }
@@ -40,7 +40,7 @@ class PluginConfigUser
      *
      * @return self
      */
-    public function setUID(int $uID) : self
+    public function setUID(int $uID): self
     {
         $this->initialized['uID'] = true;
         $this->uID = $uID;
@@ -51,7 +51,7 @@ class PluginConfigUser
      *
      * @return int
      */
-    public function getGID() : int
+    public function getGID(): int
     {
         return $this->gID;
     }
@@ -62,7 +62,7 @@ class PluginConfigUser
      *
      * @return self
      */
-    public function setGID(int $gID) : self
+    public function setGID(int $gID): self
     {
         $this->initialized['gID'] = true;
         $this->gID = $gID;

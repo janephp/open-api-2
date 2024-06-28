@@ -8,7 +8,7 @@ class NodeDescription
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -51,7 +51,7 @@ class NodeDescription
      *
      * @return string
      */
-    public function getHostname() : string
+    public function getHostname(): string
     {
         return $this->hostname;
     }
@@ -62,7 +62,7 @@ class NodeDescription
      *
      * @return self
      */
-    public function setHostname(string $hostname) : self
+    public function setHostname(string $hostname): self
     {
         $this->initialized['hostname'] = true;
         $this->hostname = $hostname;
@@ -73,7 +73,7 @@ class NodeDescription
      *
      * @return Platform
      */
-    public function getPlatform() : Platform
+    public function getPlatform(): Platform
     {
         return $this->platform;
     }
@@ -84,7 +84,7 @@ class NodeDescription
      *
      * @return self
      */
-    public function setPlatform(Platform $platform) : self
+    public function setPlatform(Platform $platform): self
     {
         $this->initialized['platform'] = true;
         $this->platform = $platform;
@@ -97,7 +97,7 @@ class NodeDescription
     *
     * @return ResourceObject
     */
-    public function getResources() : ResourceObject
+    public function getResources(): ResourceObject
     {
         return $this->resources;
     }
@@ -110,7 +110,7 @@ class NodeDescription
     *
     * @return self
     */
-    public function setResources(ResourceObject $resources) : self
+    public function setResources(ResourceObject $resources): self
     {
         $this->initialized['resources'] = true;
         $this->resources = $resources;
@@ -121,7 +121,7 @@ class NodeDescription
      *
      * @return EngineDescription
      */
-    public function getEngine() : EngineDescription
+    public function getEngine(): EngineDescription
     {
         return $this->engine;
     }
@@ -132,7 +132,7 @@ class NodeDescription
      *
      * @return self
      */
-    public function setEngine(EngineDescription $engine) : self
+    public function setEngine(EngineDescription $engine): self
     {
         $this->initialized['engine'] = true;
         $this->engine = $engine;
@@ -145,7 +145,7 @@ class NodeDescription
     *
     * @return TLSInfo
     */
-    public function getTLSInfo() : TLSInfo
+    public function getTLSInfo(): TLSInfo
     {
         return $this->tLSInfo;
     }
@@ -158,7 +158,7 @@ class NodeDescription
     *
     * @return self
     */
-    public function setTLSInfo(TLSInfo $tLSInfo) : self
+    public function setTLSInfo(TLSInfo $tLSInfo): self
     {
         $this->initialized['tLSInfo'] = true;
         $this->tLSInfo = $tLSInfo;

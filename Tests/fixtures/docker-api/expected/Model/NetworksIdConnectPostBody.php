@@ -8,7 +8,7 @@ class NetworksIdConnectPostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class NetworksIdConnectPostBody
      *
      * @return string
      */
-    public function getContainer() : string
+    public function getContainer(): string
     {
         return $this->container;
     }
@@ -40,7 +40,7 @@ class NetworksIdConnectPostBody
      *
      * @return self
      */
-    public function setContainer(string $container) : self
+    public function setContainer(string $container): self
     {
         $this->initialized['container'] = true;
         $this->container = $container;
@@ -51,7 +51,7 @@ class NetworksIdConnectPostBody
      *
      * @return EndpointSettings
      */
-    public function getEndpointConfig() : EndpointSettings
+    public function getEndpointConfig(): EndpointSettings
     {
         return $this->endpointConfig;
     }
@@ -62,7 +62,7 @@ class NetworksIdConnectPostBody
      *
      * @return self
      */
-    public function setEndpointConfig(EndpointSettings $endpointConfig) : self
+    public function setEndpointConfig(EndpointSettings $endpointConfig): self
     {
         $this->initialized['endpointConfig'] = true;
         $this->endpointConfig = $endpointConfig;

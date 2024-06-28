@@ -8,7 +8,7 @@ class SwarmSpecCAConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -56,7 +56,7 @@ class SwarmSpecCAConfig
      *
      * @return int
      */
-    public function getNodeCertExpiry() : int
+    public function getNodeCertExpiry(): int
     {
         return $this->nodeCertExpiry;
     }
@@ -67,7 +67,7 @@ class SwarmSpecCAConfig
      *
      * @return self
      */
-    public function setNodeCertExpiry(int $nodeCertExpiry) : self
+    public function setNodeCertExpiry(int $nodeCertExpiry): self
     {
         $this->initialized['nodeCertExpiry'] = true;
         $this->nodeCertExpiry = $nodeCertExpiry;
@@ -80,7 +80,7 @@ class SwarmSpecCAConfig
     *
     * @return list<SwarmSpecCAConfigExternalCAsItem>
     */
-    public function getExternalCAs() : array
+    public function getExternalCAs(): array
     {
         return $this->externalCAs;
     }
@@ -93,7 +93,7 @@ class SwarmSpecCAConfig
     *
     * @return self
     */
-    public function setExternalCAs(array $externalCAs) : self
+    public function setExternalCAs(array $externalCAs): self
     {
         $this->initialized['externalCAs'] = true;
         $this->externalCAs = $externalCAs;
@@ -106,7 +106,7 @@ class SwarmSpecCAConfig
     *
     * @return string
     */
-    public function getSigningCACert() : string
+    public function getSigningCACert(): string
     {
         return $this->signingCACert;
     }
@@ -119,7 +119,7 @@ class SwarmSpecCAConfig
     *
     * @return self
     */
-    public function setSigningCACert(string $signingCACert) : self
+    public function setSigningCACert(string $signingCACert): self
     {
         $this->initialized['signingCACert'] = true;
         $this->signingCACert = $signingCACert;
@@ -132,7 +132,7 @@ class SwarmSpecCAConfig
     *
     * @return string
     */
-    public function getSigningCAKey() : string
+    public function getSigningCAKey(): string
     {
         return $this->signingCAKey;
     }
@@ -145,7 +145,7 @@ class SwarmSpecCAConfig
     *
     * @return self
     */
-    public function setSigningCAKey(string $signingCAKey) : self
+    public function setSigningCAKey(string $signingCAKey): self
     {
         $this->initialized['signingCAKey'] = true;
         $this->signingCAKey = $signingCAKey;
@@ -159,7 +159,7 @@ class SwarmSpecCAConfig
     *
     * @return int
     */
-    public function getForceRotate() : int
+    public function getForceRotate(): int
     {
         return $this->forceRotate;
     }
@@ -173,7 +173,7 @@ class SwarmSpecCAConfig
     *
     * @return self
     */
-    public function setForceRotate(int $forceRotate) : self
+    public function setForceRotate(int $forceRotate): self
     {
         $this->initialized['forceRotate'] = true;
         $this->forceRotate = $forceRotate;

@@ -8,7 +8,7 @@ class TestComplexListGetResponse200Item1
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class TestComplexListGetResponse200Item1
      *
      * @return string
      */
-    public function getEmail() : string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -34,7 +34,7 @@ class TestComplexListGetResponse200Item1
      *
      * @return self
      */
-    public function setEmail(string $email) : self
+    public function setEmail(string $email): self
     {
         $this->initialized['email'] = true;
         $this->email = $email;

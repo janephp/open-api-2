@@ -8,7 +8,7 @@ class EndpointPortConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -56,7 +56,7 @@ class EndpointPortConfig
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -67,7 +67,7 @@ class EndpointPortConfig
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -78,7 +78,7 @@ class EndpointPortConfig
      *
      * @return string
      */
-    public function getProtocol() : string
+    public function getProtocol(): string
     {
         return $this->protocol;
     }
@@ -89,7 +89,7 @@ class EndpointPortConfig
      *
      * @return self
      */
-    public function setProtocol(string $protocol) : self
+    public function setProtocol(string $protocol): self
     {
         $this->initialized['protocol'] = true;
         $this->protocol = $protocol;
@@ -100,7 +100,7 @@ class EndpointPortConfig
      *
      * @return int
      */
-    public function getTargetPort() : int
+    public function getTargetPort(): int
     {
         return $this->targetPort;
     }
@@ -111,7 +111,7 @@ class EndpointPortConfig
      *
      * @return self
      */
-    public function setTargetPort(int $targetPort) : self
+    public function setTargetPort(int $targetPort): self
     {
         $this->initialized['targetPort'] = true;
         $this->targetPort = $targetPort;
@@ -122,7 +122,7 @@ class EndpointPortConfig
      *
      * @return int
      */
-    public function getPublishedPort() : int
+    public function getPublishedPort(): int
     {
         return $this->publishedPort;
     }
@@ -133,7 +133,7 @@ class EndpointPortConfig
      *
      * @return self
      */
-    public function setPublishedPort(int $publishedPort) : self
+    public function setPublishedPort(int $publishedPort): self
     {
         $this->initialized['publishedPort'] = true;
         $this->publishedPort = $publishedPort;
@@ -153,7 +153,7 @@ class EndpointPortConfig
     *
     * @return string
     */
-    public function getPublishMode() : string
+    public function getPublishMode(): string
     {
         return $this->publishMode;
     }
@@ -173,7 +173,7 @@ class EndpointPortConfig
     *
     * @return self
     */
-    public function setPublishMode(string $publishMode) : self
+    public function setPublishMode(string $publishMode): self
     {
         $this->initialized['publishMode'] = true;
         $this->publishMode = $publishMode;

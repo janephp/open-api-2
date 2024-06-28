@@ -8,7 +8,7 @@ class AuthPostResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class AuthPostResponse200
      *
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -40,7 +40,7 @@ class AuthPostResponse200
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(string $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -51,7 +51,7 @@ class AuthPostResponse200
      *
      * @return string
      */
-    public function getIdentityToken() : string
+    public function getIdentityToken(): string
     {
         return $this->identityToken;
     }
@@ -62,7 +62,7 @@ class AuthPostResponse200
      *
      * @return self
      */
-    public function setIdentityToken(string $identityToken) : self
+    public function setIdentityToken(string $identityToken): self
     {
         $this->initialized['identityToken'] = true;
         $this->identityToken = $identityToken;

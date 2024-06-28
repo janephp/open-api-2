@@ -8,7 +8,7 @@ class EndpointSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -31,7 +31,7 @@ class EndpointSpec
      *
      * @return string
      */
-    public function getMode() : string
+    public function getMode(): string
     {
         return $this->mode;
     }
@@ -42,7 +42,7 @@ class EndpointSpec
      *
      * @return self
      */
-    public function setMode(string $mode) : self
+    public function setMode(string $mode): self
     {
         $this->initialized['mode'] = true;
         $this->mode = $mode;
@@ -55,7 +55,7 @@ class EndpointSpec
     *
     * @return list<EndpointPortConfig>
     */
-    public function getPorts() : array
+    public function getPorts(): array
     {
         return $this->ports;
     }
@@ -68,7 +68,7 @@ class EndpointSpec
     *
     * @return self
     */
-    public function setPorts(array $ports) : self
+    public function setPorts(array $ports): self
     {
         $this->initialized['ports'] = true;
         $this->ports = $ports;

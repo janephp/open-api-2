@@ -8,7 +8,7 @@ class TaskSpecResources
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -31,7 +31,7 @@ class TaskSpecResources
      *
      * @return Limit
      */
-    public function getLimits() : Limit
+    public function getLimits(): Limit
     {
         return $this->limits;
     }
@@ -42,7 +42,7 @@ class TaskSpecResources
      *
      * @return self
      */
-    public function setLimits(Limit $limits) : self
+    public function setLimits(Limit $limits): self
     {
         $this->initialized['limits'] = true;
         $this->limits = $limits;
@@ -55,7 +55,7 @@ class TaskSpecResources
     *
     * @return ResourceObject
     */
-    public function getReservation() : ResourceObject
+    public function getReservation(): ResourceObject
     {
         return $this->reservation;
     }
@@ -68,7 +68,7 @@ class TaskSpecResources
     *
     * @return self
     */
-    public function setReservation(ResourceObject $reservation) : self
+    public function setReservation(ResourceObject $reservation): self
     {
         $this->initialized['reservation'] = true;
         $this->reservation = $reservation;

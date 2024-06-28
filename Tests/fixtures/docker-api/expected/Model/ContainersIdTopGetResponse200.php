@@ -8,7 +8,7 @@ class ContainersIdTopGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -31,7 +31,7 @@ class ContainersIdTopGetResponse200
      *
      * @return list<string>
      */
-    public function getTitles() : array
+    public function getTitles(): array
     {
         return $this->titles;
     }
@@ -42,7 +42,7 @@ class ContainersIdTopGetResponse200
      *
      * @return self
      */
-    public function setTitles(array $titles) : self
+    public function setTitles(array $titles): self
     {
         $this->initialized['titles'] = true;
         $this->titles = $titles;
@@ -55,7 +55,7 @@ class ContainersIdTopGetResponse200
     *
     * @return list<list<string>>
     */
-    public function getProcesses() : array
+    public function getProcesses(): array
     {
         return $this->processes;
     }
@@ -68,7 +68,7 @@ class ContainersIdTopGetResponse200
     *
     * @return self
     */
-    public function setProcesses(array $processes) : self
+    public function setProcesses(array $processes): self
     {
         $this->initialized['processes'] = true;
         $this->processes = $processes;

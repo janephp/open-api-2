@@ -8,7 +8,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return bool
      */
-    public function getDisable() : bool
+    public function getDisable(): bool
     {
         return $this->disable;
     }
@@ -58,7 +58,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return self
      */
-    public function setDisable(bool $disable) : self
+    public function setDisable(bool $disable): self
     {
         $this->initialized['disable'] = true;
         $this->disable = $disable;
@@ -69,7 +69,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return string
      */
-    public function getUser() : string
+    public function getUser(): string
     {
         return $this->user;
     }
@@ -80,7 +80,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return self
      */
-    public function setUser(string $user) : self
+    public function setUser(string $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -91,7 +91,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return string
      */
-    public function getRole() : string
+    public function getRole(): string
     {
         return $this->role;
     }
@@ -102,7 +102,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return self
      */
-    public function setRole(string $role) : self
+    public function setRole(string $role): self
     {
         $this->initialized['role'] = true;
         $this->role = $role;
@@ -113,7 +113,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -124,7 +124,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -135,7 +135,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return string
      */
-    public function getLevel() : string
+    public function getLevel(): string
     {
         return $this->level;
     }
@@ -146,7 +146,7 @@ class TaskSpecContainerSpecPrivilegesSELinuxContext
      *
      * @return self
      */
-    public function setLevel(string $level) : self
+    public function setLevel(string $level): self
     {
         $this->initialized['level'] = true;
         $this->level = $level;

@@ -8,7 +8,7 @@ class GenericResourcesItemDiscreteResourceSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class GenericResourcesItemDiscreteResourceSpec
      *
      * @return string
      */
-    public function getKind() : string
+    public function getKind(): string
     {
         return $this->kind;
     }
@@ -40,7 +40,7 @@ class GenericResourcesItemDiscreteResourceSpec
      *
      * @return self
      */
-    public function setKind(string $kind) : self
+    public function setKind(string $kind): self
     {
         $this->initialized['kind'] = true;
         $this->kind = $kind;
@@ -51,7 +51,7 @@ class GenericResourcesItemDiscreteResourceSpec
      *
      * @return int
      */
-    public function getValue() : int
+    public function getValue(): int
     {
         return $this->value;
     }
@@ -62,7 +62,7 @@ class GenericResourcesItemDiscreteResourceSpec
      *
      * @return self
      */
-    public function setValue(int $value) : self
+    public function setValue(int $value): self
     {
         $this->initialized['value'] = true;
         $this->value = $value;

@@ -8,7 +8,7 @@ class ServiceSpecMode
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -45,7 +45,7 @@ class ServiceSpecMode
      *
      * @return ServiceSpecModeReplicated
      */
-    public function getReplicated() : ServiceSpecModeReplicated
+    public function getReplicated(): ServiceSpecModeReplicated
     {
         return $this->replicated;
     }
@@ -56,7 +56,7 @@ class ServiceSpecMode
      *
      * @return self
      */
-    public function setReplicated(ServiceSpecModeReplicated $replicated) : self
+    public function setReplicated(ServiceSpecModeReplicated $replicated): self
     {
         $this->initialized['replicated'] = true;
         $this->replicated = $replicated;
@@ -78,7 +78,7 @@ class ServiceSpecMode
      *
      * @return self
      */
-    public function setGlobal($global) : self
+    public function setGlobal($global): self
     {
         $this->initialized['global'] = true;
         $this->global = $global;
@@ -91,7 +91,7 @@ class ServiceSpecMode
     *
     * @return ServiceSpecModeReplicatedJob
     */
-    public function getReplicatedJob() : ServiceSpecModeReplicatedJob
+    public function getReplicatedJob(): ServiceSpecModeReplicatedJob
     {
         return $this->replicatedJob;
     }
@@ -104,7 +104,7 @@ class ServiceSpecMode
     *
     * @return self
     */
-    public function setReplicatedJob(ServiceSpecModeReplicatedJob $replicatedJob) : self
+    public function setReplicatedJob(ServiceSpecModeReplicatedJob $replicatedJob): self
     {
         $this->initialized['replicatedJob'] = true;
         $this->replicatedJob = $replicatedJob;
@@ -130,7 +130,7 @@ class ServiceSpecMode
     *
     * @return self
     */
-    public function setGlobalJob($globalJob) : self
+    public function setGlobalJob($globalJob): self
     {
         $this->initialized['globalJob'] = true;
         $this->globalJob = $globalJob;

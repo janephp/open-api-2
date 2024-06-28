@@ -8,7 +8,7 @@ class ContainersIdUpdatePostResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class ContainersIdUpdatePostResponse200
      *
      * @return list<string>
      */
-    public function getWarnings() : array
+    public function getWarnings(): array
     {
         return $this->warnings;
     }
@@ -34,7 +34,7 @@ class ContainersIdUpdatePostResponse200
      *
      * @return self
      */
-    public function setWarnings(array $warnings) : self
+    public function setWarnings(array $warnings): self
     {
         $this->initialized['warnings'] = true;
         $this->warnings = $warnings;

@@ -8,7 +8,7 @@ class VolumesGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class VolumesGetResponse200
      *
      * @return list<Volume>
      */
-    public function getVolumes() : array
+    public function getVolumes(): array
     {
         return $this->volumes;
     }
@@ -40,7 +40,7 @@ class VolumesGetResponse200
      *
      * @return self
      */
-    public function setVolumes(array $volumes) : self
+    public function setVolumes(array $volumes): self
     {
         $this->initialized['volumes'] = true;
         $this->volumes = $volumes;
@@ -51,7 +51,7 @@ class VolumesGetResponse200
      *
      * @return list<string>
      */
-    public function getWarnings() : array
+    public function getWarnings(): array
     {
         return $this->warnings;
     }
@@ -62,7 +62,7 @@ class VolumesGetResponse200
      *
      * @return self
      */
-    public function setWarnings(array $warnings) : self
+    public function setWarnings(array $warnings): self
     {
         $this->initialized['warnings'] = true;
         $this->warnings = $warnings;

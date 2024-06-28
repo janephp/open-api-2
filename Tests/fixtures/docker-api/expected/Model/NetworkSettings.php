@@ -8,7 +8,7 @@ class NetworkSettings
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -203,7 +203,7 @@ class NetworkSettings
      *
      * @return string
      */
-    public function getBridge() : string
+    public function getBridge(): string
     {
         return $this->bridge;
     }
@@ -214,7 +214,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setBridge(string $bridge) : self
+    public function setBridge(string $bridge): self
     {
         $this->initialized['bridge'] = true;
         $this->bridge = $bridge;
@@ -225,7 +225,7 @@ class NetworkSettings
      *
      * @return string
      */
-    public function getSandboxID() : string
+    public function getSandboxID(): string
     {
         return $this->sandboxID;
     }
@@ -236,7 +236,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setSandboxID(string $sandboxID) : self
+    public function setSandboxID(string $sandboxID): self
     {
         $this->initialized['sandboxID'] = true;
         $this->sandboxID = $sandboxID;
@@ -247,7 +247,7 @@ class NetworkSettings
      *
      * @return bool
      */
-    public function getHairpinMode() : bool
+    public function getHairpinMode(): bool
     {
         return $this->hairpinMode;
     }
@@ -258,7 +258,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setHairpinMode(bool $hairpinMode) : self
+    public function setHairpinMode(bool $hairpinMode): self
     {
         $this->initialized['hairpinMode'] = true;
         $this->hairpinMode = $hairpinMode;
@@ -269,7 +269,7 @@ class NetworkSettings
      *
      * @return string
      */
-    public function getLinkLocalIPv6Address() : string
+    public function getLinkLocalIPv6Address(): string
     {
         return $this->linkLocalIPv6Address;
     }
@@ -280,7 +280,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setLinkLocalIPv6Address(string $linkLocalIPv6Address) : self
+    public function setLinkLocalIPv6Address(string $linkLocalIPv6Address): self
     {
         $this->initialized['linkLocalIPv6Address'] = true;
         $this->linkLocalIPv6Address = $linkLocalIPv6Address;
@@ -291,7 +291,7 @@ class NetworkSettings
      *
      * @return int
      */
-    public function getLinkLocalIPv6PrefixLen() : int
+    public function getLinkLocalIPv6PrefixLen(): int
     {
         return $this->linkLocalIPv6PrefixLen;
     }
@@ -302,7 +302,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setLinkLocalIPv6PrefixLen(int $linkLocalIPv6PrefixLen) : self
+    public function setLinkLocalIPv6PrefixLen(int $linkLocalIPv6PrefixLen): self
     {
         $this->initialized['linkLocalIPv6PrefixLen'] = true;
         $this->linkLocalIPv6PrefixLen = $linkLocalIPv6PrefixLen;
@@ -319,7 +319,7 @@ class NetworkSettings
     *
     * @return array<string, list<PortBinding>>
     */
-    public function getPorts() : iterable
+    public function getPorts(): iterable
     {
         return $this->ports;
     }
@@ -336,7 +336,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setPorts(iterable $ports) : self
+    public function setPorts(iterable $ports): self
     {
         $this->initialized['ports'] = true;
         $this->ports = $ports;
@@ -347,7 +347,7 @@ class NetworkSettings
      *
      * @return string
      */
-    public function getSandboxKey() : string
+    public function getSandboxKey(): string
     {
         return $this->sandboxKey;
     }
@@ -358,7 +358,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setSandboxKey(string $sandboxKey) : self
+    public function setSandboxKey(string $sandboxKey): self
     {
         $this->initialized['sandboxKey'] = true;
         $this->sandboxKey = $sandboxKey;
@@ -369,7 +369,7 @@ class NetworkSettings
      *
      * @return list<Address>|null
      */
-    public function getSecondaryIPAddresses() : ?array
+    public function getSecondaryIPAddresses(): ?array
     {
         return $this->secondaryIPAddresses;
     }
@@ -380,7 +380,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setSecondaryIPAddresses(?array $secondaryIPAddresses) : self
+    public function setSecondaryIPAddresses(?array $secondaryIPAddresses): self
     {
         $this->initialized['secondaryIPAddresses'] = true;
         $this->secondaryIPAddresses = $secondaryIPAddresses;
@@ -391,7 +391,7 @@ class NetworkSettings
      *
      * @return list<Address>|null
      */
-    public function getSecondaryIPv6Addresses() : ?array
+    public function getSecondaryIPv6Addresses(): ?array
     {
         return $this->secondaryIPv6Addresses;
     }
@@ -402,7 +402,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setSecondaryIPv6Addresses(?array $secondaryIPv6Addresses) : self
+    public function setSecondaryIPv6Addresses(?array $secondaryIPv6Addresses): self
     {
         $this->initialized['secondaryIPv6Addresses'] = true;
         $this->secondaryIPv6Addresses = $secondaryIPv6Addresses;
@@ -422,7 +422,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getEndpointID() : string
+    public function getEndpointID(): string
     {
         return $this->endpointID;
     }
@@ -442,7 +442,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setEndpointID(string $endpointID) : self
+    public function setEndpointID(string $endpointID): self
     {
         $this->initialized['endpointID'] = true;
         $this->endpointID = $endpointID;
@@ -462,7 +462,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getGateway() : string
+    public function getGateway(): string
     {
         return $this->gateway;
     }
@@ -482,7 +482,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setGateway(string $gateway) : self
+    public function setGateway(string $gateway): self
     {
         $this->initialized['gateway'] = true;
         $this->gateway = $gateway;
@@ -502,7 +502,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getGlobalIPv6Address() : string
+    public function getGlobalIPv6Address(): string
     {
         return $this->globalIPv6Address;
     }
@@ -522,7 +522,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setGlobalIPv6Address(string $globalIPv6Address) : self
+    public function setGlobalIPv6Address(string $globalIPv6Address): self
     {
         $this->initialized['globalIPv6Address'] = true;
         $this->globalIPv6Address = $globalIPv6Address;
@@ -542,7 +542,7 @@ class NetworkSettings
     *
     * @return int
     */
-    public function getGlobalIPv6PrefixLen() : int
+    public function getGlobalIPv6PrefixLen(): int
     {
         return $this->globalIPv6PrefixLen;
     }
@@ -562,7 +562,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setGlobalIPv6PrefixLen(int $globalIPv6PrefixLen) : self
+    public function setGlobalIPv6PrefixLen(int $globalIPv6PrefixLen): self
     {
         $this->initialized['globalIPv6PrefixLen'] = true;
         $this->globalIPv6PrefixLen = $globalIPv6PrefixLen;
@@ -582,7 +582,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getIPAddress() : string
+    public function getIPAddress(): string
     {
         return $this->iPAddress;
     }
@@ -602,7 +602,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setIPAddress(string $iPAddress) : self
+    public function setIPAddress(string $iPAddress): self
     {
         $this->initialized['iPAddress'] = true;
         $this->iPAddress = $iPAddress;
@@ -622,7 +622,7 @@ class NetworkSettings
     *
     * @return int
     */
-    public function getIPPrefixLen() : int
+    public function getIPPrefixLen(): int
     {
         return $this->iPPrefixLen;
     }
@@ -642,7 +642,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setIPPrefixLen(int $iPPrefixLen) : self
+    public function setIPPrefixLen(int $iPPrefixLen): self
     {
         $this->initialized['iPPrefixLen'] = true;
         $this->iPPrefixLen = $iPPrefixLen;
@@ -662,7 +662,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getIPv6Gateway() : string
+    public function getIPv6Gateway(): string
     {
         return $this->iPv6Gateway;
     }
@@ -682,7 +682,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setIPv6Gateway(string $iPv6Gateway) : self
+    public function setIPv6Gateway(string $iPv6Gateway): self
     {
         $this->initialized['iPv6Gateway'] = true;
         $this->iPv6Gateway = $iPv6Gateway;
@@ -702,7 +702,7 @@ class NetworkSettings
     *
     * @return string
     */
-    public function getMacAddress() : string
+    public function getMacAddress(): string
     {
         return $this->macAddress;
     }
@@ -722,7 +722,7 @@ class NetworkSettings
     *
     * @return self
     */
-    public function setMacAddress(string $macAddress) : self
+    public function setMacAddress(string $macAddress): self
     {
         $this->initialized['macAddress'] = true;
         $this->macAddress = $macAddress;
@@ -733,7 +733,7 @@ class NetworkSettings
      *
      * @return array<string, EndpointSettings>
      */
-    public function getNetworks() : iterable
+    public function getNetworks(): iterable
     {
         return $this->networks;
     }
@@ -744,7 +744,7 @@ class NetworkSettings
      *
      * @return self
      */
-    public function setNetworks(iterable $networks) : self
+    public function setNetworks(iterable $networks): self
     {
         $this->initialized['networks'] = true;
         $this->networks = $networks;

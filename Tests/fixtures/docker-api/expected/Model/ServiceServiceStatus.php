@@ -8,7 +8,7 @@ class ServiceServiceStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -44,7 +44,7 @@ class ServiceServiceStatus
      *
      * @return int
      */
-    public function getRunningTasks() : int
+    public function getRunningTasks(): int
     {
         return $this->runningTasks;
     }
@@ -55,7 +55,7 @@ class ServiceServiceStatus
      *
      * @return self
      */
-    public function setRunningTasks(int $runningTasks) : self
+    public function setRunningTasks(int $runningTasks): self
     {
         $this->initialized['runningTasks'] = true;
         $this->runningTasks = $runningTasks;
@@ -71,7 +71,7 @@ class ServiceServiceStatus
     *
     * @return int
     */
-    public function getDesiredTasks() : int
+    public function getDesiredTasks(): int
     {
         return $this->desiredTasks;
     }
@@ -87,7 +87,7 @@ class ServiceServiceStatus
     *
     * @return self
     */
-    public function setDesiredTasks(int $desiredTasks) : self
+    public function setDesiredTasks(int $desiredTasks): self
     {
         $this->initialized['desiredTasks'] = true;
         $this->desiredTasks = $desiredTasks;
@@ -102,7 +102,7 @@ class ServiceServiceStatus
     *
     * @return int
     */
-    public function getCompletedTasks() : int
+    public function getCompletedTasks(): int
     {
         return $this->completedTasks;
     }
@@ -117,7 +117,7 @@ class ServiceServiceStatus
     *
     * @return self
     */
-    public function setCompletedTasks(int $completedTasks) : self
+    public function setCompletedTasks(int $completedTasks): self
     {
         $this->initialized['completedTasks'] = true;
         $this->completedTasks = $completedTasks;

@@ -16,19 +16,19 @@ class SystemAuth extends \Docker\Api\Runtime\Client\BaseEndpoint implements \Doc
         $this->body = $authConfig;
     }
     use \Docker\Api\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/auth';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders() : array
+    public function getExtraHeaders(): array
     {
         return ['Accept' => ['application/json']];
     }
@@ -44,16 +44,16 @@ class SystemAuth extends \Docker\Api\Runtime\Client\BaseEndpoint implements \Doc
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Docker\\Api\\Model\\AuthPostResponse200', 'json');
+            return $serializer->deserialize($body, 'Docker\Api\Model\AuthPostResponse200', 'json');
         }
         if (204 === $status) {
             return null;
         }
         if (500 === $status) {
-            throw new \Docker\Api\Exception\SystemAuthInternalServerErrorException($serializer->deserialize($body, 'Docker\\Api\\Model\\ErrorResponse', 'json'), $response);
+            throw new \Docker\Api\Exception\SystemAuthInternalServerErrorException($serializer->deserialize($body, 'Docker\Api\Model\ErrorResponse', 'json'), $response);
         }
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

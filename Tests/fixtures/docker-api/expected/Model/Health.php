@@ -8,7 +8,7 @@ class Health
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class Health
     *
     * @return string
     */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -64,7 +64,7 @@ class Health
     *
     * @return self
     */
-    public function setStatus(string $status) : self
+    public function setStatus(string $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -75,7 +75,7 @@ class Health
      *
      * @return int
      */
-    public function getFailingStreak() : int
+    public function getFailingStreak(): int
     {
         return $this->failingStreak;
     }
@@ -86,7 +86,7 @@ class Health
      *
      * @return self
      */
-    public function setFailingStreak(int $failingStreak) : self
+    public function setFailingStreak(int $failingStreak): self
     {
         $this->initialized['failingStreak'] = true;
         $this->failingStreak = $failingStreak;
@@ -97,7 +97,7 @@ class Health
      *
      * @return list<HealthcheckResult>
      */
-    public function getLog() : array
+    public function getLog(): array
     {
         return $this->log;
     }
@@ -108,7 +108,7 @@ class Health
      *
      * @return self
      */
-    public function setLog(array $log) : self
+    public function setLog(array $log): self
     {
         $this->initialized['log'] = true;
         $this->log = $log;

@@ -8,7 +8,7 @@ class ResourcesBlkioWeightDeviceItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ResourcesBlkioWeightDeviceItem
      *
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -40,7 +40,7 @@ class ResourcesBlkioWeightDeviceItem
      *
      * @return self
      */
-    public function setPath(string $path) : self
+    public function setPath(string $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;
@@ -51,7 +51,7 @@ class ResourcesBlkioWeightDeviceItem
      *
      * @return int
      */
-    public function getWeight() : int
+    public function getWeight(): int
     {
         return $this->weight;
     }
@@ -62,7 +62,7 @@ class ResourcesBlkioWeightDeviceItem
      *
      * @return self
      */
-    public function setWeight(int $weight) : self
+    public function setWeight(int $weight): self
     {
         $this->initialized['weight'] = true;
         $this->weight = $weight;

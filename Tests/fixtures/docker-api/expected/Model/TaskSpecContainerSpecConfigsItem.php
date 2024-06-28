@@ -8,7 +8,7 @@ class TaskSpecContainerSpecConfigsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -63,7 +63,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return TaskSpecContainerSpecConfigsItemFile
     */
-    public function getFile() : TaskSpecContainerSpecConfigsItemFile
+    public function getFile(): TaskSpecContainerSpecConfigsItemFile
     {
         return $this->file;
     }
@@ -79,7 +79,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return self
     */
-    public function setFile(TaskSpecContainerSpecConfigsItemFile $file) : self
+    public function setFile(TaskSpecContainerSpecConfigsItemFile $file): self
     {
         $this->initialized['file'] = true;
         $this->file = $file;
@@ -115,7 +115,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return self
     */
-    public function setRuntime($runtime) : self
+    public function setRuntime($runtime): self
     {
         $this->initialized['runtime'] = true;
         $this->runtime = $runtime;
@@ -128,7 +128,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return string
     */
-    public function getConfigID() : string
+    public function getConfigID(): string
     {
         return $this->configID;
     }
@@ -141,7 +141,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return self
     */
-    public function setConfigID(string $configID) : self
+    public function setConfigID(string $configID): self
     {
         $this->initialized['configID'] = true;
         $this->configID = $configID;
@@ -155,7 +155,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return string
     */
-    public function getConfigName() : string
+    public function getConfigName(): string
     {
         return $this->configName;
     }
@@ -169,7 +169,7 @@ class TaskSpecContainerSpecConfigsItem
     *
     * @return self
     */
-    public function setConfigName(string $configName) : self
+    public function setConfigName(string $configName): self
     {
         $this->initialized['configName'] = true;
         $this->configName = $configName;

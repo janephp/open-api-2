@@ -8,7 +8,7 @@ class PluginDevice
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class PluginDevice
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class PluginDevice
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -63,7 +63,7 @@ class PluginDevice
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -74,7 +74,7 @@ class PluginDevice
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -85,7 +85,7 @@ class PluginDevice
      *
      * @return list<string>
      */
-    public function getSettable() : array
+    public function getSettable(): array
     {
         return $this->settable;
     }
@@ -96,7 +96,7 @@ class PluginDevice
      *
      * @return self
      */
-    public function setSettable(array $settable) : self
+    public function setSettable(array $settable): self
     {
         $this->initialized['settable'] = true;
         $this->settable = $settable;
@@ -107,7 +107,7 @@ class PluginDevice
      *
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -118,7 +118,7 @@ class PluginDevice
      *
      * @return self
      */
-    public function setPath(string $path) : self
+    public function setPath(string $path): self
     {
         $this->initialized['path'] = true;
         $this->path = $path;

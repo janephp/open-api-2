@@ -8,7 +8,7 @@ class TaskSpecPlacement
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -88,7 +88,7 @@ class TaskSpecPlacement
     *
     * @return list<string>
     */
-    public function getConstraints() : array
+    public function getConstraints(): array
     {
         return $this->constraints;
     }
@@ -118,7 +118,7 @@ class TaskSpecPlacement
     *
     * @return self
     */
-    public function setConstraints(array $constraints) : self
+    public function setConstraints(array $constraints): self
     {
         $this->initialized['constraints'] = true;
         $this->constraints = $constraints;
@@ -132,7 +132,7 @@ class TaskSpecPlacement
     *
     * @return list<TaskSpecPlacementPreferencesItem>
     */
-    public function getPreferences() : array
+    public function getPreferences(): array
     {
         return $this->preferences;
     }
@@ -146,7 +146,7 @@ class TaskSpecPlacement
     *
     * @return self
     */
-    public function setPreferences(array $preferences) : self
+    public function setPreferences(array $preferences): self
     {
         $this->initialized['preferences'] = true;
         $this->preferences = $preferences;
@@ -159,7 +159,7 @@ class TaskSpecPlacement
     *
     * @return int
     */
-    public function getMaxReplicas() : int
+    public function getMaxReplicas(): int
     {
         return $this->maxReplicas;
     }
@@ -172,7 +172,7 @@ class TaskSpecPlacement
     *
     * @return self
     */
-    public function setMaxReplicas(int $maxReplicas) : self
+    public function setMaxReplicas(int $maxReplicas): self
     {
         $this->initialized['maxReplicas'] = true;
         $this->maxReplicas = $maxReplicas;
@@ -187,7 +187,7 @@ class TaskSpecPlacement
     *
     * @return list<Platform>
     */
-    public function getPlatforms() : array
+    public function getPlatforms(): array
     {
         return $this->platforms;
     }
@@ -202,7 +202,7 @@ class TaskSpecPlacement
     *
     * @return self
     */
-    public function setPlatforms(array $platforms) : self
+    public function setPlatforms(array $platforms): self
     {
         $this->initialized['platforms'] = true;
         $this->platforms = $platforms;

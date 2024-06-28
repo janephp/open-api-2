@@ -8,7 +8,7 @@ class CompanyPatchBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class CompanyPatchBody
      *
      * @return bool
      */
-    public function getWantsTimestampTimers() : bool
+    public function getWantsTimestampTimers(): bool
     {
         return $this->wantsTimestampTimers;
     }
@@ -40,7 +40,7 @@ class CompanyPatchBody
      *
      * @return self
      */
-    public function setWantsTimestampTimers(bool $wantsTimestampTimers) : self
+    public function setWantsTimestampTimers(bool $wantsTimestampTimers): self
     {
         $this->initialized['wantsTimestampTimers'] = true;
         $this->wantsTimestampTimers = $wantsTimestampTimers;
@@ -51,7 +51,7 @@ class CompanyPatchBody
      *
      * @return int
      */
-    public function getWeeklyCapacity() : int
+    public function getWeeklyCapacity(): int
     {
         return $this->weeklyCapacity;
     }
@@ -62,7 +62,7 @@ class CompanyPatchBody
      *
      * @return self
      */
-    public function setWeeklyCapacity(int $weeklyCapacity) : self
+    public function setWeeklyCapacity(int $weeklyCapacity): self
     {
         $this->initialized['weeklyCapacity'] = true;
         $this->weeklyCapacity = $weeklyCapacity;

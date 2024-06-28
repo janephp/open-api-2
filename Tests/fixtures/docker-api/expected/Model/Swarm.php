@@ -8,7 +8,7 @@ class Swarm
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -106,7 +106,7 @@ class Swarm
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -117,7 +117,7 @@ class Swarm
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -138,7 +138,7 @@ class Swarm
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -159,7 +159,7 @@ class Swarm
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -172,7 +172,7 @@ class Swarm
     *
     * @return string
     */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -185,7 +185,7 @@ class Swarm
     *
     * @return self
     */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -198,7 +198,7 @@ class Swarm
     *
     * @return string
     */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -211,7 +211,7 @@ class Swarm
     *
     * @return self
     */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -222,7 +222,7 @@ class Swarm
      *
      * @return SwarmSpec
      */
-    public function getSpec() : SwarmSpec
+    public function getSpec(): SwarmSpec
     {
         return $this->spec;
     }
@@ -233,7 +233,7 @@ class Swarm
      *
      * @return self
      */
-    public function setSpec(SwarmSpec $spec) : self
+    public function setSpec(SwarmSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -246,7 +246,7 @@ class Swarm
     *
     * @return TLSInfo
     */
-    public function getTLSInfo() : TLSInfo
+    public function getTLSInfo(): TLSInfo
     {
         return $this->tLSInfo;
     }
@@ -259,7 +259,7 @@ class Swarm
     *
     * @return self
     */
-    public function setTLSInfo(TLSInfo $tLSInfo) : self
+    public function setTLSInfo(TLSInfo $tLSInfo): self
     {
         $this->initialized['tLSInfo'] = true;
         $this->tLSInfo = $tLSInfo;
@@ -270,7 +270,7 @@ class Swarm
      *
      * @return bool
      */
-    public function getRootRotationInProgress() : bool
+    public function getRootRotationInProgress(): bool
     {
         return $this->rootRotationInProgress;
     }
@@ -281,7 +281,7 @@ class Swarm
      *
      * @return self
      */
-    public function setRootRotationInProgress(bool $rootRotationInProgress) : self
+    public function setRootRotationInProgress(bool $rootRotationInProgress): self
     {
         $this->initialized['rootRotationInProgress'] = true;
         $this->rootRotationInProgress = $rootRotationInProgress;
@@ -295,7 +295,7 @@ class Swarm
     *
     * @return int
     */
-    public function getDataPathPort() : int
+    public function getDataPathPort(): int
     {
         return $this->dataPathPort;
     }
@@ -309,7 +309,7 @@ class Swarm
     *
     * @return self
     */
-    public function setDataPathPort(int $dataPathPort) : self
+    public function setDataPathPort(int $dataPathPort): self
     {
         $this->initialized['dataPathPort'] = true;
         $this->dataPathPort = $dataPathPort;
@@ -322,7 +322,7 @@ class Swarm
     *
     * @return list<string>
     */
-    public function getDefaultAddrPool() : array
+    public function getDefaultAddrPool(): array
     {
         return $this->defaultAddrPool;
     }
@@ -335,7 +335,7 @@ class Swarm
     *
     * @return self
     */
-    public function setDefaultAddrPool(array $defaultAddrPool) : self
+    public function setDefaultAddrPool(array $defaultAddrPool): self
     {
         $this->initialized['defaultAddrPool'] = true;
         $this->defaultAddrPool = $defaultAddrPool;
@@ -348,7 +348,7 @@ class Swarm
     *
     * @return int
     */
-    public function getSubnetSize() : int
+    public function getSubnetSize(): int
     {
         return $this->subnetSize;
     }
@@ -361,7 +361,7 @@ class Swarm
     *
     * @return self
     */
-    public function setSubnetSize(int $subnetSize) : self
+    public function setSubnetSize(int $subnetSize): self
     {
         $this->initialized['subnetSize'] = true;
         $this->subnetSize = $subnetSize;
@@ -372,7 +372,7 @@ class Swarm
      *
      * @return JoinTokens
      */
-    public function getJoinTokens() : JoinTokens
+    public function getJoinTokens(): JoinTokens
     {
         return $this->joinTokens;
     }
@@ -383,7 +383,7 @@ class Swarm
      *
      * @return self
      */
-    public function setJoinTokens(JoinTokens $joinTokens) : self
+    public function setJoinTokens(JoinTokens $joinTokens): self
     {
         $this->initialized['joinTokens'] = true;
         $this->joinTokens = $joinTokens;

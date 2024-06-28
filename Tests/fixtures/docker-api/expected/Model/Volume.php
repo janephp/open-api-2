@@ -8,7 +8,7 @@ class Volume
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -81,7 +81,7 @@ class Volume
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -92,7 +92,7 @@ class Volume
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -103,7 +103,7 @@ class Volume
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -114,7 +114,7 @@ class Volume
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -125,7 +125,7 @@ class Volume
      *
      * @return string
      */
-    public function getMountpoint() : string
+    public function getMountpoint(): string
     {
         return $this->mountpoint;
     }
@@ -136,7 +136,7 @@ class Volume
      *
      * @return self
      */
-    public function setMountpoint(string $mountpoint) : self
+    public function setMountpoint(string $mountpoint): self
     {
         $this->initialized['mountpoint'] = true;
         $this->mountpoint = $mountpoint;
@@ -147,7 +147,7 @@ class Volume
      *
      * @return string
      */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -158,7 +158,7 @@ class Volume
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -175,7 +175,7 @@ class Volume
     *
     * @return array<string, mixed>
     */
-    public function getStatus() : iterable
+    public function getStatus(): iterable
     {
         return $this->status;
     }
@@ -192,7 +192,7 @@ class Volume
     *
     * @return self
     */
-    public function setStatus(iterable $status) : self
+    public function setStatus(iterable $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -203,7 +203,7 @@ class Volume
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -214,7 +214,7 @@ class Volume
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -227,7 +227,7 @@ class Volume
     *
     * @return string
     */
-    public function getScope() : string
+    public function getScope(): string
     {
         return $this->scope;
     }
@@ -240,7 +240,7 @@ class Volume
     *
     * @return self
     */
-    public function setScope(string $scope) : self
+    public function setScope(string $scope): self
     {
         $this->initialized['scope'] = true;
         $this->scope = $scope;
@@ -251,7 +251,7 @@ class Volume
      *
      * @return array<string, string>
      */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -262,7 +262,7 @@ class Volume
      *
      * @return self
      */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;
@@ -275,7 +275,7 @@ class Volume
     *
     * @return VolumeUsageData|null
     */
-    public function getUsageData() : ?VolumeUsageData
+    public function getUsageData(): ?VolumeUsageData
     {
         return $this->usageData;
     }
@@ -288,7 +288,7 @@ class Volume
     *
     * @return self
     */
-    public function setUsageData(?VolumeUsageData $usageData) : self
+    public function setUsageData(?VolumeUsageData $usageData): self
     {
         $this->initialized['usageData'] = true;
         $this->usageData = $usageData;

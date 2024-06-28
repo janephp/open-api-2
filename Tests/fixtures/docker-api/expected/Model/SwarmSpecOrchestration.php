@@ -8,7 +8,7 @@ class SwarmSpecOrchestration
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -27,7 +27,7 @@ class SwarmSpecOrchestration
     *
     * @return int
     */
-    public function getTaskHistoryRetentionLimit() : int
+    public function getTaskHistoryRetentionLimit(): int
     {
         return $this->taskHistoryRetentionLimit;
     }
@@ -40,7 +40,7 @@ class SwarmSpecOrchestration
     *
     * @return self
     */
-    public function setTaskHistoryRetentionLimit(int $taskHistoryRetentionLimit) : self
+    public function setTaskHistoryRetentionLimit(int $taskHistoryRetentionLimit): self
     {
         $this->initialized['taskHistoryRetentionLimit'] = true;
         $this->taskHistoryRetentionLimit = $taskHistoryRetentionLimit;

@@ -8,7 +8,7 @@ class Plugin
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -53,7 +53,7 @@ class Plugin
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -64,7 +64,7 @@ class Plugin
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -75,7 +75,7 @@ class Plugin
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -86,7 +86,7 @@ class Plugin
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -97,7 +97,7 @@ class Plugin
      *
      * @return bool
      */
-    public function getEnabled() : bool
+    public function getEnabled(): bool
     {
         return $this->enabled;
     }
@@ -108,7 +108,7 @@ class Plugin
      *
      * @return self
      */
-    public function setEnabled(bool $enabled) : self
+    public function setEnabled(bool $enabled): self
     {
         $this->initialized['enabled'] = true;
         $this->enabled = $enabled;
@@ -119,7 +119,7 @@ class Plugin
      *
      * @return PluginSettings
      */
-    public function getSettings() : PluginSettings
+    public function getSettings(): PluginSettings
     {
         return $this->settings;
     }
@@ -130,7 +130,7 @@ class Plugin
      *
      * @return self
      */
-    public function setSettings(PluginSettings $settings) : self
+    public function setSettings(PluginSettings $settings): self
     {
         $this->initialized['settings'] = true;
         $this->settings = $settings;
@@ -141,7 +141,7 @@ class Plugin
      *
      * @return string
      */
-    public function getPluginReference() : string
+    public function getPluginReference(): string
     {
         return $this->pluginReference;
     }
@@ -152,7 +152,7 @@ class Plugin
      *
      * @return self
      */
-    public function setPluginReference(string $pluginReference) : self
+    public function setPluginReference(string $pluginReference): self
     {
         $this->initialized['pluginReference'] = true;
         $this->pluginReference = $pluginReference;
@@ -163,7 +163,7 @@ class Plugin
      *
      * @return PluginConfig
      */
-    public function getConfig() : PluginConfig
+    public function getConfig(): PluginConfig
     {
         return $this->config;
     }
@@ -174,7 +174,7 @@ class Plugin
      *
      * @return self
      */
-    public function setConfig(PluginConfig $config) : self
+    public function setConfig(PluginConfig $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;

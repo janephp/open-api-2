@@ -8,7 +8,7 @@ class ContainerSummaryHostConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class ContainerSummaryHostConfig
      *
      * @return string
      */
-    public function getNetworkMode() : string
+    public function getNetworkMode(): string
     {
         return $this->networkMode;
     }
@@ -34,7 +34,7 @@ class ContainerSummaryHostConfig
      *
      * @return self
      */
-    public function setNetworkMode(string $networkMode) : self
+    public function setNetworkMode(string $networkMode): self
     {
         $this->initialized['networkMode'] = true;
         $this->networkMode = $networkMode;

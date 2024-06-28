@@ -8,7 +8,7 @@ class TaskSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -119,7 +119,7 @@ class TaskSpec
     *
     * @return TaskSpecPluginSpec
     */
-    public function getPluginSpec() : TaskSpecPluginSpec
+    public function getPluginSpec(): TaskSpecPluginSpec
     {
         return $this->pluginSpec;
     }
@@ -138,7 +138,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setPluginSpec(TaskSpecPluginSpec $pluginSpec) : self
+    public function setPluginSpec(TaskSpecPluginSpec $pluginSpec): self
     {
         $this->initialized['pluginSpec'] = true;
         $this->pluginSpec = $pluginSpec;
@@ -157,7 +157,7 @@ class TaskSpec
     *
     * @return TaskSpecContainerSpec
     */
-    public function getContainerSpec() : TaskSpecContainerSpec
+    public function getContainerSpec(): TaskSpecContainerSpec
     {
         return $this->containerSpec;
     }
@@ -176,7 +176,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setContainerSpec(TaskSpecContainerSpec $containerSpec) : self
+    public function setContainerSpec(TaskSpecContainerSpec $containerSpec): self
     {
         $this->initialized['containerSpec'] = true;
         $this->containerSpec = $containerSpec;
@@ -196,7 +196,7 @@ class TaskSpec
     *
     * @return TaskSpecNetworkAttachmentSpec
     */
-    public function getNetworkAttachmentSpec() : TaskSpecNetworkAttachmentSpec
+    public function getNetworkAttachmentSpec(): TaskSpecNetworkAttachmentSpec
     {
         return $this->networkAttachmentSpec;
     }
@@ -216,7 +216,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setNetworkAttachmentSpec(TaskSpecNetworkAttachmentSpec $networkAttachmentSpec) : self
+    public function setNetworkAttachmentSpec(TaskSpecNetworkAttachmentSpec $networkAttachmentSpec): self
     {
         $this->initialized['networkAttachmentSpec'] = true;
         $this->networkAttachmentSpec = $networkAttachmentSpec;
@@ -229,7 +229,7 @@ class TaskSpec
     *
     * @return TaskSpecResources
     */
-    public function getResources() : TaskSpecResources
+    public function getResources(): TaskSpecResources
     {
         return $this->resources;
     }
@@ -242,7 +242,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setResources(TaskSpecResources $resources) : self
+    public function setResources(TaskSpecResources $resources): self
     {
         $this->initialized['resources'] = true;
         $this->resources = $resources;
@@ -255,7 +255,7 @@ class TaskSpec
     *
     * @return TaskSpecRestartPolicy
     */
-    public function getRestartPolicy() : TaskSpecRestartPolicy
+    public function getRestartPolicy(): TaskSpecRestartPolicy
     {
         return $this->restartPolicy;
     }
@@ -268,7 +268,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setRestartPolicy(TaskSpecRestartPolicy $restartPolicy) : self
+    public function setRestartPolicy(TaskSpecRestartPolicy $restartPolicy): self
     {
         $this->initialized['restartPolicy'] = true;
         $this->restartPolicy = $restartPolicy;
@@ -279,7 +279,7 @@ class TaskSpec
      *
      * @return TaskSpecPlacement
      */
-    public function getPlacement() : TaskSpecPlacement
+    public function getPlacement(): TaskSpecPlacement
     {
         return $this->placement;
     }
@@ -290,7 +290,7 @@ class TaskSpec
      *
      * @return self
      */
-    public function setPlacement(TaskSpecPlacement $placement) : self
+    public function setPlacement(TaskSpecPlacement $placement): self
     {
         $this->initialized['placement'] = true;
         $this->placement = $placement;
@@ -303,7 +303,7 @@ class TaskSpec
     *
     * @return int
     */
-    public function getForceUpdate() : int
+    public function getForceUpdate(): int
     {
         return $this->forceUpdate;
     }
@@ -316,7 +316,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setForceUpdate(int $forceUpdate) : self
+    public function setForceUpdate(int $forceUpdate): self
     {
         $this->initialized['forceUpdate'] = true;
         $this->forceUpdate = $forceUpdate;
@@ -327,7 +327,7 @@ class TaskSpec
      *
      * @return string
      */
-    public function getRuntime() : string
+    public function getRuntime(): string
     {
         return $this->runtime;
     }
@@ -338,7 +338,7 @@ class TaskSpec
      *
      * @return self
      */
-    public function setRuntime(string $runtime) : self
+    public function setRuntime(string $runtime): self
     {
         $this->initialized['runtime'] = true;
         $this->runtime = $runtime;
@@ -349,7 +349,7 @@ class TaskSpec
      *
      * @return list<NetworkAttachmentConfig>
      */
-    public function getNetworks() : array
+    public function getNetworks(): array
     {
         return $this->networks;
     }
@@ -360,7 +360,7 @@ class TaskSpec
      *
      * @return self
      */
-    public function setNetworks(array $networks) : self
+    public function setNetworks(array $networks): self
     {
         $this->initialized['networks'] = true;
         $this->networks = $networks;
@@ -374,7 +374,7 @@ class TaskSpec
     *
     * @return TaskSpecLogDriver
     */
-    public function getLogDriver() : TaskSpecLogDriver
+    public function getLogDriver(): TaskSpecLogDriver
     {
         return $this->logDriver;
     }
@@ -388,7 +388,7 @@ class TaskSpec
     *
     * @return self
     */
-    public function setLogDriver(TaskSpecLogDriver $logDriver) : self
+    public function setLogDriver(TaskSpecLogDriver $logDriver): self
     {
         $this->initialized['logDriver'] = true;
         $this->logDriver = $logDriver;

@@ -14,15 +14,15 @@ class TestSimpleBodyParameter extends \Jane\Component\OpenApi2\Tests\Expected\Ru
         $this->body = $testString;
     }
     use \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/test-simple';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return [[], $this->body];
     }
@@ -40,7 +40,7 @@ class TestSimpleBodyParameter extends \Jane\Component\OpenApi2\Tests\Expected\Ru
             return null;
         }
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

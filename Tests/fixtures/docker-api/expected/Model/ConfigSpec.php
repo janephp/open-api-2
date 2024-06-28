@@ -8,7 +8,7 @@ class ConfigSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -43,7 +43,7 @@ class ConfigSpec
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -54,7 +54,7 @@ class ConfigSpec
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -65,7 +65,7 @@ class ConfigSpec
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -76,7 +76,7 @@ class ConfigSpec
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -89,7 +89,7 @@ class ConfigSpec
     *
     * @return string
     */
-    public function getData() : string
+    public function getData(): string
     {
         return $this->data;
     }
@@ -102,7 +102,7 @@ class ConfigSpec
     *
     * @return self
     */
-    public function setData(string $data) : self
+    public function setData(string $data): self
     {
         $this->initialized['data'] = true;
         $this->data = $data;
@@ -113,7 +113,7 @@ class ConfigSpec
      *
      * @return Driver
      */
-    public function getTemplating() : Driver
+    public function getTemplating(): Driver
     {
         return $this->templating;
     }
@@ -124,7 +124,7 @@ class ConfigSpec
      *
      * @return self
      */
-    public function setTemplating(Driver $templating) : self
+    public function setTemplating(Driver $templating): self
     {
         $this->initialized['templating'] = true;
         $this->templating = $templating;

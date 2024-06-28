@@ -8,7 +8,7 @@ class NetworkAttachmentConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class NetworkAttachmentConfig
      *
      * @return string
      */
-    public function getTarget() : string
+    public function getTarget(): string
     {
         return $this->target;
     }
@@ -46,7 +46,7 @@ class NetworkAttachmentConfig
      *
      * @return self
      */
-    public function setTarget(string $target) : self
+    public function setTarget(string $target): self
     {
         $this->initialized['target'] = true;
         $this->target = $target;
@@ -57,7 +57,7 @@ class NetworkAttachmentConfig
      *
      * @return list<string>
      */
-    public function getAliases() : array
+    public function getAliases(): array
     {
         return $this->aliases;
     }
@@ -68,7 +68,7 @@ class NetworkAttachmentConfig
      *
      * @return self
      */
-    public function setAliases(array $aliases) : self
+    public function setAliases(array $aliases): self
     {
         $this->initialized['aliases'] = true;
         $this->aliases = $aliases;
@@ -79,7 +79,7 @@ class NetworkAttachmentConfig
      *
      * @return array<string, string>
      */
-    public function getDriverOpts() : iterable
+    public function getDriverOpts(): iterable
     {
         return $this->driverOpts;
     }
@@ -90,7 +90,7 @@ class NetworkAttachmentConfig
      *
      * @return self
      */
-    public function setDriverOpts(iterable $driverOpts) : self
+    public function setDriverOpts(iterable $driverOpts): self
     {
         $this->initialized['driverOpts'] = true;
         $this->driverOpts = $driverOpts;

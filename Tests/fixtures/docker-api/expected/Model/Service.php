@@ -8,7 +8,7 @@ class Service
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -87,7 +87,7 @@ class Service
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -98,7 +98,7 @@ class Service
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -119,7 +119,7 @@ class Service
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -140,7 +140,7 @@ class Service
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -151,7 +151,7 @@ class Service
      *
      * @return string
      */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -162,7 +162,7 @@ class Service
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -173,7 +173,7 @@ class Service
      *
      * @return string
      */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -184,7 +184,7 @@ class Service
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -195,7 +195,7 @@ class Service
      *
      * @return ServiceSpec
      */
-    public function getSpec() : ServiceSpec
+    public function getSpec(): ServiceSpec
     {
         return $this->spec;
     }
@@ -206,7 +206,7 @@ class Service
      *
      * @return self
      */
-    public function setSpec(ServiceSpec $spec) : self
+    public function setSpec(ServiceSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -217,7 +217,7 @@ class Service
      *
      * @return ServiceEndpoint
      */
-    public function getEndpoint() : ServiceEndpoint
+    public function getEndpoint(): ServiceEndpoint
     {
         return $this->endpoint;
     }
@@ -228,7 +228,7 @@ class Service
      *
      * @return self
      */
-    public function setEndpoint(ServiceEndpoint $endpoint) : self
+    public function setEndpoint(ServiceEndpoint $endpoint): self
     {
         $this->initialized['endpoint'] = true;
         $this->endpoint = $endpoint;
@@ -239,7 +239,7 @@ class Service
      *
      * @return ServiceUpdateStatus
      */
-    public function getUpdateStatus() : ServiceUpdateStatus
+    public function getUpdateStatus(): ServiceUpdateStatus
     {
         return $this->updateStatus;
     }
@@ -250,7 +250,7 @@ class Service
      *
      * @return self
      */
-    public function setUpdateStatus(ServiceUpdateStatus $updateStatus) : self
+    public function setUpdateStatus(ServiceUpdateStatus $updateStatus): self
     {
         $this->initialized['updateStatus'] = true;
         $this->updateStatus = $updateStatus;
@@ -263,7 +263,7 @@ class Service
     *
     * @return ServiceServiceStatus
     */
-    public function getServiceStatus() : ServiceServiceStatus
+    public function getServiceStatus(): ServiceServiceStatus
     {
         return $this->serviceStatus;
     }
@@ -276,7 +276,7 @@ class Service
     *
     * @return self
     */
-    public function setServiceStatus(ServiceServiceStatus $serviceStatus) : self
+    public function setServiceStatus(ServiceServiceStatus $serviceStatus): self
     {
         $this->initialized['serviceStatus'] = true;
         $this->serviceStatus = $serviceStatus;
@@ -291,7 +291,7 @@ class Service
     *
     * @return ServiceJobStatus
     */
-    public function getJobStatus() : ServiceJobStatus
+    public function getJobStatus(): ServiceJobStatus
     {
         return $this->jobStatus;
     }
@@ -306,7 +306,7 @@ class Service
     *
     * @return self
     */
-    public function setJobStatus(ServiceJobStatus $jobStatus) : self
+    public function setJobStatus(ServiceJobStatus $jobStatus): self
     {
         $this->initialized['jobStatus'] = true;
         $this->jobStatus = $jobStatus;

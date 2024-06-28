@@ -8,7 +8,7 @@ class EventActor
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class EventActor
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -40,7 +40,7 @@ class EventActor
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -51,7 +51,7 @@ class EventActor
      *
      * @return array<string, string>
      */
-    public function getAttributes() : iterable
+    public function getAttributes(): iterable
     {
         return $this->attributes;
     }
@@ -62,7 +62,7 @@ class EventActor
      *
      * @return self
      */
-    public function setAttributes(iterable $attributes) : self
+    public function setAttributes(iterable $attributes): self
     {
         $this->initialized['attributes'] = true;
         $this->attributes = $attributes;

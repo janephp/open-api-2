@@ -8,7 +8,7 @@ class NetworkingConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class NetworkingConfig
      *
      * @return array<string, EndpointSettings>
      */
-    public function getEndpointsConfig() : iterable
+    public function getEndpointsConfig(): iterable
     {
         return $this->endpointsConfig;
     }
@@ -34,7 +34,7 @@ class NetworkingConfig
      *
      * @return self
      */
-    public function setEndpointsConfig(iterable $endpointsConfig) : self
+    public function setEndpointsConfig(iterable $endpointsConfig): self
     {
         $this->initialized['endpointsConfig'] = true;
         $this->endpointsConfig = $endpointsConfig;

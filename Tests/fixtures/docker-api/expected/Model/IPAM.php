@@ -8,7 +8,7 @@ class IPAM
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -40,7 +40,7 @@ class IPAM
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -51,7 +51,7 @@ class IPAM
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -67,7 +67,7 @@ class IPAM
     *
     * @return list<array<string, string>>
     */
-    public function getConfig() : array
+    public function getConfig(): array
     {
         return $this->config;
     }
@@ -83,7 +83,7 @@ class IPAM
     *
     * @return self
     */
-    public function setConfig(array $config) : self
+    public function setConfig(array $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;
@@ -94,7 +94,7 @@ class IPAM
      *
      * @return array<string, string>
      */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -105,7 +105,7 @@ class IPAM
      *
      * @return self
      */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

@@ -8,7 +8,7 @@ class MountPoint
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -65,7 +65,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -76,7 +76,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;
@@ -87,7 +87,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -98,7 +98,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -109,7 +109,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getSource() : string
+    public function getSource(): string
     {
         return $this->source;
     }
@@ -120,7 +120,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setSource(string $source) : self
+    public function setSource(string $source): self
     {
         $this->initialized['source'] = true;
         $this->source = $source;
@@ -131,7 +131,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getDestination() : string
+    public function getDestination(): string
     {
         return $this->destination;
     }
@@ -142,7 +142,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setDestination(string $destination) : self
+    public function setDestination(string $destination): self
     {
         $this->initialized['destination'] = true;
         $this->destination = $destination;
@@ -153,7 +153,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -164,7 +164,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -175,7 +175,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getMode() : string
+    public function getMode(): string
     {
         return $this->mode;
     }
@@ -186,7 +186,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setMode(string $mode) : self
+    public function setMode(string $mode): self
     {
         $this->initialized['mode'] = true;
         $this->mode = $mode;
@@ -197,7 +197,7 @@ class MountPoint
      *
      * @return bool
      */
-    public function getRW() : bool
+    public function getRW(): bool
     {
         return $this->rW;
     }
@@ -208,7 +208,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setRW(bool $rW) : self
+    public function setRW(bool $rW): self
     {
         $this->initialized['rW'] = true;
         $this->rW = $rW;
@@ -219,7 +219,7 @@ class MountPoint
      *
      * @return string
      */
-    public function getPropagation() : string
+    public function getPropagation(): string
     {
         return $this->propagation;
     }
@@ -230,7 +230,7 @@ class MountPoint
      *
      * @return self
      */
-    public function setPropagation(string $propagation) : self
+    public function setPropagation(string $propagation): self
     {
         $this->initialized['propagation'] = true;
         $this->propagation = $propagation;

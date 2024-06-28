@@ -8,7 +8,7 @@ class PeerNode
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class PeerNode
      *
      * @return string
      */
-    public function getNodeID() : string
+    public function getNodeID(): string
     {
         return $this->nodeID;
     }
@@ -40,7 +40,7 @@ class PeerNode
      *
      * @return self
      */
-    public function setNodeID(string $nodeID) : self
+    public function setNodeID(string $nodeID): self
     {
         $this->initialized['nodeID'] = true;
         $this->nodeID = $nodeID;
@@ -51,7 +51,7 @@ class PeerNode
      *
      * @return string
      */
-    public function getAddr() : string
+    public function getAddr(): string
     {
         return $this->addr;
     }
@@ -62,7 +62,7 @@ class PeerNode
      *
      * @return self
      */
-    public function setAddr(string $addr) : self
+    public function setAddr(string $addr): self
     {
         $this->initialized['addr'] = true;
         $this->addr = $addr;

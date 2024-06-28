@@ -8,7 +8,7 @@ class NetworksIdDisconnectPostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class NetworksIdDisconnectPostBody
      *
      * @return string
      */
-    public function getContainer() : string
+    public function getContainer(): string
     {
         return $this->container;
     }
@@ -40,7 +40,7 @@ class NetworksIdDisconnectPostBody
      *
      * @return self
      */
-    public function setContainer(string $container) : self
+    public function setContainer(string $container): self
     {
         $this->initialized['container'] = true;
         $this->container = $container;
@@ -51,7 +51,7 @@ class NetworksIdDisconnectPostBody
      *
      * @return bool
      */
-    public function getForce() : bool
+    public function getForce(): bool
     {
         return $this->force;
     }
@@ -62,7 +62,7 @@ class NetworksIdDisconnectPostBody
      *
      * @return self
      */
-    public function setForce(bool $force) : self
+    public function setForce(bool $force): self
     {
         $this->initialized['force'] = true;
         $this->force = $force;

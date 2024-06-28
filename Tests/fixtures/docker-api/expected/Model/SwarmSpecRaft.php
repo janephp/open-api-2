@@ -8,7 +8,7 @@ class SwarmSpecRaft
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -60,7 +60,7 @@ class SwarmSpecRaft
      *
      * @return int
      */
-    public function getSnapshotInterval() : int
+    public function getSnapshotInterval(): int
     {
         return $this->snapshotInterval;
     }
@@ -71,7 +71,7 @@ class SwarmSpecRaft
      *
      * @return self
      */
-    public function setSnapshotInterval(int $snapshotInterval) : self
+    public function setSnapshotInterval(int $snapshotInterval): self
     {
         $this->initialized['snapshotInterval'] = true;
         $this->snapshotInterval = $snapshotInterval;
@@ -82,7 +82,7 @@ class SwarmSpecRaft
      *
      * @return int
      */
-    public function getKeepOldSnapshots() : int
+    public function getKeepOldSnapshots(): int
     {
         return $this->keepOldSnapshots;
     }
@@ -93,7 +93,7 @@ class SwarmSpecRaft
      *
      * @return self
      */
-    public function setKeepOldSnapshots(int $keepOldSnapshots) : self
+    public function setKeepOldSnapshots(int $keepOldSnapshots): self
     {
         $this->initialized['keepOldSnapshots'] = true;
         $this->keepOldSnapshots = $keepOldSnapshots;
@@ -106,7 +106,7 @@ class SwarmSpecRaft
     *
     * @return int
     */
-    public function getLogEntriesForSlowFollowers() : int
+    public function getLogEntriesForSlowFollowers(): int
     {
         return $this->logEntriesForSlowFollowers;
     }
@@ -119,7 +119,7 @@ class SwarmSpecRaft
     *
     * @return self
     */
-    public function setLogEntriesForSlowFollowers(int $logEntriesForSlowFollowers) : self
+    public function setLogEntriesForSlowFollowers(int $logEntriesForSlowFollowers): self
     {
         $this->initialized['logEntriesForSlowFollowers'] = true;
         $this->logEntriesForSlowFollowers = $logEntriesForSlowFollowers;
@@ -136,7 +136,7 @@ class SwarmSpecRaft
     *
     * @return int
     */
-    public function getElectionTick() : int
+    public function getElectionTick(): int
     {
         return $this->electionTick;
     }
@@ -153,7 +153,7 @@ class SwarmSpecRaft
     *
     * @return self
     */
-    public function setElectionTick(int $electionTick) : self
+    public function setElectionTick(int $electionTick): self
     {
         $this->initialized['electionTick'] = true;
         $this->electionTick = $electionTick;
@@ -169,7 +169,7 @@ class SwarmSpecRaft
     *
     * @return int
     */
-    public function getHeartbeatTick() : int
+    public function getHeartbeatTick(): int
     {
         return $this->heartbeatTick;
     }
@@ -185,7 +185,7 @@ class SwarmSpecRaft
     *
     * @return self
     */
-    public function setHeartbeatTick(int $heartbeatTick) : self
+    public function setHeartbeatTick(int $heartbeatTick): self
     {
         $this->initialized['heartbeatTick'] = true;
         $this->heartbeatTick = $heartbeatTick;

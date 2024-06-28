@@ -8,7 +8,7 @@ class ImagesNameHistoryGetResponse200Item
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -53,7 +53,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -64,7 +64,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -75,7 +75,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return int
      */
-    public function getCreated() : int
+    public function getCreated(): int
     {
         return $this->created;
     }
@@ -86,7 +86,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setCreated(int $created) : self
+    public function setCreated(int $created): self
     {
         $this->initialized['created'] = true;
         $this->created = $created;
@@ -97,7 +97,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return string
      */
-    public function getCreatedBy() : string
+    public function getCreatedBy(): string
     {
         return $this->createdBy;
     }
@@ -108,7 +108,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setCreatedBy(string $createdBy) : self
+    public function setCreatedBy(string $createdBy): self
     {
         $this->initialized['createdBy'] = true;
         $this->createdBy = $createdBy;
@@ -119,7 +119,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return list<string>
      */
-    public function getTags() : array
+    public function getTags(): array
     {
         return $this->tags;
     }
@@ -130,7 +130,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setTags(array $tags) : self
+    public function setTags(array $tags): self
     {
         $this->initialized['tags'] = true;
         $this->tags = $tags;
@@ -141,7 +141,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return int
      */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -152,7 +152,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;
@@ -163,7 +163,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return string
      */
-    public function getComment() : string
+    public function getComment(): string
     {
         return $this->comment;
     }
@@ -174,7 +174,7 @@ class ImagesNameHistoryGetResponse200Item
      *
      * @return self
      */
-    public function setComment(string $comment) : self
+    public function setComment(string $comment): self
     {
         $this->initialized['comment'] = true;
         $this->comment = $comment;

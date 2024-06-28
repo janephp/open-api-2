@@ -8,7 +8,7 @@ class CreateImageInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class CreateImageInfo
      *
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->id;
     }
@@ -58,7 +58,7 @@ class CreateImageInfo
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -69,7 +69,7 @@ class CreateImageInfo
      *
      * @return string
      */
-    public function getError() : string
+    public function getError(): string
     {
         return $this->error;
     }
@@ -80,7 +80,7 @@ class CreateImageInfo
      *
      * @return self
      */
-    public function setError(string $error) : self
+    public function setError(string $error): self
     {
         $this->initialized['error'] = true;
         $this->error = $error;
@@ -91,7 +91,7 @@ class CreateImageInfo
      *
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -102,7 +102,7 @@ class CreateImageInfo
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(string $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -113,7 +113,7 @@ class CreateImageInfo
      *
      * @return string
      */
-    public function getProgress() : string
+    public function getProgress(): string
     {
         return $this->progress;
     }
@@ -124,7 +124,7 @@ class CreateImageInfo
      *
      * @return self
      */
-    public function setProgress(string $progress) : self
+    public function setProgress(string $progress): self
     {
         $this->initialized['progress'] = true;
         $this->progress = $progress;
@@ -135,7 +135,7 @@ class CreateImageInfo
      *
      * @return ProgressDetail
      */
-    public function getProgressDetail() : ProgressDetail
+    public function getProgressDetail(): ProgressDetail
     {
         return $this->progressDetail;
     }
@@ -146,7 +146,7 @@ class CreateImageInfo
      *
      * @return self
      */
-    public function setProgressDetail(ProgressDetail $progressDetail) : self
+    public function setProgressDetail(ProgressDetail $progressDetail): self
     {
         $this->initialized['progressDetail'] = true;
         $this->progressDetail = $progressDetail;

@@ -8,7 +8,7 @@ class TaskSpecContainerSpecPrivileges
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class TaskSpecContainerSpecPrivileges
      *
      * @return TaskSpecContainerSpecPrivilegesCredentialSpec
      */
-    public function getCredentialSpec() : TaskSpecContainerSpecPrivilegesCredentialSpec
+    public function getCredentialSpec(): TaskSpecContainerSpecPrivilegesCredentialSpec
     {
         return $this->credentialSpec;
     }
@@ -40,7 +40,7 @@ class TaskSpecContainerSpecPrivileges
      *
      * @return self
      */
-    public function setCredentialSpec(TaskSpecContainerSpecPrivilegesCredentialSpec $credentialSpec) : self
+    public function setCredentialSpec(TaskSpecContainerSpecPrivilegesCredentialSpec $credentialSpec): self
     {
         $this->initialized['credentialSpec'] = true;
         $this->credentialSpec = $credentialSpec;
@@ -51,7 +51,7 @@ class TaskSpecContainerSpecPrivileges
      *
      * @return TaskSpecContainerSpecPrivilegesSELinuxContext
      */
-    public function getSELinuxContext() : TaskSpecContainerSpecPrivilegesSELinuxContext
+    public function getSELinuxContext(): TaskSpecContainerSpecPrivilegesSELinuxContext
     {
         return $this->sELinuxContext;
     }
@@ -62,7 +62,7 @@ class TaskSpecContainerSpecPrivileges
      *
      * @return self
      */
-    public function setSELinuxContext(TaskSpecContainerSpecPrivilegesSELinuxContext $sELinuxContext) : self
+    public function setSELinuxContext(TaskSpecContainerSpecPrivilegesSELinuxContext $sELinuxContext): self
     {
         $this->initialized['sELinuxContext'] = true;
         $this->sELinuxContext = $sELinuxContext;

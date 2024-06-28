@@ -22,19 +22,19 @@ class ListProjects extends \Jane\OpenApi2\Tests\Expected\Runtime\Client\BaseEndp
         $this->queryParameters = $queryParameters;
     }
     use \Jane\OpenApi2\Tests\Expected\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/projects';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return [[], null];
     }
-    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(['is_active', 'client_id', 'updated_since', 'page', 'per_page']);
@@ -58,11 +58,11 @@ class ListProjects extends \Jane\OpenApi2\Tests\Expected\Runtime\Client\BaseEndp
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Projects', 'json');
+            return $serializer->deserialize($body, 'Jane\OpenApi2\Tests\Expected\Model\Projects', 'json');
         }
-        return $serializer->deserialize($body, 'Jane\\OpenApi2\\Tests\\Expected\\Model\\Error', 'json');
+        return $serializer->deserialize($body, 'Jane\OpenApi2\Tests\Expected\Model\Error', 'json');
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return ['BearerAuth', 'AccountAuth'];
     }

@@ -8,7 +8,7 @@ class SystemInfoDefaultAddressPoolsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class SystemInfoDefaultAddressPoolsItem
      *
      * @return string
      */
-    public function getBase() : string
+    public function getBase(): string
     {
         return $this->base;
     }
@@ -40,7 +40,7 @@ class SystemInfoDefaultAddressPoolsItem
      *
      * @return self
      */
-    public function setBase(string $base) : self
+    public function setBase(string $base): self
     {
         $this->initialized['base'] = true;
         $this->base = $base;
@@ -51,7 +51,7 @@ class SystemInfoDefaultAddressPoolsItem
      *
      * @return int
      */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -62,7 +62,7 @@ class SystemInfoDefaultAddressPoolsItem
      *
      * @return self
      */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;

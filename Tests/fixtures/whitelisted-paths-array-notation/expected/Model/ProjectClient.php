@@ -8,7 +8,7 @@ class ProjectClient
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class ProjectClient
      *
      * @return int
      */
-    public function getId() : int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -46,7 +46,7 @@ class ProjectClient
      *
      * @return self
      */
-    public function setId(int $id) : self
+    public function setId(int $id): self
     {
         $this->initialized['id'] = true;
         $this->id = $id;
@@ -57,7 +57,7 @@ class ProjectClient
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -68,7 +68,7 @@ class ProjectClient
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -79,7 +79,7 @@ class ProjectClient
      *
      * @return string
      */
-    public function getCurrency() : string
+    public function getCurrency(): string
     {
         return $this->currency;
     }
@@ -90,7 +90,7 @@ class ProjectClient
      *
      * @return self
      */
-    public function setCurrency(string $currency) : self
+    public function setCurrency(string $currency): self
     {
         $this->initialized['currency'] = true;
         $this->currency = $currency;

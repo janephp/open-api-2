@@ -8,7 +8,7 @@ class PluginInterfaceType
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class PluginInterfaceType
      *
      * @return string
      */
-    public function getPrefix() : string
+    public function getPrefix(): string
     {
         return $this->prefix;
     }
@@ -46,7 +46,7 @@ class PluginInterfaceType
      *
      * @return self
      */
-    public function setPrefix(string $prefix) : self
+    public function setPrefix(string $prefix): self
     {
         $this->initialized['prefix'] = true;
         $this->prefix = $prefix;
@@ -57,7 +57,7 @@ class PluginInterfaceType
      *
      * @return string
      */
-    public function getCapability() : string
+    public function getCapability(): string
     {
         return $this->capability;
     }
@@ -68,7 +68,7 @@ class PluginInterfaceType
      *
      * @return self
      */
-    public function setCapability(string $capability) : self
+    public function setCapability(string $capability): self
     {
         $this->initialized['capability'] = true;
         $this->capability = $capability;
@@ -79,7 +79,7 @@ class PluginInterfaceType
      *
      * @return string
      */
-    public function getVersion() : string
+    public function getVersion(): string
     {
         return $this->version;
     }
@@ -90,7 +90,7 @@ class PluginInterfaceType
      *
      * @return self
      */
-    public function setVersion(string $version) : self
+    public function setVersion(string $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;

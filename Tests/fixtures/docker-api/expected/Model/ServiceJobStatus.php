@@ -8,7 +8,7 @@ class ServiceJobStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -51,7 +51,7 @@ class ServiceJobStatus
     *
     * @return ObjectVersion
     */
-    public function getJobIteration() : ObjectVersion
+    public function getJobIteration(): ObjectVersion
     {
         return $this->jobIteration;
     }
@@ -72,7 +72,7 @@ class ServiceJobStatus
     *
     * @return self
     */
-    public function setJobIteration(ObjectVersion $jobIteration) : self
+    public function setJobIteration(ObjectVersion $jobIteration): self
     {
         $this->initialized['jobIteration'] = true;
         $this->jobIteration = $jobIteration;
@@ -85,7 +85,7 @@ class ServiceJobStatus
     *
     * @return string
     */
-    public function getLastExecution() : string
+    public function getLastExecution(): string
     {
         return $this->lastExecution;
     }
@@ -98,7 +98,7 @@ class ServiceJobStatus
     *
     * @return self
     */
-    public function setLastExecution(string $lastExecution) : self
+    public function setLastExecution(string $lastExecution): self
     {
         $this->initialized['lastExecution'] = true;
         $this->lastExecution = $lastExecution;

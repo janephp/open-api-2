@@ -8,7 +8,7 @@ class TestComplexListGetResponse200Item2
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return string
      */
-    public function getImage32() : string
+    public function getImage32(): string
     {
         return $this->image32;
     }
@@ -46,7 +46,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return self
      */
-    public function setImage32(string $image32) : self
+    public function setImage32(string $image32): self
     {
         $this->initialized['image32'] = true;
         $this->image32 = $image32;
@@ -57,7 +57,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return string
      */
-    public function getImage64() : string
+    public function getImage64(): string
     {
         return $this->image64;
     }
@@ -68,7 +68,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return self
      */
-    public function setImage64(string $image64) : self
+    public function setImage64(string $image64): self
     {
         $this->initialized['image64'] = true;
         $this->image64 = $image64;
@@ -79,7 +79,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return string
      */
-    public function getImage128() : string
+    public function getImage128(): string
     {
         return $this->image128;
     }
@@ -90,7 +90,7 @@ class TestComplexListGetResponse200Item2
      *
      * @return self
      */
-    public function setImage128(string $image128) : self
+    public function setImage128(string $image128): self
     {
         $this->initialized['image128'] = true;
         $this->image128 = $image128;

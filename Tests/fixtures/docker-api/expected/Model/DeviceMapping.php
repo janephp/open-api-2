@@ -8,7 +8,7 @@ class DeviceMapping
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class DeviceMapping
      *
      * @return string
      */
-    public function getPathOnHost() : string
+    public function getPathOnHost(): string
     {
         return $this->pathOnHost;
     }
@@ -46,7 +46,7 @@ class DeviceMapping
      *
      * @return self
      */
-    public function setPathOnHost(string $pathOnHost) : self
+    public function setPathOnHost(string $pathOnHost): self
     {
         $this->initialized['pathOnHost'] = true;
         $this->pathOnHost = $pathOnHost;
@@ -57,7 +57,7 @@ class DeviceMapping
      *
      * @return string
      */
-    public function getPathInContainer() : string
+    public function getPathInContainer(): string
     {
         return $this->pathInContainer;
     }
@@ -68,7 +68,7 @@ class DeviceMapping
      *
      * @return self
      */
-    public function setPathInContainer(string $pathInContainer) : self
+    public function setPathInContainer(string $pathInContainer): self
     {
         $this->initialized['pathInContainer'] = true;
         $this->pathInContainer = $pathInContainer;
@@ -79,7 +79,7 @@ class DeviceMapping
      *
      * @return string
      */
-    public function getCgroupPermissions() : string
+    public function getCgroupPermissions(): string
     {
         return $this->cgroupPermissions;
     }
@@ -90,7 +90,7 @@ class DeviceMapping
      *
      * @return self
      */
-    public function setCgroupPermissions(string $cgroupPermissions) : self
+    public function setCgroupPermissions(string $cgroupPermissions): self
     {
         $this->initialized['cgroupPermissions'] = true;
         $this->cgroupPermissions = $cgroupPermissions;

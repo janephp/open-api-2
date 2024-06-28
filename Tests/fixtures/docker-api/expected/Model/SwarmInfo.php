@@ -8,7 +8,7 @@ class SwarmInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -75,7 +75,7 @@ class SwarmInfo
      *
      * @return string
      */
-    public function getNodeID() : string
+    public function getNodeID(): string
     {
         return $this->nodeID;
     }
@@ -86,7 +86,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setNodeID(string $nodeID) : self
+    public function setNodeID(string $nodeID): self
     {
         $this->initialized['nodeID'] = true;
         $this->nodeID = $nodeID;
@@ -99,7 +99,7 @@ class SwarmInfo
     *
     * @return string
     */
-    public function getNodeAddr() : string
+    public function getNodeAddr(): string
     {
         return $this->nodeAddr;
     }
@@ -112,7 +112,7 @@ class SwarmInfo
     *
     * @return self
     */
-    public function setNodeAddr(string $nodeAddr) : self
+    public function setNodeAddr(string $nodeAddr): self
     {
         $this->initialized['nodeAddr'] = true;
         $this->nodeAddr = $nodeAddr;
@@ -123,7 +123,7 @@ class SwarmInfo
      *
      * @return string
      */
-    public function getLocalNodeState() : string
+    public function getLocalNodeState(): string
     {
         return $this->localNodeState;
     }
@@ -134,7 +134,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setLocalNodeState(string $localNodeState) : self
+    public function setLocalNodeState(string $localNodeState): self
     {
         $this->initialized['localNodeState'] = true;
         $this->localNodeState = $localNodeState;
@@ -145,7 +145,7 @@ class SwarmInfo
      *
      * @return bool
      */
-    public function getControlAvailable() : bool
+    public function getControlAvailable(): bool
     {
         return $this->controlAvailable;
     }
@@ -156,7 +156,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setControlAvailable(bool $controlAvailable) : self
+    public function setControlAvailable(bool $controlAvailable): self
     {
         $this->initialized['controlAvailable'] = true;
         $this->controlAvailable = $controlAvailable;
@@ -167,7 +167,7 @@ class SwarmInfo
      *
      * @return string
      */
-    public function getError() : string
+    public function getError(): string
     {
         return $this->error;
     }
@@ -178,7 +178,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setError(string $error) : self
+    public function setError(string $error): self
     {
         $this->initialized['error'] = true;
         $this->error = $error;
@@ -189,7 +189,7 @@ class SwarmInfo
      *
      * @return list<PeerNode>|null
      */
-    public function getRemoteManagers() : ?array
+    public function getRemoteManagers(): ?array
     {
         return $this->remoteManagers;
     }
@@ -200,7 +200,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setRemoteManagers(?array $remoteManagers) : self
+    public function setRemoteManagers(?array $remoteManagers): self
     {
         $this->initialized['remoteManagers'] = true;
         $this->remoteManagers = $remoteManagers;
@@ -211,7 +211,7 @@ class SwarmInfo
      *
      * @return int|null
      */
-    public function getNodes() : ?int
+    public function getNodes(): ?int
     {
         return $this->nodes;
     }
@@ -222,7 +222,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setNodes(?int $nodes) : self
+    public function setNodes(?int $nodes): self
     {
         $this->initialized['nodes'] = true;
         $this->nodes = $nodes;
@@ -233,7 +233,7 @@ class SwarmInfo
      *
      * @return int|null
      */
-    public function getManagers() : ?int
+    public function getManagers(): ?int
     {
         return $this->managers;
     }
@@ -244,7 +244,7 @@ class SwarmInfo
      *
      * @return self
      */
-    public function setManagers(?int $managers) : self
+    public function setManagers(?int $managers): self
     {
         $this->initialized['managers'] = true;
         $this->managers = $managers;
@@ -257,7 +257,7 @@ class SwarmInfo
     *
     * @return ClusterInfo|null
     */
-    public function getCluster() : ?ClusterInfo
+    public function getCluster(): ?ClusterInfo
     {
         return $this->cluster;
     }
@@ -270,7 +270,7 @@ class SwarmInfo
     *
     * @return self
     */
-    public function setCluster(?ClusterInfo $cluster) : self
+    public function setCluster(?ClusterInfo $cluster): self
     {
         $this->initialized['cluster'] = true;
         $this->cluster = $cluster;

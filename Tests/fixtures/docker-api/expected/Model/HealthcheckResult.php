@@ -8,7 +8,7 @@ class HealthcheckResult
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -53,7 +53,7 @@ class HealthcheckResult
     *
     * @return \DateTime
     */
-    public function getStart() : \DateTime
+    public function getStart(): \DateTime
     {
         return $this->start;
     }
@@ -66,7 +66,7 @@ class HealthcheckResult
     *
     * @return self
     */
-    public function setStart(\DateTime $start) : self
+    public function setStart(\DateTime $start): self
     {
         $this->initialized['start'] = true;
         $this->start = $start;
@@ -79,7 +79,7 @@ class HealthcheckResult
     *
     * @return string
     */
-    public function getEnd() : string
+    public function getEnd(): string
     {
         return $this->end;
     }
@@ -92,7 +92,7 @@ class HealthcheckResult
     *
     * @return self
     */
-    public function setEnd(string $end) : self
+    public function setEnd(string $end): self
     {
         $this->initialized['end'] = true;
         $this->end = $end;
@@ -109,7 +109,7 @@ class HealthcheckResult
     *
     * @return int
     */
-    public function getExitCode() : int
+    public function getExitCode(): int
     {
         return $this->exitCode;
     }
@@ -126,7 +126,7 @@ class HealthcheckResult
     *
     * @return self
     */
-    public function setExitCode(int $exitCode) : self
+    public function setExitCode(int $exitCode): self
     {
         $this->initialized['exitCode'] = true;
         $this->exitCode = $exitCode;
@@ -137,7 +137,7 @@ class HealthcheckResult
      *
      * @return string
      */
-    public function getOutput() : string
+    public function getOutput(): string
     {
         return $this->output;
     }
@@ -148,7 +148,7 @@ class HealthcheckResult
      *
      * @return self
      */
-    public function setOutput(string $output) : self
+    public function setOutput(string $output): self
     {
         $this->initialized['output'] = true;
         $this->output = $output;

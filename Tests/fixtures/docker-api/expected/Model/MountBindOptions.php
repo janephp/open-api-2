@@ -8,7 +8,7 @@ class MountBindOptions
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class MountBindOptions
      *
      * @return string
      */
-    public function getPropagation() : string
+    public function getPropagation(): string
     {
         return $this->propagation;
     }
@@ -40,7 +40,7 @@ class MountBindOptions
      *
      * @return self
      */
-    public function setPropagation(string $propagation) : self
+    public function setPropagation(string $propagation): self
     {
         $this->initialized['propagation'] = true;
         $this->propagation = $propagation;
@@ -51,7 +51,7 @@ class MountBindOptions
      *
      * @return bool
      */
-    public function getNonRecursive() : bool
+    public function getNonRecursive(): bool
     {
         return $this->nonRecursive;
     }
@@ -62,7 +62,7 @@ class MountBindOptions
      *
      * @return self
      */
-    public function setNonRecursive(bool $nonRecursive) : self
+    public function setNonRecursive(bool $nonRecursive): self
     {
         $this->initialized['nonRecursive'] = true;
         $this->nonRecursive = $nonRecursive;

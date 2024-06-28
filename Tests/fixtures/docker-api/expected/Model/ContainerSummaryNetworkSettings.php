@@ -8,7 +8,7 @@ class ContainerSummaryNetworkSettings
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class ContainerSummaryNetworkSettings
      *
      * @return array<string, EndpointSettings>
      */
-    public function getNetworks() : iterable
+    public function getNetworks(): iterable
     {
         return $this->networks;
     }
@@ -34,7 +34,7 @@ class ContainerSummaryNetworkSettings
      *
      * @return self
      */
-    public function setNetworks(iterable $networks) : self
+    public function setNetworks(iterable $networks): self
     {
         $this->initialized['networks'] = true;
         $this->networks = $networks;

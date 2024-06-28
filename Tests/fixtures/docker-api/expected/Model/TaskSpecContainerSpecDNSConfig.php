@@ -8,7 +8,7 @@ class TaskSpecContainerSpecDNSConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -37,7 +37,7 @@ class TaskSpecContainerSpecDNSConfig
      *
      * @return list<string>
      */
-    public function getNameservers() : array
+    public function getNameservers(): array
     {
         return $this->nameservers;
     }
@@ -48,7 +48,7 @@ class TaskSpecContainerSpecDNSConfig
      *
      * @return self
      */
-    public function setNameservers(array $nameservers) : self
+    public function setNameservers(array $nameservers): self
     {
         $this->initialized['nameservers'] = true;
         $this->nameservers = $nameservers;
@@ -59,7 +59,7 @@ class TaskSpecContainerSpecDNSConfig
      *
      * @return list<string>
      */
-    public function getSearch() : array
+    public function getSearch(): array
     {
         return $this->search;
     }
@@ -70,7 +70,7 @@ class TaskSpecContainerSpecDNSConfig
      *
      * @return self
      */
-    public function setSearch(array $search) : self
+    public function setSearch(array $search): self
     {
         $this->initialized['search'] = true;
         $this->search = $search;
@@ -83,7 +83,7 @@ class TaskSpecContainerSpecDNSConfig
     *
     * @return list<string>
     */
-    public function getOptions() : array
+    public function getOptions(): array
     {
         return $this->options;
     }
@@ -96,7 +96,7 @@ class TaskSpecContainerSpecDNSConfig
     *
     * @return self
     */
-    public function setOptions(array $options) : self
+    public function setOptions(array $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;

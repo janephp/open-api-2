@@ -8,7 +8,7 @@ class Limit
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class Limit
      *
      * @return int
      */
-    public function getNanoCPUs() : int
+    public function getNanoCPUs(): int
     {
         return $this->nanoCPUs;
     }
@@ -46,7 +46,7 @@ class Limit
      *
      * @return self
      */
-    public function setNanoCPUs(int $nanoCPUs) : self
+    public function setNanoCPUs(int $nanoCPUs): self
     {
         $this->initialized['nanoCPUs'] = true;
         $this->nanoCPUs = $nanoCPUs;
@@ -57,7 +57,7 @@ class Limit
      *
      * @return int
      */
-    public function getMemoryBytes() : int
+    public function getMemoryBytes(): int
     {
         return $this->memoryBytes;
     }
@@ -68,7 +68,7 @@ class Limit
      *
      * @return self
      */
-    public function setMemoryBytes(int $memoryBytes) : self
+    public function setMemoryBytes(int $memoryBytes): self
     {
         $this->initialized['memoryBytes'] = true;
         $this->memoryBytes = $memoryBytes;
@@ -79,7 +79,7 @@ class Limit
      *
      * @return int
      */
-    public function getPids() : int
+    public function getPids(): int
     {
         return $this->pids;
     }
@@ -90,7 +90,7 @@ class Limit
      *
      * @return self
      */
-    public function setPids(int $pids) : self
+    public function setPids(int $pids): self
     {
         $this->initialized['pids'] = true;
         $this->pids = $pids;

@@ -8,7 +8,7 @@ class Platform
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -33,7 +33,7 @@ class Platform
     *
     * @return string
     */
-    public function getArchitecture() : string
+    public function getArchitecture(): string
     {
         return $this->architecture;
     }
@@ -46,7 +46,7 @@ class Platform
     *
     * @return self
     */
-    public function setArchitecture(string $architecture) : self
+    public function setArchitecture(string $architecture): self
     {
         $this->initialized['architecture'] = true;
         $this->architecture = $architecture;
@@ -57,7 +57,7 @@ class Platform
      *
      * @return string
      */
-    public function getOS() : string
+    public function getOS(): string
     {
         return $this->oS;
     }
@@ -68,7 +68,7 @@ class Platform
      *
      * @return self
      */
-    public function setOS(string $oS) : self
+    public function setOS(string $oS): self
     {
         $this->initialized['oS'] = true;
         $this->oS = $oS;

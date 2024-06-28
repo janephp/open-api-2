@@ -8,7 +8,7 @@ class SwarmSpecTaskDefaults
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -33,7 +33,7 @@ class SwarmSpecTaskDefaults
     *
     * @return SwarmSpecTaskDefaultsLogDriver
     */
-    public function getLogDriver() : SwarmSpecTaskDefaultsLogDriver
+    public function getLogDriver(): SwarmSpecTaskDefaultsLogDriver
     {
         return $this->logDriver;
     }
@@ -49,7 +49,7 @@ class SwarmSpecTaskDefaults
     *
     * @return self
     */
-    public function setLogDriver(SwarmSpecTaskDefaultsLogDriver $logDriver) : self
+    public function setLogDriver(SwarmSpecTaskDefaultsLogDriver $logDriver): self
     {
         $this->initialized['logDriver'] = true;
         $this->logDriver = $logDriver;

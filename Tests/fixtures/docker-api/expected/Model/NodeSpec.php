@@ -8,7 +8,7 @@ class NodeSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class NodeSpec
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class NodeSpec
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -63,7 +63,7 @@ class NodeSpec
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -74,7 +74,7 @@ class NodeSpec
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -85,7 +85,7 @@ class NodeSpec
      *
      * @return string
      */
-    public function getRole() : string
+    public function getRole(): string
     {
         return $this->role;
     }
@@ -96,7 +96,7 @@ class NodeSpec
      *
      * @return self
      */
-    public function setRole(string $role) : self
+    public function setRole(string $role): self
     {
         $this->initialized['role'] = true;
         $this->role = $role;
@@ -107,7 +107,7 @@ class NodeSpec
      *
      * @return string
      */
-    public function getAvailability() : string
+    public function getAvailability(): string
     {
         return $this->availability;
     }
@@ -118,7 +118,7 @@ class NodeSpec
      *
      * @return self
      */
-    public function setAvailability(string $availability) : self
+    public function setAvailability(string $availability): self
     {
         $this->initialized['availability'] = true;
         $this->availability = $availability;

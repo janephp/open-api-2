@@ -8,7 +8,7 @@ class JoinTokens
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class JoinTokens
      *
      * @return string
      */
-    public function getWorker() : string
+    public function getWorker(): string
     {
         return $this->worker;
     }
@@ -40,7 +40,7 @@ class JoinTokens
      *
      * @return self
      */
-    public function setWorker(string $worker) : self
+    public function setWorker(string $worker): self
     {
         $this->initialized['worker'] = true;
         $this->worker = $worker;
@@ -51,7 +51,7 @@ class JoinTokens
      *
      * @return string
      */
-    public function getManager() : string
+    public function getManager(): string
     {
         return $this->manager;
     }
@@ -62,7 +62,7 @@ class JoinTokens
      *
      * @return self
      */
-    public function setManager(string $manager) : self
+    public function setManager(string $manager): self
     {
         $this->initialized['manager'] = true;
         $this->manager = $manager;

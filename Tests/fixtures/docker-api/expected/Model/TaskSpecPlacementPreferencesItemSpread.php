@@ -8,7 +8,7 @@ class TaskSpecPlacementPreferencesItemSpread
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class TaskSpecPlacementPreferencesItemSpread
      *
      * @return string
      */
-    public function getSpreadDescriptor() : string
+    public function getSpreadDescriptor(): string
     {
         return $this->spreadDescriptor;
     }
@@ -34,7 +34,7 @@ class TaskSpecPlacementPreferencesItemSpread
      *
      * @return self
      */
-    public function setSpreadDescriptor(string $spreadDescriptor) : self
+    public function setSpreadDescriptor(string $spreadDescriptor): self
     {
         $this->initialized['spreadDescriptor'] = true;
         $this->spreadDescriptor = $spreadDescriptor;

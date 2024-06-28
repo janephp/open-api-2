@@ -8,7 +8,7 @@ class ServiceUpdateStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class ServiceUpdateStatus
      *
      * @return string
      */
-    public function getState() : string
+    public function getState(): string
     {
         return $this->state;
     }
@@ -52,7 +52,7 @@ class ServiceUpdateStatus
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(string $state): self
     {
         $this->initialized['state'] = true;
         $this->state = $state;
@@ -63,7 +63,7 @@ class ServiceUpdateStatus
      *
      * @return string
      */
-    public function getStartedAt() : string
+    public function getStartedAt(): string
     {
         return $this->startedAt;
     }
@@ -74,7 +74,7 @@ class ServiceUpdateStatus
      *
      * @return self
      */
-    public function setStartedAt(string $startedAt) : self
+    public function setStartedAt(string $startedAt): self
     {
         $this->initialized['startedAt'] = true;
         $this->startedAt = $startedAt;
@@ -85,7 +85,7 @@ class ServiceUpdateStatus
      *
      * @return string
      */
-    public function getCompletedAt() : string
+    public function getCompletedAt(): string
     {
         return $this->completedAt;
     }
@@ -96,7 +96,7 @@ class ServiceUpdateStatus
      *
      * @return self
      */
-    public function setCompletedAt(string $completedAt) : self
+    public function setCompletedAt(string $completedAt): self
     {
         $this->initialized['completedAt'] = true;
         $this->completedAt = $completedAt;
@@ -107,7 +107,7 @@ class ServiceUpdateStatus
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage(): string
     {
         return $this->message;
     }
@@ -118,7 +118,7 @@ class ServiceUpdateStatus
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message): self
     {
         $this->initialized['message'] = true;
         $this->message = $message;

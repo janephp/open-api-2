@@ -8,7 +8,7 @@ class ProcessConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class ProcessConfig
      *
      * @return bool
      */
-    public function getPrivileged() : bool
+    public function getPrivileged(): bool
     {
         return $this->privileged;
     }
@@ -58,7 +58,7 @@ class ProcessConfig
      *
      * @return self
      */
-    public function setPrivileged(bool $privileged) : self
+    public function setPrivileged(bool $privileged): self
     {
         $this->initialized['privileged'] = true;
         $this->privileged = $privileged;
@@ -69,7 +69,7 @@ class ProcessConfig
      *
      * @return string
      */
-    public function getUser() : string
+    public function getUser(): string
     {
         return $this->user;
     }
@@ -80,7 +80,7 @@ class ProcessConfig
      *
      * @return self
      */
-    public function setUser(string $user) : self
+    public function setUser(string $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -91,7 +91,7 @@ class ProcessConfig
      *
      * @return bool
      */
-    public function getTty() : bool
+    public function getTty(): bool
     {
         return $this->tty;
     }
@@ -102,7 +102,7 @@ class ProcessConfig
      *
      * @return self
      */
-    public function setTty(bool $tty) : self
+    public function setTty(bool $tty): self
     {
         $this->initialized['tty'] = true;
         $this->tty = $tty;
@@ -113,7 +113,7 @@ class ProcessConfig
      *
      * @return string
      */
-    public function getEntrypoint() : string
+    public function getEntrypoint(): string
     {
         return $this->entrypoint;
     }
@@ -124,7 +124,7 @@ class ProcessConfig
      *
      * @return self
      */
-    public function setEntrypoint(string $entrypoint) : self
+    public function setEntrypoint(string $entrypoint): self
     {
         $this->initialized['entrypoint'] = true;
         $this->entrypoint = $entrypoint;
@@ -135,7 +135,7 @@ class ProcessConfig
      *
      * @return list<string>
      */
-    public function getArguments() : array
+    public function getArguments(): array
     {
         return $this->arguments;
     }
@@ -146,7 +146,7 @@ class ProcessConfig
      *
      * @return self
      */
-    public function setArguments(array $arguments) : self
+    public function setArguments(array $arguments): self
     {
         $this->initialized['arguments'] = true;
         $this->arguments = $arguments;

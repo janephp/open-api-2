@@ -8,7 +8,7 @@ class Task
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -123,7 +123,7 @@ class Task
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -134,7 +134,7 @@ class Task
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -155,7 +155,7 @@ class Task
     *
     * @return ObjectVersion
     */
-    public function getVersion() : ObjectVersion
+    public function getVersion(): ObjectVersion
     {
         return $this->version;
     }
@@ -176,7 +176,7 @@ class Task
     *
     * @return self
     */
-    public function setVersion(ObjectVersion $version) : self
+    public function setVersion(ObjectVersion $version): self
     {
         $this->initialized['version'] = true;
         $this->version = $version;
@@ -187,7 +187,7 @@ class Task
      *
      * @return string
      */
-    public function getCreatedAt() : string
+    public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
@@ -198,7 +198,7 @@ class Task
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt) : self
+    public function setCreatedAt(string $createdAt): self
     {
         $this->initialized['createdAt'] = true;
         $this->createdAt = $createdAt;
@@ -209,7 +209,7 @@ class Task
      *
      * @return string
      */
-    public function getUpdatedAt() : string
+    public function getUpdatedAt(): string
     {
         return $this->updatedAt;
     }
@@ -220,7 +220,7 @@ class Task
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt) : self
+    public function setUpdatedAt(string $updatedAt): self
     {
         $this->initialized['updatedAt'] = true;
         $this->updatedAt = $updatedAt;
@@ -231,7 +231,7 @@ class Task
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -242,7 +242,7 @@ class Task
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -253,7 +253,7 @@ class Task
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -264,7 +264,7 @@ class Task
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -275,7 +275,7 @@ class Task
      *
      * @return TaskSpec
      */
-    public function getSpec() : TaskSpec
+    public function getSpec(): TaskSpec
     {
         return $this->spec;
     }
@@ -286,7 +286,7 @@ class Task
      *
      * @return self
      */
-    public function setSpec(TaskSpec $spec) : self
+    public function setSpec(TaskSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;
@@ -297,7 +297,7 @@ class Task
      *
      * @return string
      */
-    public function getServiceID() : string
+    public function getServiceID(): string
     {
         return $this->serviceID;
     }
@@ -308,7 +308,7 @@ class Task
      *
      * @return self
      */
-    public function setServiceID(string $serviceID) : self
+    public function setServiceID(string $serviceID): self
     {
         $this->initialized['serviceID'] = true;
         $this->serviceID = $serviceID;
@@ -319,7 +319,7 @@ class Task
      *
      * @return int
      */
-    public function getSlot() : int
+    public function getSlot(): int
     {
         return $this->slot;
     }
@@ -330,7 +330,7 @@ class Task
      *
      * @return self
      */
-    public function setSlot(int $slot) : self
+    public function setSlot(int $slot): self
     {
         $this->initialized['slot'] = true;
         $this->slot = $slot;
@@ -341,7 +341,7 @@ class Task
      *
      * @return string
      */
-    public function getNodeID() : string
+    public function getNodeID(): string
     {
         return $this->nodeID;
     }
@@ -352,7 +352,7 @@ class Task
      *
      * @return self
      */
-    public function setNodeID(string $nodeID) : self
+    public function setNodeID(string $nodeID): self
     {
         $this->initialized['nodeID'] = true;
         $this->nodeID = $nodeID;
@@ -365,7 +365,7 @@ class Task
     *
     * @return list<GenericResourcesItem>
     */
-    public function getAssignedGenericResources() : array
+    public function getAssignedGenericResources(): array
     {
         return $this->assignedGenericResources;
     }
@@ -378,7 +378,7 @@ class Task
     *
     * @return self
     */
-    public function setAssignedGenericResources(array $assignedGenericResources) : self
+    public function setAssignedGenericResources(array $assignedGenericResources): self
     {
         $this->initialized['assignedGenericResources'] = true;
         $this->assignedGenericResources = $assignedGenericResources;
@@ -389,7 +389,7 @@ class Task
      *
      * @return TaskStatus
      */
-    public function getStatus() : TaskStatus
+    public function getStatus(): TaskStatus
     {
         return $this->status;
     }
@@ -400,7 +400,7 @@ class Task
      *
      * @return self
      */
-    public function setStatus(TaskStatus $status) : self
+    public function setStatus(TaskStatus $status): self
     {
         $this->initialized['status'] = true;
         $this->status = $status;
@@ -411,7 +411,7 @@ class Task
      *
      * @return string
      */
-    public function getDesiredState() : string
+    public function getDesiredState(): string
     {
         return $this->desiredState;
     }
@@ -422,7 +422,7 @@ class Task
      *
      * @return self
      */
-    public function setDesiredState(string $desiredState) : self
+    public function setDesiredState(string $desiredState): self
     {
         $this->initialized['desiredState'] = true;
         $this->desiredState = $desiredState;
@@ -443,7 +443,7 @@ class Task
     *
     * @return ObjectVersion
     */
-    public function getJobIteration() : ObjectVersion
+    public function getJobIteration(): ObjectVersion
     {
         return $this->jobIteration;
     }
@@ -464,7 +464,7 @@ class Task
     *
     * @return self
     */
-    public function setJobIteration(ObjectVersion $jobIteration) : self
+    public function setJobIteration(ObjectVersion $jobIteration): self
     {
         $this->initialized['jobIteration'] = true;
         $this->jobIteration = $jobIteration;

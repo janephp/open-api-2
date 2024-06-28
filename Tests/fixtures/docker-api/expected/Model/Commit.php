@@ -8,7 +8,7 @@ class Commit
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class Commit
      *
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -40,7 +40,7 @@ class Commit
      *
      * @return self
      */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -51,7 +51,7 @@ class Commit
      *
      * @return string
      */
-    public function getExpected() : string
+    public function getExpected(): string
     {
         return $this->expected;
     }
@@ -62,7 +62,7 @@ class Commit
      *
      * @return self
      */
-    public function setExpected(string $expected) : self
+    public function setExpected(string $expected): self
     {
         $this->initialized['expected'] = true;
         $this->expected = $expected;

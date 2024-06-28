@@ -8,7 +8,7 @@ class VolumesPrunePostResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class VolumesPrunePostResponse200
      *
      * @return list<string>
      */
-    public function getVolumesDeleted() : array
+    public function getVolumesDeleted(): array
     {
         return $this->volumesDeleted;
     }
@@ -40,7 +40,7 @@ class VolumesPrunePostResponse200
      *
      * @return self
      */
-    public function setVolumesDeleted(array $volumesDeleted) : self
+    public function setVolumesDeleted(array $volumesDeleted): self
     {
         $this->initialized['volumesDeleted'] = true;
         $this->volumesDeleted = $volumesDeleted;
@@ -51,7 +51,7 @@ class VolumesPrunePostResponse200
      *
      * @return int
      */
-    public function getSpaceReclaimed() : int
+    public function getSpaceReclaimed(): int
     {
         return $this->spaceReclaimed;
     }
@@ -62,7 +62,7 @@ class VolumesPrunePostResponse200
      *
      * @return self
      */
-    public function setSpaceReclaimed(int $spaceReclaimed) : self
+    public function setSpaceReclaimed(int $spaceReclaimed): self
     {
         $this->initialized['spaceReclaimed'] = true;
         $this->spaceReclaimed = $spaceReclaimed;

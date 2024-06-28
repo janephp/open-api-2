@@ -8,7 +8,7 @@ class NetworkContainer
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class NetworkContainer
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -58,7 +58,7 @@ class NetworkContainer
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -69,7 +69,7 @@ class NetworkContainer
      *
      * @return string
      */
-    public function getEndpointID() : string
+    public function getEndpointID(): string
     {
         return $this->endpointID;
     }
@@ -80,7 +80,7 @@ class NetworkContainer
      *
      * @return self
      */
-    public function setEndpointID(string $endpointID) : self
+    public function setEndpointID(string $endpointID): self
     {
         $this->initialized['endpointID'] = true;
         $this->endpointID = $endpointID;
@@ -91,7 +91,7 @@ class NetworkContainer
      *
      * @return string
      */
-    public function getMacAddress() : string
+    public function getMacAddress(): string
     {
         return $this->macAddress;
     }
@@ -102,7 +102,7 @@ class NetworkContainer
      *
      * @return self
      */
-    public function setMacAddress(string $macAddress) : self
+    public function setMacAddress(string $macAddress): self
     {
         $this->initialized['macAddress'] = true;
         $this->macAddress = $macAddress;
@@ -113,7 +113,7 @@ class NetworkContainer
      *
      * @return string
      */
-    public function getIPv4Address() : string
+    public function getIPv4Address(): string
     {
         return $this->iPv4Address;
     }
@@ -124,7 +124,7 @@ class NetworkContainer
      *
      * @return self
      */
-    public function setIPv4Address(string $iPv4Address) : self
+    public function setIPv4Address(string $iPv4Address): self
     {
         $this->initialized['iPv4Address'] = true;
         $this->iPv4Address = $iPv4Address;
@@ -135,7 +135,7 @@ class NetworkContainer
      *
      * @return string
      */
-    public function getIPv6Address() : string
+    public function getIPv6Address(): string
     {
         return $this->iPv6Address;
     }
@@ -146,7 +146,7 @@ class NetworkContainer
      *
      * @return self
      */
-    public function setIPv6Address(string $iPv6Address) : self
+    public function setIPv6Address(string $iPv6Address): self
     {
         $this->initialized['iPv6Address'] = true;
         $this->iPv6Address = $iPv6Address;

@@ -8,7 +8,7 @@ class PluginConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -113,7 +113,7 @@ class PluginConfig
      *
      * @return string
      */
-    public function getDockerVersion() : string
+    public function getDockerVersion(): string
     {
         return $this->dockerVersion;
     }
@@ -124,7 +124,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setDockerVersion(string $dockerVersion) : self
+    public function setDockerVersion(string $dockerVersion): self
     {
         $this->initialized['dockerVersion'] = true;
         $this->dockerVersion = $dockerVersion;
@@ -135,7 +135,7 @@ class PluginConfig
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -146,7 +146,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->initialized['description'] = true;
         $this->description = $description;
@@ -157,7 +157,7 @@ class PluginConfig
      *
      * @return string
      */
-    public function getDocumentation() : string
+    public function getDocumentation(): string
     {
         return $this->documentation;
     }
@@ -168,7 +168,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setDocumentation(string $documentation) : self
+    public function setDocumentation(string $documentation): self
     {
         $this->initialized['documentation'] = true;
         $this->documentation = $documentation;
@@ -179,7 +179,7 @@ class PluginConfig
      *
      * @return PluginConfigInterface
      */
-    public function getInterface() : PluginConfigInterface
+    public function getInterface(): PluginConfigInterface
     {
         return $this->interface;
     }
@@ -190,7 +190,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setInterface(PluginConfigInterface $interface) : self
+    public function setInterface(PluginConfigInterface $interface): self
     {
         $this->initialized['interface'] = true;
         $this->interface = $interface;
@@ -201,7 +201,7 @@ class PluginConfig
      *
      * @return list<string>
      */
-    public function getEntrypoint() : array
+    public function getEntrypoint(): array
     {
         return $this->entrypoint;
     }
@@ -212,7 +212,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setEntrypoint(array $entrypoint) : self
+    public function setEntrypoint(array $entrypoint): self
     {
         $this->initialized['entrypoint'] = true;
         $this->entrypoint = $entrypoint;
@@ -223,7 +223,7 @@ class PluginConfig
      *
      * @return string
      */
-    public function getWorkDir() : string
+    public function getWorkDir(): string
     {
         return $this->workDir;
     }
@@ -234,7 +234,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setWorkDir(string $workDir) : self
+    public function setWorkDir(string $workDir): self
     {
         $this->initialized['workDir'] = true;
         $this->workDir = $workDir;
@@ -245,7 +245,7 @@ class PluginConfig
      *
      * @return PluginConfigUser
      */
-    public function getUser() : PluginConfigUser
+    public function getUser(): PluginConfigUser
     {
         return $this->user;
     }
@@ -256,7 +256,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setUser(PluginConfigUser $user) : self
+    public function setUser(PluginConfigUser $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -267,7 +267,7 @@ class PluginConfig
      *
      * @return PluginConfigNetwork
      */
-    public function getNetwork() : PluginConfigNetwork
+    public function getNetwork(): PluginConfigNetwork
     {
         return $this->network;
     }
@@ -278,7 +278,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setNetwork(PluginConfigNetwork $network) : self
+    public function setNetwork(PluginConfigNetwork $network): self
     {
         $this->initialized['network'] = true;
         $this->network = $network;
@@ -289,7 +289,7 @@ class PluginConfig
      *
      * @return PluginConfigLinux
      */
-    public function getLinux() : PluginConfigLinux
+    public function getLinux(): PluginConfigLinux
     {
         return $this->linux;
     }
@@ -300,7 +300,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setLinux(PluginConfigLinux $linux) : self
+    public function setLinux(PluginConfigLinux $linux): self
     {
         $this->initialized['linux'] = true;
         $this->linux = $linux;
@@ -311,7 +311,7 @@ class PluginConfig
      *
      * @return string
      */
-    public function getPropagatedMount() : string
+    public function getPropagatedMount(): string
     {
         return $this->propagatedMount;
     }
@@ -322,7 +322,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setPropagatedMount(string $propagatedMount) : self
+    public function setPropagatedMount(string $propagatedMount): self
     {
         $this->initialized['propagatedMount'] = true;
         $this->propagatedMount = $propagatedMount;
@@ -333,7 +333,7 @@ class PluginConfig
      *
      * @return bool
      */
-    public function getIpcHost() : bool
+    public function getIpcHost(): bool
     {
         return $this->ipcHost;
     }
@@ -344,7 +344,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setIpcHost(bool $ipcHost) : self
+    public function setIpcHost(bool $ipcHost): self
     {
         $this->initialized['ipcHost'] = true;
         $this->ipcHost = $ipcHost;
@@ -355,7 +355,7 @@ class PluginConfig
      *
      * @return bool
      */
-    public function getPidHost() : bool
+    public function getPidHost(): bool
     {
         return $this->pidHost;
     }
@@ -366,7 +366,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setPidHost(bool $pidHost) : self
+    public function setPidHost(bool $pidHost): self
     {
         $this->initialized['pidHost'] = true;
         $this->pidHost = $pidHost;
@@ -377,7 +377,7 @@ class PluginConfig
      *
      * @return list<PluginMount>
      */
-    public function getMounts() : array
+    public function getMounts(): array
     {
         return $this->mounts;
     }
@@ -388,7 +388,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setMounts(array $mounts) : self
+    public function setMounts(array $mounts): self
     {
         $this->initialized['mounts'] = true;
         $this->mounts = $mounts;
@@ -399,7 +399,7 @@ class PluginConfig
      *
      * @return list<PluginEnv>
      */
-    public function getEnv() : array
+    public function getEnv(): array
     {
         return $this->env;
     }
@@ -410,7 +410,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setEnv(array $env) : self
+    public function setEnv(array $env): self
     {
         $this->initialized['env'] = true;
         $this->env = $env;
@@ -421,7 +421,7 @@ class PluginConfig
      *
      * @return PluginConfigArgs
      */
-    public function getArgs() : PluginConfigArgs
+    public function getArgs(): PluginConfigArgs
     {
         return $this->args;
     }
@@ -432,7 +432,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setArgs(PluginConfigArgs $args) : self
+    public function setArgs(PluginConfigArgs $args): self
     {
         $this->initialized['args'] = true;
         $this->args = $args;
@@ -443,7 +443,7 @@ class PluginConfig
      *
      * @return PluginConfigRootfs
      */
-    public function getRootfs() : PluginConfigRootfs
+    public function getRootfs(): PluginConfigRootfs
     {
         return $this->rootfs;
     }
@@ -454,7 +454,7 @@ class PluginConfig
      *
      * @return self
      */
-    public function setRootfs(PluginConfigRootfs $rootfs) : self
+    public function setRootfs(PluginConfigRootfs $rootfs): self
     {
         $this->initialized['rootfs'] = true;
         $this->rootfs = $rootfs;

@@ -8,7 +8,7 @@ class ContainersIdArchiveGetResponse400
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ContainersIdArchiveGetResponse400
     *
     * @return string
     */
-    public function getMessage() : string
+    public function getMessage(): string
     {
         return $this->message;
     }
@@ -43,7 +43,7 @@ class ContainersIdArchiveGetResponse400
     *
     * @return self
     */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message): self
     {
         $this->initialized['message'] = true;
         $this->message = $message;

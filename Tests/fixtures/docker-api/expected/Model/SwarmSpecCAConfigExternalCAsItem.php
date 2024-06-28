@@ -8,7 +8,7 @@ class SwarmSpecCAConfigExternalCAsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -50,7 +50,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return string
     */
-    public function getProtocol() : string
+    public function getProtocol(): string
     {
         return $this->protocol;
     }
@@ -63,7 +63,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return self
     */
-    public function setProtocol(string $protocol) : self
+    public function setProtocol(string $protocol): self
     {
         $this->initialized['protocol'] = true;
         $this->protocol = $protocol;
@@ -74,7 +74,7 @@ class SwarmSpecCAConfigExternalCAsItem
      *
      * @return string
      */
-    public function getURL() : string
+    public function getURL(): string
     {
         return $this->uRL;
     }
@@ -85,7 +85,7 @@ class SwarmSpecCAConfigExternalCAsItem
      *
      * @return self
      */
-    public function setURL(string $uRL) : self
+    public function setURL(string $uRL): self
     {
         $this->initialized['uRL'] = true;
         $this->uRL = $uRL;
@@ -98,7 +98,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return array<string, string>
     */
-    public function getOptions() : iterable
+    public function getOptions(): iterable
     {
         return $this->options;
     }
@@ -111,7 +111,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return self
     */
-    public function setOptions(iterable $options) : self
+    public function setOptions(iterable $options): self
     {
         $this->initialized['options'] = true;
         $this->options = $options;
@@ -125,7 +125,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return string
     */
-    public function getCACert() : string
+    public function getCACert(): string
     {
         return $this->cACert;
     }
@@ -139,7 +139,7 @@ class SwarmSpecCAConfigExternalCAsItem
     *
     * @return self
     */
-    public function setCACert(string $cACert) : self
+    public function setCACert(string $cACert): self
     {
         $this->initialized['cACert'] = true;
         $this->cACert = $cACert;

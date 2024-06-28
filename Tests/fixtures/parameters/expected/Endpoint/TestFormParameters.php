@@ -21,19 +21,19 @@ class TestFormParameters extends \Jane\Component\OpenApi2\Tests\Expected\Runtime
         $this->formParameters = $formParameters;
     }
     use \Jane\Component\OpenApi2\Tests\Expected\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/test-form';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return $this->getFormBody();
     }
-    protected function getFormOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getFormOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getFormOptionsResolver();
         $optionsResolver->setDefined(['testString', 'testInteger', 'testFloat', 'testArray', 'testRequired', 'testDefault']);
@@ -61,7 +61,7 @@ class TestFormParameters extends \Jane\Component\OpenApi2\Tests\Expected\Runtime
             return null;
         }
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return [];
     }

@@ -8,7 +8,7 @@ class ManagerStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class ManagerStatus
      *
      * @return bool
      */
-    public function getLeader() : bool
+    public function getLeader(): bool
     {
         return $this->leader;
     }
@@ -46,7 +46,7 @@ class ManagerStatus
      *
      * @return self
      */
-    public function setLeader(bool $leader) : self
+    public function setLeader(bool $leader): self
     {
         $this->initialized['leader'] = true;
         $this->leader = $leader;
@@ -57,7 +57,7 @@ class ManagerStatus
      *
      * @return string
      */
-    public function getReachability() : string
+    public function getReachability(): string
     {
         return $this->reachability;
     }
@@ -68,7 +68,7 @@ class ManagerStatus
      *
      * @return self
      */
-    public function setReachability(string $reachability) : self
+    public function setReachability(string $reachability): self
     {
         $this->initialized['reachability'] = true;
         $this->reachability = $reachability;
@@ -79,7 +79,7 @@ class ManagerStatus
      *
      * @return string
      */
-    public function getAddr() : string
+    public function getAddr(): string
     {
         return $this->addr;
     }
@@ -90,7 +90,7 @@ class ManagerStatus
      *
      * @return self
      */
-    public function setAddr(string $addr) : self
+    public function setAddr(string $addr): self
     {
         $this->initialized['addr'] = true;
         $this->addr = $addr;

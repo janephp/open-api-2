@@ -8,7 +8,7 @@ class PluginConfigLinux
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class PluginConfigLinux
      *
      * @return list<string>
      */
-    public function getCapabilities() : array
+    public function getCapabilities(): array
     {
         return $this->capabilities;
     }
@@ -46,7 +46,7 @@ class PluginConfigLinux
      *
      * @return self
      */
-    public function setCapabilities(array $capabilities) : self
+    public function setCapabilities(array $capabilities): self
     {
         $this->initialized['capabilities'] = true;
         $this->capabilities = $capabilities;
@@ -57,7 +57,7 @@ class PluginConfigLinux
      *
      * @return bool
      */
-    public function getAllowAllDevices() : bool
+    public function getAllowAllDevices(): bool
     {
         return $this->allowAllDevices;
     }
@@ -68,7 +68,7 @@ class PluginConfigLinux
      *
      * @return self
      */
-    public function setAllowAllDevices(bool $allowAllDevices) : self
+    public function setAllowAllDevices(bool $allowAllDevices): self
     {
         $this->initialized['allowAllDevices'] = true;
         $this->allowAllDevices = $allowAllDevices;
@@ -79,7 +79,7 @@ class PluginConfigLinux
      *
      * @return list<PluginDevice>
      */
-    public function getDevices() : array
+    public function getDevices(): array
     {
         return $this->devices;
     }
@@ -90,7 +90,7 @@ class PluginConfigLinux
      *
      * @return self
      */
-    public function setDevices(array $devices) : self
+    public function setDevices(array $devices): self
     {
         $this->initialized['devices'] = true;
         $this->devices = $devices;

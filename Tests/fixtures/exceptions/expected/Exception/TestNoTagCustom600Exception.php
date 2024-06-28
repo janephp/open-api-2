@@ -13,7 +13,7 @@ class TestNoTagCustom600Exception extends Custom600Exception
         parent::__construct('New update available');
         $this->response = $response;
     }
-    public function getResponse() : ?\Psr\Http\Message\ResponseInterface
+    public function getResponse(): ?\Psr\Http\Message\ResponseInterface
     {
         return $this->response;
     }

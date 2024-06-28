@@ -8,7 +8,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -75,7 +75,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return string
     */
-    public function getConfig() : string
+    public function getConfig(): string
     {
         return $this->config;
     }
@@ -95,7 +95,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return self
     */
-    public function setConfig(string $config) : self
+    public function setConfig(string $config): self
     {
         $this->initialized['config'] = true;
         $this->config = $config;
@@ -118,7 +118,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return string
     */
-    public function getFile() : string
+    public function getFile(): string
     {
         return $this->file;
     }
@@ -141,7 +141,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return self
     */
-    public function setFile(string $file) : self
+    public function setFile(string $file): self
     {
         $this->initialized['file'] = true;
         $this->file = $file;
@@ -162,7 +162,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return string
     */
-    public function getRegistry() : string
+    public function getRegistry(): string
     {
         return $this->registry;
     }
@@ -183,7 +183,7 @@ class TaskSpecContainerSpecPrivilegesCredentialSpec
     *
     * @return self
     */
-    public function setRegistry(string $registry) : self
+    public function setRegistry(string $registry): self
     {
         $this->initialized['registry'] = true;
         $this->registry = $registry;

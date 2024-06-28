@@ -8,7 +8,7 @@ class OCIPlatform
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -53,7 +53,7 @@ class OCIPlatform
      *
      * @return string
      */
-    public function getArchitecture() : string
+    public function getArchitecture(): string
     {
         return $this->architecture;
     }
@@ -64,7 +64,7 @@ class OCIPlatform
      *
      * @return self
      */
-    public function setArchitecture(string $architecture) : self
+    public function setArchitecture(string $architecture): self
     {
         $this->initialized['architecture'] = true;
         $this->architecture = $architecture;
@@ -75,7 +75,7 @@ class OCIPlatform
      *
      * @return string
      */
-    public function getOs() : string
+    public function getOs(): string
     {
         return $this->os;
     }
@@ -86,7 +86,7 @@ class OCIPlatform
      *
      * @return self
      */
-    public function setOs(string $os) : self
+    public function setOs(string $os): self
     {
         $this->initialized['os'] = true;
         $this->os = $os;
@@ -99,7 +99,7 @@ class OCIPlatform
     *
     * @return string
     */
-    public function getOsVersion() : string
+    public function getOsVersion(): string
     {
         return $this->osVersion;
     }
@@ -112,7 +112,7 @@ class OCIPlatform
     *
     * @return self
     */
-    public function setOsVersion(string $osVersion) : self
+    public function setOsVersion(string $osVersion): self
     {
         $this->initialized['osVersion'] = true;
         $this->osVersion = $osVersion;
@@ -125,7 +125,7 @@ class OCIPlatform
     *
     * @return list<string>
     */
-    public function getOsFeatures() : array
+    public function getOsFeatures(): array
     {
         return $this->osFeatures;
     }
@@ -138,7 +138,7 @@ class OCIPlatform
     *
     * @return self
     */
-    public function setOsFeatures(array $osFeatures) : self
+    public function setOsFeatures(array $osFeatures): self
     {
         $this->initialized['osFeatures'] = true;
         $this->osFeatures = $osFeatures;
@@ -151,7 +151,7 @@ class OCIPlatform
     *
     * @return string
     */
-    public function getVariant() : string
+    public function getVariant(): string
     {
         return $this->variant;
     }
@@ -164,7 +164,7 @@ class OCIPlatform
     *
     * @return self
     */
-    public function setVariant(string $variant) : self
+    public function setVariant(string $variant): self
     {
         $this->initialized['variant'] = true;
         $this->variant = $variant;

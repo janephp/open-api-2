@@ -8,7 +8,7 @@ class ContainersIdWaitPostResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class ContainersIdWaitPostResponse200
      *
      * @return int
      */
-    public function getStatusCode() : int
+    public function getStatusCode(): int
     {
         return $this->statusCode;
     }
@@ -40,7 +40,7 @@ class ContainersIdWaitPostResponse200
      *
      * @return self
      */
-    public function setStatusCode(int $statusCode) : self
+    public function setStatusCode(int $statusCode): self
     {
         $this->initialized['statusCode'] = true;
         $this->statusCode = $statusCode;
@@ -51,7 +51,7 @@ class ContainersIdWaitPostResponse200
      *
      * @return ContainersIdWaitPostResponse200Error
      */
-    public function getError() : ContainersIdWaitPostResponse200Error
+    public function getError(): ContainersIdWaitPostResponse200Error
     {
         return $this->error;
     }
@@ -62,7 +62,7 @@ class ContainersIdWaitPostResponse200
      *
      * @return self
      */
-    public function setError(ContainersIdWaitPostResponse200Error $error) : self
+    public function setError(ContainersIdWaitPostResponse200Error $error): self
     {
         $this->initialized['error'] = true;
         $this->error = $error;

@@ -8,7 +8,7 @@ class SwarmUnlockkeyGetResponse200
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class SwarmUnlockkeyGetResponse200
      *
      * @return string
      */
-    public function getUnlockKey() : string
+    public function getUnlockKey(): string
     {
         return $this->unlockKey;
     }
@@ -34,7 +34,7 @@ class SwarmUnlockkeyGetResponse200
      *
      * @return self
      */
-    public function setUnlockKey(string $unlockKey) : self
+    public function setUnlockKey(string $unlockKey): self
     {
         $this->initialized['unlockKey'] = true;
         $this->unlockKey = $unlockKey;

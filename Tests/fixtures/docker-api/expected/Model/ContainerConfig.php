@@ -8,7 +8,7 @@ class ContainerConfig
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -180,7 +180,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getHostname() : string
+    public function getHostname(): string
     {
         return $this->hostname;
     }
@@ -191,7 +191,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setHostname(string $hostname) : self
+    public function setHostname(string $hostname): self
     {
         $this->initialized['hostname'] = true;
         $this->hostname = $hostname;
@@ -202,7 +202,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getDomainname() : string
+    public function getDomainname(): string
     {
         return $this->domainname;
     }
@@ -213,7 +213,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setDomainname(string $domainname) : self
+    public function setDomainname(string $domainname): self
     {
         $this->initialized['domainname'] = true;
         $this->domainname = $domainname;
@@ -224,7 +224,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getUser() : string
+    public function getUser(): string
     {
         return $this->user;
     }
@@ -235,7 +235,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setUser(string $user) : self
+    public function setUser(string $user): self
     {
         $this->initialized['user'] = true;
         $this->user = $user;
@@ -246,7 +246,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getAttachStdin() : bool
+    public function getAttachStdin(): bool
     {
         return $this->attachStdin;
     }
@@ -257,7 +257,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setAttachStdin(bool $attachStdin) : self
+    public function setAttachStdin(bool $attachStdin): self
     {
         $this->initialized['attachStdin'] = true;
         $this->attachStdin = $attachStdin;
@@ -268,7 +268,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getAttachStdout() : bool
+    public function getAttachStdout(): bool
     {
         return $this->attachStdout;
     }
@@ -279,7 +279,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setAttachStdout(bool $attachStdout) : self
+    public function setAttachStdout(bool $attachStdout): self
     {
         $this->initialized['attachStdout'] = true;
         $this->attachStdout = $attachStdout;
@@ -290,7 +290,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getAttachStderr() : bool
+    public function getAttachStderr(): bool
     {
         return $this->attachStderr;
     }
@@ -301,7 +301,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setAttachStderr(bool $attachStderr) : self
+    public function setAttachStderr(bool $attachStderr): self
     {
         $this->initialized['attachStderr'] = true;
         $this->attachStderr = $attachStderr;
@@ -315,7 +315,7 @@ class ContainerConfig
     *
     * @return array<string, mixed>
     */
-    public function getExposedPorts() : iterable
+    public function getExposedPorts(): iterable
     {
         return $this->exposedPorts;
     }
@@ -329,7 +329,7 @@ class ContainerConfig
     *
     * @return self
     */
-    public function setExposedPorts(iterable $exposedPorts) : self
+    public function setExposedPorts(iterable $exposedPorts): self
     {
         $this->initialized['exposedPorts'] = true;
         $this->exposedPorts = $exposedPorts;
@@ -340,7 +340,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getTty() : bool
+    public function getTty(): bool
     {
         return $this->tty;
     }
@@ -351,7 +351,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setTty(bool $tty) : self
+    public function setTty(bool $tty): self
     {
         $this->initialized['tty'] = true;
         $this->tty = $tty;
@@ -362,7 +362,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getOpenStdin() : bool
+    public function getOpenStdin(): bool
     {
         return $this->openStdin;
     }
@@ -373,7 +373,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setOpenStdin(bool $openStdin) : self
+    public function setOpenStdin(bool $openStdin): self
     {
         $this->initialized['openStdin'] = true;
         $this->openStdin = $openStdin;
@@ -384,7 +384,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getStdinOnce() : bool
+    public function getStdinOnce(): bool
     {
         return $this->stdinOnce;
     }
@@ -395,7 +395,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setStdinOnce(bool $stdinOnce) : self
+    public function setStdinOnce(bool $stdinOnce): self
     {
         $this->initialized['stdinOnce'] = true;
         $this->stdinOnce = $stdinOnce;
@@ -409,7 +409,7 @@ class ContainerConfig
     *
     * @return list<string>
     */
-    public function getEnv() : array
+    public function getEnv(): array
     {
         return $this->env;
     }
@@ -423,7 +423,7 @@ class ContainerConfig
     *
     * @return self
     */
-    public function setEnv(array $env) : self
+    public function setEnv(array $env): self
     {
         $this->initialized['env'] = true;
         $this->env = $env;
@@ -434,7 +434,7 @@ class ContainerConfig
      *
      * @return list<string>
      */
-    public function getCmd() : array
+    public function getCmd(): array
     {
         return $this->cmd;
     }
@@ -445,7 +445,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setCmd(array $cmd) : self
+    public function setCmd(array $cmd): self
     {
         $this->initialized['cmd'] = true;
         $this->cmd = $cmd;
@@ -456,7 +456,7 @@ class ContainerConfig
      *
      * @return HealthConfig
      */
-    public function getHealthcheck() : HealthConfig
+    public function getHealthcheck(): HealthConfig
     {
         return $this->healthcheck;
     }
@@ -467,7 +467,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setHealthcheck(HealthConfig $healthcheck) : self
+    public function setHealthcheck(HealthConfig $healthcheck): self
     {
         $this->initialized['healthcheck'] = true;
         $this->healthcheck = $healthcheck;
@@ -478,7 +478,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getArgsEscaped() : bool
+    public function getArgsEscaped(): bool
     {
         return $this->argsEscaped;
     }
@@ -489,7 +489,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setArgsEscaped(bool $argsEscaped) : self
+    public function setArgsEscaped(bool $argsEscaped): self
     {
         $this->initialized['argsEscaped'] = true;
         $this->argsEscaped = $argsEscaped;
@@ -500,7 +500,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getImage() : string
+    public function getImage(): string
     {
         return $this->image;
     }
@@ -511,7 +511,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setImage(string $image) : self
+    public function setImage(string $image): self
     {
         $this->initialized['image'] = true;
         $this->image = $image;
@@ -524,7 +524,7 @@ class ContainerConfig
     *
     * @return array<string, mixed>
     */
-    public function getVolumes() : iterable
+    public function getVolumes(): iterable
     {
         return $this->volumes;
     }
@@ -537,7 +537,7 @@ class ContainerConfig
     *
     * @return self
     */
-    public function setVolumes(iterable $volumes) : self
+    public function setVolumes(iterable $volumes): self
     {
         $this->initialized['volumes'] = true;
         $this->volumes = $volumes;
@@ -548,7 +548,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getWorkingDir() : string
+    public function getWorkingDir(): string
     {
         return $this->workingDir;
     }
@@ -559,7 +559,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setWorkingDir(string $workingDir) : self
+    public function setWorkingDir(string $workingDir): self
     {
         $this->initialized['workingDir'] = true;
         $this->workingDir = $workingDir;
@@ -575,7 +575,7 @@ class ContainerConfig
     *
     * @return list<string>
     */
-    public function getEntrypoint() : array
+    public function getEntrypoint(): array
     {
         return $this->entrypoint;
     }
@@ -591,7 +591,7 @@ class ContainerConfig
     *
     * @return self
     */
-    public function setEntrypoint(array $entrypoint) : self
+    public function setEntrypoint(array $entrypoint): self
     {
         $this->initialized['entrypoint'] = true;
         $this->entrypoint = $entrypoint;
@@ -602,7 +602,7 @@ class ContainerConfig
      *
      * @return bool
      */
-    public function getNetworkDisabled() : bool
+    public function getNetworkDisabled(): bool
     {
         return $this->networkDisabled;
     }
@@ -613,7 +613,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setNetworkDisabled(bool $networkDisabled) : self
+    public function setNetworkDisabled(bool $networkDisabled): self
     {
         $this->initialized['networkDisabled'] = true;
         $this->networkDisabled = $networkDisabled;
@@ -624,7 +624,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getMacAddress() : string
+    public function getMacAddress(): string
     {
         return $this->macAddress;
     }
@@ -635,7 +635,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setMacAddress(string $macAddress) : self
+    public function setMacAddress(string $macAddress): self
     {
         $this->initialized['macAddress'] = true;
         $this->macAddress = $macAddress;
@@ -646,7 +646,7 @@ class ContainerConfig
      *
      * @return list<string>
      */
-    public function getOnBuild() : array
+    public function getOnBuild(): array
     {
         return $this->onBuild;
     }
@@ -657,7 +657,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setOnBuild(array $onBuild) : self
+    public function setOnBuild(array $onBuild): self
     {
         $this->initialized['onBuild'] = true;
         $this->onBuild = $onBuild;
@@ -668,7 +668,7 @@ class ContainerConfig
      *
      * @return array<string, string>
      */
-    public function getLabels() : iterable
+    public function getLabels(): iterable
     {
         return $this->labels;
     }
@@ -679,7 +679,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setLabels(iterable $labels) : self
+    public function setLabels(iterable $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -690,7 +690,7 @@ class ContainerConfig
      *
      * @return string
      */
-    public function getStopSignal() : string
+    public function getStopSignal(): string
     {
         return $this->stopSignal;
     }
@@ -701,7 +701,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setStopSignal(string $stopSignal) : self
+    public function setStopSignal(string $stopSignal): self
     {
         $this->initialized['stopSignal'] = true;
         $this->stopSignal = $stopSignal;
@@ -712,7 +712,7 @@ class ContainerConfig
      *
      * @return int
      */
-    public function getStopTimeout() : int
+    public function getStopTimeout(): int
     {
         return $this->stopTimeout;
     }
@@ -723,7 +723,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setStopTimeout(int $stopTimeout) : self
+    public function setStopTimeout(int $stopTimeout): self
     {
         $this->initialized['stopTimeout'] = true;
         $this->stopTimeout = $stopTimeout;
@@ -734,7 +734,7 @@ class ContainerConfig
      *
      * @return list<string>
      */
-    public function getShell() : array
+    public function getShell(): array
     {
         return $this->shell;
     }
@@ -745,7 +745,7 @@ class ContainerConfig
      *
      * @return self
      */
-    public function setShell(array $shell) : self
+    public function setShell(array $shell): self
     {
         $this->initialized['shell'] = true;
         $this->shell = $shell;

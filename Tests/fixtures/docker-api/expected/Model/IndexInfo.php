@@ -8,7 +8,7 @@ class IndexInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -53,7 +53,7 @@ class IndexInfo
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -64,7 +64,7 @@ class IndexInfo
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -75,7 +75,7 @@ class IndexInfo
      *
      * @return list<string>
      */
-    public function getMirrors() : array
+    public function getMirrors(): array
     {
         return $this->mirrors;
     }
@@ -86,7 +86,7 @@ class IndexInfo
      *
      * @return self
      */
-    public function setMirrors(array $mirrors) : self
+    public function setMirrors(array $mirrors): self
     {
         $this->initialized['mirrors'] = true;
         $this->mirrors = $mirrors;
@@ -109,7 +109,7 @@ class IndexInfo
     *
     * @return bool
     */
-    public function getSecure() : bool
+    public function getSecure(): bool
     {
         return $this->secure;
     }
@@ -132,7 +132,7 @@ class IndexInfo
     *
     * @return self
     */
-    public function setSecure(bool $secure) : self
+    public function setSecure(bool $secure): self
     {
         $this->initialized['secure'] = true;
         $this->secure = $secure;
@@ -143,7 +143,7 @@ class IndexInfo
      *
      * @return bool
      */
-    public function getOfficial() : bool
+    public function getOfficial(): bool
     {
         return $this->official;
     }
@@ -154,7 +154,7 @@ class IndexInfo
      *
      * @return self
      */
-    public function setOfficial(bool $official) : self
+    public function setOfficial(bool $official): self
     {
         $this->initialized['official'] = true;
         $this->official = $official;

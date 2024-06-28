@@ -8,7 +8,7 @@ class SwarmInitPostBody
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -100,7 +100,7 @@ class SwarmInitPostBody
     *
     * @return string
     */
-    public function getListenAddr() : string
+    public function getListenAddr(): string
     {
         return $this->listenAddr;
     }
@@ -117,7 +117,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setListenAddr(string $listenAddr) : self
+    public function setListenAddr(string $listenAddr): self
     {
         $this->initialized['listenAddr'] = true;
         $this->listenAddr = $listenAddr;
@@ -134,7 +134,7 @@ class SwarmInitPostBody
     *
     * @return string
     */
-    public function getAdvertiseAddr() : string
+    public function getAdvertiseAddr(): string
     {
         return $this->advertiseAddr;
     }
@@ -151,7 +151,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setAdvertiseAddr(string $advertiseAddr) : self
+    public function setAdvertiseAddr(string $advertiseAddr): self
     {
         $this->initialized['advertiseAddr'] = true;
         $this->advertiseAddr = $advertiseAddr;
@@ -172,7 +172,7 @@ class SwarmInitPostBody
     *
     * @return string
     */
-    public function getDataPathAddr() : string
+    public function getDataPathAddr(): string
     {
         return $this->dataPathAddr;
     }
@@ -193,7 +193,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setDataPathAddr(string $dataPathAddr) : self
+    public function setDataPathAddr(string $dataPathAddr): self
     {
         $this->initialized['dataPathAddr'] = true;
         $this->dataPathAddr = $dataPathAddr;
@@ -207,7 +207,7 @@ class SwarmInitPostBody
     *
     * @return int
     */
-    public function getDataPathPort() : int
+    public function getDataPathPort(): int
     {
         return $this->dataPathPort;
     }
@@ -221,7 +221,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setDataPathPort(int $dataPathPort) : self
+    public function setDataPathPort(int $dataPathPort): self
     {
         $this->initialized['dataPathPort'] = true;
         $this->dataPathPort = $dataPathPort;
@@ -234,7 +234,7 @@ class SwarmInitPostBody
     *
     * @return list<string>
     */
-    public function getDefaultAddrPool() : array
+    public function getDefaultAddrPool(): array
     {
         return $this->defaultAddrPool;
     }
@@ -247,7 +247,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setDefaultAddrPool(array $defaultAddrPool) : self
+    public function setDefaultAddrPool(array $defaultAddrPool): self
     {
         $this->initialized['defaultAddrPool'] = true;
         $this->defaultAddrPool = $defaultAddrPool;
@@ -258,7 +258,7 @@ class SwarmInitPostBody
      *
      * @return bool
      */
-    public function getForceNewCluster() : bool
+    public function getForceNewCluster(): bool
     {
         return $this->forceNewCluster;
     }
@@ -269,7 +269,7 @@ class SwarmInitPostBody
      *
      * @return self
      */
-    public function setForceNewCluster(bool $forceNewCluster) : self
+    public function setForceNewCluster(bool $forceNewCluster): self
     {
         $this->initialized['forceNewCluster'] = true;
         $this->forceNewCluster = $forceNewCluster;
@@ -282,7 +282,7 @@ class SwarmInitPostBody
     *
     * @return int
     */
-    public function getSubnetSize() : int
+    public function getSubnetSize(): int
     {
         return $this->subnetSize;
     }
@@ -295,7 +295,7 @@ class SwarmInitPostBody
     *
     * @return self
     */
-    public function setSubnetSize(int $subnetSize) : self
+    public function setSubnetSize(int $subnetSize): self
     {
         $this->initialized['subnetSize'] = true;
         $this->subnetSize = $subnetSize;
@@ -306,7 +306,7 @@ class SwarmInitPostBody
      *
      * @return SwarmSpec
      */
-    public function getSpec() : SwarmSpec
+    public function getSpec(): SwarmSpec
     {
         return $this->spec;
     }
@@ -317,7 +317,7 @@ class SwarmInitPostBody
      *
      * @return self
      */
-    public function setSpec(SwarmSpec $spec) : self
+    public function setSpec(SwarmSpec $spec): self
     {
         $this->initialized['spec'] = true;
         $this->spec = $spec;

@@ -8,7 +8,7 @@ class Company
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -119,7 +119,7 @@ class Company
      *
      * @return string
      */
-    public function getBaseUri() : string
+    public function getBaseUri(): string
     {
         return $this->baseUri;
     }
@@ -130,7 +130,7 @@ class Company
      *
      * @return self
      */
-    public function setBaseUri(string $baseUri) : self
+    public function setBaseUri(string $baseUri): self
     {
         $this->initialized['baseUri'] = true;
         $this->baseUri = $baseUri;
@@ -141,7 +141,7 @@ class Company
      *
      * @return string
      */
-    public function getFullDomain() : string
+    public function getFullDomain(): string
     {
         return $this->fullDomain;
     }
@@ -152,7 +152,7 @@ class Company
      *
      * @return self
      */
-    public function setFullDomain(string $fullDomain) : self
+    public function setFullDomain(string $fullDomain): self
     {
         $this->initialized['fullDomain'] = true;
         $this->fullDomain = $fullDomain;
@@ -163,7 +163,7 @@ class Company
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -174,7 +174,7 @@ class Company
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -185,7 +185,7 @@ class Company
      *
      * @return bool
      */
-    public function getIsActive() : bool
+    public function getIsActive(): bool
     {
         return $this->isActive;
     }
@@ -196,7 +196,7 @@ class Company
      *
      * @return self
      */
-    public function setIsActive(bool $isActive) : self
+    public function setIsActive(bool $isActive): self
     {
         $this->initialized['isActive'] = true;
         $this->isActive = $isActive;
@@ -207,7 +207,7 @@ class Company
      *
      * @return string
      */
-    public function getWeekStartDay() : string
+    public function getWeekStartDay(): string
     {
         return $this->weekStartDay;
     }
@@ -218,7 +218,7 @@ class Company
      *
      * @return self
      */
-    public function setWeekStartDay(string $weekStartDay) : self
+    public function setWeekStartDay(string $weekStartDay): self
     {
         $this->initialized['weekStartDay'] = true;
         $this->weekStartDay = $weekStartDay;
@@ -229,7 +229,7 @@ class Company
      *
      * @return bool
      */
-    public function getWantsTimestampTimers() : bool
+    public function getWantsTimestampTimers(): bool
     {
         return $this->wantsTimestampTimers;
     }
@@ -240,7 +240,7 @@ class Company
      *
      * @return self
      */
-    public function setWantsTimestampTimers(bool $wantsTimestampTimers) : self
+    public function setWantsTimestampTimers(bool $wantsTimestampTimers): self
     {
         $this->initialized['wantsTimestampTimers'] = true;
         $this->wantsTimestampTimers = $wantsTimestampTimers;
@@ -251,7 +251,7 @@ class Company
      *
      * @return string
      */
-    public function getTimeFormat() : string
+    public function getTimeFormat(): string
     {
         return $this->timeFormat;
     }
@@ -262,7 +262,7 @@ class Company
      *
      * @return self
      */
-    public function setTimeFormat(string $timeFormat) : self
+    public function setTimeFormat(string $timeFormat): self
     {
         $this->initialized['timeFormat'] = true;
         $this->timeFormat = $timeFormat;
@@ -273,7 +273,7 @@ class Company
      *
      * @return string
      */
-    public function getPlanType() : string
+    public function getPlanType(): string
     {
         return $this->planType;
     }
@@ -284,7 +284,7 @@ class Company
      *
      * @return self
      */
-    public function setPlanType(string $planType) : self
+    public function setPlanType(string $planType): self
     {
         $this->initialized['planType'] = true;
         $this->planType = $planType;
@@ -295,7 +295,7 @@ class Company
      *
      * @return string
      */
-    public function getClock() : string
+    public function getClock(): string
     {
         return $this->clock;
     }
@@ -306,7 +306,7 @@ class Company
      *
      * @return self
      */
-    public function setClock(string $clock) : self
+    public function setClock(string $clock): self
     {
         $this->initialized['clock'] = true;
         $this->clock = $clock;
@@ -317,7 +317,7 @@ class Company
      *
      * @return string
      */
-    public function getDecimalSymbol() : string
+    public function getDecimalSymbol(): string
     {
         return $this->decimalSymbol;
     }
@@ -328,7 +328,7 @@ class Company
      *
      * @return self
      */
-    public function setDecimalSymbol(string $decimalSymbol) : self
+    public function setDecimalSymbol(string $decimalSymbol): self
     {
         $this->initialized['decimalSymbol'] = true;
         $this->decimalSymbol = $decimalSymbol;
@@ -339,7 +339,7 @@ class Company
      *
      * @return string
      */
-    public function getThousandsSeparator() : string
+    public function getThousandsSeparator(): string
     {
         return $this->thousandsSeparator;
     }
@@ -350,7 +350,7 @@ class Company
      *
      * @return self
      */
-    public function setThousandsSeparator(string $thousandsSeparator) : self
+    public function setThousandsSeparator(string $thousandsSeparator): self
     {
         $this->initialized['thousandsSeparator'] = true;
         $this->thousandsSeparator = $thousandsSeparator;
@@ -361,7 +361,7 @@ class Company
      *
      * @return string
      */
-    public function getColorScheme() : string
+    public function getColorScheme(): string
     {
         return $this->colorScheme;
     }
@@ -372,7 +372,7 @@ class Company
      *
      * @return self
      */
-    public function setColorScheme(string $colorScheme) : self
+    public function setColorScheme(string $colorScheme): self
     {
         $this->initialized['colorScheme'] = true;
         $this->colorScheme = $colorScheme;
@@ -383,7 +383,7 @@ class Company
      *
      * @return int
      */
-    public function getWeeklyCapacity() : int
+    public function getWeeklyCapacity(): int
     {
         return $this->weeklyCapacity;
     }
@@ -394,7 +394,7 @@ class Company
      *
      * @return self
      */
-    public function setWeeklyCapacity(int $weeklyCapacity) : self
+    public function setWeeklyCapacity(int $weeklyCapacity): self
     {
         $this->initialized['weeklyCapacity'] = true;
         $this->weeklyCapacity = $weeklyCapacity;
@@ -405,7 +405,7 @@ class Company
      *
      * @return bool
      */
-    public function getExpenseFeature() : bool
+    public function getExpenseFeature(): bool
     {
         return $this->expenseFeature;
     }
@@ -416,7 +416,7 @@ class Company
      *
      * @return self
      */
-    public function setExpenseFeature(bool $expenseFeature) : self
+    public function setExpenseFeature(bool $expenseFeature): self
     {
         $this->initialized['expenseFeature'] = true;
         $this->expenseFeature = $expenseFeature;
@@ -427,7 +427,7 @@ class Company
      *
      * @return bool
      */
-    public function getInvoiceFeature() : bool
+    public function getInvoiceFeature(): bool
     {
         return $this->invoiceFeature;
     }
@@ -438,7 +438,7 @@ class Company
      *
      * @return self
      */
-    public function setInvoiceFeature(bool $invoiceFeature) : self
+    public function setInvoiceFeature(bool $invoiceFeature): self
     {
         $this->initialized['invoiceFeature'] = true;
         $this->invoiceFeature = $invoiceFeature;
@@ -449,7 +449,7 @@ class Company
      *
      * @return bool
      */
-    public function getEstimateFeature() : bool
+    public function getEstimateFeature(): bool
     {
         return $this->estimateFeature;
     }
@@ -460,7 +460,7 @@ class Company
      *
      * @return self
      */
-    public function setEstimateFeature(bool $estimateFeature) : self
+    public function setEstimateFeature(bool $estimateFeature): self
     {
         $this->initialized['estimateFeature'] = true;
         $this->estimateFeature = $estimateFeature;
@@ -471,7 +471,7 @@ class Company
      *
      * @return bool
      */
-    public function getApprovalFeature() : bool
+    public function getApprovalFeature(): bool
     {
         return $this->approvalFeature;
     }
@@ -482,7 +482,7 @@ class Company
      *
      * @return self
      */
-    public function setApprovalFeature(bool $approvalFeature) : self
+    public function setApprovalFeature(bool $approvalFeature): self
     {
         $this->initialized['approvalFeature'] = true;
         $this->approvalFeature = $approvalFeature;

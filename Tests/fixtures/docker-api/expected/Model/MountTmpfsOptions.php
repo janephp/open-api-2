@@ -8,7 +8,7 @@ class MountTmpfsOptions
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class MountTmpfsOptions
      *
      * @return int
      */
-    public function getSizeBytes() : int
+    public function getSizeBytes(): int
     {
         return $this->sizeBytes;
     }
@@ -40,7 +40,7 @@ class MountTmpfsOptions
      *
      * @return self
      */
-    public function setSizeBytes(int $sizeBytes) : self
+    public function setSizeBytes(int $sizeBytes): self
     {
         $this->initialized['sizeBytes'] = true;
         $this->sizeBytes = $sizeBytes;
@@ -51,7 +51,7 @@ class MountTmpfsOptions
      *
      * @return int
      */
-    public function getMode() : int
+    public function getMode(): int
     {
         return $this->mode;
     }
@@ -62,7 +62,7 @@ class MountTmpfsOptions
      *
      * @return self
      */
-    public function setMode(int $mode) : self
+    public function setMode(int $mode): self
     {
         $this->initialized['mode'] = true;
         $this->mode = $mode;

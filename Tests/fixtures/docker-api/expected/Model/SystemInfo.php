@@ -8,7 +8,7 @@ class SystemInfo
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -591,7 +591,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->iD;
     }
@@ -608,7 +608,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setID(string $iD) : self
+    public function setID(string $iD): self
     {
         $this->initialized['iD'] = true;
         $this->iD = $iD;
@@ -619,7 +619,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getContainers() : int
+    public function getContainers(): int
     {
         return $this->containers;
     }
@@ -630,7 +630,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setContainers(int $containers) : self
+    public function setContainers(int $containers): self
     {
         $this->initialized['containers'] = true;
         $this->containers = $containers;
@@ -641,7 +641,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getContainersRunning() : int
+    public function getContainersRunning(): int
     {
         return $this->containersRunning;
     }
@@ -652,7 +652,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setContainersRunning(int $containersRunning) : self
+    public function setContainersRunning(int $containersRunning): self
     {
         $this->initialized['containersRunning'] = true;
         $this->containersRunning = $containersRunning;
@@ -663,7 +663,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getContainersPaused() : int
+    public function getContainersPaused(): int
     {
         return $this->containersPaused;
     }
@@ -674,7 +674,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setContainersPaused(int $containersPaused) : self
+    public function setContainersPaused(int $containersPaused): self
     {
         $this->initialized['containersPaused'] = true;
         $this->containersPaused = $containersPaused;
@@ -685,7 +685,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getContainersStopped() : int
+    public function getContainersStopped(): int
     {
         return $this->containersStopped;
     }
@@ -696,7 +696,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setContainersStopped(int $containersStopped) : self
+    public function setContainersStopped(int $containersStopped): self
     {
         $this->initialized['containersStopped'] = true;
         $this->containersStopped = $containersStopped;
@@ -710,7 +710,7 @@ class SystemInfo
     *
     * @return int
     */
-    public function getImages() : int
+    public function getImages(): int
     {
         return $this->images;
     }
@@ -724,7 +724,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setImages(int $images) : self
+    public function setImages(int $images): self
     {
         $this->initialized['images'] = true;
         $this->images = $images;
@@ -735,7 +735,7 @@ class SystemInfo
      *
      * @return string
      */
-    public function getDriver() : string
+    public function getDriver(): string
     {
         return $this->driver;
     }
@@ -746,7 +746,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setDriver(string $driver) : self
+    public function setDriver(string $driver): self
     {
         $this->initialized['driver'] = true;
         $this->driver = $driver;
@@ -769,7 +769,7 @@ class SystemInfo
     *
     * @return list<list<string>>
     */
-    public function getDriverStatus() : array
+    public function getDriverStatus(): array
     {
         return $this->driverStatus;
     }
@@ -792,7 +792,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setDriverStatus(array $driverStatus) : self
+    public function setDriverStatus(array $driverStatus): self
     {
         $this->initialized['driverStatus'] = true;
         $this->driverStatus = $driverStatus;
@@ -807,7 +807,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getDockerRootDir() : string
+    public function getDockerRootDir(): string
     {
         return $this->dockerRootDir;
     }
@@ -822,7 +822,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setDockerRootDir(string $dockerRootDir) : self
+    public function setDockerRootDir(string $dockerRootDir): self
     {
         $this->initialized['dockerRootDir'] = true;
         $this->dockerRootDir = $dockerRootDir;
@@ -840,7 +840,7 @@ class SystemInfo
     *
     * @return PluginsInfo
     */
-    public function getPlugins() : PluginsInfo
+    public function getPlugins(): PluginsInfo
     {
         return $this->plugins;
     }
@@ -858,7 +858,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setPlugins(PluginsInfo $plugins) : self
+    public function setPlugins(PluginsInfo $plugins): self
     {
         $this->initialized['plugins'] = true;
         $this->plugins = $plugins;
@@ -869,7 +869,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getMemoryLimit() : bool
+    public function getMemoryLimit(): bool
     {
         return $this->memoryLimit;
     }
@@ -880,7 +880,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setMemoryLimit(bool $memoryLimit) : self
+    public function setMemoryLimit(bool $memoryLimit): self
     {
         $this->initialized['memoryLimit'] = true;
         $this->memoryLimit = $memoryLimit;
@@ -891,7 +891,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getSwapLimit() : bool
+    public function getSwapLimit(): bool
     {
         return $this->swapLimit;
     }
@@ -902,7 +902,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setSwapLimit(bool $swapLimit) : self
+    public function setSwapLimit(bool $swapLimit): self
     {
         $this->initialized['swapLimit'] = true;
         $this->swapLimit = $swapLimit;
@@ -919,7 +919,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getKernelMemory() : bool
+    public function getKernelMemory(): bool
     {
         return $this->kernelMemory;
     }
@@ -936,7 +936,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setKernelMemory(bool $kernelMemory) : self
+    public function setKernelMemory(bool $kernelMemory): self
     {
         $this->initialized['kernelMemory'] = true;
         $this->kernelMemory = $kernelMemory;
@@ -949,7 +949,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getCpuCfsPeriod() : bool
+    public function getCpuCfsPeriod(): bool
     {
         return $this->cpuCfsPeriod;
     }
@@ -962,7 +962,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setCpuCfsPeriod(bool $cpuCfsPeriod) : self
+    public function setCpuCfsPeriod(bool $cpuCfsPeriod): self
     {
         $this->initialized['cpuCfsPeriod'] = true;
         $this->cpuCfsPeriod = $cpuCfsPeriod;
@@ -975,7 +975,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getCpuCfsQuota() : bool
+    public function getCpuCfsQuota(): bool
     {
         return $this->cpuCfsQuota;
     }
@@ -988,7 +988,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setCpuCfsQuota(bool $cpuCfsQuota) : self
+    public function setCpuCfsQuota(bool $cpuCfsQuota): self
     {
         $this->initialized['cpuCfsQuota'] = true;
         $this->cpuCfsQuota = $cpuCfsQuota;
@@ -999,7 +999,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getCPUShares() : bool
+    public function getCPUShares(): bool
     {
         return $this->cPUShares;
     }
@@ -1010,7 +1010,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setCPUShares(bool $cPUShares) : self
+    public function setCPUShares(bool $cPUShares): self
     {
         $this->initialized['cPUShares'] = true;
         $this->cPUShares = $cPUShares;
@@ -1024,7 +1024,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getCPUSet() : bool
+    public function getCPUSet(): bool
     {
         return $this->cPUSet;
     }
@@ -1038,7 +1038,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setCPUSet(bool $cPUSet) : self
+    public function setCPUSet(bool $cPUSet): self
     {
         $this->initialized['cPUSet'] = true;
         $this->cPUSet = $cPUSet;
@@ -1049,7 +1049,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getPidsLimit() : bool
+    public function getPidsLimit(): bool
     {
         return $this->pidsLimit;
     }
@@ -1060,7 +1060,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setPidsLimit(bool $pidsLimit) : self
+    public function setPidsLimit(bool $pidsLimit): self
     {
         $this->initialized['pidsLimit'] = true;
         $this->pidsLimit = $pidsLimit;
@@ -1071,7 +1071,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getOomKillDisable() : bool
+    public function getOomKillDisable(): bool
     {
         return $this->oomKillDisable;
     }
@@ -1082,7 +1082,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setOomKillDisable(bool $oomKillDisable) : self
+    public function setOomKillDisable(bool $oomKillDisable): self
     {
         $this->initialized['oomKillDisable'] = true;
         $this->oomKillDisable = $oomKillDisable;
@@ -1093,7 +1093,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getIPv4Forwarding() : bool
+    public function getIPv4Forwarding(): bool
     {
         return $this->iPv4Forwarding;
     }
@@ -1104,7 +1104,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setIPv4Forwarding(bool $iPv4Forwarding) : self
+    public function setIPv4Forwarding(bool $iPv4Forwarding): self
     {
         $this->initialized['iPv4Forwarding'] = true;
         $this->iPv4Forwarding = $iPv4Forwarding;
@@ -1115,7 +1115,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getBridgeNfIptables() : bool
+    public function getBridgeNfIptables(): bool
     {
         return $this->bridgeNfIptables;
     }
@@ -1126,7 +1126,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setBridgeNfIptables(bool $bridgeNfIptables) : self
+    public function setBridgeNfIptables(bool $bridgeNfIptables): self
     {
         $this->initialized['bridgeNfIptables'] = true;
         $this->bridgeNfIptables = $bridgeNfIptables;
@@ -1137,7 +1137,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getBridgeNfIp6tables() : bool
+    public function getBridgeNfIp6tables(): bool
     {
         return $this->bridgeNfIp6tables;
     }
@@ -1148,7 +1148,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setBridgeNfIp6tables(bool $bridgeNfIp6tables) : self
+    public function setBridgeNfIp6tables(bool $bridgeNfIp6tables): self
     {
         $this->initialized['bridgeNfIp6tables'] = true;
         $this->bridgeNfIp6tables = $bridgeNfIp6tables;
@@ -1161,7 +1161,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getDebug() : bool
+    public function getDebug(): bool
     {
         return $this->debug;
     }
@@ -1174,7 +1174,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setDebug(bool $debug) : self
+    public function setDebug(bool $debug): self
     {
         $this->initialized['debug'] = true;
         $this->debug = $debug;
@@ -1188,7 +1188,7 @@ class SystemInfo
     *
     * @return int
     */
-    public function getNFd() : int
+    public function getNFd(): int
     {
         return $this->nFd;
     }
@@ -1202,7 +1202,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setNFd(int $nFd) : self
+    public function setNFd(int $nFd): self
     {
         $this->initialized['nFd'] = true;
         $this->nFd = $nFd;
@@ -1216,7 +1216,7 @@ class SystemInfo
     *
     * @return int
     */
-    public function getNGoroutines() : int
+    public function getNGoroutines(): int
     {
         return $this->nGoroutines;
     }
@@ -1230,7 +1230,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setNGoroutines(int $nGoroutines) : self
+    public function setNGoroutines(int $nGoroutines): self
     {
         $this->initialized['nGoroutines'] = true;
         $this->nGoroutines = $nGoroutines;
@@ -1243,7 +1243,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getSystemTime() : string
+    public function getSystemTime(): string
     {
         return $this->systemTime;
     }
@@ -1256,7 +1256,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setSystemTime(string $systemTime) : self
+    public function setSystemTime(string $systemTime): self
     {
         $this->initialized['systemTime'] = true;
         $this->systemTime = $systemTime;
@@ -1267,7 +1267,7 @@ class SystemInfo
      *
      * @return string
      */
-    public function getLoggingDriver() : string
+    public function getLoggingDriver(): string
     {
         return $this->loggingDriver;
     }
@@ -1278,7 +1278,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setLoggingDriver(string $loggingDriver) : self
+    public function setLoggingDriver(string $loggingDriver): self
     {
         $this->initialized['loggingDriver'] = true;
         $this->loggingDriver = $loggingDriver;
@@ -1289,7 +1289,7 @@ class SystemInfo
      *
      * @return string
      */
-    public function getCgroupDriver() : string
+    public function getCgroupDriver(): string
     {
         return $this->cgroupDriver;
     }
@@ -1300,7 +1300,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setCgroupDriver(string $cgroupDriver) : self
+    public function setCgroupDriver(string $cgroupDriver): self
     {
         $this->initialized['cgroupDriver'] = true;
         $this->cgroupDriver = $cgroupDriver;
@@ -1311,7 +1311,7 @@ class SystemInfo
      *
      * @return string
      */
-    public function getCgroupVersion() : string
+    public function getCgroupVersion(): string
     {
         return $this->cgroupVersion;
     }
@@ -1322,7 +1322,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setCgroupVersion(string $cgroupVersion) : self
+    public function setCgroupVersion(string $cgroupVersion): self
     {
         $this->initialized['cgroupVersion'] = true;
         $this->cgroupVersion = $cgroupVersion;
@@ -1333,7 +1333,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getNEventsListener() : int
+    public function getNEventsListener(): int
     {
         return $this->nEventsListener;
     }
@@ -1344,7 +1344,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setNEventsListener(int $nEventsListener) : self
+    public function setNEventsListener(int $nEventsListener): self
     {
         $this->initialized['nEventsListener'] = true;
         $this->nEventsListener = $nEventsListener;
@@ -1360,7 +1360,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getKernelVersion() : string
+    public function getKernelVersion(): string
     {
         return $this->kernelVersion;
     }
@@ -1376,7 +1376,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setKernelVersion(string $kernelVersion) : self
+    public function setKernelVersion(string $kernelVersion): self
     {
         $this->initialized['kernelVersion'] = true;
         $this->kernelVersion = $kernelVersion;
@@ -1389,7 +1389,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getOperatingSystem() : string
+    public function getOperatingSystem(): string
     {
         return $this->operatingSystem;
     }
@@ -1402,7 +1402,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setOperatingSystem(string $operatingSystem) : self
+    public function setOperatingSystem(string $operatingSystem): self
     {
         $this->initialized['operatingSystem'] = true;
         $this->operatingSystem = $operatingSystem;
@@ -1420,7 +1420,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getOSVersion() : string
+    public function getOSVersion(): string
     {
         return $this->oSVersion;
     }
@@ -1438,7 +1438,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setOSVersion(string $oSVersion) : self
+    public function setOSVersion(string $oSVersion): self
     {
         $this->initialized['oSVersion'] = true;
         $this->oSVersion = $oSVersion;
@@ -1454,7 +1454,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getOSType() : string
+    public function getOSType(): string
     {
         return $this->oSType;
     }
@@ -1470,7 +1470,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setOSType(string $oSType) : self
+    public function setOSType(string $oSType): self
     {
         $this->initialized['oSType'] = true;
         $this->oSType = $oSType;
@@ -1485,7 +1485,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getArchitecture() : string
+    public function getArchitecture(): string
     {
         return $this->architecture;
     }
@@ -1500,7 +1500,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setArchitecture(string $architecture) : self
+    public function setArchitecture(string $architecture): self
     {
         $this->initialized['architecture'] = true;
         $this->architecture = $architecture;
@@ -1516,7 +1516,7 @@ class SystemInfo
     *
     * @return int
     */
-    public function getNCPU() : int
+    public function getNCPU(): int
     {
         return $this->nCPU;
     }
@@ -1532,7 +1532,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setNCPU(int $nCPU) : self
+    public function setNCPU(int $nCPU): self
     {
         $this->initialized['nCPU'] = true;
         $this->nCPU = $nCPU;
@@ -1543,7 +1543,7 @@ class SystemInfo
      *
      * @return int
      */
-    public function getMemTotal() : int
+    public function getMemTotal(): int
     {
         return $this->memTotal;
     }
@@ -1554,7 +1554,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setMemTotal(int $memTotal) : self
+    public function setMemTotal(int $memTotal): self
     {
         $this->initialized['memTotal'] = true;
         $this->memTotal = $memTotal;
@@ -1567,7 +1567,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getIndexServerAddress() : string
+    public function getIndexServerAddress(): string
     {
         return $this->indexServerAddress;
     }
@@ -1580,7 +1580,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setIndexServerAddress(string $indexServerAddress) : self
+    public function setIndexServerAddress(string $indexServerAddress): self
     {
         $this->initialized['indexServerAddress'] = true;
         $this->indexServerAddress = $indexServerAddress;
@@ -1591,7 +1591,7 @@ class SystemInfo
      *
      * @return RegistryServiceConfig|null
      */
-    public function getRegistryConfig() : ?RegistryServiceConfig
+    public function getRegistryConfig(): ?RegistryServiceConfig
     {
         return $this->registryConfig;
     }
@@ -1602,7 +1602,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setRegistryConfig(?RegistryServiceConfig $registryConfig) : self
+    public function setRegistryConfig(?RegistryServiceConfig $registryConfig): self
     {
         $this->initialized['registryConfig'] = true;
         $this->registryConfig = $registryConfig;
@@ -1615,7 +1615,7 @@ class SystemInfo
     *
     * @return list<GenericResourcesItem>
     */
-    public function getGenericResources() : array
+    public function getGenericResources(): array
     {
         return $this->genericResources;
     }
@@ -1628,7 +1628,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setGenericResources(array $genericResources) : self
+    public function setGenericResources(array $genericResources): self
     {
         $this->initialized['genericResources'] = true;
         $this->genericResources = $genericResources;
@@ -1645,7 +1645,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getHttpProxy() : string
+    public function getHttpProxy(): string
     {
         return $this->httpProxy;
     }
@@ -1662,7 +1662,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setHttpProxy(string $httpProxy) : self
+    public function setHttpProxy(string $httpProxy): self
     {
         $this->initialized['httpProxy'] = true;
         $this->httpProxy = $httpProxy;
@@ -1679,7 +1679,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getHttpsProxy() : string
+    public function getHttpsProxy(): string
     {
         return $this->httpsProxy;
     }
@@ -1696,7 +1696,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setHttpsProxy(string $httpsProxy) : self
+    public function setHttpsProxy(string $httpsProxy): self
     {
         $this->initialized['httpsProxy'] = true;
         $this->httpsProxy = $httpsProxy;
@@ -1712,7 +1712,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getNoProxy() : string
+    public function getNoProxy(): string
     {
         return $this->noProxy;
     }
@@ -1728,7 +1728,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setNoProxy(string $noProxy) : self
+    public function setNoProxy(string $noProxy): self
     {
         $this->initialized['noProxy'] = true;
         $this->noProxy = $noProxy;
@@ -1739,7 +1739,7 @@ class SystemInfo
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -1750,7 +1750,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -1770,7 +1770,7 @@ class SystemInfo
     *
     * @return list<string>
     */
-    public function getLabels() : array
+    public function getLabels(): array
     {
         return $this->labels;
     }
@@ -1790,7 +1790,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setLabels(array $labels) : self
+    public function setLabels(array $labels): self
     {
         $this->initialized['labels'] = true;
         $this->labels = $labels;
@@ -1801,7 +1801,7 @@ class SystemInfo
      *
      * @return bool
      */
-    public function getExperimentalBuild() : bool
+    public function getExperimentalBuild(): bool
     {
         return $this->experimentalBuild;
     }
@@ -1812,7 +1812,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setExperimentalBuild(bool $experimentalBuild) : self
+    public function setExperimentalBuild(bool $experimentalBuild): self
     {
         $this->initialized['experimentalBuild'] = true;
         $this->experimentalBuild = $experimentalBuild;
@@ -1828,7 +1828,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getServerVersion() : string
+    public function getServerVersion(): string
     {
         return $this->serverVersion;
     }
@@ -1844,7 +1844,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setServerVersion(string $serverVersion) : self
+    public function setServerVersion(string $serverVersion): self
     {
         $this->initialized['serverVersion'] = true;
         $this->serverVersion = $serverVersion;
@@ -1867,7 +1867,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getClusterStore() : string
+    public function getClusterStore(): string
     {
         return $this->clusterStore;
     }
@@ -1890,7 +1890,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setClusterStore(string $clusterStore) : self
+    public function setClusterStore(string $clusterStore): self
     {
         $this->initialized['clusterStore'] = true;
         $this->clusterStore = $clusterStore;
@@ -1911,7 +1911,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getClusterAdvertise() : string
+    public function getClusterAdvertise(): string
     {
         return $this->clusterAdvertise;
     }
@@ -1932,7 +1932,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setClusterAdvertise(string $clusterAdvertise) : self
+    public function setClusterAdvertise(string $clusterAdvertise): self
     {
         $this->initialized['clusterAdvertise'] = true;
         $this->clusterAdvertise = $clusterAdvertise;
@@ -1953,7 +1953,7 @@ class SystemInfo
     *
     * @return array<string, Runtime>
     */
-    public function getRuntimes() : iterable
+    public function getRuntimes(): iterable
     {
         return $this->runtimes;
     }
@@ -1974,7 +1974,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setRuntimes(iterable $runtimes) : self
+    public function setRuntimes(iterable $runtimes): self
     {
         $this->initialized['runtimes'] = true;
         $this->runtimes = $runtimes;
@@ -1988,7 +1988,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getDefaultRuntime() : string
+    public function getDefaultRuntime(): string
     {
         return $this->defaultRuntime;
     }
@@ -2002,7 +2002,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setDefaultRuntime(string $defaultRuntime) : self
+    public function setDefaultRuntime(string $defaultRuntime): self
     {
         $this->initialized['defaultRuntime'] = true;
         $this->defaultRuntime = $defaultRuntime;
@@ -2013,7 +2013,7 @@ class SystemInfo
      *
      * @return SwarmInfo
      */
-    public function getSwarm() : SwarmInfo
+    public function getSwarm(): SwarmInfo
     {
         return $this->swarm;
     }
@@ -2024,7 +2024,7 @@ class SystemInfo
      *
      * @return self
      */
-    public function setSwarm(SwarmInfo $swarm) : self
+    public function setSwarm(SwarmInfo $swarm): self
     {
         $this->initialized['swarm'] = true;
         $this->swarm = $swarm;
@@ -2039,7 +2039,7 @@ class SystemInfo
     *
     * @return bool
     */
-    public function getLiveRestoreEnabled() : bool
+    public function getLiveRestoreEnabled(): bool
     {
         return $this->liveRestoreEnabled;
     }
@@ -2054,7 +2054,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setLiveRestoreEnabled(bool $liveRestoreEnabled) : self
+    public function setLiveRestoreEnabled(bool $liveRestoreEnabled): self
     {
         $this->initialized['liveRestoreEnabled'] = true;
         $this->liveRestoreEnabled = $liveRestoreEnabled;
@@ -2072,7 +2072,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getIsolation() : string
+    public function getIsolation(): string
     {
         return $this->isolation;
     }
@@ -2090,7 +2090,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setIsolation(string $isolation) : self
+    public function setIsolation(string $isolation): self
     {
         $this->initialized['isolation'] = true;
         $this->isolation = $isolation;
@@ -2105,7 +2105,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getInitBinary() : string
+    public function getInitBinary(): string
     {
         return $this->initBinary;
     }
@@ -2120,7 +2120,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setInitBinary(string $initBinary) : self
+    public function setInitBinary(string $initBinary): self
     {
         $this->initialized['initBinary'] = true;
         $this->initBinary = $initBinary;
@@ -2134,7 +2134,7 @@ class SystemInfo
     *
     * @return Commit
     */
-    public function getContainerdCommit() : Commit
+    public function getContainerdCommit(): Commit
     {
         return $this->containerdCommit;
     }
@@ -2148,7 +2148,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setContainerdCommit(Commit $containerdCommit) : self
+    public function setContainerdCommit(Commit $containerdCommit): self
     {
         $this->initialized['containerdCommit'] = true;
         $this->containerdCommit = $containerdCommit;
@@ -2162,7 +2162,7 @@ class SystemInfo
     *
     * @return Commit
     */
-    public function getRuncCommit() : Commit
+    public function getRuncCommit(): Commit
     {
         return $this->runcCommit;
     }
@@ -2176,7 +2176,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setRuncCommit(Commit $runcCommit) : self
+    public function setRuncCommit(Commit $runcCommit): self
     {
         $this->initialized['runcCommit'] = true;
         $this->runcCommit = $runcCommit;
@@ -2190,7 +2190,7 @@ class SystemInfo
     *
     * @return Commit
     */
-    public function getInitCommit() : Commit
+    public function getInitCommit(): Commit
     {
         return $this->initCommit;
     }
@@ -2204,7 +2204,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setInitCommit(Commit $initCommit) : self
+    public function setInitCommit(Commit $initCommit): self
     {
         $this->initialized['initCommit'] = true;
         $this->initCommit = $initCommit;
@@ -2221,7 +2221,7 @@ class SystemInfo
     *
     * @return list<string>
     */
-    public function getSecurityOptions() : array
+    public function getSecurityOptions(): array
     {
         return $this->securityOptions;
     }
@@ -2238,7 +2238,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setSecurityOptions(array $securityOptions) : self
+    public function setSecurityOptions(array $securityOptions): self
     {
         $this->initialized['securityOptions'] = true;
         $this->securityOptions = $securityOptions;
@@ -2253,7 +2253,7 @@ class SystemInfo
     *
     * @return string
     */
-    public function getProductLicense() : string
+    public function getProductLicense(): string
     {
         return $this->productLicense;
     }
@@ -2268,7 +2268,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setProductLicense(string $productLicense) : self
+    public function setProductLicense(string $productLicense): self
     {
         $this->initialized['productLicense'] = true;
         $this->productLicense = $productLicense;
@@ -2284,7 +2284,7 @@ class SystemInfo
     *
     * @return list<SystemInfoDefaultAddressPoolsItem>
     */
-    public function getDefaultAddressPools() : array
+    public function getDefaultAddressPools(): array
     {
         return $this->defaultAddressPools;
     }
@@ -2300,7 +2300,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setDefaultAddressPools(array $defaultAddressPools) : self
+    public function setDefaultAddressPools(array $defaultAddressPools): self
     {
         $this->initialized['defaultAddressPools'] = true;
         $this->defaultAddressPools = $defaultAddressPools;
@@ -2315,7 +2315,7 @@ class SystemInfo
     *
     * @return list<string>
     */
-    public function getWarnings() : array
+    public function getWarnings(): array
     {
         return $this->warnings;
     }
@@ -2330,7 +2330,7 @@ class SystemInfo
     *
     * @return self
     */
-    public function setWarnings(array $warnings) : self
+    public function setWarnings(array $warnings): self
     {
         $this->initialized['warnings'] = true;
         $this->warnings = $warnings;

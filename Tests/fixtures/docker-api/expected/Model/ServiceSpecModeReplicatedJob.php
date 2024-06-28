@@ -8,7 +8,7 @@ class ServiceSpecModeReplicatedJob
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -31,7 +31,7 @@ class ServiceSpecModeReplicatedJob
      *
      * @return int
      */
-    public function getMaxConcurrent() : int
+    public function getMaxConcurrent(): int
     {
         return $this->maxConcurrent;
     }
@@ -42,7 +42,7 @@ class ServiceSpecModeReplicatedJob
      *
      * @return self
      */
-    public function setMaxConcurrent(int $maxConcurrent) : self
+    public function setMaxConcurrent(int $maxConcurrent): self
     {
         $this->initialized['maxConcurrent'] = true;
         $this->maxConcurrent = $maxConcurrent;
@@ -55,7 +55,7 @@ class ServiceSpecModeReplicatedJob
     *
     * @return int
     */
-    public function getTotalCompletions() : int
+    public function getTotalCompletions(): int
     {
         return $this->totalCompletions;
     }
@@ -68,7 +68,7 @@ class ServiceSpecModeReplicatedJob
     *
     * @return self
     */
-    public function setTotalCompletions(int $totalCompletions) : self
+    public function setTotalCompletions(int $totalCompletions): self
     {
         $this->initialized['totalCompletions'] = true;
         $this->totalCompletions = $totalCompletions;

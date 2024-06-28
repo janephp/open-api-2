@@ -8,7 +8,7 @@ class TaskSpecNetworkAttachmentSpec
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -23,7 +23,7 @@ class TaskSpecNetworkAttachmentSpec
      *
      * @return string
      */
-    public function getContainerID() : string
+    public function getContainerID(): string
     {
         return $this->containerID;
     }
@@ -34,7 +34,7 @@ class TaskSpecNetworkAttachmentSpec
      *
      * @return self
      */
-    public function setContainerID(string $containerID) : self
+    public function setContainerID(string $containerID): self
     {
         $this->initialized['containerID'] = true;
         $this->containerID = $containerID;

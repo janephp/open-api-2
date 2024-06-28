@@ -8,7 +8,7 @@ class OCIDescriptor
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class OCIDescriptor
      *
      * @return string
      */
-    public function getMediaType() : string
+    public function getMediaType(): string
     {
         return $this->mediaType;
     }
@@ -46,7 +46,7 @@ class OCIDescriptor
      *
      * @return self
      */
-    public function setMediaType(string $mediaType) : self
+    public function setMediaType(string $mediaType): self
     {
         $this->initialized['mediaType'] = true;
         $this->mediaType = $mediaType;
@@ -57,7 +57,7 @@ class OCIDescriptor
      *
      * @return string
      */
-    public function getDigest() : string
+    public function getDigest(): string
     {
         return $this->digest;
     }
@@ -68,7 +68,7 @@ class OCIDescriptor
      *
      * @return self
      */
-    public function setDigest(string $digest) : self
+    public function setDigest(string $digest): self
     {
         $this->initialized['digest'] = true;
         $this->digest = $digest;
@@ -79,7 +79,7 @@ class OCIDescriptor
      *
      * @return int
      */
-    public function getSize() : int
+    public function getSize(): int
     {
         return $this->size;
     }
@@ -90,7 +90,7 @@ class OCIDescriptor
      *
      * @return self
      */
-    public function setSize(int $size) : self
+    public function setSize(int $size): self
     {
         $this->initialized['size'] = true;
         $this->size = $size;

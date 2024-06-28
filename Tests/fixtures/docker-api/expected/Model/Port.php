@@ -8,7 +8,7 @@ class Port
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -41,7 +41,7 @@ class Port
      *
      * @return string
      */
-    public function getIP() : string
+    public function getIP(): string
     {
         return $this->iP;
     }
@@ -52,7 +52,7 @@ class Port
      *
      * @return self
      */
-    public function setIP(string $iP) : self
+    public function setIP(string $iP): self
     {
         $this->initialized['iP'] = true;
         $this->iP = $iP;
@@ -63,7 +63,7 @@ class Port
      *
      * @return int
      */
-    public function getPrivatePort() : int
+    public function getPrivatePort(): int
     {
         return $this->privatePort;
     }
@@ -74,7 +74,7 @@ class Port
      *
      * @return self
      */
-    public function setPrivatePort(int $privatePort) : self
+    public function setPrivatePort(int $privatePort): self
     {
         $this->initialized['privatePort'] = true;
         $this->privatePort = $privatePort;
@@ -85,7 +85,7 @@ class Port
      *
      * @return int
      */
-    public function getPublicPort() : int
+    public function getPublicPort(): int
     {
         return $this->publicPort;
     }
@@ -96,7 +96,7 @@ class Port
      *
      * @return self
      */
-    public function setPublicPort(int $publicPort) : self
+    public function setPublicPort(int $publicPort): self
     {
         $this->initialized['publicPort'] = true;
         $this->publicPort = $publicPort;
@@ -107,7 +107,7 @@ class Port
      *
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -118,7 +118,7 @@ class Port
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->initialized['type'] = true;
         $this->type = $type;

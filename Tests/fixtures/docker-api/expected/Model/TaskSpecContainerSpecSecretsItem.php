@@ -8,7 +8,7 @@ class TaskSpecContainerSpecSecretsItem
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -40,7 +40,7 @@ class TaskSpecContainerSpecSecretsItem
      *
      * @return TaskSpecContainerSpecSecretsItemFile
      */
-    public function getFile() : TaskSpecContainerSpecSecretsItemFile
+    public function getFile(): TaskSpecContainerSpecSecretsItemFile
     {
         return $this->file;
     }
@@ -51,7 +51,7 @@ class TaskSpecContainerSpecSecretsItem
      *
      * @return self
      */
-    public function setFile(TaskSpecContainerSpecSecretsItemFile $file) : self
+    public function setFile(TaskSpecContainerSpecSecretsItemFile $file): self
     {
         $this->initialized['file'] = true;
         $this->file = $file;
@@ -64,7 +64,7 @@ class TaskSpecContainerSpecSecretsItem
     *
     * @return string
     */
-    public function getSecretID() : string
+    public function getSecretID(): string
     {
         return $this->secretID;
     }
@@ -77,7 +77,7 @@ class TaskSpecContainerSpecSecretsItem
     *
     * @return self
     */
-    public function setSecretID(string $secretID) : self
+    public function setSecretID(string $secretID): self
     {
         $this->initialized['secretID'] = true;
         $this->secretID = $secretID;
@@ -91,7 +91,7 @@ class TaskSpecContainerSpecSecretsItem
     *
     * @return string
     */
-    public function getSecretName() : string
+    public function getSecretName(): string
     {
         return $this->secretName;
     }
@@ -105,7 +105,7 @@ class TaskSpecContainerSpecSecretsItem
     *
     * @return self
     */
-    public function setSecretName(string $secretName) : self
+    public function setSecretName(string $secretName): self
     {
         $this->initialized['secretName'] = true;
         $this->secretName = $secretName;

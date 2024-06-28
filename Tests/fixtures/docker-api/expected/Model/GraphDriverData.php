@@ -8,7 +8,7 @@ class GraphDriverData
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -29,7 +29,7 @@ class GraphDriverData
      *
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -40,7 +40,7 @@ class GraphDriverData
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->initialized['name'] = true;
         $this->name = $name;
@@ -51,7 +51,7 @@ class GraphDriverData
      *
      * @return array<string, string>
      */
-    public function getData() : iterable
+    public function getData(): iterable
     {
         return $this->data;
     }
@@ -62,7 +62,7 @@ class GraphDriverData
      *
      * @return self
      */
-    public function setData(iterable $data) : self
+    public function setData(iterable $data): self
     {
         $this->initialized['data'] = true;
         $this->data = $data;

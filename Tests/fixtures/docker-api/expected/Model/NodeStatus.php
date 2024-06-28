@@ -8,7 +8,7 @@ class NodeStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -35,7 +35,7 @@ class NodeStatus
      *
      * @return string
      */
-    public function getState() : string
+    public function getState(): string
     {
         return $this->state;
     }
@@ -46,7 +46,7 @@ class NodeStatus
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(string $state): self
     {
         $this->initialized['state'] = true;
         $this->state = $state;
@@ -57,7 +57,7 @@ class NodeStatus
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage(): string
     {
         return $this->message;
     }
@@ -68,7 +68,7 @@ class NodeStatus
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message): self
     {
         $this->initialized['message'] = true;
         $this->message = $message;
@@ -79,7 +79,7 @@ class NodeStatus
      *
      * @return string
      */
-    public function getAddr() : string
+    public function getAddr(): string
     {
         return $this->addr;
     }
@@ -90,7 +90,7 @@ class NodeStatus
      *
      * @return self
      */
-    public function setAddr(string $addr) : self
+    public function setAddr(string $addr): self
     {
         $this->initialized['addr'] = true;
         $this->addr = $addr;

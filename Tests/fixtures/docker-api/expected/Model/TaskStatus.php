@@ -8,7 +8,7 @@ class TaskStatus
      * @var array
      */
     protected $initialized = [];
-    public function isInitialized($property) : bool
+    public function isInitialized($property): bool
     {
         return array_key_exists($property, $this->initialized);
     }
@@ -47,7 +47,7 @@ class TaskStatus
      *
      * @return string
      */
-    public function getTimestamp() : string
+    public function getTimestamp(): string
     {
         return $this->timestamp;
     }
@@ -58,7 +58,7 @@ class TaskStatus
      *
      * @return self
      */
-    public function setTimestamp(string $timestamp) : self
+    public function setTimestamp(string $timestamp): self
     {
         $this->initialized['timestamp'] = true;
         $this->timestamp = $timestamp;
@@ -69,7 +69,7 @@ class TaskStatus
      *
      * @return string
      */
-    public function getState() : string
+    public function getState(): string
     {
         return $this->state;
     }
@@ -80,7 +80,7 @@ class TaskStatus
      *
      * @return self
      */
-    public function setState(string $state) : self
+    public function setState(string $state): self
     {
         $this->initialized['state'] = true;
         $this->state = $state;
@@ -91,7 +91,7 @@ class TaskStatus
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage(): string
     {
         return $this->message;
     }
@@ -102,7 +102,7 @@ class TaskStatus
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message): self
     {
         $this->initialized['message'] = true;
         $this->message = $message;
@@ -113,7 +113,7 @@ class TaskStatus
      *
      * @return string
      */
-    public function getErr() : string
+    public function getErr(): string
     {
         return $this->err;
     }
@@ -124,7 +124,7 @@ class TaskStatus
      *
      * @return self
      */
-    public function setErr(string $err) : self
+    public function setErr(string $err): self
     {
         $this->initialized['err'] = true;
         $this->err = $err;
@@ -135,7 +135,7 @@ class TaskStatus
      *
      * @return TaskStatusContainerStatus
      */
-    public function getContainerStatus() : TaskStatusContainerStatus
+    public function getContainerStatus(): TaskStatusContainerStatus
     {
         return $this->containerStatus;
     }
@@ -146,7 +146,7 @@ class TaskStatus
      *
      * @return self
      */
-    public function setContainerStatus(TaskStatusContainerStatus $containerStatus) : self
+    public function setContainerStatus(TaskStatusContainerStatus $containerStatus): self
     {
         $this->initialized['containerStatus'] = true;
         $this->containerStatus = $containerStatus;
