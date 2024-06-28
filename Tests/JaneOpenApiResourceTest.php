@@ -29,6 +29,10 @@ class JaneOpenApiResourceTest extends TestCase
      */
     public function testResources($name, SplFileInfo $testDirectory): void
     {
+        if ($this->shouldSkipPathForCurrentPhpParserVersion($testDirectory->getRealPath())) {
+            $this->markTestSkipped('Skip path ' . $testDirectory->getRealPath());
+        }
+
         // 1. Cleanup generated
         $filesystem = new Filesystem();
 
