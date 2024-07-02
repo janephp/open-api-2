@@ -18,7 +18,28 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
+        protected $normalizers = [
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class,
+            
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class,
+        ], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -63,7 +84,28 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class, \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
+        protected $normalizers = [
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\EmptySpace::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\EmptySpaceNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\Schema::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\SchemaObjectProperty::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\SchemaObjectPropertyNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\Error::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\ErrorNormalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestIdGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestIdGetResponse200Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item0::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item0Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item1::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item1Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponse200Item2::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponse200Item2Normalizer::class,
+            
+            \Jane\Component\OpenApi2\Tests\Expected\Model\TestComplexListGetResponsedefault::class => \Jane\Component\OpenApi2\Tests\Expected\Normalizer\TestComplexListGetResponsedefaultNormalizer::class,
+            
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\Runtime\Normalizer\ReferenceNormalizer::class,
+        ], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
         {
             return array_key_exists($type, $this->normalizers);

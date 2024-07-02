@@ -18,7 +18,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\One\Model\TestOneGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\One\Normalizer\TestOneGetResponse200Normalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\One\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
+        protected $normalizers = [
+            
+            \Jane\Component\OpenApi2\Tests\Expected\One\Model\TestOneGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\One\Normalizer\TestOneGetResponse200Normalizer::class,
+            
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\One\Runtime\Normalizer\ReferenceNormalizer::class,
+        ], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
         {
             return array_key_exists($type, $this->normalizers);
@@ -63,7 +68,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use NormalizerAwareTrait;
         use CheckArray;
         use ValidatorTrait;
-        protected $normalizers = [\Jane\Component\OpenApi2\Tests\Expected\One\Model\TestOneGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\One\Normalizer\TestOneGetResponse200Normalizer::class, \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\One\Runtime\Normalizer\ReferenceNormalizer::class], $normalizersCache = [];
+        protected $normalizers = [
+            
+            \Jane\Component\OpenApi2\Tests\Expected\One\Model\TestOneGetResponse200::class => \Jane\Component\OpenApi2\Tests\Expected\One\Normalizer\TestOneGetResponse200Normalizer::class,
+            
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \Jane\Component\OpenApi2\Tests\Expected\One\Runtime\Normalizer\ReferenceNormalizer::class,
+        ], $normalizersCache = [];
         public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
         {
             return array_key_exists($type, $this->normalizers);
