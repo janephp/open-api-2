@@ -70,7 +70,17 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\Jane\OpenApi2\Tests\Expected\Model\Company::class => false, \Jane\OpenApi2\Tests\Expected\Model\Project::class => false, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false, \Jane\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [
+                
+                \Jane\OpenApi2\Tests\Expected\Model\Company::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Project::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Error::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false,
+                \Jane\Component\JsonSchemaRuntime\Reference::class => false,
+            ];
         }
     }
 } else {
@@ -138,7 +148,17 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         }
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\Jane\OpenApi2\Tests\Expected\Model\Company::class => false, \Jane\OpenApi2\Tests\Expected\Model\Project::class => false, \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false, \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false, \Jane\OpenApi2\Tests\Expected\Model\Error::class => false, \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false, \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [
+                
+                \Jane\OpenApi2\Tests\Expected\Model\Company::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Project::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\ProjectClient::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Projects::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\Error::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\PaginationLinks::class => false,
+                \Jane\OpenApi2\Tests\Expected\Model\CompanyPatchBody::class => false,
+                \Jane\Component\JsonSchemaRuntime\Reference::class => false,
+            ];
         }
     }
 }
