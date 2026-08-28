@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ThingNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
@@ -19,15 +19,15 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \Jane\Component\OpenApi2\Tests\Client\Model\Error::class;
+        return $type === \Jane\Component\OpenApi2\Tests\Client\Model\Thing::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \Jane\Component\OpenApi2\Tests\Client\Model\Error::class;
+        return is_object($data) && get_class($data) === \Jane\Component\OpenApi2\Tests\Client\Model\Thing::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
-        $object = new \Jane\Component\OpenApi2\Tests\Client\Model\Error();
+        $object = new \Jane\Component\OpenApi2\Tests\Client\Model\Thing();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -37,21 +37,47 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        if (\array_key_exists('message', $data)) {
-            $object->setMessage($data['message']);
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
+        }
+        if (\array_key_exists('kind', $data)) {
+            $object->setKind($data['kind']);
+        }
+        if (\array_key_exists('createdAt', $data)) {
+            $date = \DateTime::createFromFormat('Y-m-d', $data['createdAt']);
+            if (false === $date) {
+                throw new \Jane\Component\OpenApi2\Tests\Client\Runtime\Normalizer\InvalidDateException($data['createdAt'], 'Y-m-d');
+            }
+            $object->setCreatedAt($date->setTime(0, 0, 0));
+        }
+        if (\array_key_exists('tags', $data)) {
+            $values = [];
+            foreach ($data['tags'] as $value) {
+                $values[] = $value;
+            }
+            $object->setTags($values);
         }
         return $object;
     }
     public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
     {
         $dataArray = [];
-        if ($data->isInitialized('message') && null !== $data->getMessage()) {
-            $dataArray['message'] = $data->getMessage();
+        $dataArray['id'] = $data->getId();
+        $dataArray['name'] = $data->getName();
+        $dataArray['kind'] = $data->getKind();
+        $dataArray['createdAt'] = $data->getCreatedAt()->format('Y-m-d');
+        $values = [];
+        foreach ($data->getTags() as $value) {
+            $values[] = $value;
         }
+        $dataArray['tags'] = $values;
         return $dataArray;
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\Jane\Component\OpenApi2\Tests\Client\Model\Error::class => false];
+        return [\Jane\Component\OpenApi2\Tests\Client\Model\Thing::class => false];
     }
 }
